@@ -1,0 +1,17 @@
+{
+    "extends": "airbnb-base",
+     "env": {
+         "browser": true,
+        "node": true,
+        "es6": true
+     },
+
+     "rules":{
+        "no-unused-expressions": 0,
+         "linebreak-style": 0,
+         "consistent-return": 0,
+         "no-param-reassign": ["error", { "props": false }],
+         "import/no-cycle": [2, { "maxDepth": 1 }],
+         "camelcase": ["error", {"properties": "never", "ignoreDestructuring": true}]
+        }
+}
