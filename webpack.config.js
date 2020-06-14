@@ -65,7 +65,7 @@ module.exports = (env, options) => {
         protectWebpackAssets: true,
       }),
       new HtmlWebpackPlugin({
-        template: 'index.html',
+        template: 'src/index.html',
       }),
     ],
   };
