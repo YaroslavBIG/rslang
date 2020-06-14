@@ -1,4 +1,4 @@
-# WebPaсk
+## WebPaсk
 
  babel
  clean-webpack-plugin
@@ -27,7 +27,7 @@ prod с babel_
 Используем расширения [Live Server](https://github.com/ritwickdey/vscode-live-server.git) и [EditorConfig](https://github.com/editorconfig/editorconfig-vscode.git) оба расширения есть в маркете VsCode
 
 ----
-# Editor Config
+## Editor Config
 
  charset = utf-8
  indent_style = space
@@ -35,7 +35,7 @@ prod с babel_
  end_of_line = lf
 
 ---
-# Eslint
+## Eslint
 
 airbnb-base config
 
