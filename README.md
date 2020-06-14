@@ -1,12 +1,47 @@
-# Ветка develop – основная ветка разработки.
-## В ней находится самая актуальная рабочая версия проекта, собираются вместе все готовые части функциональности по мере их завершения.
+# WebPaсk
 
-## Каждый участник команды, и тим лид команды в том числе, ведут разработку в своих собственных ветках. Название ветки даётся в соответствии с реализуемой частью функциональности. Данные ветки создаются при начале разработки каждой фичи от develop (актуальной на тот момент). Все мержи в ветку develop происходят только через Pull Request. Для того, чтобы разрешить merge conflicts, нужно смержить ветку develop в свою feature ветку.
+ babel
+ clean-webpack-plugin
+ copy-webpack-plugin
+ css-loader
+ eslint-config-airbnb-base
+ extract-text-webpack-plugin
+ file-loader
+ html-loader
+ html-webpack-plugin
+ mini-css-extract-plugin
+ sass
 
-## Ветка считается готовой к мержу в develop, если все комментарии помечены как resolved и как минимум два члена команды поставили approve. Resolve комментария может делать только тот человек, который его оставил.
+---
+## Запуск сборки 
 
-## После разрешения на мерж, каждый сам мержит свой Pull request. Если требуется – разрешает конфликты. Это очень важный опыт.
+development mode: npm run dev
+production: npm run prod
 
-## В ревьюверы включать не только тим лида и куратора группы, но и участников команды. Это позволяет каждому попробовать себя в роли ревьюера, видеть все реализованные фичи, каким образом они работают.
+_dev с source map и watcher;
+prod с babel_
 
-## От каждого участника команды ожидается минимум пять коммитов и минимум два собственных Pull Request, замерженых в ветку develop. Если требования к минимальному количеству коммитов и Pull Request от каждого участника не выполняется, команде начисляются штрафные баллы за недостатки в организации командной работы.
+---
+## Extensions
+
+Используем расширения [Live Server](https://github.com/ritwickdey/vscode-live-server.git) и [EditorConfig](https://github.com/editorconfig/editorconfig-vscode.git) оба расширения есть в маркете VsCode
+
+----
+# Editor Config
+
+ charset = utf-8
+ indent_style = space
+ indent_size = 2
+ end_of_line = lf
+
+---
+# Eslint
+
+airbnb-base config
+
+Exceptions:
+- [consistent-return](https://eslint.org/docs/rules/consistent-return)
+- [no-param-reassign : { "props": false }](https://eslint.org/docs/rules/no-param-reassign)
+- [import/no-cycle: 2, { "maxDepth": 1 }](https://github.com/benmosher/eslint-plugin-import/blob/v2.20.1/docs/rules/no-cycle.md)
+- [no-unused-expressions](https://eslint.org/docs/rules/no-unused-expressions)
+- [camelcase: {"properties": "never", "ignoreDestructuring": true}](https://eslint.org/docs/rules/camelcase)
