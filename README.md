@@ -1,9 +1,14 @@
 ## Запуск сборки
 
-development mode: npm run dev
-production: npm run prod
+##### development mode: 
+npm run dev
 
-dev с source map и watcher;
+##### production: 
+npm run prod
+
+---
+dev с source map и watcher
+
 prod с babel
 
 ## Extensions
