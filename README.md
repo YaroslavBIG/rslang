@@ -1,3 +1,16 @@
+## Запуск сборки
+
+development mode: npm run dev
+production: npm run prod
+
+dev с source map и watcher;
+prod с babel
+
+## Extensions
+
+Всем установить расширения Live Server и EditorConfig оба расширения есть в маркете VsCode!
+
+---
 # Ветка develop – основная ветка разработки.
 В ней находится самая актуальная рабочая версия проекта, собираются вместе все готовые части функциональности по мере их завершения.
 
