@@ -7,8 +7,7 @@
      },
      "settings": {
       "import/extensions": [
-        ".js",
-        ".jsx"
+        ".js"
       ]
     },
 
