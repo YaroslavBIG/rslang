@@ -5,6 +5,12 @@
         "node": true,
         "es6": true
      },
+     "settings": {
+      "import/extensions": [
+        ".js",
+        ".jsx"
+      ]
+    },
 
      "rules":{
         "no-unused-expressions": 0,
