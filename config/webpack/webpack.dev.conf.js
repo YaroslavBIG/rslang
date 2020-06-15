@@ -6,24 +6,6 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   mode: 'development',
   devtool: 'source-map',
   watch: true,
-  module: {
-    rules: [
-      {
-        test: /\.(m?js)$/,
-        exclude: /(node_modules)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-            plugins: [
-              ['@babel/transform-runtime'],
-              ['transform-remove-strict-mode'],
-            ],
-          },
-        },
-      },
-    ],
-  },
 
   plugins: [
     new CleanWebpackPlugin({

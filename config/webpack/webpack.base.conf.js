@@ -4,9 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  mode: 'production',
-  devtool: 'none',
-  watch: false,
   entry: ['./src/script.js', './src/sass/style.scss'],
   output: {
     path: path.join(__dirname, '../../dist'),
@@ -15,6 +12,20 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        test: /\.(m?js)$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+            plugins: [
+              ['@babel/transform-runtime'],
+              ['transform-remove-strict-mode'],
+            ],
+          },
+        },
+      },
       {
         test: /\.(scss|css)$/,
         use: [
