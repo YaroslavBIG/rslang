@@ -1,7 +1,8 @@
 const onclickHandler = (container) => {
   const games = container.querySelectorAll('.game');
-  // eslint-disable-next-line no-console,no-return-assign
-  games.forEach((game) => game.onclick = () => console.log(game.id));
+  games.forEach((game) => {
+    game.onclick = () => game.id; // return game.id
+  });
 };
 
 export default onclickHandler;
