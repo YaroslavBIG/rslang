@@ -1,14 +1,9 @@
 ## Запуск сборки
 
-##### development mode: 
-npm run dev
+development mode: npm run dev
+production: npm run prod
 
-##### production: 
-npm run prod
-
----
-dev с source map и watcher
-
+dev с source map и watcher;
 prod с babel
 
 ## Extensions
@@ -23,10 +18,11 @@ prod с babel
         - /youreDirName/ -для каждый части которую разрабатываете делаете оддельную дирикторию
     - sass
         - components
-            - /youreDirName/ -для каждый части которую разрабатываете делаете оддельную дирикторию
+            - /youreDirName/ -для каждой части которую разрабатываете делаете оддельную дирикторию
+               - _example.scss всё названия scss файлов должны начинаться с _(нижнего подчёркивания) и обязательно прописать импорт в style.scss
         - style.scss - сюда пишем импорты стилей
     - index.html - остаётся пустой! можно подключать шрифты
-    - script.js - сюда пишем импорты из папки js
+    - script.js - скрипт отсюда выполняется при открытии страницы, сдесь будет init().
   
 
 ---
