@@ -1,61 +1,30 @@
 function gameIndex() {
+  const root = document.querySelector('#root');
   const mainGameScreen = document.createDocumentFragment();
   const wrapperGame = document.createElement('div');
+  wrapperGame.classList.add('game_main__wrapper');
   wrapperGame.innerHTML = `
-  <div class="wrapper">
-  <header>
-    <nav>
-      <div class="level">
-        <label for="level">Level</label>
-        <select name="level" id="level">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-        </select>
-
+    <div class="game_main">
+      <div class="main__field">
+        <div class="card-game">
+          <div class="card-text card-text--quest">
+            <span class="sentence sentence--first-part"></span>
+            <span class="sentence sentence--target-word"></span>
+            <span class="sentence sentence--last-part"></span>
+          </div>
+          <div class="separator"></div>
+          <div class="card-text card-text--translate"></div>
+        </div>
+        <div class="arrow arrow--left"></div>
+        <div class="arrow arrow--right"></div>
       </div>
-      <div class="page">
-        <label for="page">Page</label>
-        <select name="page" id="page">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-        </select>
-      </div>
-    </nav>
-    <div class="controls">
-
-      </div>
+      <div class="translate__word"></div>
+      <div class="progress-bar"></div>
     </div>
-  </header>
-  <main>
-    <div class="example">
-      <div class="example--button">
-        <a href="#" class="button">
-          <img src="./img/volume_up-black-24dp.svg" alt="auto play example" title="auto play example">
-        </a>
-      </div>
-      <div class="example--text"></div>
-    </div>
-    <div class="game-field">
-
-    </div>
-  </main>
-  <footer>
-    <div class="words"></div>
-    <div class="buttons">
-      <a href="#" class="button button--answer button--dknow">I don't know</a>
-      <a href="#" class="button button--answer button--check">Check</a>
-    </div>
-  </footer>
-</div>
   `;
-
   mainGameScreen.append(wrapperGame);
-  document.body.innerHTML = '';
-  document.body.append(mainGameScreen);
+  root.innerHTML = '';
+  root.append(mainGameScreen);
 }
 
 export default gameIndex;
