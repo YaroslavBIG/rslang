@@ -1,25 +1,21 @@
 import cutTags from '../utils/cutTags';
-import randomArr from '../utils/random';
 
-function gameContent(data) {
+function gameContent(data, wordNum = 0) {
   console.log(data);
   // const gameField = document.querySelector('.game-field');
-  const wordsField = document.querySelector('.words');
-  const { textExample } = data[0];
+  // const wordsField = document.querySelector('.words');
+  const {
+    textExample, word, textExampleTranslate,
+  } = data[wordNum];
   console.log(textExample);
-  const textArr = textExample.split(' ').map((word) => cutTags(word));
+  const textArr = textExample.split(' ').map((words) => cutTags(words));
+  const textWithWord = textArr.join(' ');
+  const textWithoutWord = textArr.filter((w) => w !== word).join(' ');
   console.log(textArr);
-  const random = randomArr(textArr.length);
-  console.log(random);
-  const words = document.createDocumentFragment();
-  random.forEach((num, idx) => {
-    const wordContainer = document.createElement('div');
-    wordContainer.classList.add('word--unsort', `word-${idx}`);
-    const word = textArr[num].toLowerCase();
-    wordContainer.innerText = word;
-    words.append(wordContainer);
-  });
-  wordsField.append(words);
+  console.log(textWithWord);
+  console.log(textWithoutWord);
+  console.log(textExampleTranslate);
+  // wordsField.append(words);
 }
 
 export default gameContent;

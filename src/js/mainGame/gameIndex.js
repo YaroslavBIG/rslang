@@ -40,16 +40,7 @@ function gameIndex() {
       <div class="example--text"></div>
     </div>
     <div class="game-field">
-    <div class="field--puzzle field-1"></div>
-    <div class="field--puzzle field-2"></div>
-    <div class="field--puzzle field-3"></div>
-    <div class="field--puzzle field-4"></div>
-    <div class="field--puzzle field-5"></div>
-    <div class="field--puzzle field-6"></div>
-    <div class="field--puzzle field-7"></div>
-    <div class="field--puzzle field-8"></div>
-    <div class="field--puzzle field-9"></div>
-    <div class="field--puzzle field-10"></div>
+
     </div>
   </main>
   <footer>
