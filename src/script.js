@@ -1,3 +1,3 @@
-import startGame from './js/mainGame/startGame';
+import startMainGame from './js/pages/mainGame';
 
-startGame();
+startMainGame();
