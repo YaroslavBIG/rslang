@@ -1,6 +1,6 @@
 function getPromoPage(name, description, rules, video) {
   document.body.innerHTML += `
-  a
+  
   <div id="myModal" class="modal">
 
   <div class="modal-content">
