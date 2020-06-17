@@ -31,4 +31,13 @@
       cursor: pointer;
     }
   }
+  &__settings {
+    height: 31px;
+    margin: 0 20px;
+    &:hover {
+      cursor: pointer;
+      transform: rotate(360deg);
+      transition: transform 2s ease;
+    }
+  }
 }

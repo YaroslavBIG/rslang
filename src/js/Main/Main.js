@@ -1,9 +1,5 @@
-const Main = (...nodes) => {
-  const mainNode = document.createElement('main');
-  mainNode.classList.add('main');
-  const bgMain = document.createElement('div');
-  bgMain.classList.add('main-bg');
-  mainNode.append(bgMain, ...nodes);
-  return mainNode;
+const Main = (...children) => {
+  const bgMain = '<div class="main-bg"></div>';
+  return `<main class="main">${bgMain + [...children].join('')}</main>`;
 };
 export default Main;

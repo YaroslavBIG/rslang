@@ -1,27 +1,25 @@
-import Nav from '../Nav/Nav';
-import Logo from '../Logo/Logo';
+import '../../assets/img/noavatar.png';
+import '../../assets/img/settings.png';
+import Nav from './Nav';
+import Logo from './Logo';
 
-const avatarPath = 'noavatar.png';
-const Header = (showNav, showUser) => {
-  const headerNode = document.createElement('header');
-  headerNode.classList.add('header');
+const avatarPath = 'assets/img/noavatar.png';
+const settingsIconPath = 'assets/img/settings.png';
+const Header = (showNav, showUser, showSettings) => {
+  const singoutContent = 'Выход';
   const logo = Logo();
-  logo.classList.add('header__logo');
-  headerNode.append(logo);
-  if (showNav) {
-    const nav = Nav();
-    nav.classList.add('header__nav');
-    headerNode.append(nav);
-  }
-  if (showUser) {
-    const userAvatar = document.createElement('img');
-    userAvatar.classList.add('header__avatar');
-    userAvatar.src = avatarPath;
-    const singOut = document.createElement('button');
-    singOut.innerHTML = 'Выход';
-    singOut.classList.add('header__singout');
-    headerNode.append(userAvatar, singOut);
-  }
-  return headerNode;
+  const nav = showNav ? Nav() : '';
+  const settingsIcon = showSettings
+    ? `<img class="header__settings" src="${settingsIconPath}" alt="settings">`
+    : '';
+  const userAvatar = showUser
+    ? `<img class="header__avatar" src="${avatarPath}" alt="avatar">
+    <button class="header__singout">
+    ${singoutContent}
+    </button>`
+    : '';
+  return `<header class="header">${
+    logo + nav + settingsIcon + userAvatar
+  }</header>`;
 };
 export default Header;

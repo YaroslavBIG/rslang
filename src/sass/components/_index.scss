@@ -1,7 +1,8 @@
 @import "./root.scss";
-@import "./header.scss";
-@import "./main.scss";
+@import "./Header/header.scss";
+@import "./Main/main.scss";
 @import "./footer.scss";
-@import "./logo.scss";
-@import "./nav.scss";
-@import "./card.scss";
+@import "./Header/logo.scss";
+@import "./Header/nav.scss";
+@import "./Main/card.scss";
+@import "./Main/container.scss";

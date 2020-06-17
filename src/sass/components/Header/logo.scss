@@ -1,0 +1,22 @@
+.logo {
+  display: flex;
+  align-items: center;
+  &__name {
+    font-size: 24px;
+    margin-left: 10px;
+    color: #74aacc;
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+      margin: 5px;
+    }
+  }
+  &__icon {
+    height: 38px;
+    @media screen and (max-width: 768px) {
+      height: 24px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
