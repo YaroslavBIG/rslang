@@ -3,7 +3,7 @@ body {
   margin: 0;
 }
 
-.game-container {
+.sprint-game__screen-wrapper {
   width: 45%;
   height: 100%;
   margin: 0 auto;
@@ -13,12 +13,12 @@ body {
   background: #979797;
 }
 
-.game-container__main-content {
+.screen-wrapper__main-content {
   width: 100%;
   height: 60%;
 }
 
-.game-container__timer {
+.screen-wrapper__timer {
   width: 95px;
   height: 95px;
   position: absolute;
@@ -27,7 +27,7 @@ body {
   background: #000;
 }
 
-.game-container__points {
+.screen-wrapper__points {
   width: 100%;
   height: 20%;
   text-align: center;
@@ -35,7 +35,7 @@ body {
   font-weight: bold;
 }
 
-.game-container__hints {
+.screen-wrapper__hints {
   width: 100%;
   height: 30%;
   display: flex;

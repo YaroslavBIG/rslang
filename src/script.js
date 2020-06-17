@@ -1,3 +1,3 @@
-import MiniGameSprint from './js/mini-game-sprint/mini-game-sprint';
+import startSprintGame from './js/pages/sprintGamePage';
 
-MiniGameSprint();
+startSprintGame();
