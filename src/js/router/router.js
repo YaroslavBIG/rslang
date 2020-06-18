@@ -13,6 +13,7 @@ const speakit = {
 
   <div class="modal-content">
     <div class="modal-header">
+    <a href="#/" class="close"></a>
       <span class="modal-header__name">Мини-игра SpeakIt</span> 
     </div>
     <div class="modal-body">
@@ -39,6 +40,7 @@ const englishPuzzle = {
 
     <div class="modal-content">
       <div class="modal-header">
+      <a href="#/" class="close"></a>
         <span class="modal-header__name">Мини-игра English puzzle</span> 
       </div>
       <div class="modal-body">
@@ -65,6 +67,7 @@ const savannah = {
 
     <div class="modal-content">
       <div class="modal-header">
+      <a href="#/" class="close"></a>
         <span class="modal-header__name">Мини-игра Savannah</span> 
       </div>
       <div class="modal-body">
@@ -91,6 +94,7 @@ const listening = {
 
     <div class="modal-content">
       <div class="modal-header">
+      <a href="#/" class="close"></a>
         <span class="modal-header__name">Мини-игра Listening</span> 
       </div>
       <div class="modal-body">
@@ -117,6 +121,7 @@ const sprint = {
 
     <div class="modal-content">
       <div class="modal-header">
+      <a href="#/" class="close"></a>
         <span class="modal-header__name">Мини-игра Sprint</span> 
       </div>
       <div class="modal-body">
@@ -143,6 +148,7 @@ const constructor = {
 
     <div class="modal-content">
       <div class="modal-header">
+      <a href="#/" class="close"></a>
         <span class="modal-header__name">Мини-игра Constructor</span> 
       </div>
       <div class="modal-body">

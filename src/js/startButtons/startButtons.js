@@ -8,22 +8,10 @@ function startButtons() {
   <a href="#/listening">listening</a>
   <a href="#/sprint">sprint</a>
   <a href="#/constructor">constructor</a>
-  <a href="#/" class="close"></a>
   `;
 
   window.addEventListener('hashchange', router);
   window.addEventListener('load', router) || router();
-  for (let i = 0; i < document.getElementsByTagName('a').length; i++) {
-    let link = document.getElementsByTagName('a')[i];
-    link.addEventListener('click', function () {
-      document.getElementsByClassName('close')[0].style.display = 'block';
-    });
-  }
-  document
-    .getElementsByClassName('close')[0]
-    .addEventListener('click', function () {
-      document.getElementsByClassName('close')[0].style.display = 'none';
-    });
 }
 
 export default startButtons;
