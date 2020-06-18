@@ -1,17 +1,17 @@
-import games from './buttonCheck.js';
+import router from '../router/router.js';
 
 function startButtons() {
   document.body.innerHTML += `
-  <button name="speakit">speakit</button>
-  <button name="english-puzzle">english-puzzle</button>
+  <a href="#/speakit">speakit</a>
+  <a href="#/english-puzzle">english-puzzle</a>
+  <a href="#/savannah">savannh</a>
+  <a href="#/listening">listening</a>
+  <a href="#/sprint">sprint</a>
+  <a href="#/constructor">constructor</a>
   `;
-  var buttons = document.getElementsByTagName('button');
-  for (let i = 0; i < buttons.length; i++) {
-    let button = buttons[i];
-    button.addEventListener('click', function () {
-      games(button.name);
-    });
-  }
+
+  window.addEventListener('hashchange', router);
+  window.addEventListener('load', router) || router();
 }
 
 export default startButtons;
