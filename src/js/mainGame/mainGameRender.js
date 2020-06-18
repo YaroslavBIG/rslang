@@ -1,9 +1,6 @@
-function gameIndex() {
-  const root = document.querySelector('#root');
-  const mainGameScreen = document.createDocumentFragment();
-  const wrapperGame = document.createElement('section');
-  wrapperGame.classList.add('game_main__wrapper');
-  wrapperGame.innerHTML = `
+function mainGameRender() {
+  const template = `
+  <section class="game_main__wrapper">
     <div class="game_main">
       <div class="main__field">
         <div class="card-game">
@@ -21,16 +18,12 @@ function gameIndex() {
       <div class="translate__word"></div>
       <div class="progress-bar">
         <div class="progress">
-          <div class="progress-done">
-
-          </div>
+          <div class="progress-done"></div>
         </div>
       </div>
     </div>
+  </section>
   `;
-  mainGameScreen.append(wrapperGame);
-  root.innerHTML = '';
-  root.append(mainGameScreen);
+  return template;
 }
-
-export default gameIndex;
+export default mainGameRender;

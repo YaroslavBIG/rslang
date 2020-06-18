@@ -13,8 +13,7 @@ function gameContent(data, wordNum = 0) {
   const lastPartBlock = document.querySelector('.sentence--last-part');
   const textTranslateBlock = document.querySelector('.card-text--translate');
   const wordTranslateBlock = document.querySelector('.translate__word');
-  const font = cardQuestBlock.computedStyleMap().get('font').toString(); // || '400 14px Roboto'; // TODO: FixIt
-  console.log(font);
+  const font = cardQuestBlock.computedStyleMap().get('font').toString();
   const textArr = textExample.split(' ').map((words) => cutTags(words));
   const targetWordIndex = textArr.indexOf(word);
   const textLen = textArr.length - 1;
