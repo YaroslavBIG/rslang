@@ -3,22 +3,24 @@ import createUser from '../../api/createUser';
 import { icon } from './chooseIcon';
 
 const signUp = () => {
-  const nextButton = document.querySelector('.click-reload');
   const errorBlock = document.querySelector('.error-block');
 
   const login = document.querySelector('[name="email"]').value;
-  const password = document.querySelector('[name="password-up"]').value;
+  const pass = document.querySelector('[name="password-up"]').value;
   const reg = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[+-_@$!%*?&#.,;:[\]{}]).{8,}$/;
 
-  if (reg.test(password)) {
-    const user = { email: login, password: password };
+  if (reg.test(pass)) {
+    const user = { email: login, password: pass };
 
     globalUser.set('email', login);
-    globalUser.set('password', password);
+    globalUser.set('password', pass);
     globalUser.set('iconURL', icon.iconURL);
 
-    createUser(user);
-    nextButton.click();
+    const success = createUser(user);
+    if (success) {
+      alert('Now you can sign in');
+      window.location.reload();
+    }
   } else {
     errorBlock.innerHTML = `
       <p> Password must be minimum: </p>

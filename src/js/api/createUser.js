@@ -7,8 +7,10 @@ const createUser = async (user) => {
   const content = await getResponse('users', 'POST', { body: parse });
   if (content) {
     globalUser.set('id', content.id);
+    saveUser();
+    return true;
   }
-  saveUser();
+  return false;
 };
 
 export default createUser;

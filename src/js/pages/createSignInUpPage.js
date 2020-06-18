@@ -27,12 +27,12 @@ function createSignInUpPage() {
               <div class="error-block"></div>
               <p class="title-block">Choose your icon</p>
               <div class="icons">
-                <div ><img class="icons__item" src="assets/1.svg" alt=""></div>
-                <div ><img class="icons__item" src="assets/2.svg" alt=""></div>
-                <div ><img class="icons__item" src="assets/3.svg" alt=""></div>
-                <div ><img class="icons__item" src="assets/4.svg" alt=""></div>
-                <div ><img class="icons__item" src="assets/5.svg" alt=""></div>
-                <div ><img class="icons__item" src="assets/6.svg" alt=""></div>
+                <div ><img class="icons__item" src="assets/img/1.svg" alt=""></div>
+                <div ><img class="icons__item" src="assets/img/2.svg" alt=""></div>
+                <div ><img class="icons__item" src="assets/img/3.svg" alt=""></div>
+                <div ><img class="icons__item" src="assets/img/4.svg" alt=""></div>
+                <div ><img class="icons__item" src="assets/img/5.svg" alt=""></div>
+                <div ><img class="icons__item" src="assets/img/6.svg" alt=""></div>
               </div>
               <button class="button">Sign Up</button>
             </form>
