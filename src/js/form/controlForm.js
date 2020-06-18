@@ -1,8 +1,6 @@
 import controlButton from './controlButton';
-import checkStateButton from './checkStateButton';
 
 const controlForm = () => {
-  checkStateButton();
   document.querySelector('.control-in').addEventListener('click', () => {
     controlButton();
   });

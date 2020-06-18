@@ -7,21 +7,20 @@ const signIn = () => {
   const errorBlock = document.querySelector('.error-block');
 
   const login = document.querySelector('[name="login"]').value;
-  const password = document.querySelector('[name="password-in"]').value;
+  const pass = document.querySelector('[name="password-in"]').value;
 
   const getUser = globalUser.get();
   const existUser = (getUser.email === login);
 
   if (existUser) {
-    if (getUser.password === password) {
-      const user = { email: login, password: password };
+    if (getUser.password === pass) {
+      const user = { email: login, password: pass };
 
       loginUser(user);
 
       actionAuth.setAuth(true);
       saveAuth();
-
-      // nextButton.click();
+      nextButton.click();
     } else {
       errorBlock.textContent = 'Invalid password. Try again';
     }

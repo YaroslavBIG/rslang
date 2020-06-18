@@ -25,13 +25,14 @@ function createSignInUpPage() {
               <label for="password">Password</label>
 <input required autocomplete="disabled" class="form__styling sign-up__pass" type="text" name="password-up" placeholder=""/>
               <div class="error-block"></div>
+              <p class="title-block">Choose your icon</p>
               <div class="icons">
-                <div class="icons__item"><img src="" alt=""></div>
-                <div class="icons__item"><img src="" alt=""></div>
-                <div class="icons__item"><img src="" alt=""></div>
-                <div class="icons__item"><img src="" alt=""></div>
-                <div class="icons__item"><img src="" alt=""></div>
-                <div class="icons__item"><img src="" alt=""></div>
+                <div ><img class="icons__item" src="assets/1.svg" alt=""></div>
+                <div ><img class="icons__item" src="assets/2.svg" alt=""></div>
+                <div ><img class="icons__item" src="assets/3.svg" alt=""></div>
+                <div ><img class="icons__item" src="assets/4.svg" alt=""></div>
+                <div ><img class="icons__item" src="assets/5.svg" alt=""></div>
+                <div ><img class="icons__item" src="assets/6.svg" alt=""></div>
               </div>
               <button class="button">Sign Up</button>
             </form>

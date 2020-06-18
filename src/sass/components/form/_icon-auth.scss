@@ -1,0 +1,17 @@
+.icons{
+  display: flex;
+  justify-content: space-between;
+  &__item{
+    height: 38px;
+    width: 38px;
+  }
+}
+
+.icon_active{
+  outline: 1px solid $active-color;
+}
+
+.title-block{
+  text-align: center;
+  color: $active-color;
+}

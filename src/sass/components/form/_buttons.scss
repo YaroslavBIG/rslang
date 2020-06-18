@@ -1,0 +1,15 @@
+.button{
+  float: left;
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  text-align: center;
+  color: $primary-color;
+  background-color: $active-color;
+  margin-top: 23px;
+  cursor: pointer;
+}

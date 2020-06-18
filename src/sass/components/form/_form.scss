@@ -1,0 +1,72 @@
+@import './start-section';
+@import './buttons';
+@import './icon-auth';
+
+.form{
+  height: 375px;
+  font-size: 16px;
+  font-weight: $primary-font-weight;
+  padding: 55px 37px;
+
+  &__sign-in{
+    transition: opacity .5s ease, transform .5s ease;
+    opacity: 1;
+  }
+  &__sign-up{
+    position: relative;
+    top: -484px;
+    left: 400px;
+    opacity: 0;
+    transition: all .5s ease;
+  }
+  &__sign-in input, &__sign-up input {
+    color: $primary-color;
+    font-size: 13px;
+  }
+  &__styling {
+    width: 340px;
+    height: 35px;
+    padding-left: 15px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background: $color-back-input;
+  }
+}
+.sign-in_left, .sign-up_left{
+  transform: translateX(-400px);
+}
+.sign-in_left{
+  opacity: 0;
+}
+.sign-up_left{
+  opacity: 1;
+}
+:focus{
+  outline: none;
+}
+
+label {
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $color-label;
+}
+
+.form__sign-in input:focus, textarea:focus, .form__sign-up input:focus, textarea:focus {
+  background: $color-inactive-a;
+  border: none;
+  padding-right: 40px;
+  transition: background .5s ease;
+}
+
+.control{
+  cursor: pointer;
+  color: $color-inactive-a;
+  text-decoration: none;
+  transition: all .25s ease;
+}
+
+.error-block{
+  color: $primary-color;
+  font-size: 15px;
+}
