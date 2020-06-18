@@ -1,5 +1,6 @@
-const { load } = require("./js/main");
+import load from './js/utils/load';
 
-
-window.addEventListener('hashchange', router);
-window.onload = () => load();
+// window.addEventListener('hashchange', router);
+window.onload = () => {
+  load();
+};

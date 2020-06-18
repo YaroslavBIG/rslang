@@ -1,5 +1,3 @@
-import { load } from "../main";
-
 const loadUser = () => {
   const resUsers = localStorage.getItem('user');
   if (resUsers) {

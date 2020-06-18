@@ -1,23 +1,23 @@
-import loadAuth from "./loadAuth";
-import loadUser from "./loadUser";
-
-let globalUser = {};
-
-const actionAuth = {
-  setAuth(auth) {
-    this._isAuth = auth;
+const globalUser = {
+  user: {},
+  get() {
+    return this.user;
   },
-  getAuth() {
-    return this._isAuth;
+  set(key, value) {
+    this.user[key] = value;
+  },
+  setFullUser(obj) {
+    this.user = obj;
   },
 };
 
-const load = () => {
-  loadAuth();
-  globalUser = loadUser();
-  router();
-  console.log(localStorage, globalUser);
-}
+const actionAuth = {
+  setAuth(auth) {
+    this.isAuth = auth;
+  },
+  getAuth() {
+    return this.isAuth;
+  },
+};
 
-export { globalUser, actionAuth, load };
-
+export { globalUser, actionAuth };

@@ -1,8 +1,8 @@
-const { globalUser } = require("../main");
+import { globalUser } from './main';
 
 const saveUser = () => {
-  const json = JSON.stringify(globalUser);
-  console.log(json)
+  const user = globalUser.get();
+  const json = JSON.stringify(user);
   localStorage.setItem('user', json);
 };
 

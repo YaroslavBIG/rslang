@@ -1,4 +1,4 @@
-const createSignInUpPage = () => {
+function createSignInUpPage() {
   return `<section class="inner-section__start">
     <a href="#/auth" class="click-reload"></a>
     <a href="#/main" class="click-enter"></a>
@@ -25,12 +25,20 @@ const createSignInUpPage = () => {
               <label for="password">Password</label>
 <input required autocomplete="disabled" class="form__styling sign-up__pass" type="text" name="password-up" placeholder=""/>
               <div class="error-block"></div>
+              <div class="icons">
+                <div class="icons__item"><img src="" alt=""></div>
+                <div class="icons__item"><img src="" alt=""></div>
+                <div class="icons__item"><img src="" alt=""></div>
+                <div class="icons__item"><img src="" alt=""></div>
+                <div class="icons__item"><img src="" alt=""></div>
+                <div class="icons__item"><img src="" alt=""></div>
+              </div>
               <button class="button">Sign Up</button>
             </form>
           </div>
         </div>
       </div>
     </section>`;
-};
+}
 
 export default createSignInUpPage;

@@ -1,10 +1,13 @@
-import getResponse from "./getResponse";
+import getResponse from './getResponse';
+import saveUser from '../utils/saveUser';
+import { globalUser } from '../utils/main';
 
-const createUser = async (user, globalUser) => {
+const createUser = async (user) => {
   const parse = JSON.stringify(user);
-  const content = await getResponse('users', {method: 'POST', body: parse});
-  globalUser.id = content.id;
-  console.log(globalUser);
+  const content = await getResponse('users', 'POST', { body: parse });
+  if (content) {
+    globalUser.set('id', content.id);
+  }
   saveUser();
 };
 

@@ -1,5 +1,6 @@
-import { globalUser } from "../utils/main";
-import createUser from "../api/createUser";
+import { globalUser } from '../../utils/main';
+import createUser from '../../api/createUser';
+import { icon } from './chooseIcon';
 
 const signUp = () => {
   const nextButton = document.querySelector('.click-reload');
@@ -10,15 +11,15 @@ const signUp = () => {
   const reg = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[+-_@$!%*?&#.,;:[\]{}]).{8,}$/;
 
   if (reg.test(password)) {
-    const user = {email: login, password: password};
+    const user = { email: login, password: password };
 
-    globalUser.email = login;
-    globalUser.password = password;
+    globalUser.set('email', login);
+    globalUser.set('password', password);
+    globalUser.set('iconURL', icon.iconURL);
 
-    createUser(user, globalUser);
+    createUser(user);
     nextButton.click();
-  }
-  else {
+  } else {
     errorBlock.innerHTML = `
       <p> Password must be minimum: </p>
       <p>- 8 symbols; </p>
@@ -28,6 +29,6 @@ const signUp = () => {
       <p>- one special symbol;</p>
     `;
   }
-}
+};
 
 export default signUp;

@@ -1,4 +1,4 @@
-import { actionAuth } from "../main";
+import { actionAuth } from './main';
 
 const loadAuth = () => {
   const resAuth = localStorage.getItem('auth');

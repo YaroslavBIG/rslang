@@ -6,6 +6,6 @@ const checkStateButton = (button) => {
     button.classList.remove('active');
     button.classList.add('inactive');
   }
-}
+};
 
 export default checkStateButton;

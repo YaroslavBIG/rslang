@@ -1,10 +1,14 @@
+import controlButton from './controlButton';
+import checkStateButton from './checkStateButton';
+
 const controlForm = () => {
-  document.querySelector(`.control-in`).addEventListener('click', () => {
+  checkStateButton();
+  document.querySelector('.control-in').addEventListener('click', () => {
     controlButton();
   });
-  document.querySelector(`.control-up`).addEventListener('click', () => {
+  document.querySelector('.control-up').addEventListener('click', () => {
     controlButton();
   });
-}
+};
 
 export default controlForm;
