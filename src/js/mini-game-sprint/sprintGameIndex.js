@@ -5,7 +5,22 @@ const sprintGameIndex = () => `
     <div class="screen-wrapper__points">
         <p class="points__quantity">99</p>
     </div>
-    <div class="screen-wrapper__main-content"></div>
+    <div class="screen-wrapper__main-content">
+      <div class="main-content__information"></div>
+      <div class="main-content__combo-block"></div>
+      <div class="main-content__task-container">
+        <p class="task-container__question" id="question"></p>
+        <p class="task-container__answer" id="answer"></p>
+      </div>
+      <div class="main-content__control">
+        <div class="control__wrong-btn" id="wrong-btn">
+          ${constantsData.wrongBtnText}
+        </div>
+        <div class="control__right-btn" id="right-btn">
+          ${constantsData.rightBtnText}
+        </div>
+      </div>
+    </div>
     <div class="screen-wrapper__hints">
         <p class="hints__description">${constantsData.hintsDescription}</p>
         <div class="hints__voice" id="voice">

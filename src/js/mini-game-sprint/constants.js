@@ -5,6 +5,8 @@ const constantsData = {
   leadTime: 60,
   oneSec: 1000,
   loaderTime: 167,
+  rightBtnText: 'RIGHT',
+  wrongBtnText: 'WRONG',
 };
 
 export default constantsData;
