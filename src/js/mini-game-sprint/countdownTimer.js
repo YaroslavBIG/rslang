@@ -1,5 +1,5 @@
 import constantsData from './constants';
-import timerLoader from './timer-loader';
+import timerLoader from './timerLoader';
 
 const countdownTimer = () => {
   const timerContainer = document.getElementById('timer');

@@ -43,7 +43,12 @@ body {
   top: 261px;
   right: -117px;
   background: #950082;
-  border-radius: 50%
+  border-radius: 50%;
+}
+
+.timer__loader-wrapper svg {
+  width: 103px;
+  height: 103px;
 }
 
 .screen-wrapper__points {
@@ -134,4 +139,8 @@ body {
 .control__right-btn:hover {
   cursor: pointer;
   background: #515151;
+}
+
+#loader {
+  transform: translate(125px, 125px);
 }

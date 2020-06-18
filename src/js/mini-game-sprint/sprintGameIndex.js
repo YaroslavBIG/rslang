@@ -28,8 +28,8 @@ const sprintGameIndex = () => `
         </div>
     </div>
     <div class="timer__loader-wrapper" id="loader-wrapper">
-      <svg width="103" height="103" viewbox="0 0 250 250">
-        <path id="loader" transform="translate(125, 125)"/>
+      <svg viewbox="0 0 250 250">
+        <path id="loader">
       </svg>
     </div>
     <div class="screen-wrapper__timer" id="timer"></div>
