@@ -1,8 +1,37 @@
 // startGame
 import startGame from './startGame/startGame.js';
-document.getElementsByClassName()[0].addEventListener('click', function () {
-  startGame();
-});
+switch (path) {
+  case '/speakit': {
+    document.getElementsByClassName()[0].addEventListener('click', function () {
+      startGame();
+    });
+  }
+  case '/englishPuzzle': {
+    document.getElementsByClassName()[0].addEventListener('click', function () {
+      startGame();
+    });
+  }
+  case '/savannah': {
+    document.getElementsByClassName()[0].addEventListener('click', function () {
+      startGame();
+    });
+  }
+  case '/listening': {
+    document.getElementsByClassName()[0].addEventListener('click', function () {
+      startGame();
+    });
+  }
+  case '/sprint': {
+    document.getElementsByClassName()[0].addEventListener('click', function () {
+      startGame();
+    });
+  }
+  case '/constructor': {
+    document.getElementsByClassName()[0].addEventListener('click', function () {
+      startGame();
+    });
+  }
+}
 
 // startButtons
 import startButtons from './startButtons/startButtons.js';
