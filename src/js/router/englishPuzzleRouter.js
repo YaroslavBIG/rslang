@@ -1,6 +1,5 @@
-const englishPuzzle = {
-  render: () => {
-    return `
+const englishPuzzle = () => {
+  return `
           
       <div id="myModal" class="modal">
   
@@ -22,6 +21,5 @@ const englishPuzzle = {
       </div>
     
       `;
-  },
 };
 export default englishPuzzle;

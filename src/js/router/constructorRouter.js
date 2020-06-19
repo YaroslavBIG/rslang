@@ -1,6 +1,5 @@
-const constructor = {
-  render: () => {
-    return `
+const constructor = () => {
+  return `
           
       <div id="myModal" class="modal">
   
@@ -22,7 +21,6 @@ const constructor = {
       </div>
     
         `;
-  },
 };
 
 export default constructor;

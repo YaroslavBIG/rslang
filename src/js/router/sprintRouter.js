@@ -1,6 +1,5 @@
-const sprint = {
-  render: () => {
-    return `
+const sprint = () => {
+  return `
           
       <div id="myModal" class="modal">
   
@@ -22,7 +21,6 @@ const sprint = {
       </div>
     
         `;
-  },
 };
 
 export default sprint;

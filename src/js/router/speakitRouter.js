@@ -1,6 +1,5 @@
-const speakit = {
-  render: () => {
-    return `
+const speakit = () => {
+  return `
           
     <div id="myModal" class="modal">
   
@@ -22,6 +21,5 @@ const speakit = {
     </div>
   
       `;
-  },
 };
 export default speakit;

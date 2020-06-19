@@ -1,6 +1,5 @@
-const listening = {
-  render: () => {
-    return `
+const listening = () => {
+  return `
           
       <div id="myModal" class="modal">
   
@@ -22,7 +21,6 @@ const listening = {
       </div>
     
         `;
-  },
 };
 
 export default listening;
