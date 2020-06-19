@@ -1,6 +1,6 @@
 import '../../assets/img/logo.png';
 
-export const Logo = () => {
+export const logo = () => {
   const logoTitle = 'RS Lang';
   const iconPath = 'assets/img/logo.png';
   const icon = `<img class="logo__icon" src="${iconPath}" alt="logo">`;

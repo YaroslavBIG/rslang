@@ -1,14 +1,14 @@
 import '../../assets/img/noavatar.png';
 import '../../assets/img/settings.png';
-import { Nav } from './Nav';
-import { Logo } from './Logo';
+import { nav } from './nav';
+import { logo } from './logo';
 
 const avatarPath = 'assets/img/noavatar.png';
 const settingsIconPath = 'assets/img/settings.png';
-export const Header = (showNav, showUser, showSettings) => {
+export const header = (showNav, showUser, showSettings) => {
   const singoutContent = 'Выход';
-  const logo = Logo();
-  const nav = showNav ? Nav() : '';
+  const headerLogo = logo();
+  const headerNav = showNav ? nav() : '';
   const settingsIcon = showSettings
     ? `<img class="header__settings" src="${settingsIconPath}" alt="settings">`
     : '';
@@ -19,6 +19,6 @@ export const Header = (showNav, showUser, showSettings) => {
     </button>`
     : '';
   return `<header class="header">${
-    logo + nav + settingsIcon + userAvatar
+    headerLogo + headerNav + settingsIcon + userAvatar
   }</header>`;
 };

@@ -1,27 +1,28 @@
-import { Footer } from '../Footer/Footer';
-import { Main } from '../Main/Main';
-import { Card } from '../Card/Card';
-import { CardBoard } from '../Card/CardBoard';
-import { Header } from '../Header/Header';
-import { Container } from '../Main/Container';
+import { footer } from '../footer/footer';
+import { main } from '../main/main';
+import { card } from '../main/card/card';
+import { cardBoard } from '../main/card/cardBoard';
+import { header } from '../header/header';
+import { container } from '../main/container';
 
 export const mainPage = () => {
-  const cardWordLearning = Card('Изучение слов', 'word-learning', 'card_main');
-  const cardWordRepeat = Card(
+  const cardWordLearning = card('Изучение слов', 'word-learning', 'card_main');
+  const cardWordRepeat = card(
     'Интервальное повторение слов',
     'word-repeat',
-    'card_main',
+    'card_main'
   );
-  const cardSpeakIt = Card('SpeakIt', 'speak-it');
-  const cardEngPuz = Card('English Puzzle', 'english-puzzle');
-  const cardSavannah = Card('Саванна', 'savannah');
-  const cardAudition = Card('Аудирование', 'audition');
-  const cardSprint = Card('Спринт', 'sprint');
-  const cardWordPuz = Card('Коструктор', 'word-puzzle');
-  const cardBoard1 = CardBoard(cardWordLearning, cardWordRepeat);
-  const cardBoard2 = CardBoard(cardSpeakIt, cardEngPuz, cardSavannah);
-  const cardBoard3 = CardBoard(cardAudition, cardSprint, cardWordPuz);
-  const container = Container(cardBoard1, cardBoard2, cardBoard3);
-  const pageComponents = Header(true, true, true) + Main(container) + Footer();
+  const cardSpeakIt = card('SpeakIt', 'speak-it');
+  const cardEngPuz = card('English Puzzle', 'english-puzzle');
+  const cardSavannah = card('Саванна', 'savannah');
+  const cardAudition = card('Аудирование', 'audition');
+  const cardSprint = card('Спринт', 'sprint');
+  const cardWordPuz = card('Коструктор', 'word-puzzle');
+  const cardBoard1 = cardBoard(cardWordLearning, cardWordRepeat);
+  const cardBoard2 = cardBoard(cardSpeakIt, cardEngPuz, cardSavannah);
+  const cardBoard3 = cardBoard(cardAudition, cardSprint, cardWordPuz);
+  const mainContainer = container(cardBoard1, cardBoard2, cardBoard3);
+  const pageComponents =
+    header(true, true, true) + main(mainContainer) + footer();
   return `<section class="main-page">${pageComponents}</section>`;
 };

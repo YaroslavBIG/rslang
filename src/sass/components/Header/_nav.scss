@@ -56,7 +56,7 @@
       width: 26px;
       height: 26px;
       cursor: pointer;
-      z-index: 1;
+      z-index: 101;
     }
     .nav__btn > span,
     .nav__btn > span::before,
@@ -90,6 +90,7 @@
       background-color: #eceff1eb;
       box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
       transition-duration: 0.25s;
+      z-index: 100;
     }
     .nav__item {
       display: block;
