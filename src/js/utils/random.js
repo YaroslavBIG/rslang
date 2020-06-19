@@ -3,25 +3,23 @@
  * Для получения случайных чисел в диапазоне:
  * @param {number} min Минимально возможное число
  * @param {number} max Максимально возможное число
- * @return {number}
- * @usage
- *   Генерирует случайное число от min до max
+ * @return {number} number
+ * @usage Генерирует случайное число от min до max
  */
 
-function randomInteger(min, max) {
+export const randomInteger = (min, max) => {
   const rand = min + Math.random() * (max + 1 - min);
   return Math.floor(rand);
-}
+};
 
 /**
  * Random Arrray
  * Для получения массива случайных чисел:
  * @param {number} len Длинна массива
- * @return {Array}
- * @usage
- *   Генерирует массив чисел от 0 до указанной длинны
+ * @return {Array} array
+ * @usage Генерирует массив чисел от 0 до указанной длинны
  */
-const randomArr = (len) => {
+export const randomArr = (len) => {
   const result = [];
   const size = len - 1;
   while (result.length < size) {
@@ -30,5 +28,3 @@ const randomArr = (len) => {
   }
   return result;
 };
-
-export { randomInteger, randomArr };

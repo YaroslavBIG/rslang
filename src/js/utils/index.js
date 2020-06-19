@@ -1,4 +1,4 @@
-import cutTags from './cutTags';
+import { cutTags } from './cutTags';
 import { randomInteger, randomArr } from './random';
 
 export { cutTags, randomInteger, randomArr };
