@@ -8,6 +8,7 @@ async function startMainGame() {
   const gameData = await getWords();
   gameContent(gameData);
   progressBar(10, 50);
+  document.querySelector('.sentence--target-word').focus();
 }
 
 export default startMainGame;

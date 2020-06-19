@@ -12,10 +12,12 @@ function mainGameRender() {
           <div class="separator"></div>
           <span class="card-text card-text--translate"></span>
         </div>
-        <div class="arrow arrow--left"></div>
-        <div class="arrow arrow--right"></div>
       </div>
-      <div class="translate__word"></div>
+      <div class="hints">
+      <div class="hints hint--translate_word"></div>
+      <div class="hints hint--image"></div>
+      <div class="hints hint--text_example"></div>
+      </div>
       <div class="progress-bar">
         <div class="progress">
           <div class="progress-done"></div>
