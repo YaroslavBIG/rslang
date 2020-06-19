@@ -1,4 +1,2 @@
-import { cutTags } from './cutTags';
-import { randomInteger, randomArr } from './random';
-
-export { cutTags, randomInteger, randomArr };
+export { cutTags } from './cutTags';
+export { randomInteger, randomArr } from './random';
