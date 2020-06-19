@@ -1,3 +1,9 @@
+// startGame
+import startGame from './startGame/startGame.js';
+document.getElementsByClassName()[0].addEventListener('click', function () {
+  startGame();
+});
+
 // startButtons
 import startButtons from './startButtons/startButtons.js';
 startButtons();
