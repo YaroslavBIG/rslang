@@ -6,7 +6,7 @@
   height: 375px;
   font-size: 16px;
   font-weight: $primary-font-weight;
-  padding: 55px 37px;
+  padding: 5px 37px;
 
   &__sign-in{
     transition: opacity .5s ease, transform .5s ease;
@@ -14,7 +14,7 @@
   }
   &__sign-up{
     position: relative;
-    top: -484px;
+    top: -383px;
     left: 400px;
     opacity: 0;
     transition: all .5s ease;
@@ -28,9 +28,12 @@
     height: 35px;
     padding-left: 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     margin-bottom: 20px;
     background: $color-back-input;
+  }
+  & input::placeholder{
+    color: $color-label;
   }
 }
 .sign-in_left, .sign-up_left{
@@ -42,8 +45,9 @@
 .sign-up_left{
   opacity: 1;
 }
-:focus{
+input:focus{
   outline: none;
+  width: 357px;
 }
 
 label {
@@ -69,4 +73,12 @@ label {
 .error-block{
   color: $primary-color;
   font-size: 15px;
+}
+
+.error-block-up{
+  color: $primary-color;
+  font-size: 12px;
+  p {
+    margin: 0;
+  }
 }

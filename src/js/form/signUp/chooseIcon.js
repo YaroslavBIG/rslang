@@ -1,4 +1,4 @@
-const icon = { iconURL: null };
+const icon = { iconURL: 'none' };
 
 const chooseIcon = () => {
   const arrIcons = document.querySelectorAll('.icons__item');
@@ -6,7 +6,8 @@ const chooseIcon = () => {
     elem.addEventListener('click', (ev) => {
       arrIcons.forEach((item) => item.classList.remove('icon_active'));
       elem.classList.add('icon_active');
-      icon.iconURL = ev.target.currentSrc.slice(33);
+
+      icon.iconURL = ev.target.alt;
     });
   });
 };

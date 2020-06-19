@@ -1,6 +1,5 @@
-import { globalUser, actionAuth } from '../../utils/main';
-import loginUser from '../../api/loginUser';
-import saveAuth from '../../utils/saveAuth';
+import { globalUser } from '../../utils/main';
+import logIn from './login';
 
 const signIn = () => {
   const nextButton = document.querySelector('.click-enter');
@@ -14,12 +13,8 @@ const signIn = () => {
 
   if (existUser) {
     if (getUser.password === pass) {
-      const user = { email: login, password: pass };
-
-      loginUser(user);
-
-      actionAuth.setAuth(true);
-      saveAuth();
+      const user = { email: login };
+      logIn(user);
       nextButton.click();
     } else {
       errorBlock.textContent = 'Invalid password. Try again';

@@ -1,9 +1,11 @@
 import { globalUser } from '../../utils/main';
 import createUser from '../../api/createUser';
-import { icon } from './chooseIcon';
+import saveIcon from './saveIcon';
+import logIn from '../signIn/login';
 
-const signUp = () => {
-  const errorBlock = document.querySelector('.error-block');
+const signUp = async () => {
+  const errorBlock = document.querySelector('.error-block-up');
+  const nextButton = document.querySelector('.click-enter');
 
   const login = document.querySelector('[name="email"]').value;
   const pass = document.querySelector('[name="password-up"]').value;
@@ -14,12 +16,12 @@ const signUp = () => {
 
     globalUser.set('email', login);
     globalUser.set('password', pass);
-    globalUser.set('iconURL', icon.iconURL);
 
-    const success = createUser(user);
-    if (success) {
-      alert('Now you can sign in');
-      window.location.reload();
+    const success = await createUser(user);
+    const logSuccess = await logIn(success);
+    const iconSuccess = await saveIcon(logSuccess);
+    if (iconSuccess) {
+      nextButton.click();
     }
   } else {
     errorBlock.innerHTML = `
