@@ -1,3 +1,5 @@
+import swaggerUrl from './constants';
+
 /**
  * Words
  * GET для получения списка слов:
@@ -13,12 +15,11 @@
  * самой простой(0) до самой сложной(5).
  */
 async function getWords(page = 0, group = 0, lte = 10, perPage = 20) {
-  const url = `https://afternoon-falls-25894.herokuapp.com/words?page=${page}&group=${group}
+  const url = `${swaggerUrl}words?page=${page}&group=${group}
   &wordsPerExampleSentenceLTE=${lte}&wordsPerPage=${perPage}`;
   try {
     const res = await fetch(url);
-    const data = await res.json();
-    return data;
+    return await res.json();
   } catch (err) {
     return Object.keys(err);
   }

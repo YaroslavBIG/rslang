@@ -10,9 +10,7 @@
 function cutTags(str) {
   const tags = /( |<([^>]+)>)/ig;
   const dots = /(\.)/g;
-  const result = str.replace(tags, '').replace(dots, '');
-
-  return result;
+  return str.replace(tags, '').replace(dots, '');
 }
 
 export default cutTags;
