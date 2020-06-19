@@ -1,5 +1,3 @@
-import router from '../router/router.js';
-
 function startButtons() {
   document.body.innerHTML += `
   <a href="#/speakit">speakit</a>
@@ -9,9 +7,6 @@ function startButtons() {
   <a href="#/sprint">sprint</a>
   <a href="#/constructor">constructor</a>
   `;
-
-  window.addEventListener('hashchange', router);
-  window.addEventListener('load', router) || router();
 }
 
 export default startButtons;
