@@ -1,3 +1,4 @@
-import mainPage from './js/pages/mainPage';
+import { mainPage } from './js/pages/mainPage';
 
-mainPage();
+const root = document.querySelector('#root');
+root.innerHTML = mainPage();

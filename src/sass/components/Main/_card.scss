@@ -10,7 +10,7 @@
   &_main {
     background-position: right 0 bottom 0;
     background-size: cover;
-    color: #ffffff;
+    color: $primary-color;
     width: 420px;
     flex-grow: 1;
     @media screen and (max-width: 1000px) {
@@ -55,11 +55,11 @@
   }
   &__title {
     margin: 10px;
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   &:hover {
     cursor: pointer;
-    box-shadow: 0 0 10px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px 12px $primary-shadow-color;
   }
   @media screen and (max-width: 1000px) {
     width: 77%;

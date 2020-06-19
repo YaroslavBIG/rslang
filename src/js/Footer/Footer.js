@@ -1,4 +1,4 @@
-const Footer = () => {
+export const Footer = () => {
   const copyrightContent = '© The Rolling Scopes School';
   const aboutContent = 'Сайт создан в рамках обучающей программы RSS';
   return `<footer class="footer">
@@ -6,4 +6,3 @@ const Footer = () => {
     <div class="footer__about">${aboutContent}</div>
   </footer>`;
 };
-export default Footer;

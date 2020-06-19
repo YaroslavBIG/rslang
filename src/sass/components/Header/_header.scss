@@ -8,7 +8,7 @@
   font-family: $primary-font-family;
   display: flex;
   align-items: center;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px 0 $primary-shadow-color;
   &__singout {
     color: $secondary-color;
     font-weight: $secondary-font-weight;
@@ -19,7 +19,7 @@
     margin: 0 20px;
     &:hover {
       cursor: pointer;
-      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 10px 0 $primary-shadow-color;
     }
   }
   &__logo {

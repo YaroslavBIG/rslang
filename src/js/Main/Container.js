@@ -1,2 +1,1 @@
-const Container = (...children) => `<div class="container">${[...children].join('')}</div>`;
-export default Container;
+export const Container = (...children) => `<div class="container">${[...children].join('')}</div>`;

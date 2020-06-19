@@ -1,12 +1,11 @@
-import Footer from '../Footer/Footer';
-import Main from '../Main/Main';
-import Card from '../Card/Card';
-import CardBoard from '../Card/CardBoard';
-import Header from '../Header/Header';
-import Container from '../Main/Container';
+import { Footer } from '../Footer/Footer';
+import { Main } from '../Main/Main';
+import { Card } from '../Card/Card';
+import { CardBoard } from '../Card/CardBoard';
+import { Header } from '../Header/Header';
+import { Container } from '../Main/Container';
 
-const mainPage = () => {
-  const root = document.querySelector('#root');
+export const mainPage = () => {
   const cardWordLearning = Card('Изучение слов', 'word-learning', 'card_main');
   const cardWordRepeat = Card(
     'Интервальное повторение слов',
@@ -23,6 +22,6 @@ const mainPage = () => {
   const cardBoard2 = CardBoard(cardSpeakIt, cardEngPuz, cardSavannah);
   const cardBoard3 = CardBoard(cardAudition, cardSprint, cardWordPuz);
   const container = Container(cardBoard1, cardBoard2, cardBoard3);
-  root.innerHTML = Header(true, true, true) + Main(container) + Footer();
+  const pageComponents = Header(true, true, true) + Main(container) + Footer();
+  return `<section class="main-page">${pageComponents}</section>`;
 };
-export default mainPage;

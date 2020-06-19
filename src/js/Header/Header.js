@@ -1,11 +1,11 @@
 import '../../assets/img/noavatar.png';
 import '../../assets/img/settings.png';
-import Nav from './Nav';
-import Logo from './Logo';
+import { Nav } from './Nav';
+import { Logo } from './Logo';
 
 const avatarPath = 'assets/img/noavatar.png';
 const settingsIconPath = 'assets/img/settings.png';
-const Header = (showNav, showUser, showSettings) => {
+export const Header = (showNav, showUser, showSettings) => {
   const singoutContent = 'Выход';
   const logo = Logo();
   const nav = showNav ? Nav() : '';
@@ -22,4 +22,3 @@ const Header = (showNav, showUser, showSettings) => {
     logo + nav + settingsIcon + userAvatar
   }</header>`;
 };
-export default Header;
