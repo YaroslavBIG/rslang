@@ -1,3 +1,7 @@
+// startButtons
+import startButtons from './startButtons/startButtons.js';
+startButtons();
+
 // Components
 import speakit from './speakitRouter.js';
 import englishPuzzle from './englishPuzzleRouter.js';
