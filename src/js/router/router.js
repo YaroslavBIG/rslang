@@ -12,27 +12,27 @@ var listeningGame = document.getElementById('listeningGame');
 var sprintGame = document.getElementById('sprintGame');
 var constructorGame = doxument.getElementById('constructorGame');
 
-speakitGame.addEventListener('click', function () {
+speakitGame.addEventListener('click', () => {
   alert();
 });
 
-englishPuzzleGame.addEventListener('click', function () {
+englishPuzzleGame.addEventListener('click', () => {
   alert();
 });
 
-savannahGame.addEventListener('click', function () {
+savannahGame.addEventListener('click', () => {
   alert();
 });
 
-listeningGame.addEventListener('click', function () {
+listeningGame.addEventListener('click', () => {
   alert();
 });
 
-sprintGame.addEventListener('click', function () {
+sprintGame.addEventListener('click', () => {
   alert();
 });
 
-constructorGame.addEventListener('click', function () {
+constructorGame.addEventListener('click', () => {
   alert();
 });
 
