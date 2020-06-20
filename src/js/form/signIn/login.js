@@ -2,18 +2,20 @@ import { actionAuth, globalUser } from '../../utils/main';
 import loginUser from '../../api/loginUser';
 import saveAuth from '../../utils/saveAuth';
 
-const logIn = async (user) => {
-  const pass = globalUser.get().password;
-  const getUserInfo = {
-    email: user.email,
-    password: pass,
-  };
-  const success = await loginUser(getUserInfo);
+const logIn = async (res) => {
+  const { password: pass, email: em } = globalUser.get();
 
-  if (success) {
-    actionAuth.setAuth(true);
-    saveAuth();
-    return success;
+  if (res) {
+    const userInfo = {
+      email: em,
+      password: pass,
+    };
+    const success = await loginUser(userInfo);
+    if (success) {
+      actionAuth.setAuth(true);
+      saveAuth();
+      return success;
+    }
   }
 };
 

@@ -8,19 +8,18 @@ const signIn = () => {
   const login = document.querySelector('[name="login"]').value;
   const pass = document.querySelector('[name="password-in"]').value;
 
-  const getUser = globalUser.get();
-  const existUser = (getUser.email === login);
+  const { email: em, password: userPass } = globalUser.get();
 
-  if (existUser) {
-    if (getUser.password === pass) {
-      const user = { email: login };
-      logIn(user);
+  if (em === login) {
+    if (userPass === pass) {
+      const success = true;
+      logIn(success);
       nextButton.click();
     } else {
-      errorBlock.textContent = 'Invalid password. Try again';
+      errorBlock.textContent = 'Неверный пароль, попробуйте снова';
     }
   } else {
-    errorBlock.textContent = "The user doesn't exist";
+    errorBlock.textContent = 'Пользователь не существует';
   }
 };
 

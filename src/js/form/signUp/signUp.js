@@ -20,18 +20,13 @@ const signUp = async () => {
     const success = await createUser(user);
     const logSuccess = await logIn(success);
     const iconSuccess = await saveIcon(logSuccess);
+
     if (iconSuccess) {
+      alert('Успешная регистрация!');
       nextButton.click();
     }
   } else {
-    errorBlock.innerHTML = `
-      <p> Password must be minimum: </p>
-      <p>- 8 symbols; </p>
-      <p>- one uppercase letter;</p>
-      <p>- one lowercase letter;</p>
-      <p>- one digital;</p>
-      <p>- one special symbol;</p>
-    `;
+    errorBlock.innerHTML = 'неверный пароль!';
   }
 };
 

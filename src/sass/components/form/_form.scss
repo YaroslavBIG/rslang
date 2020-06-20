@@ -4,7 +4,6 @@
 
 .form{
   height: 375px;
-  font-size: $primary-font-size;
   font-weight: $primary-font-weight;
   padding: 5px 37px;
 
@@ -20,15 +19,15 @@
     transition: all .5s ease;
   }
   &__sign-in input, &__sign-up input {
-    color: $primary-color;
-    font-size: $primary-font-size - 3px;
+    color: $secondary-color;
+    font-size: $primary-font-size;
   }
   &__styling {
     width: 100%;
     height: 35px;
     border: none;
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     background: $color-back-input;
   }
   & input::placeholder{
@@ -70,12 +69,13 @@ label {
   transition: all .25s ease;
 }
 
-.error-block{
-  color: $secondary-color;
+.error-block, .error-block-up{
+  color: $color-error-text;
   font-size: $primary-font-size;
+  text-align: center;
 }
 
-.error-block-up{
+.rules{
   color: $secondary-color;
   font-size: $primary-font-size - 4px;
   p {

@@ -2,9 +2,7 @@ import { actionAuth, globalUser } from '../utils/main';
 
 const getResponse = async (url, { ...options }) => {
   const isAuth = actionAuth.getAuth();
-  const info = globalUser.get();
-  const { token: tokenRes } = info;
-
+  const { token: tokenRes } = globalUser.get();
   const invalidToken = 401;
 
   const resURL = `https://afternoon-falls-25894.herokuapp.com/${url}`;
@@ -25,7 +23,7 @@ const getResponse = async (url, { ...options }) => {
     });
     if (response && response.status === invalidToken) {
       actionAuth.setAuth(false);
-      // router();
+      // router(); need, but doesn't exist yet. comment, because eslint is angry.
     }
     const content = await response.json();
     return content;

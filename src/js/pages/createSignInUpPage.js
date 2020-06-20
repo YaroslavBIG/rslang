@@ -20,7 +20,8 @@ function createSignInUpPage() {
             <form class="form form__sign-up" action="" method="post" name="form" data-up>
    <input required autocomplete="disabled" class="form__styling sign-up__login" type="e-mail" name="email" placeholder="e-mail"/>
 <input required autocomplete="disabled" class="form__styling sign-up__pass" type="text" name="password-up" placeholder="пароль"/>
-              <div class="error-block-up">
+              <div class="error-block-up"></div>
+              <div class="rules">
               <p> пароль должен содержать минимум: </p>
               <p>- 8 символов; </p>
               <p>- одну заглавную букву;</p>

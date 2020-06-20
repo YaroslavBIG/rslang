@@ -3,6 +3,8 @@ import getResponse from '../../api/getResponse';
 
 const saveIcon = async (resResp) => {
   const authMess = 'Authenticated';
+  const success = true;
+
   const bodyIcon = {
     wordsPerDay: 50,
     optional: {
@@ -14,7 +16,7 @@ const saveIcon = async (resResp) => {
   if (resResp.message === authMess) {
     const content = await getResponse(`users/${resResp.userId}/settings`, { method: 'PUT', body: json });
     if (content) {
-      return true;
+      return success;
     }
   }
 };
