@@ -1,6 +1,6 @@
-import controllerHandler from './controllerHandler';
+import { controllerHandler } from './controllerHandler';
 
-const taskRendering = (word, translate, wordId, translateID) => {
+export const taskRendering = (word, translate, wordId, translateID) => {
   const wordBlock = document.getElementById('question');
   const translateBlock = document.getElementById('answer');
   wordBlock.innerHTML = word;
@@ -8,5 +8,3 @@ const taskRendering = (word, translate, wordId, translateID) => {
 
   controllerHandler(wordId, translateID);
 };
-
-export default taskRendering;

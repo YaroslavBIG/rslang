@@ -1,6 +1,6 @@
-import constantsData from './constants';
+import { constantsData } from './constants';
 
-const sprintGameIndex = () => `
+export const sprintGameIndex = () => `
   <section class="sprint-game__screen-wrapper" id="wrapper">
     <div class="screen-wrapper__points">
         <p class="points__quantity" id="points"></p>
@@ -35,5 +35,3 @@ const sprintGameIndex = () => `
     <div class="screen-wrapper__timer" id="timer"></div>
   </section>
   `;
-
-export default sprintGameIndex;

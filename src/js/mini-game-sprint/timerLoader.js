@@ -1,6 +1,6 @@
-import constantsData from './constants';
+import { constantsData } from './constants';
 
-const timerLoader = () => {
+export const timerLoader = () => {
   const loader = document.getElementById('loader');
   const timer = document.getElementById('timer');
   let a = 0;
@@ -23,5 +23,3 @@ const timerLoader = () => {
   };
   draw();
 };
-
-export default timerLoader;

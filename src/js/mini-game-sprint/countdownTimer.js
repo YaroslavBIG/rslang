@@ -1,7 +1,7 @@
-import constantsData from './constants';
-import timerLoader from './timerLoader';
+import { constantsData } from './constants';
+import { timerLoader } from './timerLoader';
 
-const countdownTimer = () => {
+export const countdownTimer = () => {
   const timerContainer = document.getElementById('timer');
   const points = document.getElementById('points');
   const wrapper = document.getElementById('wrapper');
@@ -28,5 +28,3 @@ const countdownTimer = () => {
   timerLoader(yourTime);
   tikTak();
 };
-
-export default countdownTimer;

@@ -1,7 +1,7 @@
-import sprintGameIndex from '../mini-game-sprint/sprintGameIndex';
-import voiceBtnHandler from '../mini-game-sprint/voiceButtonHandler';
-import countdownTimer from '../mini-game-sprint/countdownTimer';
-import fetchSprintGameData from '../mini-game-sprint/fetchSprintGameData';
+import { sprintGameIndex } from '../mini-game-sprint/sprintGameIndex';
+import { voiceBtnHandler } from '../mini-game-sprint/voiceButtonHandler';
+import { countdownTimer } from '../mini-game-sprint/countdownTimer';
+import { fetchSprintGameData } from '../mini-game-sprint/fetchSprintGameData';
 import { randomInteger } from '../utils/index';
 
 const startSprintGame = () => {
