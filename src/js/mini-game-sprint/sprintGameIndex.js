@@ -1,22 +1,22 @@
 import constantsData from './constants';
 
 const sprintGameIndex = () => `
-  <section class="sprint-game__screen-wrapper">
+  <section class="sprint-game__screen-wrapper" id="wrapper">
     <div class="screen-wrapper__points">
-        <p class="points__quantity">99</p>
+        <p class="points__quantity" id="points"></p>
     </div>
-    <div class="screen-wrapper__main-content">
+    <div class="screen-wrapper__main-content" id="main-content">
       <div class="main-content__information"></div>
       <div class="main-content__combo-block"></div>
       <div class="main-content__task-container">
         <p class="task-container__question" id="question"></p>
         <p class="task-container__answer" id="answer"></p>
       </div>
-      <div class="main-content__control">
-        <div class="control__wrong-btn" id="wrong-btn">
+      <div class="main-content__controller">
+        <div class="controller__wrong-btn" id="wrong-btn">
           ${constantsData.wrongBtnText}
         </div>
-        <div class="control__right-btn" id="right-btn">
+        <div class="controller__right-btn" id="right-btn">
           ${constantsData.rightBtnText}
         </div>
       </div>
