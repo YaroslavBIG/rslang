@@ -11,7 +11,7 @@ export const savannahGame = () => `
           <iframe width="560" height="315" src="https://www.youtube.com/embed/f4ioMGDQblI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="modal-body__video"></iframe>
         </div>
         <div class="modal-footer">
-          <button class="modal-footer__button-start"><span class="modal-footer__button-name">Начать</span></button>
+          <button class="modal-footer__button-start" id="savannahGame"><span class="modal-footer__button-name">Начать</span></button>
         </div>
       </div>
       </div>

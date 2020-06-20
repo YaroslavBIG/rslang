@@ -5,6 +5,37 @@ import listeningGame from './listeningRouter.js';
 import sprintGame from './sprintRouter.js';
 import constructorGame from './constructorRouter.js';
 
+var speakitGame = document.getElementById('speakitGame');
+var englishPuzzleGame = document.getElementById('englishPuzzleGame');
+var savannahGame = document.getElementById('savannahGame');
+var listeningGame = document.getElementById('listeningGame');
+var sprintGame = document.getElementById('sprintGame');
+var constructorGame = doxument.getElementById('constructorGame');
+
+speakitGame.addEventListener('click', function () {
+  alert();
+});
+
+englishPuzzleGame.addEventListener('click', function () {
+  alert();
+});
+
+savannahGame.addEventListener('click', function () {
+  alert();
+});
+
+listeningGame.addEventListener('click', function () {
+  alert();
+});
+
+sprintGame.addEventListener('click', function () {
+  alert();
+});
+
+constructorGame.addEventListener('click', function () {
+  alert();
+});
+
 const mainPage = () => {
   return ``;
 };
