@@ -1,5 +1,4 @@
-export const constructor = () => {
-  return `
+export const constructor = () => `
       <div id="myModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
@@ -16,5 +15,4 @@ export const constructor = () => {
         </div>
       </div>
       </div>
-        `;
-};
+      `;

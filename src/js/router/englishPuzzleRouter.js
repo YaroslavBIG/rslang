@@ -1,5 +1,4 @@
-export const englishPuzzle = () => {
-  return `
+export const englishPuzzle = () => `
       <div id="myModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
@@ -17,4 +16,3 @@ export const englishPuzzle = () => {
       </div>
       </div>
       `;
-};
