@@ -1,8 +1,6 @@
 const sprint = () => {
   return `
-          
       <div id="myModal" class="modal">
-  
       <div class="modal-content">
         <div class="modal-header">
         <a href="#/" class="close"></a>
@@ -17,9 +15,7 @@ const sprint = () => {
           <button class="modal-footer__button-start"><span class="modal-footer__button-name">Начать</span></button>
         </div>
       </div>
-      
       </div>
-    
         `;
 };
 
