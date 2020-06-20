@@ -45,3 +45,5 @@ const checkPath = (path) => {
     }
   }
 };
+
+window.onload = () => (document.querySelector('body').innerHTML = s());
