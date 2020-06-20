@@ -3,7 +3,7 @@ import { constantsData } from './constants';
 export const sprintGameIndex = () => `
   <section class="sprint-game__screen-wrapper" id="wrapper">
     <div class="screen-wrapper__points">
-        <p class="points__quantity" id="points"></p>
+        <p class="points__quantity" id="points">0</p>
     </div>
     <div class="screen-wrapper__main-content" id="main-content">
       <div class="main-content__information"></div>

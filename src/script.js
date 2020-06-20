@@ -1,3 +1,3 @@
-import startSprintGame from './js/pages/sprintGamePage';
+import { startSprintGame } from './js/pages/sprintGamePage';
 
 startSprintGame();

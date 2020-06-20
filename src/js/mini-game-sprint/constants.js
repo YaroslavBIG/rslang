@@ -7,6 +7,9 @@ export const constantsData = {
   loaderTime: 167,
   rightBtnText: 'RIGHT',
   wrongBtnText: 'WRONG',
-  countSum: 10,
+  minimumScore: 10,
   combo: 1,
+  correctAnswersCounter: 0,
+  wrongAnswersCounter: 0,
+  rightInARow: 0,
 };

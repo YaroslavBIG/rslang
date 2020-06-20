@@ -1,5 +1,6 @@
 import { constantsData } from './constants';
 import { timerLoader } from './timerLoader';
+import { repeatButtonHandler } from './repeatButtonHandler';
 
 export const countdownTimer = () => {
   const timerContainer = document.getElementById('timer');
@@ -18,9 +19,10 @@ export const countdownTimer = () => {
         <div class="screen-wrapper__result-block">
             <p class="result-block__your-result">Your result: ${yourResult}</p>
             <p class="result-block__description">Что-то будет написано</p>
-            <div class="result-block__start-btn">START</div>
+            <div class="result-block__start-btn" id="repeat-btn">REPEAT</div>
         </div>
       `; // Продумать, что будет появляться после завершения игры
+      repeatButtonHandler();
     } else {
       timer = setTimeout(tikTak, constantsData.oneSec);
     }
