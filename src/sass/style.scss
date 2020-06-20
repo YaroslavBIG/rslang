@@ -2,5 +2,8 @@
 @import './commons/normalize.scss';
 @import './commons/vars.scss';
 @import './commons/base';
+@import './components/buttons/buttons';
 @import './components/form/form';
-@import './components/form/media-form';
+@import './components/form/icon-auth';
+@import './components/form/start-section';
+@import './components/media/media-form';

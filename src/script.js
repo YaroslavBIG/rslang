@@ -1,4 +1,4 @@
-import { load } from './js/utils/load';
+import { load } from './js/utils';
 
 window.onload = () => {
   load();
