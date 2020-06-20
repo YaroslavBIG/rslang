@@ -5,11 +5,11 @@
   border: none;
   border-radius: 8px;
   text-transform: uppercase;
-  font-size: $primary-font-size - 3px;
   text-align: center;
-  color: $primary-color;
+  color: $secondary-color;
   background-color: $active-color;
   font-size: $primary-font-size;
+  font-weight: $secondary-font-weight;
   margin-top: 23px;
   cursor: pointer;
 }
