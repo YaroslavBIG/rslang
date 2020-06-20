@@ -1,4 +1,4 @@
-const sprint = () => {
+export const sprint = () => {
   return `
       <div id="myModal" class="modal">
       <div class="modal-content">
@@ -18,5 +18,3 @@ const sprint = () => {
       </div>
         `;
 };
-
-export default sprint;

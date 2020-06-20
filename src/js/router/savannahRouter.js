@@ -1,4 +1,4 @@
-const savannah = () => {
+export const savannah = () => {
   return `
       <div id="myModal" class="modal">
       <div class="modal-content">
@@ -18,5 +18,3 @@ const savannah = () => {
       </div>
       `;
 };
-
-export default savannah;

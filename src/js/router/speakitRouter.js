@@ -1,4 +1,4 @@
-const speakit = () => {
+export const speakit = () => {
   return `    
     <div id="myModal" class="modal">
     <div class="modal-content">
@@ -18,4 +18,3 @@ const speakit = () => {
     </div>
       `;
 };
-export default speakit;

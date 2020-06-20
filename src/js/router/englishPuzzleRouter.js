@@ -1,4 +1,4 @@
-const englishPuzzle = () => {
+export const englishPuzzle = () => {
   return `
       <div id="myModal" class="modal">
       <div class="modal-content">
@@ -18,4 +18,3 @@ const englishPuzzle = () => {
       </div>
       `;
 };
-export default englishPuzzle;
