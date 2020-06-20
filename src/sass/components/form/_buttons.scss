@@ -4,12 +4,12 @@
   height: 35px;
   border: none;
   border-radius: 5px;
-  font-weight: 700;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: $primary-font-size - 3px;
   text-align: center;
   color: $primary-color;
   background-color: $active-color;
+  font-size: $primary-font-size;
   margin-top: 23px;
   cursor: pointer;
 }

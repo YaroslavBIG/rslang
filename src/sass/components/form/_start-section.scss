@@ -8,12 +8,11 @@
 }
 
 .start-enter{
-  padding-top: 5%;
+  padding-top: 10%;
   &__inner{
     height: 470px;
-    width: 430px;
-    margin: auto;
-    border-radius: 5px;
+    width: 370px;
+    border-radius: 8px;
     box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
     overflow: hidden;
     transition: all .5s ease;
@@ -26,15 +25,25 @@
 
     li{
       padding-left: 10px;
-      font-size: 18px;
+      font-size: $primary-font-size + 2px;
       display: inline;
       text-transform: uppercase;
       padding-right: 10px;
-      color: $primary-color;
     }
   }
+  &__text{
+    width: 400px;
+    font-size: $primary-font-size + 24px;
+    padding: 100px 0 0 20px;
+    text-align: center;
+    color: $secondary-color;
+  }
 }
-
+.inner{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
 .sign{
   cursor: pointer;
 }
@@ -42,7 +51,7 @@
   transition: all .25s ease;
 }
 .active a{
-  color: $primary-color;
+  color: $secondary-color;
   border-bottom: 2px solid $active-color;
 }
 .inactive a{
