@@ -1,4 +1,4 @@
-export const englishPuzzle = () => `
+export const englishPuzzleGame = () => `
       <div id="myModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">

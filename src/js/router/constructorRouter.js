@@ -1,4 +1,4 @@
-export const constructor = () => `
+export const constructorGame = () => `
       <div id="myModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">

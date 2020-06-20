@@ -1,4 +1,4 @@
-export const sprint = () => `
+export const sprintGame = () => `
       <div id="myModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">

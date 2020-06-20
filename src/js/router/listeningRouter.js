@@ -1,4 +1,4 @@
-export const listening = () => `
+export const listeningGame = () => `
       <div id="myModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">

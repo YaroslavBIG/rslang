@@ -1,9 +1,9 @@
-import speakit from './speakitRouter.js';
-import englishPuzzle from './englishPuzzleRouter.js';
-import savannah from './savannahRouter.js';
-import listening from './listeningRouter.js';
-import sprint from './sprintRouter.js';
-import constructor from './constructorRouter.js';
+import speakitGame from './speakitRouter.js';
+import englishPuzzleGame from './englishPuzzleRouter.js';
+import savannahGame from './savannahRouter.js';
+import listeningGame from './listeningRouter.js';
+import sprintGame from './sprintRouter.js';
+import constructorGame from './constructorRouter.js';
 
 const mainPage = () => {
   return ``;
@@ -12,12 +12,12 @@ const mainPage = () => {
 // Routes
 const routes = [
   { path: '/', component: mainPage },
-  { path: '/speakit', component: speakit },
-  { path: '/english-puzzle', component: englishPuzzle },
-  { path: '/savannah', component: savannah },
-  { path: '/listening', component: listening },
-  { path: '/sprint', component: sprint },
-  { path: '/constructor', component: constructor },
+  { path: '/speakit', component: speakitGame },
+  { path: '/english-puzzle', component: englishPuzzleGame },
+  { path: '/savannah', component: savannahGame },
+  { path: '/listening', component: listeningGame },
+  { path: '/sprint', component: sprintGame },
+  { path: '/constructor', component: constructorGame },
 ];
 
 const checkPath = (path) => {
@@ -26,22 +26,22 @@ const checkPath = (path) => {
       return mainPage();
     }
     case '/speakit': {
-      return speakit();
+      return speakitGame();
     }
     case '/english-puzzle': {
-      return englishPuzzle();
+      return englishPuzzleGame();
     }
     case '/savannah': {
-      return savannah();
+      return savannahGame();
     }
     case '/listening': {
-      return listening();
+      return listeningGame();
     }
     case '/sprint': {
-      return sprint();
+      return sprintGame();
     }
     case '/constructor': {
-      return constructor();
+      return constructorGame();
     }
   }
 };
