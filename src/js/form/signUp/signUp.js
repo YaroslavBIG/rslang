@@ -1,9 +1,9 @@
-import { globalUser } from '../../utils/main';
-import createUser from '../../api/createUser';
-import saveIcon from './saveIcon';
-import logIn from '../signIn/login';
+import { globalUser } from '../../utils';
+import { createUser } from '../../api';
+import { saveIcon } from './saveIcon';
+import { logIn } from '../signIn/login';
 
-const signUp = async () => {
+export const signUp = async () => {
   const errorBlock = document.querySelector('.error-block-up');
   const nextButton = document.querySelector('.click-enter');
 
@@ -29,5 +29,3 @@ const signUp = async () => {
     errorBlock.innerHTML = 'неверный пароль!';
   }
 };
-
-export default signUp;

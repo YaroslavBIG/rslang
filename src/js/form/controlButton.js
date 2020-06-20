@@ -1,6 +1,6 @@
-import checkStateButton from './checkStateButton';
+import { checkStateButton } from './checkStateButton';
 
-const controlButton = () => {
+export const controlButton = () => {
   const signUp = document.querySelector('.sign__up');
   const signIn = document.querySelector('.sign__in');
 
@@ -10,5 +10,3 @@ const controlButton = () => {
   checkStateButton(signUp);
   checkStateButton(signIn);
 };
-
-export default controlButton;

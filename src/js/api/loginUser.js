@@ -1,10 +1,8 @@
-import getResponse from './getResponse';
-import saveUser from '../utils/saveUser';
-import { globalUser } from '../utils/main';
+import { getResponse } from './getResponse';
+import { saveUser, globalUser } from '../utils';
 
-const loginUser = async (user) => {
-  const parse = JSON.stringify(user);
-  const content = await getResponse('signin', { method: 'POST', body: parse });
+export const loginUser = async (user) => {
+  const content = await getResponse('signin', { method: 'POST', body: JSON.stringify(user) });
 
   if (content) {
     globalUser.set('token', content.token);
@@ -13,5 +11,3 @@ const loginUser = async (user) => {
     return content;
   }
 };
-
-export default loginUser;

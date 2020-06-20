@@ -1,8 +1,3 @@
-function createErrorPage() {
-  return `
-      <section>
+export const createErrorPage = () => `<section>
         <h1>Error</h1>
       </section>`;
-}
-
-export default createErrorPage;

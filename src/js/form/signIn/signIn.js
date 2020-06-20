@@ -1,7 +1,7 @@
-import { globalUser } from '../../utils/main';
-import logIn from './login';
+import { globalUser } from '../../utils';
+import { logIn } from './login';
 
-const signIn = () => {
+export const signIn = () => {
   const nextButton = document.querySelector('.click-enter');
   const errorBlock = document.querySelector('.error-block');
 
@@ -22,5 +22,3 @@ const signIn = () => {
     errorBlock.textContent = 'Пользователь не существует';
   }
 };
-
-export default signIn;

@@ -1,8 +1,7 @@
-import { actionAuth, globalUser } from '../../utils/main';
-import loginUser from '../../api/loginUser';
-import saveAuth from '../../utils/saveAuth';
+import { actionAuth, globalUser, saveAuth } from '../../utils';
+import { loginUser } from '../../api';
 
-const logIn = async (res) => {
+export const logIn = async (res) => {
   const { password: pass, email: em } = globalUser.get();
 
   if (res) {
@@ -18,5 +17,3 @@ const logIn = async (res) => {
     }
   }
 };
-
-export default logIn;

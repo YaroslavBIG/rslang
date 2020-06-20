@@ -1,5 +1,4 @@
-function createSignInUpPage() {
-  return `<section class="inner-section__start">
+export const createSignInUpPage = () => `<section class="inner-section__start">
     <a href="#/main" class="click-enter"></a>
       <div class="start-enter">
       <div class="inner">
@@ -48,6 +47,3 @@ function createSignInUpPage() {
         </div>
       </div>
     </section>`;
-}
-
-export default createSignInUpPage;

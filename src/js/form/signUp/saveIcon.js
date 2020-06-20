@@ -1,7 +1,7 @@
 import { icon } from './chooseIcon';
-import getResponse from '../../api/getResponse';
+import { getResponse } from '../../api';
 
-const saveIcon = async (resResp) => {
+export const saveIcon = async (resResp) => {
   const authMess = 'Authenticated';
   const success = true;
 
@@ -11,14 +11,11 @@ const saveIcon = async (resResp) => {
       icon: icon.iconURL,
     },
   };
-  const json = JSON.stringify(bodyIcon);
 
   if (resResp.message === authMess) {
-    const content = await getResponse(`users/${resResp.userId}/settings`, { method: 'PUT', body: json });
+    const content = await getResponse(`users/${resResp.userId}/settings`, { method: 'PUT', body: JSON.stringify(bodyIcon) });
     if (content) {
       return success;
     }
   }
 };
-
-export default saveIcon;

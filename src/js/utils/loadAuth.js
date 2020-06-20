@@ -1,8 +1,6 @@
 import { actionAuth } from './main';
 
-const loadAuth = () => {
+export const loadAuth = () => {
   const resAuth = localStorage.getItem('auth');
   actionAuth.setAuth(resAuth);
 };
-
-export default loadAuth;

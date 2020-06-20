@@ -1,7 +1,7 @@
-import signIn from './signIn/signIn';
-import signUp from './signUp/signUp';
+import { signIn } from './signIn/signIn';
+import { signUp } from './signUp/signUp';
 
-const submitForm = () => {
+export const submitForm = () => {
   document.querySelector('[data-up]').addEventListener('submit', (event) => {
     event.preventDefault();
     signUp();
@@ -11,5 +11,3 @@ const submitForm = () => {
     signIn();
   });
 };
-
-export default submitForm;

@@ -1,6 +1,6 @@
-import controlButton from './controlButton';
+import { controlButton } from './controlButton';
 
-const controlForm = () => {
+export const controlForm = () => {
   document.querySelector('.control-in').addEventListener('click', () => {
     controlButton();
   });
@@ -8,5 +8,3 @@ const controlForm = () => {
     controlButton();
   });
 };
-
-export default controlForm;

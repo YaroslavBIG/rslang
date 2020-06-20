@@ -1,12 +1,10 @@
-import createSignInUpPage from '../pages/createSignInUpPage';
-import loadAuth from './loadAuth';
-import loadUser from './loadUser';
-import submitForm from '../form/submitForm';
+import { createSignInUpPage } from '../pages';
+import { loadAuth } from './loadAuth';
+import { loadUser } from './loadUser';
+import { submitForm, controlForm, chooseIcon } from '../form';
 import { globalUser } from './main';
-import controlForm from '../form/controlForm';
-import { chooseIcon } from '../form/signUp/chooseIcon';
 
-const load = () => {
+export const load = () => {
   loadAuth();
   globalUser.setFullUser(loadUser());
   document.querySelector('body').innerHTML = createSignInUpPage();
@@ -16,5 +14,3 @@ const load = () => {
   console.log(globalUser.get());
   // router();
 };
-
-export default load;

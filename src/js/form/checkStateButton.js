@@ -1,4 +1,4 @@
-const checkStateButton = (button) => {
+export const checkStateButton = (button) => {
   if (button.classList.contains('inactive')) {
     button.classList.remove('inactive');
     button.classList.add('active');
@@ -7,5 +7,3 @@ const checkStateButton = (button) => {
     button.classList.add('inactive');
   }
 };
-
-export default checkStateButton;

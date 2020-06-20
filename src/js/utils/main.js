@@ -1,4 +1,4 @@
-const globalUser = {
+export const globalUser = {
   user: {},
   get() {
     return this.user;
@@ -11,7 +11,7 @@ const globalUser = {
   },
 };
 
-const actionAuth = {
+export const actionAuth = {
   setAuth(auth) {
     this.isAuth = auth;
   },
@@ -19,5 +19,3 @@ const actionAuth = {
     return this.isAuth;
   },
 };
-
-export { globalUser, actionAuth };

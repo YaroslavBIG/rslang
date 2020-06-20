@@ -1,12 +1,26 @@
-import { actionAuth, globalUser } from '../utils/main';
+import { actionAuth, globalUser } from '../utils';
+import { swaggerUrl } from './constants';
 
-const getResponse = async (url, { ...options }) => {
+/**
+ * Get Response.
+ * Функция работы с сервером, возвращает успешный респонс.
+ * @param {string} url Все, что идет после https://afternoon-falls-25894.herokuapp.com/
+ * @param {object} { ...options } Обычно method и\или body.
+ * @return {object} object Каков запрос - таков ответ, если он нужен.
+ * @usage
+ * const user = { email: 'email', password: 'pass' };
+ * getResponse('users', { method: 'POST', body: JSON.stringify(user) }) =>
+ * response { id: 'id', email: 'email' };
+ */
+
+export const getResponse = async (url, { ...options }) => {
   const isAuth = actionAuth.getAuth();
   const { token: tokenRes } = globalUser.get();
   const invalidToken = 401;
 
-  const resURL = `https://afternoon-falls-25894.herokuapp.com/${url}`;
+  const resURL = `${swaggerUrl}${url}`;
   const authorization = (isAuth === 'true' || isAuth === true) ? { Authorization: `Bearer ${tokenRes}` } : {};
+  const isToken = (isAuth === 'true' || isAuth === true) ? { withCredentials: true } : {};
 
   const baseHeaders = {
     ...authorization,
@@ -17,13 +31,13 @@ const getResponse = async (url, { ...options }) => {
   try {
     const response = await fetch(resURL, {
       ...options,
+      ...isToken,
       headers: {
         ...baseHeaders,
       },
     });
     if (response && response.status === invalidToken) {
       actionAuth.setAuth(false);
-      // router(); need, but doesn't exist yet. comment, because eslint is angry.
     }
     const content = await response.json();
     return content;
@@ -31,5 +45,3 @@ const getResponse = async (url, { ...options }) => {
     return Object.keys(err);
   }
 };
-
-export default getResponse;
