@@ -78,7 +78,7 @@
     border-radius: 3px;
     cursor: pointer;
     color: $primary-color;
-    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 0 0 $secondary-shadow-color;
   }
   &__button-name {
     font-weight: $primary-font-weight + 100;
