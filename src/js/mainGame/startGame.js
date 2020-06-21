@@ -8,7 +8,7 @@ export const startMainGame = async () => {
   document.querySelector('#root').innerHTML = mainGameRender();
   const gameData = await getWords();
   gameContent(gameData);
-  progressBar(10, 50);
+  progressBar(0, 0);
   addMainGameListners();
   document.querySelector('.sentence--target-word').focus();
 };

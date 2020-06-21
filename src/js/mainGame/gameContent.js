@@ -2,11 +2,25 @@ import { cutTags, getTextWidth } from '../utils';
 import { progressBar } from './progressBar';
 import { dataUrl } from '../api';
 
-export const gameContent = (data, wordNum = 0) => {
+export const gameContent = (data = null, wordNum = 0) => {
+  const apiWords = () => sessionStorage.getItem('apiWords');
+
+  sessionStorage.setItem('wordNum', wordNum);
+
+  if (!apiWords()) {
+    sessionStorage.setItem('apiWords', JSON.stringify(data));
+  }
+
   console.log(data);
+  const userWords = apiWords();
+  const apiWordsParse = data || JSON.parse(userWords);
+
+  sessionStorage.setItem('collectionLen', apiWordsParse.length);
+  console.log(wordNum);
+  console.log(apiWordsParse);
   const {
     textExample, textExampleTranslate, word, wordTranslate, image, textMeaningTranslate,
-  } = data[wordNum];
+  } = apiWordsParse[wordNum];
   const cardQuestBlock = document.querySelector('.card-text--quest');
   const firstPartBlock = document.querySelector('.sentence--first-part');
   const wordBlock = document.querySelector('.sentence--target-word');
@@ -25,6 +39,7 @@ export const gameContent = (data, wordNum = 0) => {
   const textAfterWord = targetWordIndex === textLen ? '' : textArr.slice(targetWordIndex + 1, textLen).join(' ');
   const textWidth = getTextWidth(word, font);
 
+  wordImageBlock.innerHTML = '';
   const img = new Image();
   img.src = `${dataUrl}${image}`;
   img.onload = wordImageBlock.append(img);
@@ -32,7 +47,7 @@ export const gameContent = (data, wordNum = 0) => {
   wordTextExample.innerText = textMeaningTranslate;
 
   const progress = wordNum;
-  const progressAll = data.length;
+  const progressAll = apiWordsParse.length;
 
   firstPartBlock.innerText = textBeforeWord;
   wordBlock.style.width = `${textWidth}px`;
