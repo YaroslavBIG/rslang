@@ -39,10 +39,12 @@ export const gameContent = (data = null, wordNum = 0) => {
   const textAfterWord = targetWordIndex === textLen ? '' : textArr.slice(targetWordIndex + 1, textLen).join(' ');
   const textWidth = getTextWidth(word, font);
 
-  wordImageBlock.innerHTML = '';
   const img = new Image();
   img.src = `${dataUrl}${image}`;
-  img.onload = wordImageBlock.append(img);
+  img.onload = () => {
+    wordImageBlock.innerHTML = '';
+    wordImageBlock.append(img);
+  };
 
   wordTextExample.innerText = textMeaningTranslate;
 
