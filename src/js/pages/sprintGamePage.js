@@ -5,10 +5,8 @@ import { fetchSprintGameData } from '../mini-game-sprint/fetchSprintGameData';
 import { randomInteger } from '../utils/index';
 
 export const startSprintGame = () => {
-  window.onload = () => {
-    document.body.innerHTML = sprintGameIndex();
-    fetchSprintGameData(randomInteger(0, 59), randomInteger(0, 5));
-    voiceBtnHandler();
-    countdownTimer();
-  };
+  document.body.innerHTML = sprintGameIndex();
+  fetchSprintGameData(randomInteger(0, 59), randomInteger(0, 5));
+  voiceBtnHandler();
+  countdownTimer();
 };

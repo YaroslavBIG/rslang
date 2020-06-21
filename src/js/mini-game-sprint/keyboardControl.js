@@ -1,10 +1,26 @@
-export const keyboardControl = () => {
-  document.addEventListener('keydown', (event) => {
+import { rightChoice, wrongChoice } from './yourСhoice';
+
+export const keyboardControl = (wordId, translateID) => {
+  const listener = (event) => {
     if (event.code === 'ArrowLeft') {
-      console.log('wrong');
+      if (wordId !== translateID) {
+        document.removeEventListener('keydown', listener);
+        rightChoice();
+      } else {
+        document.removeEventListener('keydown', listener);
+        wrongChoice();
+      }
     }
     if (event.code === 'ArrowRight') {
-      console.log('right');
+      if (wordId === translateID) {
+        document.removeEventListener('keydown', listener);
+        rightChoice();
+      } else {
+        document.removeEventListener('keydown', listener);
+        wrongChoice();
+      }
     }
-  });
+  };
+
+  document.addEventListener('keydown', listener);
 };

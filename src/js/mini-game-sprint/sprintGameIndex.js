@@ -12,7 +12,7 @@ export const sprintGameIndex = () => `
         <p class="task-container__question" id="question"></p>
         <p class="task-container__answer" id="answer"></p>
       </div>
-      <div class="main-content__controller">
+      <div class="main-content__controller" id="controller">
         <div class="controller__wrong-btn" id="wrong-btn">
           ${constantsData.wrongBtnText}
         </div>
