@@ -1,3 +1,5 @@
+import { correctionBlock } from '../utils/correctionBlock';
+
 export const buttonAnswer = () => {
   const wordBlock = document.querySelector('.sentence--target-word');
   const deleteAnswer = () => { wordBlock.innerHTML = ''; };
@@ -8,8 +10,9 @@ export const buttonAnswer = () => {
   if (userAnswer === '') {
     answer.classList.add('anwser');
     answer.innerText = word;
-    answer.addEventListener('click', () => deleteAnswer());
   }
   deleteAnswer();
+  answer.innerHTML = correctionBlock(userAnswer, word);
+  answer.addEventListener('click', () => deleteAnswer());
   wordBlock.append(answer);
 };
