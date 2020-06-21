@@ -4,7 +4,6 @@
   "description": "Final project RS School 2020q1",
   "main": "index.js",
   "scripts": {
-    "preinstall": "git config core.hooksPath hooks",
     "lint": "eslint .",
     "fix": "eslint . --fix",
     "dev": "webpack --config config/webpack/webpack.dev.conf.js",
