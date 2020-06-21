@@ -13,7 +13,7 @@ export const logIn = async (res) => {
     if (loginSuccess) {
       actionAuth.setAuth(true);
       saveAuth();
-      return res;
+      return loginSuccess;
     }
   }
 };
