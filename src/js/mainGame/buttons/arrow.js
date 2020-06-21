@@ -4,6 +4,18 @@ import { addNewWordsPage } from '../newWords';
 export const gameArrows = (event) => {
   const { id } = event.target;
   const arrowDirection = id === 'arrow_left' ? 'left' : 'right';
+  const wordBlock = document.querySelector('.sentence--target-word');
+
+  const word = sessionStorage.getItem('word');
+  const currentWord = wordBlock.innerText;
+  const hint = wordBlock.firstChild || wordBlock;
+  const isHint = hint.nodeName === 'SPAN';
+
+  if ((word !== currentWord && arrowDirection === 'right') || isHint) {
+    wordBlock.classList.add('target-word--incorrect');
+    return;
+  }
+
   const currentWordNum = parseInt(sessionStorage.getItem('wordNum'), 10);
   const collectionLen = sessionStorage.getItem('collectionLen');
 
