@@ -11,13 +11,13 @@ export const gameContent = (data = null, wordNum = 0) => {
     sessionStorage.setItem('apiWords', JSON.stringify(data));
   }
 
-  console.log(data);
   const userWords = apiWords();
   const apiWordsParse = data || JSON.parse(userWords);
+  const { page, group } = apiWordsParse[wordNum];
 
+  sessionStorage.setItem('page', page);
+  sessionStorage.setItem('group', group);
   sessionStorage.setItem('collectionLen', apiWordsParse.length);
-  console.log(wordNum);
-  console.log(apiWordsParse);
   const {
     textExample, textExampleTranslate, word, wordTranslate, image, textMeaningTranslate,
   } = apiWordsParse[wordNum];
@@ -55,13 +55,4 @@ export const gameContent = (data = null, wordNum = 0) => {
   textTranslateBlock.innerText = textExampleTranslate;
   wordTranslateBlock.innerText = wordTranslate;
   progressBar(progress, progressAll);
-  // console.log(font);
-  // console.log(textWidth);
-  // console.log(textArr);
-  // console.log(textWithWord);
-  // console.log(textWithoutWord);
-  // console.log(textExampleTranslate);
-  // console.log(textBeforeWord);
-  // console.log(textAfterWord);
-  // // wordsField.append(words);
 };
