@@ -8,7 +8,7 @@ export const speakitGame = () => `
       <div class="modal-body">
         <p class="modal-body__description">SpeakIt - это мини-игра с помощью которой можно прослушать слова и проверить правильность их произношения.</p>
         <p>Кликайте по карточкам что бы прослушать их произношение.Кликайте на кнопку и произнесите слово.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/f4ioMGDQblI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="modal-body__video"></iframe>
+        <iframe src="https://www.youtube.com/embed/f4ioMGDQblI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="modal-body__video"></iframe>
       </div>
       <div class="modal-footer">
         <button class="modal-footer__button-start" id="speakitGame"><span class="modal-footer__button-name">Начать</span></button>
