@@ -17,8 +17,8 @@ export const signUp = async () => {
     globalUser.set('email', login);
     globalUser.set('password', pass);
 
-    const success = await createUser(user);
-    const logSuccess = await logIn(success);
+    const createSuccess = await createUser(user);
+    const logSuccess = await logIn(createSuccess);
     const iconSuccess = await saveIcon(logSuccess);
 
     if (iconSuccess) {

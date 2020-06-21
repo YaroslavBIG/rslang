@@ -14,7 +14,7 @@ export const createSignInUpPage = () => `<section class="inner-section__start">
   <input required autocomplete="disabled" class="form__styling sign-in__login" type="e-mail" name="login" placeholder="логин"/>
 <input required autocomplete="disabled" class="form__styling sign-in__pass" type="password" name="password-in" placeholder="пароль"/>
               <div class="error-block"></div>
-              <button class="button">Войти</button>
+              <button class="button button_sign-in">Войти</button>
             </form>
             <form class="form form__sign-up" action="" method="post" name="form" data-up>
    <input required autocomplete="disabled" class="form__styling sign-up__login" type="e-mail" name="email" placeholder="e-mail"/>
@@ -37,7 +37,7 @@ export const createSignInUpPage = () => `<section class="inner-section__start">
                 <div><img class="icons__item" src="assets/img/5.svg" alt="5"></div>
                 <div><img class="icons__item" src="assets/img/6.svg" alt="6"></div>
               </div>
-              <button class="button">Регистрация</button>
+              <button class="button button_sign-up">Регистрация</button>
             </form>
           </div>
         </div>

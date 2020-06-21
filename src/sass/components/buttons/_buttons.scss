@@ -1,15 +1,16 @@
 .button{
-  float: left;
-  width: 100%;
   height: 35px;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   text-transform: uppercase;
   text-align: center;
   color: $secondary-color;
   background-color: $active-color;
   font-size: $primary-font-size;
   font-weight: $secondary-font-weight;
-  margin-top: 23px;
   cursor: pointer;
+  &_sign-in, &_sign-up{
+    width: 100%;
+    margin-top: 23px;
+  }
 }
