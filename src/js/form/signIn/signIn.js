@@ -9,10 +9,10 @@ export const signIn = () => {
   const pass = document.querySelector('[name="password-in"]').value;
 
   const { email: em, password: userPass } = globalUser.get();
+  const success = true;
 
   if (em === login) {
     if (userPass === pass) {
-      const success = true;
       logIn(success);
       nextButton.click();
     } else {

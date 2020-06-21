@@ -6,7 +6,7 @@ export const submitForm = () => {
     event.preventDefault();
     signUp();
   });
-  document.querySelector('[data-in]').addEventListener('submit', async (event) => {
+  document.querySelector('[data-in]').addEventListener('submit', (event) => {
     event.preventDefault();
     signIn();
   });

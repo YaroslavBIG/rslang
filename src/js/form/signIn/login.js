@@ -9,11 +9,11 @@ export const logIn = async (res) => {
       email: em,
       password: pass,
     };
-    const success = await loginUser(userInfo);
-    if (success) {
+    const loginSuccess = await loginUser(userInfo);
+    if (loginSuccess) {
       actionAuth.setAuth(true);
       saveAuth();
-      return success;
+      return res;
     }
   }
 };
