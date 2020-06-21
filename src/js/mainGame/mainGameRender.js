@@ -24,9 +24,9 @@ export const mainGameRender = () => {
       <div class="hints hint--text_example"></div>
       </div>
       <div class="controls">
-        <button class="button__main-game">Сложно</button>
-        <button class="button__main-game">Показать ответ</button>
-        <button class="button__main-game">Удалить</button>
+        <button class="button__main-game" id="difficult">Сложно</button>
+        <button class="button__main-game" id="answer">Показать ответ</button>
+        <button class="button__main-game" id ="delete">Удалить</button>
       </div>
       <div class="progress-bar">
         <div class="progress">
