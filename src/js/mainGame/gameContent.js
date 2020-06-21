@@ -1,5 +1,5 @@
 import { cutTags, getTextWidth } from '../utils';
-import { progressBar } from '.';
+import { progressBar } from './progressBar';
 import { dataUrl } from '../api';
 
 export const gameContent = (data, wordNum = 0) => {
@@ -34,7 +34,6 @@ export const gameContent = (data, wordNum = 0) => {
   const progress = wordNum;
   const progressAll = data.length;
 
-  // const img = new Image();
   firstPartBlock.innerText = textBeforeWord;
   wordBlock.style.width = `${textWidth}px`;
   lastPartBlock.innerText = textAfterWord;

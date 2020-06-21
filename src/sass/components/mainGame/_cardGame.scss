@@ -10,3 +10,37 @@
   display: inline-block;
   border: 1px solid black;
 }
+
+.game_main__wrapper {
+  margin: 100px 100px 0 100px;
+}
+
+.game_main {
+ display: flex;
+}
+
+.button__main-game {
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $secondary-color;
+    background-color: $active-color;
+    font-size: $primary-font-size;
+    font-weight: $secondary-font-weight;
+    cursor: pointer;
+}
+
+.arrow {
+  background-image: url(../assets/img/arrow.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 60px;
+}
+
+.arrow--left {
+  transform: rotateY(180deg);
+}
