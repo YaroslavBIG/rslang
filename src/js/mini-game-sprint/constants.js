@@ -12,4 +12,5 @@ export const constantsData = {
   correctAnswersCounter: 0,
   wrongAnswersCounter: 0,
   rightInARow: 0,
+  backendUrl: 'https://github.com/YaroslavBIG/rslang-data/tree/master/',
 };

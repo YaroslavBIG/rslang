@@ -8,8 +8,11 @@ export const sprintGameIndex = () => `
     <div class="screen-wrapper__main-content" id="main-content">
       <div class="main-content__information"></div>
       <div class="main-content__combo-block"></div>
-      <div class="main-content__task-container">
+      <div class="main-content__task-container" id="task-container">
         <p class="task-container__question" id="question"></p>
+        <audio id="audio">
+            <source id="source">
+        </audio>
         <p class="task-container__answer" id="answer"></p>
       </div>
       <div class="main-content__controller" id="controller">

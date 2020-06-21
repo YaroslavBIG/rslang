@@ -7,10 +7,10 @@ export const voiceBtnHandler = () => {
   voiceBtn.style.backgroundImage = `url(${voiceImg})`;
   voiceOff.style.backgroundImage = `url(${voiceOffImg})`;
   voiceBtn.onclick = () => {
-    if (voiceOff.classList.contains('active')) {
-      voiceOff.classList.remove('active');
+    if (voiceOff.classList.contains('inactive')) {
+      voiceOff.classList.remove('inactive');
     } else {
-      voiceOff.classList.add('active');
+      voiceOff.classList.add('inactive');
     }
   };
 };

@@ -10,7 +10,6 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  background: #979797;
 }
 
 .screen-wrapper__main-content {
@@ -28,9 +27,8 @@ body {
   position: absolute;
   top: 265px;
   right: -113px;
-  background: #000000;
+  background: #ffffff;
   border-radius: 50%;
-  color: aliceblue;
   font-size: 55px;
   text-align: center;
   line-height: 1.7;
@@ -42,7 +40,7 @@ body {
   position: absolute;
   top: 261px;
   right: -117px;
-  background: #950082;
+  background: #1f953f;
   border-radius: 50%;
 }
 
@@ -89,7 +87,7 @@ body {
   display: none;
 }
 
-.active {
+.inactive {
   display: block;
 }
 
