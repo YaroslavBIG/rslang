@@ -4,6 +4,9 @@
   background-color: #ffffff;
   background-repeat: no-repeat;
   font: $primary-font-weight $primary-font-size $primary-font-family;
+  .anwser {
+    color: rgba(255, 0, 0, 0.925);
+  }
 }
 
 .sentence--target-word {

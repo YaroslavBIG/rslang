@@ -21,6 +21,9 @@ export const gameContent = (data = null, wordNum = 0) => {
   const {
     textExample, textExampleTranslate, word, wordTranslate, image, textMeaningTranslate,
   } = apiWordsParse[wordNum];
+
+  sessionStorage.setItem('word', word);
+
   const cardQuestBlock = document.querySelector('.card-text--quest');
   const firstPartBlock = document.querySelector('.sentence--first-part');
   const wordBlock = document.querySelector('.sentence--target-word');
@@ -52,6 +55,7 @@ export const gameContent = (data = null, wordNum = 0) => {
   const progressAll = apiWordsParse.length;
 
   firstPartBlock.innerText = textBeforeWord;
+  wordBlock.innerHTML = '';
   wordBlock.style.width = `${textWidth}px`;
   lastPartBlock.innerText = textAfterWord;
   textTranslateBlock.innerText = textExampleTranslate;
