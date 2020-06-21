@@ -15,8 +15,7 @@ import { swaggerUrl } from './constants';
  * самой простой(0) до самой сложной(5).
  */
 export const getWords = async (page = 0, group = 0, lte = 10, perPage = 20) => {
-  const url = `${swaggerUrl}words?page=${page}&group=${group}
-  &wordsPerExampleSentenceLTE=${lte}&wordsPerPage=${perPage}`;
+  const url = `${swaggerUrl}words?page=${page}&group=${group}&wordsPerExampleSentenceLTE=${lte}&wordsPerPage=${perPage}`;
   try {
     const res = await fetch(url);
     return await res.json();

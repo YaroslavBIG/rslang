@@ -1,20 +1,20 @@
-import cutTags from '../utils/cutTags';
-import getTextWidth from '../utils/getTextWidth';
-import progressBar from './progressBar';
+import { cutTags, getTextWidth } from '../utils';
+import { progressBar } from '.';
+import { dataUrl } from '../api';
 
-function gameContent(data, wordNum = 0) {
+export const gameContent = (data, wordNum = 0) => {
   console.log(data);
   const {
-    textExample, textExampleTranslate, word, wordTranslate,
-  } = data[wordNum]; // image, textMeaningTranslate,
+    textExample, textExampleTranslate, word, wordTranslate, image, textMeaningTranslate,
+  } = data[wordNum];
   const cardQuestBlock = document.querySelector('.card-text--quest');
   const firstPartBlock = document.querySelector('.sentence--first-part');
   const wordBlock = document.querySelector('.sentence--target-word');
   const lastPartBlock = document.querySelector('.sentence--last-part');
   const textTranslateBlock = document.querySelector('.card-text--translate');
   const wordTranslateBlock = document.querySelector('.hint--translate_word');
-  // const wordImageBlock = document.querySelector('.hint--image');
-  // const wordTextExample = document.querySelector('.hint--text_example');
+  const wordImageBlock = document.querySelector('.hint--image');
+  const wordTextExample = document.querySelector('.hint--text_example');
 
   const font = cardQuestBlock.computedStyleMap().get('font').toString();
 
@@ -24,6 +24,12 @@ function gameContent(data, wordNum = 0) {
   const textBeforeWord = targetWordIndex === 0 ? '' : textArr.slice(0, targetWordIndex).join(' ');
   const textAfterWord = targetWordIndex === textLen ? '' : textArr.slice(targetWordIndex + 1, textLen).join(' ');
   const textWidth = getTextWidth(word, font);
+
+  const img = new Image();
+  img.src = `${dataUrl}${image}`;
+  img.onload = wordImageBlock.append(img);
+
+  wordTextExample.innerText = textMeaningTranslate;
 
   const progress = wordNum;
   const progressAll = data.length;
@@ -44,6 +50,4 @@ function gameContent(data, wordNum = 0) {
   // console.log(textBeforeWord);
   // console.log(textAfterWord);
   // // wordsField.append(words);
-}
-
-export default gameContent;
+};

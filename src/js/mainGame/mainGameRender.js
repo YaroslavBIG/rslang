@@ -1,4 +1,4 @@
-function mainGameRender() {
+export const mainGameRender = () => {
   const template = `
   <section class="game_main__wrapper">
     <div class="game_main">
@@ -6,7 +6,7 @@ function mainGameRender() {
         <div class="card-game">
           <div class="card-text card-text--quest">
             <span class="sentence sentence--first-part"></span>
-            <input class="sentence sentence--target-word"></input>
+            <div class="sentence sentence--target-word" contenteditable></div>
             <span class="sentence sentence--last-part"></span>
           </div>
           <div class="separator"></div>
@@ -27,5 +27,4 @@ function mainGameRender() {
   </section>
   `;
   return template;
-}
-export default mainGameRender;
+};

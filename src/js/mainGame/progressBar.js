@@ -1,4 +1,4 @@
-function progressBar(done = 0, all = 0) {
+export const progressBar = (done = 0, all = 0) => {
   const progress = document.querySelector('.progress-done');
   const percent = (all / 100) * done;
   progress.style.width = `${percent}%`;
@@ -6,6 +6,4 @@ function progressBar(done = 0, all = 0) {
   console.log(`${done}/${all}`);
   progress.innerHTML = '';
   progress.innerText = `${done}/${all}`;
-}
-
-export default progressBar;
+};

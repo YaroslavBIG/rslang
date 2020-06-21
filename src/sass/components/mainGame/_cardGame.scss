@@ -5,3 +5,8 @@
   background-repeat: no-repeat;
   font: $primary-font-weight $primary-font-size $primary-font-family;
 }
+
+.sentence--target-word {
+  display: inline-block;
+  border: 1px solid black;
+}
