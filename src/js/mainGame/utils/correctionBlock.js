@@ -3,7 +3,7 @@ export const correctionBlock = (userAnswer, word) => {
   const wordArr = word.split('');
   const result = [];
   wordArr.forEach((symb, idx) => {
-    const char = symb === userAnswerArr[idx] ? symb : `<span class="anwser">${symb}</span>`;
+    const char = symb === userAnswerArr[idx] ? `<span class="anwser--wright">${symb}</span>` : `<span class="anwser">${symb}</span>`;
     result.push(char);
   });
   return result.join('');

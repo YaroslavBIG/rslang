@@ -18,4 +18,6 @@ export const buttonAnswer = () => {
   answer.innerHTML = correctionBlock(userAnswer, word);
   answer.addEventListener('click', () => deleteAnswer());
   wordBlock.append(answer);
+  const hint = document.querySelectorAll('.anwser');
+  setTimeout(() => { hint.forEach((el) => { el.style.color = '#adadad'; }); }, 3000);
 };

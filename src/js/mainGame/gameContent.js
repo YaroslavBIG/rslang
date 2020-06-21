@@ -61,4 +61,5 @@ export const gameContent = (data = null, wordNum = 0) => {
   textTranslateBlock.innerText = textExampleTranslate;
   wordTranslateBlock.innerText = wordTranslate;
   progressBar(progress, progressAll);
+  wordBlock.focus();
 };

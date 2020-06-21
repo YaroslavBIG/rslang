@@ -1,5 +1,6 @@
 import { gameContent } from '../gameContent';
 import { addNewWordsPage } from '../newWords';
+import { buttonAnswer } from './buttonAnswer';
 
 export const gameArrows = (event) => {
   const { id } = event.target;
@@ -13,6 +14,8 @@ export const gameArrows = (event) => {
 
   if ((word !== currentWord && arrowDirection === 'right') || isHint) {
     wordBlock.classList.add('target-word--incorrect');
+    const userInput = wordBlock.innerText;
+    if (userInput !== '') buttonAnswer();
     return;
   }
 
