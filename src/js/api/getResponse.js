@@ -20,7 +20,7 @@ export const getResponse = async (url, { ...options }) => {
 
   const resURL = `${swaggerUrl}${url}`;
   const authorization = (isAuth === 'true' || isAuth === true) ? { Authorization: `Bearer ${tokenRes}` } : {};
-  const isToken = (isAuth === 'true' || isAuth === true) ? { withCredentials: true } : {};
+  const withCredential = (isAuth === 'true' || isAuth === true) ? { withCredentials: true } : {};
 
   const baseHeaders = {
     ...authorization,
@@ -31,7 +31,7 @@ export const getResponse = async (url, { ...options }) => {
   try {
     const response = await fetch(resURL, {
       ...options,
-      ...isToken,
+      ...withCredential,
       headers: {
         ...baseHeaders,
       },
