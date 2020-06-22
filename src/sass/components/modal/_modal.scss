@@ -119,3 +119,9 @@
     }
   }
 }
+
+@media screen and (max-device-height: 700px) {
+  .modal {
+    padding: 0;
+  }
+}
