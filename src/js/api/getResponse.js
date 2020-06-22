@@ -39,8 +39,7 @@ export const getResponse = async (url, { ...options }) => {
     if (response && response.status === invalidToken) {
       actionAuth.setAuth(false);
     }
-    const content = await response.json();
-    return content;
+    return await response.json();
   } catch (err) {
     return Object.keys(err);
   }
