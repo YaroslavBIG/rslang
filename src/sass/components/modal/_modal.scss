@@ -111,15 +111,6 @@
 }
 
 @media screen and (max-device-width: 400px) {
-  .modal {
-    padding: 0;
-  }
-
-  .modal-body {
-    &__video {
-      width: 220px;
-    }
-  }
 }
 
 @media screen and (max-device-height: 700px) {
