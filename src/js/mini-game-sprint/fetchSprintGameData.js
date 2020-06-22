@@ -11,20 +11,15 @@ export const fetchSprintGameData = async (page, group) => {
   const randomTranslateId = randomInteger(0, 1);
   const randomWord = wordsArray[randomWordId];
   const randomTranslate = translateWordsArray[randomTranslateId];
-  const audioSrc = document.getElementById('source');
-  audioSrc.setAttribute(
+  const audio = document.getElementById('audio');
+  audio.setAttribute(
     'src',
     `${constantsData.backendUrl}${gameData[randomWordId].audio}`,
   );
 
   const voiceOffBtn = document.getElementById('voice-off');
-  const taskContainer = document.getElementById('task-container');
   if (!voiceOffBtn.classList.contains('inactive')) {
-    const timer = document.getElementById('timer');
-    if (timer.innerHTML < 60 && timer.innerHTML >= 0) {
-      taskContainer.children[1].play();
-      console.log('play');
-    }
+    audio.autoplay = true;
   }
 
   taskRendering(randomWord, randomTranslate, randomWordId, randomTranslateId);
