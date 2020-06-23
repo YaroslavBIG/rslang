@@ -9,12 +9,13 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-image: url(/rslang/src/assets/background.jpg);
+  background-image: url(/rslang/src/assets/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: $primary-font-family;
 }
 
 .modal-content {
-  color: $primary-color;
   text-align: center;
   position: relative;
   margin: auto;
@@ -22,21 +23,8 @@
   width: 80%;
 }
 
-.close {
-  color: $primary-color;
-  float: right;
-  width: 20px;
-  height: 20px;
-  font-weight: $primary-font-weight + 300;
-  cursor: pointer;
-  background-image: url(/rslang/src/assets/cross.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .modal-header {
   padding: 2px 16px;
-  color: $primary-color;
   &__greet {
     font-weight: $primary-font-weight - 100;
     text-align: center;
@@ -46,13 +34,9 @@
 }
 
 .modal-body {
+  margin-top: 100px;
   text-align: center;
   padding: 2px 16px;
-  &__video {
-    margin-top: 100px;
-    width: 560px;
-    height: 315px;
-  }
   &__description {
     margin-top: 50px;
     font-size: $secondary-font-size - 24;
@@ -63,13 +47,28 @@
     margin-right: -50%;
     transform: translate(-50%, -50%);
   }
+  &__first-gifs {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__second-gifs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  &__mini-games {
+    font-weight: $primary-font-weight - 100;
+    text-align: center;
+    white-space: pre-wrap;
+    font-size: $secondary-font-size;
+  }
 }
 
 .modal-footer {
   padding: 2px 16px;
-  color: $primary-color;
+  margin-top: 100px;
   &__button-start {
-    margin-top: 50px;
     background-color: $color-button-name;
     width: 206px;
     height: 64px;
@@ -79,6 +78,7 @@
     cursor: pointer;
     color: $primary-color;
     box-shadow: 0 2px 0 0 $secondary-shadow-color;
+    margin-top: 170px;
   }
   &__button-name {
     font-weight: $primary-font-weight + 100;
@@ -89,6 +89,21 @@
     width: 100%;
     color: $primary-color;
     text-decoration: none;
+  }
+  &__interface {
+    font-weight: $primary-font-weight - 100;
+    text-align: center;
+    white-space: pre-wrap;
+    font-size: $secondary-font-size;
+  }
+  &__video {
+    margin-bottom: 200px;
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 560px;
+    height: 315px;
   }
 }
 
@@ -117,4 +132,10 @@
   .modal {
     padding: 0;
   }
+}
+
+.swiper-container {
+  margin-top: 50px;
+  width: 1000px;
+  height: 500px;
 }
