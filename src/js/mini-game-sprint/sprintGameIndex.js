@@ -22,6 +22,12 @@ export const sprintGameIndex = () => `
         <div class="controller__right-btn" id="right-btn">
           ${constantsData.rightBtnText}
         </div>
+        <audio id="audio--correct">
+            <source id="source--correct">
+        </audio>
+        <audio id="audio--error">
+            <source id="source-error">
+        </audio>
       </div>
     </div>
     <div class="screen-wrapper__hints">

@@ -4,10 +4,12 @@ import { randomInteger } from '../utils';
 
 export const rightChoice = () => {
   const points = document.getElementById('points');
+  const controller = document.getElementById('controller');
   constantsData.correctAnswersCounter += 1; // Показать на экране результата
   let result;
 
   if (points) {
+    controller.children[2].play();
     result = +points.innerHTML + (constantsData.minimumScore * constantsData.combo);
     constantsData.rightInARow += 1;
     if (constantsData.rightInARow === 4) {
@@ -22,6 +24,8 @@ export const rightChoice = () => {
 };
 export const wrongChoice = () => {
   const points = document.getElementById('points');
+  const controller = document.getElementById('controller');
+  controller.children[3].play();
   constantsData.combo = 1;
   constantsData.rightInARow = 0;
   constantsData.wrongAnswersCounter += 1; // Показать на экране результата
