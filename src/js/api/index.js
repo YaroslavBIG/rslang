@@ -1,2 +1,2 @@
 export { getWords } from './getWords';
-export * from './constants';
+export { dataUrl } from './constants';
