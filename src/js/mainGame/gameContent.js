@@ -3,6 +3,7 @@ import { progressBar } from './progressBar';
 import { dataUrl } from '../api';
 
 export const gameContent = (data = null, wordNum = 0) => {
+  console.log(data);
   const apiWords = () => sessionStorage.getItem('apiWords');
 
   sessionStorage.setItem('wordNum', wordNum);
@@ -19,10 +20,14 @@ export const gameContent = (data = null, wordNum = 0) => {
   sessionStorage.setItem('group', group);
   sessionStorage.setItem('collectionLen', apiWordsParse.length);
   const {
-    textExample, textExampleTranslate, word, wordTranslate, image, textMeaningTranslate,
+    textExample, textExampleTranslate, word, wordTranslate,
+    image, textMeaningTranslate, audio, audioExample, audioMeaning,
   } = apiWordsParse[wordNum];
 
   sessionStorage.setItem('word', word);
+  sessionStorage.setItem('audio', audio);
+  sessionStorage.setItem('audioExample', audioExample);
+  sessionStorage.setItem('audioMeaning', audioMeaning);
 
   const cardQuestBlock = document.querySelector('.card-text--quest');
   const firstPartBlock = document.querySelector('.sentence--first-part');

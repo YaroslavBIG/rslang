@@ -8,7 +8,7 @@ export const mainGameRender = () => {
           <div class="card-game">
               <div class="card-text card-text--quest">
                 <span class="sentence sentence--first-part"></span>
-                <div class="sentence sentence--target-word" contenteditable></div>
+                <div class="sentence sentence--target-word" id="user_input"contenteditable></div>
                 <span class="sentence sentence--last-part"></span>
               </div>
               <div class="separator"></div>
