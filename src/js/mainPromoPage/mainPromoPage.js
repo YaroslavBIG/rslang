@@ -40,8 +40,10 @@ export const mainPromoPage = () => `
 	  <!-- If we need scrollbar -->
 	  <div class="swiper-scrollbar"></div>
   </div>
+  <span class="modal-footer__familiarize">Ознакомительное видео</span>
   <iframe src="https://www.youtube.com/embed/f4ioMGDQblI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="modal-footer__video"></iframe>
-  <button class="modal-footer__button-start" ><a href="#/auth" class="modal-footer__button-name">Вперёд</a></button>
+  <span class="modal-footer__go">Вперёд! К новым начинаниям!</span>
+  <button class="modal-footer__button-start" ><a href="#/auth" class="modal-footer__button-name">Вперёд!</a></button>
   </div>
 </div>
 </div>
