@@ -18,11 +18,18 @@ export const countdownTimer = () => {
       const yourResult = points.innerHTML;
       wrapper.innerHTML = `
         <div class="screen-wrapper__result-block" id="result-block">
-            <p class="result-block__your-result">Your result: ${yourResult}</p>
-            <p class="result-block__description">Что-то будет написано</p>
-            <div class="result-block__start-btn" id="repeat-btn">REPEAT</div>
+          <audio id="audio-completed"></audio>
+          <p class="result-block__your-result">Your result: ${yourResult}</p>
+          <p class="result-block__description">Что-то будет написано</p>
+          <div class="result-block__start-btn" id="repeat-btn">REPEAT</div>
         </div>
       `; // Продумать, что будет появляться после завершения игры
+      const completedAudio = document.getElementById('audio-completed');
+      completedAudio.setAttribute(
+        'src',
+        `${constantsData.backendUrl}files/success.mp3`,
+      );
+      completedAudio.autoplay = true;
       repeatButtonHandler();
     } else {
       timer = setTimeout(tikTak, constantsData.oneSec);
