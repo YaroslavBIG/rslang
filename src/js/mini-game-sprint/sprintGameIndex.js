@@ -6,8 +6,15 @@ export const sprintGameIndex = () => `
         <p class="points__quantity" id="points">0</p>
     </div>
     <div class="screen-wrapper__main-content" id="main-content">
-      <div class="main-content__information"></div>
-      <div class="main-content__combo-block"></div>
+      <div class="main-content__information" id="main-information">
+        YOUR COMBO: x${constantsData.combo}
+      </div>
+      <div class="main-content__combo-block" id="combo-block">
+        <div class="combo-block__section" id="star-1"></div>
+        <div class="combo-block__section" id="star-2"></div>
+        <div class="combo-block__section" id="star-3"></div>
+        <div class="combo-block__section" id="star-4"></div>
+      </div>
       <div class="main-content__task-container" id="task-container">
         <p class="task-container__question" id="question"></p>
         <audio id="audio">
