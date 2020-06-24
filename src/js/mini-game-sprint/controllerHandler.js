@@ -26,6 +26,9 @@ export const controllerHandler = (wordId, translateID) => {
   };
 
   document.addEventListener('keydown', listener);
+  setTimeout(() => {
+    document.removeEventListener('keydown', listener);
+  }, 5000);
 
   wrongBtn.onclick = () => {
     if (wordId !== translateID) {
