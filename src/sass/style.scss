@@ -1,4 +1,10 @@
 @import "./components/index";
 @import "./components/modal/modal";
-@import "./commons/normalize.scss";
 @import "./commons/vars.scss";
+@import "./commons/normalize.scss";
+@import "./commons/base";
+@import "./components/buttons/buttons";
+@import "./components/form/form";
+@import "./components/form/icon-auth";
+@import "./components/form/start-section";
+@import "./components/media/media-form";

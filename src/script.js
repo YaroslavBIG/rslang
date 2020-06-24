@@ -1,5 +1,5 @@
-import { mainPromoPage } from './js/mainPromoPage/mainPromoPage';
-import { addSwiper } from './js/swiper/swiper';
+import { mainPromoPage } from './js/pages/mainPromoPage';
+import { addSwiper } from './js/pages/swiper';
 window.onload = () => {
   document.querySelector('body').innerHTML = mainPromoPage();
   addSwiper();

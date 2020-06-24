@@ -1,0 +1,20 @@
+.button{
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $secondary-color;
+  background-color: $active-color;
+  font-size: $primary-font-size;
+  font-weight: $secondary-font-weight;
+  cursor: pointer;
+  &_sign-in, &_sign-up{
+    width: 100%;
+    margin-top: 23px;
+  }
+  &:active{
+    padding: 5px 5px 3px;
+    box-shadow: inset 0 -1px 1px $color-active-button-up, inset 0 1px 2px $color-active-button-side, inset 0 0 0 60px $color-active-button;
+  }
+}
