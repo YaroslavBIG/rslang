@@ -10,12 +10,12 @@ export const mainPromoPage = () => `
     <div class="modal-body__first-gifs">
     <img src="./assets/site-functional.gif">
     <img src="./assets/site-functional1.gif">
-    <img src="./assets/site-functional2.gif">
+    <img src="./assets/site-functional2.gif" class="modal-body__third-mini-game">
     </div>
     <div class="modal-body__second-gifs">
     <img src="./assets/site-functional3.gif">
     <img src="./assets/site-functional4.gif">
-    <img src="./assets/site-functional5.gif">
+    <img src="./assets/site-functional5.gif" class="modal-body__third-mini-game">
     </div>
   </div>
   <div class="modal-footer">
