@@ -71,7 +71,6 @@
   padding: 2px 16px;
   margin-top: 100px;
   &__button-start {
-    margin: 0 500px 0 500px;
     background-color: $color-button-name;
     width: 206px;
     height: 64px;
@@ -120,6 +119,9 @@
     font-size: $secondary-font-size;
     width: 100%;
   }
+  &__go-block {
+    width: 100%;
+  }
 }
 
 .swiper-container {
@@ -149,28 +151,7 @@
   align-items: center;
 }
 
-@media screen and (max-device-width: 1000px) {
-  .modal-body {
-    &__thitd-mini-game {
-      margin: 0 auto;
-    }
-  }
-}
-
-@media screen and (max-device-width: 650px) {
-  .modal-footer {
-    &__video {
-      height: 100px;
-    }
-  }
-}
-
 @media screen and (max-device-width: 1250px) {
-  .modal-footer {
-    &__button-start {
-      margin: 0 auto;
-    }
-  }
   .modal-footer {
     &__video {
       height: 300px;
@@ -181,11 +162,58 @@
   }
 }
 
-@media screen and (max-device-width: 400px) {
+@media screen and (max-device-width: 1000px) {
+  .modal-body {
+    &__first-gifs {
+      flex-direction: column;
+    }
+    &__second-gifs {
+      flex-direction: column;
+    }
+  }
+  .swiper-container {
+    width: 500px;
+    height: 350px;
+  }
+  .modal-body {
+    &__thitd-mini-game {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-device-width: 700px) {
+  .swiper-container {
+    width: 270px;
+    height: 250px;
+  }
+  .modal {
+    padding: 0;
+  }
 }
 
 @media screen and (max-device-height: 700px) {
   .modal {
     padding: 0;
+  }
+}
+
+@media screen and (max-device-width: 650px) {
+  .modal-footer {
+    &__video {
+      height: 300px;
+    }
+  }
+}
+
+@media screen and (max-device-width: 500px) {
+  .modal-body {
+    &__gifs-block {
+      width: 250px;
+      height: 250px;
+    }
+  }
+  .swiper-container {
+    width: 230px;
   }
 }

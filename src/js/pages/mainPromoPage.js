@@ -6,16 +6,16 @@ export const mainPromoPage = () => `
     <p class="modal-header__appeal">Дорогой пользователей, этот сервис предоставляет полный курс для изучения английского языка.</p>
   </div>
   <div class="modal-body">
-    <span class="modal-body__mini-games">Увлекательнейшее разнообразие мини-игр</span>
+    <span class="modal-body__mini-games">Огромное разнообразие мини-игр</span>
     <div class="modal-body__first-gifs">
-    <img src="./assets/site-functional.gif">
-    <img src="./assets/site-functional1.gif">
-    <img src="./assets/site-functional2.gif" class="modal-body__third-mini-game">
+    <img src="./assets/site-functional.gif" class="modal-body__gifs-block">
+    <img src="./assets/site-functional1.gif" class="modal-body__gifs-block">
+    <img src="./assets/site-functional2.gif" class="modal-body__gifs-block">
     </div>
     <div class="modal-body__second-gifs">
-    <img src="./assets/site-functional3.gif">
-    <img src="./assets/site-functional4.gif">
-    <img src="./assets/site-functional5.gif" class="modal-body__third-mini-game">
+    <img src="./assets/site-functional3.gif" class="modal-body__gifs-block">
+    <img src="./assets/site-functional4.gif" class="modal-body__gifs-block">
+    <img src="./assets/site-functional5.gif" class="modal-body__gifs-block">
     </div>
   </div>
   <div class="modal-footer">
@@ -40,9 +40,11 @@ export const mainPromoPage = () => `
 	  <!-- If we need scrollbar -->
 	  <div class="swiper-scrollbar"></div>
   </div>
-  <span class="modal-footer__familiarize">Ознакомительное видео</span>
+  <span class="modal-footer__familiarize">Краткий обзор приложения</span>
   <iframe src="https://www.youtube.com/embed/f4ioMGDQblI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="modal-footer__video"></iframe>
+  <div class="modal-footer__go-block">
   <span class="modal-footer__go">Вперёд! К новым начинаниям!</span>
+  </div>
   <button class="modal-footer__button-start" ><a href="#/auth" class="modal-footer__button-name">Вперёд!</a></button>
   </div>
 </div>
