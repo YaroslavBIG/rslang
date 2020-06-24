@@ -12,5 +12,5 @@ export const nav = () => {
     ''
   );
   const list = `<ul class="nav__list">${items}</ul>`;
-  return `<nav class="nav header__nav">${input + label + list}</nav>`;
+  return `<nav class="nav header__nav">${input} ${label} ${list}</nav>`;
 };
