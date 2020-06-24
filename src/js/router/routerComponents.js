@@ -13,11 +13,9 @@ export const HomeComponent = {
 }
 export const AuthComponent = {
   render: () => createSignInUpPage(),
-  }
 }
 export const MainComponent = {
   render: () => '',
-  }
 }
 export const SettingsComponent = {
   render: () => '',
