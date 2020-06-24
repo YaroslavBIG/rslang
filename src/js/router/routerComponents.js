@@ -8,6 +8,8 @@
 * pageGame() - название функции, которая отдает вашу начальную верстку для игры.
 */
 
+import { createErrorPage, createSignInUpPage } from "../pages"
+
 export const HomeComponent = {
   render: () => '<a href="#/auth">click</a>',
 }
@@ -49,4 +51,8 @@ export const StatisticComponent = {
 }
 export const AboutUsComponent = {
   render: () => '',
+}
+
+export const ErrorComponent = {
+  render: () => createErrorPage(),
 }
