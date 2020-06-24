@@ -218,7 +218,7 @@ body {
 
   .screen-wrapper__main-content {
     width: 95%;
-    margin: 0 auto;
+    margin: 10px auto 0;
   }
 
   .main-content__information {
@@ -251,6 +251,7 @@ body {
     width: 40%;
     height: 30%;
     font-size: 18px;
+    padding-top: 5px;
   }
 
   .hints__description {
@@ -266,7 +267,7 @@ body {
   }
 
   .hints__voice {
-    margin: 47px auto 0 75px;
+    margin: 30px auto 0 60px;
   }
 
   .points__quantity {
@@ -276,7 +277,7 @@ body {
 
   .timer__loader-wrapper {
     right: 60px;
-    top: 445px;
+    top: 77%;
     width: 73px;
     height: 73px;
 
@@ -288,7 +289,7 @@ body {
 
   .screen-wrapper__timer {
     right: 64px;
-    top: 449px;
+    top: 77.6%;
     height: 65px;
     width: 65px;
     border-radius: 50%;
@@ -320,6 +321,11 @@ body {
     padding-top: 10px;
   }
 
+  .controller__wrong-btn,
+  .controller__right-btn {
+    padding-top: 5px;
+  }
+
   .result-block__your-result {
     font-size: 30px;
   }
@@ -331,7 +337,7 @@ body {
   .screen-wrapper__main-content {
     height: 50%;
     width: 95%;
-    margin: 0 auto;
+    margin: 10px auto 0;
   }
 
   .hints__description {
@@ -344,7 +350,7 @@ body {
 
   .timer__loader-wrapper {
     right: 60px;
-    top: 560px;
+    top: 67%;
     width: 83px;
     height: 83px;
 
@@ -356,7 +362,7 @@ body {
 
   .screen-wrapper__timer {
     right: 64px;
-    top: 564px;
+    top: 67.5%;;
     height: 75px;
     width: 75px;
     border-radius: 50%;
