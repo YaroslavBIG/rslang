@@ -1,6 +1,6 @@
 export const nav = () => {
   const navLinkNames = [
-    { name: 'Словарь', link: '#wordbook' },
+    { name: 'Словарь', link: '#vocabulary' },
     { name: 'О команде', link: '#about-us' },
   ];
   const input = '<input id="nav__toggle" class="nav__toggle" type="checkbox">';
