@@ -1,4 +1,4 @@
-import { startSprintGame } from '../pages/sprintGamePage';
+import { startSprintGame } from './launchSprintGameMethods';
 
 export const repeatButtonHandler = () => {
   const repeatBtn = document.getElementById('repeat-btn');

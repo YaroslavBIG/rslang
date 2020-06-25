@@ -1,6 +1,6 @@
-import { constantsData } from './constants';
+import { constantsData } from '../mini-game-sprint/constants';
 
-export const sprintGameIndex = () => `
+export const createSprintGamePage = () => `
   <section class="sprint-game__screen-wrapper" id="wrapper">
     <div class="screen-wrapper__points">
         <p class="points__quantity" id="points">0</p>

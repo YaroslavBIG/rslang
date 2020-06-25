@@ -1,4 +1,5 @@
-import { startSprintGame } from './js/pages/sprintGamePage';
+import { load } from './js/utils';
 
-startSprintGame();
-
+window.onload = () => {
+  load();
+};
