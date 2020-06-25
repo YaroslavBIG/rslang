@@ -47,17 +47,12 @@
     margin-right: -50%;
     transform: translate(-50%, -50%);
   }
-  &__first-gifs {
-    margin-top: 50px;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: space-between;
-  }
+  &__first-gifs,
   &__second-gifs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     margin-top: 50px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
   }
   &__mini-games {
     font-weight: $primary-font-weight - 100;

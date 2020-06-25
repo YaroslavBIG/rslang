@@ -11,9 +11,7 @@
 
 @media screen and (max-device-width: 1000px) {
   .modal-body {
-    &__first-gifs {
-      flex-direction: column;
-    }
+    &__first-gifs,
     &__second-gifs {
       flex-direction: column;
     }
