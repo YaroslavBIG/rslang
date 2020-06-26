@@ -1,48 +1,126 @@
+.card_wrapper{
+  width: 100%;
+}
 .card-game{
+  height: 250px;
+  padding: 0 20px 0;
   border-radius: 8px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 0 1px 0 rgba(0, 0, 0, 0.12);
-  background-color: #ffffff;
-  background-repeat: no-repeat;
-  font: $primary-font-weight $primary-font-size $primary-font-family;
+  background-color: $color-back-main-game;
+  font: $primary-font-weight $primary-font-size+6px $primary-font-family;
   .anwser {
-    color: rgba(255, 0, 0, 0.925);
+    color: $color-incorrect;
   }
   .anwser--wright {
-    color: green;
+    color: $color-correct;
+  }
+}
+
+.card-text{
+  &--quest{
+    padding: 70px 0px 10px;
+  }
+  &--translate{
+    font-size: $primary-font-size + 2px;
+  }
+}
+.separator{
+  margin-bottom: 10px;
+  hr{
+    border: none;
+	  border-top: 1px solid $color-target-word;
   }
 }
 
 .sentence--target-word {
   display: inline-block;
-  border: 1px solid black;
   overflow: hidden;
   overflow-wrap: normal;
+  background-color: $color-target-word;
+  &:focus{
+    outline: 2px solid $active-color;
+  }
 }
 
 .target-word--incorrect {
-  border: 1px solid rgba(255, 0, 0, 0.925);
+  outline: 1px solid $color-incorrect;
 }
 
 .game_main__wrapper {
-  margin: 100px 100px 0 100px;
+  background-image: url('../assets/img/backMainGame.svg');
+  background-size: cover;
+  background-position: center center;
+  &_inner{
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 20px;
+  }
 }
 
 .game_main {
  display: flex;
+ &__modal{
+  display: none;
+  padding-top: 10%;
+  width: 100%;
+  background: #00000082;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  bottom: 0;
+ }
+}
+
+.modal{
+  &__inner{
+    background: $primary-color;
+    padding: 50px 10px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+    color: $secondary-color;
+    & h2, p{
+      font-weight: $primary-font-weight;
+      font-family: $primary-font-family;
+    }
+    & h2{
+      font-size: $primary-font-size + 16px;
+    }
+    & p{
+      font-size: $primary-font-size + 3px;
+    }
+  }
+  &__button_block{
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
 
 .button__main-game {
-    width: 100px;
-    height: 35px;
-    border: none;
-    border-radius: 8px;
-    text-transform: uppercase;
-    text-align: center;
+  width: 135px;
+  height: 35px;
+  border: none;
+  border-radius: 8px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $secondary-color;
+  background-color: $active-color;
+  font-size: $primary-font-size;
+  font-weight: $secondary-font-weight;
+  cursor: pointer;
+  a{
+    text-decoration: none;
     color: $secondary-color;
-    background-color: $active-color;
-    font-size: $primary-font-size;
-    font-weight: $secondary-font-weight;
-    cursor: pointer;
+  }
+}
+.button__main{
+  box-sizing: border-box;
+  padding-top: 8px;
 }
 
 .arrow {
@@ -51,8 +129,31 @@
   background-repeat: no-repeat;
   width: 30px;
   height: 60px;
+  margin-top: 18%;
+  cursor: pointer;
 }
 
 .arrow--left {
   transform: rotateY(180deg);
+}
+
+.hint{
+  padding: 30px 20px 0;
+  &--translate_word, &--text_example, &--image{
+    text-align: center;
+    font: $secondary-font-weight $primary-font-size $primary-font-family;
+    margin-bottom: 10px;
+  }
+  &--image{
+    img{
+      border-radius: 8px;
+      border: 2px solid $active-color;
+    }
+  }
+}
+
+.controls{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px 0;
 }

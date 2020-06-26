@@ -4,14 +4,17 @@
 	position: relative;
 	margin: 15px 0;
 	height: 30px;
-	width: 300px;
+  width: 100%;
+  &-bar{
+    margin-bottom: 30px;
+  }
 }
 
 .progress-done {
-	background: linear-gradient(to left, #F2709C, #FF9472);
+	background: linear-gradient(to left, #6b1834, #ffa500);
 	box-shadow: 0 3px 3px -5px #F2709C, 0 2px 5px #F2709C;
 	border-radius: 20px;
-	color: #fff;
+	color: $primary-color;
 	display: flex;
 	align-items: center;
 	justify-content: center;
