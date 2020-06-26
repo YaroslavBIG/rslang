@@ -6,5 +6,6 @@
 import { createAboutTheTeamPage } from './js/pages/createAboutTheTeamPage';
 
 window.onload = () => {
-  document.body.innerHTML = createAboutTheTeamPage();
+  const root = document.getElementById('root');
+  root.innerHTML = createAboutTheTeamPage();
 };

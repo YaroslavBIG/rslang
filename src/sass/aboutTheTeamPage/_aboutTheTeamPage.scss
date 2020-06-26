@@ -5,7 +5,7 @@
   &__title {
     text-align: center;
     margin: 0;
-    padding: 15px 0 25px;
+    padding: 15px 0 35px;
   }
 }
 
@@ -17,15 +17,10 @@
   padding-bottom: 35px;
 }
 
-.mentor-card__view-block {
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-}
-
-.mentor-card__description-block {
+.mentor-card__description-block,
+.membership-card__description-block {
   width: 75%;
-  text-align: center;
+  padding: 0 25px;
 }
 
 .description-block__name {
@@ -87,18 +82,30 @@
   display: flex;
 }
 
-.membership-card__view-block {
+.right {
+  text-align: end;
+}
+
+.left {
+  text-align: start;
+}
+
+.center {
+  text-align: center;
+}
+
+.membership-card__view-block,
+.mentor-card__view-block {
   width: 25%;
   display: flex;
   flex-direction: column;
 }
 
-.membership-card__description-block {
-  width: 75%;
-  text-align: center;
-}
-
 .student {
   background-image: url(../assets/img/avatarW.png);
   width: 100%;
+}
+
+.Elfimov {
+  background-image: url(../assets/img/Elfimov.jpg);
 }
