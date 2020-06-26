@@ -6,11 +6,5 @@ export const voiceBtnHandler = () => {
   const voiceOff = document.getElementById('voice-off');
   voiceBtn.style.backgroundImage = `url(${voiceImg})`;
   voiceOff.style.backgroundImage = `url(${voiceOffImg})`;
-  voiceBtn.onclick = () => {
-    if (voiceOff.classList.contains('inactive')) {
-      voiceOff.classList.remove('inactive');
-    } else {
-      voiceOff.classList.add('inactive');
-    }
-  };
+  voiceBtn.onclick = () => voiceOff.classList.toggle('inactive');
 };

@@ -3,22 +3,22 @@ import { constantsData } from './constants';
 export const timerLoader = () => {
   const loader = document.getElementById('loader');
   const timer = document.getElementById('timer');
-  let a = 0;
+  let azimuth = 0;
   const pi = Math.PI;
-  const t = constantsData.loaderTime;
+  const loaderTime = constantsData.loaderTime;
 
   const draw = () => {
-    a += 1;
-    a %= 360;
-    const r = ((a * pi) / 180);
+    azimuth += 1;
+    azimuth %= 360;
+    const r = ((azimuth * pi) / 180);
     const x = Math.sin(r) * 125;
     const y = Math.cos(r) * (-125);
-    const mid = (a > 180) ? 1 : 0;
+    const mid = (azimuth > 180) ? 1 : 0;
     const anim = `M 0 0 v -125 A 125 125 1 ${mid} 1 ${x} ${y} z`;
 
     loader.setAttribute('d', anim);
     if (timer.innerHTML !== '0') {
-      setTimeout(draw, t);
+      setTimeout(draw, loaderTime);
     }
   };
   draw();

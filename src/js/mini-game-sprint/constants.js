@@ -1,3 +1,5 @@
+import { dataUrl } from '../api/constants';
+
 export const constantsData = {
   hintsDescription: `<strong>For convenience, you can use the buttons:</strong>
   <br />← to select the option "WRONG"
@@ -12,5 +14,5 @@ export const constantsData = {
   correctAnswersCounter: 0,
   wrongAnswersCounter: 0,
   rightInARow: 0,
-  backendUrl: 'https://raw.githubusercontent.com/YaroslavBIG/rslang-data/master/',
+  backendUrl: dataUrl,
 };
