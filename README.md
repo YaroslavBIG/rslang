@@ -1,4 +1,4 @@
-## Запуск сборкиl
+## Запуск сборки
 
 development mode: npm run dev
 production: npm run prod
