@@ -5,21 +5,29 @@ export const controllerHandler = (wordId, translateID) => {
   const rightBtn = document.getElementById('right-btn');
   const listenerRemove = (func) => document.removeEventListener('keydown', func);
 
+  const wrongBtnChoice = () => {
+    if (wordId !== translateID) {
+      rightChoice();
+    } else {
+      wrongChoice();
+    }
+  }
+
+  const rightBtnChoice = () => {
+    if (wordId === translateID) {
+      rightChoice();
+    } else {
+      wrongChoice();
+    }
+  }
+
   const listener = (event) => {
     listenerRemove(listener);
     if (event.code === 'ArrowLeft') {
-      if (wordId !== translateID) {
-        rightChoice();
-      } else {
-        wrongChoice();
-      }
+      wrongBtnChoice();
     }
     if (event.code === 'ArrowRight') {
-      if (wordId === translateID) {
-        rightChoice();
-      } else {
-        wrongChoice();
-      }
+      rightBtnChoice();
     }
   };
 
@@ -30,19 +38,11 @@ export const controllerHandler = (wordId, translateID) => {
 
   wrongBtn.onclick = () => {
     listenerRemove(listener);
-    if (wordId !== translateID) {
-      rightChoice();
-    } else {
-      wrongChoice();
-    }
+    wrongBtnChoice();
   };
 
   rightBtn.onclick = () => {
     listenerRemove(listener);
-    if (wordId === translateID) {
-      rightChoice();
-    } else {
-      wrongChoice();
-    }
+    rightBtnChoice();
   };
 };
