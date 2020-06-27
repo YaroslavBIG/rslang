@@ -1,6 +1,8 @@
 import { gameContent } from '../gameContent';
 import { addNewWordsPage } from '../newWords';
 import { buttonAnswer } from './buttonAnswer';
+import { setStatistic, setAnswers } from '../statistic/setStatistic';
+import { getDayStatistic } from '../statistic/getStatistic';
 
 export const gameArrows = (event) => {
   const { id } = event.target;
@@ -15,8 +17,16 @@ export const gameArrows = (event) => {
   if ((word !== currentWord && arrowDirection === 'right') || isHint) {
     wordBlock.classList.add('target-word--incorrect');
     const userInput = wordBlock.innerText;
+    setAnswers('wrong');
     if (userInput !== '') buttonAnswer();
     return;
+  }
+
+  if (word === currentWord && arrowDirection === 'right') {
+    setAnswers('right');
+    setStatistic('newWordsCount'); // TODO: add validation new or not
+    setStatistic('wordsLearnToday');
+    console.log(getDayStatistic());
   }
 
   const currentWordNum = parseInt(sessionStorage.getItem('wordNum'), 10);
