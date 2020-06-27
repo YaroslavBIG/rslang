@@ -3,14 +3,15 @@ import { addNewWordsPage } from '../newWords';
 import { buttonAnswer } from './buttonAnswer';
 import { setStatistic, setAnswers } from '../statistic/setStatistic';
 import { getDayStatistic } from '../statistic/getStatistic';
+import { modalCreate } from '../modal/modalCreate';
 
 export const gameArrows = (event) => {
   const { id } = event.target;
   const arrowDirection = id === 'arrow_left' ? 'left' : 'right';
   const wordBlock = document.querySelector('.sentence--target-word');
 
-  const word = sessionStorage.getItem('word');
-  const currentWord = wordBlock.innerText;
+  const word = sessionStorage.getItem('word').toLowerCase();
+  const currentWord = wordBlock.innerText.toLowerCase();
   const hint = wordBlock.firstChild || wordBlock;
   const isHint = hint.nodeName === 'SPAN';
 
@@ -38,15 +39,14 @@ export const gameArrows = (event) => {
       arrowDirection === 'left' ? featureWordNum = 0 : featureWordNum = 1;
       addNewWordsPage();
       break;
-    case collectionLen + 1:
-      addNewWordsPage();
-      break;
     default:
       featureWordNum = arrowDirection === 'left' ? currentWordNum - 1 : currentWordNum + 1;
       break;
   }
-
+  if (featureWordNum >= collectionLen) return modalCreate('end'); // TODO: Check words per day
   if (featureWordNum !== currentWordNum) {
+    console.log(featureWordNum);
+    console.log(collectionLen === featureWordNum);
     gameContent(null, featureWordNum);
   }
 };

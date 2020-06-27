@@ -1,17 +1,16 @@
 export const mainGameRender = () => `
   <section class="game_main__wrapper">
   <div class="game_main__modal">
-    <div class="modal__inner">
-      <h2>Ура! На сегодня все.</h2>
-      <p>Есть еще новые карточки, но дневной лимит исчерпан.</p>
-      <p>Вы можете увеличить лимит в настройках, но, пожалуйста,
-      имейте в виду, что чем больше новых карточек вы посмотрите, тем больше вам надо будет повторять в ближайшее время.</p>
-      <div class="modal__button_block">
-        <div class="button__main-game button__main"><a href="#/main">Выход</a></div>
-        <button class="button__main-game">Продолжить</button>
-      </div>
+  <div class="modal__inner">
+    <div class="modal__inner--wrapper" id="modal">
+
+    </div>
+    <div class="modal__button_block">
+      <div class="button__main-game button__main"><a href="#/main">Выход</a></div>
+      <button class="button__main-game">Продолжить</button>
     </div>
   </div>
+</div>
   <div class="game_main__wrapper_inner">
     <div class="game_main">
       <div class="arrow arrow--left" id="arrow_left"></div>
