@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 export function addSwiper() {
-  let head = document.getElementsByTagName('head')[0];
+  const head = document.getElementsByTagName('head')[0];
   head.innerHTML += `
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
@@ -8,7 +8,7 @@ export function addSwiper() {
     <script src="https://unpkg.com/swiper/js/swiper.js"></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   `;
-  let swiper = new Swiper('.swiper-container', {
+  const swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
