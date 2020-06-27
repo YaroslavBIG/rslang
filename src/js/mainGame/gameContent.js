@@ -3,7 +3,6 @@ import { progressBar } from './progressBar';
 import { dataUrl } from '../api';
 
 export const gameContent = (data = null, wordNum = 0) => {
-  console.log(data);
   const apiWords = () => sessionStorage.getItem('apiWords');
 
   sessionStorage.setItem('wordNum', wordNum);

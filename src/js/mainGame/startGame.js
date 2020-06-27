@@ -6,7 +6,8 @@ import { addMainGameListners } from './eventListners';
 export const startMainGame = async () => {
   const gameData = await getWords();
   gameContent(gameData);
-  progressBar(0, 0);
+  const allWordsCount = JSON.parse(sessionStorage.getItem('apiWords')).length;
+  progressBar(0, allWordsCount);
   addMainGameListners();
   document.querySelector('.sentence--target-word').focus();
 };
