@@ -15,6 +15,11 @@ export const wordConstructorPage = () => `
       </div>
       <div class="game-block__body-cells-answers">
       </div>
+      <div class="game-block__body-context">
+      <img src="" class="game-block__context-image">
+      <p class="game-block__context-name">Контекст</p>
+      <span class="game-block__context-text"></span>
+      </div>
     </div>
     <div class="game-block__footer">
       <span class="game-block__enter">Enter</span>

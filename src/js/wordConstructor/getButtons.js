@@ -6,7 +6,7 @@ var page = randomPage;
 var group = randomGroup;
 var t = 0;
 var b = 1;
-export const getButtons = async (page, group) => {
+export const getButtons = async (page, group, j) => {
   const url = `https://afternoon-falls-25894.herokuapp.com/words?page=${page}&group=${group}`;
   const res = await fetch(url);
   const data = await res.json();
@@ -51,36 +51,21 @@ export const getButtons = async (page, group) => {
           document.getElementsByClassName(
             'game-block__footer-dont-know-button'
           )[0].innerHTML = 'Далее →';
-          if (
-            document.getElementsByClassName(
-              'game-block__footer-dont-know-button'
-            )[0].innerHTML == 'Далее →'
-          ) {
-            document
-              .getElementsByClassName('game-block__footer-dont-know-button')[0]
-              .addEventListener('click', function () {
-                document.getElementsByClassName(
-                  'game-block__body-cells'
-                )[0].innerHTML = '';
-                document.getElementsByClassName(
-                  'game-block__body-cells-answers'
-                )[0].innerHTML = '';
-                t++;
-                b++;
-                document.getElementsByClassName(
-                  'wrapper-block__raund'
-                )[0].innerHTML = `${b}/10`;
-                if (b == 10) {
-                  document.body.innerHTML = '';
-                }
-                randomWord = Math.ceil(Math.random() * 19);
-                j = randomWord;
-                document.getElementsByClassName(
-                  'game-block__footer-dont-know-button'
-                )[0].innerHTML = 'Не знаю :(';
-                getButtons(page, group);
-              });
-          }
+          document.getElementsByClassName(
+            'game-block__context-image'
+          )[0].src = `https://raw.githubusercontent.com/irinainina/rslang/rslang-data/data/${data[j].image}`;
+          document.getElementsByClassName(
+            'game-block__context-image'
+          )[0].style.display = 'block';
+          document.getElementsByClassName(
+            'game-block__context-text'
+          )[0].style.display = 'block';
+          document.getElementsByClassName(
+            'game-block__context-text'
+          )[0].innerHTML = data[j].textExample;
+          document.getElementsByClassName(
+            'game-block__context-name'
+          )[0].style.display = 'block';
         }
       } else {
         button.style.backgroundColor = '#ee5838';

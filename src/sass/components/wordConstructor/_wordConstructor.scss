@@ -122,4 +122,19 @@
     color: #7e919f;
     cursor: pointer;
   }
+  &__context-image {
+    width: 200px;
+    height: 140px;
+    display: none;
+    margin: 0 auto;
+  }
+  &__context-text {
+    font-size: 14px;
+  }
+  &__context-name {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #7e919e;
+    display: none;
+  }
 }
