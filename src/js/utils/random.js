@@ -15,9 +15,9 @@ export const randomInteger = (min, max) => {
 /**
  * Random Arrray
  * Для получения массива случайных чисел:
- * @param {number} len Длинна массива
+ * @param {number} len Длина массива
  * @return {Array} array
- * @usage Генерирует массив чисел от 0 до указанной длинны
+ * @usage Генерирует массив чисел от 0 до указанной длины
  */
 export const randomArr = (len) => {
   const result = [];

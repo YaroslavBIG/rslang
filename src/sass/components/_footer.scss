@@ -1,0 +1,10 @@
+.footer {
+  height: $footer-height;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: $primary-font-family;
+  font-size: 14px;
+  text-align: center;
+}
