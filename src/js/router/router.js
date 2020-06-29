@@ -12,7 +12,7 @@ export const router = () => {
   const path = parseLocation();
   checkToAuth(path);
 
-  const { component = ErrorComponent } = findComponentByPath(path, routes) || {};
+  const { component = ErrorComponent } = findComponentByPath(path, routes);
 
   if (packWithHeader.includes(path)) {
     document.querySelector('main').innerHTML = component.render();
