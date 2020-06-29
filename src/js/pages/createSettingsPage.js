@@ -1,6 +1,7 @@
 import { footer } from '../footer';
-import { main, card, cardBoard, container } from '../main';
-import { header, settings, user } from '../header';
+import { main } from '../main';
+import { header } from '../header';
+
 export const createSettingsPage = () => {
   const pageComponents = header() + main() + footer();
   return `<section class="settings-page">${pageComponents}</section>`;
