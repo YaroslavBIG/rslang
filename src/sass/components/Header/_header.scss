@@ -1,0 +1,42 @@
+.header {
+  height: $header-height;
+  background-color: $primary-color;
+  position: relative;
+  padding: 0 20px;
+  height: $header-height;
+  font-family: $primary-font-family;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 10px 0 $primary-shadow-color;
+  &__singout {
+    color: $secondary-color;
+    font-weight: $secondary-font-weight;
+    background-color: $active-color;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0 20px;
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0 10px 0 $primary-shadow-color;
+    }
+  }
+  &__logo {
+    display: flex;
+  }
+  &__avatar {
+    height: 35px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__settings {
+    height: 31px;
+    margin: 0 20px;
+    &:hover {
+      cursor: pointer;
+      transform: rotate(360deg);
+      transition: transform 2s ease;
+    }
+  }
+}

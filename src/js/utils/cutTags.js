@@ -7,7 +7,7 @@
  */
 
 export const cutTags = (str) => {
-  const tags = /( |<([^>]+)>)/ig;
+  const tags = /( |<([^>]+)>)/gi;
   const dots = /(\.)/g;
   return str.replace(tags, '').replace(dots, '');
 };
