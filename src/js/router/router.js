@@ -5,8 +5,15 @@ import { findComponentByPath } from './findComponentByPath';
 import { routes } from './routes';
 import { callsNecessaryMethods } from './callsNecessaryMethods';
 
-const packWithHeader = ['/main/settings', '/main/learning', '/main/method-interval', '/main/english-puzzle',
-  '/main/speak-it', '/main/sprint', '/main/listening', '/main/savannah', '/main/constructor'];
+const packWithHeader = ['/main/settings',
+'/main/learning',
+'/main/method-interval',
+'/main/english-puzzle',
+'/main/speak-it',
+'/main/sprint',
+'/main/listening',
+'/main/savannah',
+'/main/constructor'];
 
 export const router = () => {
   const path = parseLocation();
