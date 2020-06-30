@@ -38,8 +38,14 @@
   &__text {
     font-size: 19px;
     line-height: 1.5;
+    font-style: italic;
   }
 
+}
+
+.mentor-text {
+  width: 90%;
+  margin: 0 auto;
 }
 
 .view-block {
@@ -86,6 +92,7 @@
   width: 50%;
   height: 200px;
   display: flex;
+  padding-bottom: 35px;
 }
 
 .right {
@@ -114,7 +121,7 @@
   }
 
   &-Elfimov {
-    background-image: url(../assets/img/Elfimov.jpg);
+    background-image: url(../assets/img/Artem.jpg);
   }
 
   &-Yaroslav {
@@ -206,6 +213,7 @@
 
     &__membership-card {
       height: 170px;
+      padding-bottom: 10px;
     }
 
   }
