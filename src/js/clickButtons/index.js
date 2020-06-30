@@ -1,0 +1,1 @@
+export { clickButtonIntervalRepeatContinue } from './clickButtons';
