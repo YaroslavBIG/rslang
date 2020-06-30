@@ -22,7 +22,7 @@ export const intervalRepeatPromoPage = () => `
     </ul>
     </div>
   <div class="modal-footer">
-    <button class="modal-footer__button-start" id="constructorGame"><span class="modal-footer__button-name">Продолжить</span></button>
+    <button class="modal-footer__button-start" id="constructorGame"><span class="modal-footer__button-name" id="modal-footer__continue">Продолжить</span></button>
   </div>
 </div>
 </div>
