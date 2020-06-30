@@ -30,6 +30,14 @@ export function continuee() {
         document.getElementsByClassName(
           'game-block__body-cells-answers'
         )[0].innerHTML = '';
+        document.getElementsByClassName(
+          'game-block__header-volume'
+        )[0].style.display = 'none';
+        document.getElementsByClassName('game-block__header')[0].style.width =
+          '100%';
+        document.getElementsByClassName(
+          'game-block__volume-block'
+        )[0].style.width = '0%';
         t++;
         b++;
         document.getElementsByClassName(

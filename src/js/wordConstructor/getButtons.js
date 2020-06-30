@@ -66,6 +66,21 @@ export const getButtons = async (page, group, j) => {
           document.getElementsByClassName(
             'game-block__context-name'
           )[0].style.display = 'block';
+          document.getElementsByClassName(
+            'game-block__header-volume'
+          )[0].style.display = 'block';
+          document.getElementsByClassName('game-block__header')[0].style.width =
+            '75%';
+          document.getElementsByClassName(
+            'game-block__volume-block'
+          )[0].style.width = '50%';
+          document
+            .getElementsByClassName('game-block__header-volume')[0]
+            .addEventListener('click', function () {
+              var sound = document.createElement('audio');
+              sound.src = `https://raw.githubusercontent.com/irinainina/rslang/rslang-data/data/${data[j].audio}`;
+              sound.play();
+            });
         }
       } else {
         button.style.backgroundColor = '#ee5838';

@@ -7,8 +7,13 @@ export const wordConstructorPage = () => `
   </div>
   <div class="game-block">
     <div class="game-block__header">
-      <p class="game-block__header-name"></p>
-      <p class="game-block__header-description">Собери слово из букв</p>
+      <div class="game-block__volume-block">
+        <img src="./assets/img/volume.svg.png" class="game-block__header-volume">
+      </div>
+      <div class="game-block__header-context">
+        <p class="game-block__header-name"></p>
+        <p class="game-block__header-description">Собери слово из букв</p>
+      </div>
     </div>
     <div class="game-block__body">
       <div class="game-block__body-cells">

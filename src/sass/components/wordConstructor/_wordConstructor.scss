@@ -43,6 +43,8 @@
   &__header {
     width: 100%;
     height: 20%;
+    display: flex;
+    justify-content: space-between;
   }
   &__body {
     width: 100%;
@@ -57,7 +59,7 @@
     background-color: #f5f7f8;
   }
   &__header-name {
-    font-size: 30px;
+    font-size: 27px;
     color: #37383c;
   }
   &__header-description {
@@ -136,5 +138,23 @@
     font-size: 14px;
     color: #7e919e;
     display: none;
+  }
+  &__header-volume {
+    width: 50px;
+    height: 50px;
+    display: none;
+    cursor: pointer;
+  }
+  &__header-context {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  &__volume-block {
+    display: flex;
+    width: 0%;
+    justify-content: center;
+    align-items: center;
   }
 }
