@@ -1,5 +1,6 @@
 import { actionAuth, globalUser, saveAuth } from '../utils';
 import { swaggerUrl } from './constants';
+import { router } from '../router';
 
 /**
  * Get Response.
@@ -39,6 +40,7 @@ export const getResponse = async (url, { ...options }) => {
     if (response && response.status === invalidToken) {
       actionAuth.setAuth(false);
       saveAuth();
+      router();
     }
     return await response.json();
   } catch (err) {
