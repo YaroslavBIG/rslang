@@ -4,14 +4,14 @@
   * список кейсов:
   * case '/main': {}
   * case '/main/settings': {}
-  * case '/main/learning': {}
-  * case '/main/method-interval': {}
+  * case '/main/word-learning': {}
+  * case '/main/word-repeat': {}
   * case '/main/english-puzzle': {}
   * case '/main/speak-it': {}
   * case '/main/sprint': {}
-  * case '/main/listening': {}
+  * case '/main/audition': {}
   * case '/main/savannah': {}
-  * case '/main/constructor': {}
+  * case '/main/word-puzzle': {}
   * case '/vocabulary': {}
   * case '/statistic': {}
   * case '/about-us': {}

@@ -8,7 +8,7 @@
 * pageGame() - название функции, которая отдает вашу начальную верстку для игры.
 */
 
-import { createErrorPage, createSignInUpPage } from '../pages';
+import { createErrorPage, createSignInUpPage, createMainPage } from '../pages';
 
 export const HomeComponent = {
   render: () => '<a href="#/auth">click</a>',
@@ -17,15 +17,15 @@ export const AuthComponent = {
   render: () => createSignInUpPage(),
 };
 export const MainComponent = {
-  render: () => '',
+  render: () => createMainPage(),
 };
 export const SettingsComponent = {
   render: () => '',
 };
-export const LearningComponent = {
+export const WordLearningComponent = {
   render: () => '',
 };
-export const MethodIntervalComponent = {
+export const WordRepeatComponent = {
   render: () => '',
 };
 export const EnglishPuzzleComponent = {
@@ -34,13 +34,16 @@ export const EnglishPuzzleComponent = {
 export const SpeakItComponent = {
   render: () => '',
 };
-export const ListeningComponent = {
+export const AuditionComponent = {
   render: () => '',
 };
 export const SavannahComponent = {
   render: () => '',
 };
-export const ConstructorComponent = {
+export const SprintComponent = {
+  render: () => '',
+};
+export const WordPuzzleComponent = {
   render: () => '',
 };
 export const VocabularyComponent = {
