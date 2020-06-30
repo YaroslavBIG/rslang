@@ -22,7 +22,7 @@ export const router = () => {
   const { component = ErrorComponent } = findComponentByPath(path, routes);
 
   if (packWithHeader.includes(path)) {
-    document.querySelector('main').innerHTML = component.render();
+    document.querySelector('.main').innerHTML = component.render();
   } else {
     document.getElementById('root').innerHTML = component.render();
   }
