@@ -1,13 +1,10 @@
-import { footer } from '../footer/footer';
-import { main } from '../main/main';
-import { card } from '../main/card/card';
-import { cardBoard } from '../main/card/cardBoard';
-import { header } from '../header/header';
-import { container } from '../main/container';
-import { settings } from '../header/settings';
-import { user } from '../header/user';
+import { footer } from '../footer';
+import {
+  main, card, cardBoard, container,
+} from '../main';
+import { header, settings, user } from '../header';
 
-export const mainPage = () => {
+export const createMainPage = () => {
   const cardWordLearning = card(
     'Изучение слов',
     '#/main/word-learning',
