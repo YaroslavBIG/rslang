@@ -8,7 +8,7 @@ export const createAboutTheTeamPage = () => `
               <a class="social-link" href="https://github.com/ikisialiou">
                 <i class="fa fa-github"></i>
               </a>
-              <a class="social-link" href="#tg">
+              <a class="social-link" href="mailto:ivan_kiselev1990@mail.ru">
                 <i class="fa fa-envelope"></i>
               </a>
             </div>
@@ -17,7 +17,7 @@ export const createAboutTheTeamPage = () => `
             <h2 class="description-block__name">Киселев Иван</h2>
             <p class="description-block__role">Ментор / Наставник</p>
             <p class="description-block__text">
-              Один из самых сильных и мудрых джедаев своего времени. Человек, который смог собрать из одиноких странников - 
+              Один из самых сильных и мудрых джедаев своего времени. Человек, который смог собрать из одиноких странников -
               команду и привести её к победе!
             </p>
         </div>
