@@ -5,10 +5,9 @@ export const inputControl = (event) => {
   const userInput = event.target.innerText;
   if (targetWord === userInput) {
     const url = sessionStorage.getItem('audio');
-    playAudio(url);
     const urlExample = sessionStorage.getItem('audioExample');
-    playAudio(urlExample);
     const urlMeaning = sessionStorage.getItem('audioMeaning');
-    playAudio(urlMeaning);
+    const audioArr = [url, urlExample, urlMeaning];
+    playAudio(false, audioArr);
   }
 };
