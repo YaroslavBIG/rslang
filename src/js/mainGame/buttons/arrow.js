@@ -4,6 +4,7 @@ import { buttonAnswer } from './buttonAnswer';
 import { setStatistic, setAnswers } from '../statistic/setStatistic';
 import { getDayStatistic } from '../statistic/getStatistic';
 import { modalCreate } from '../modal/modalCreate';
+import { progressBar } from '../progressBar';
 
 export const gameArrows = (event) => {
   const { id } = event.target;
@@ -43,7 +44,12 @@ export const gameArrows = (event) => {
       featureWordNum = arrowDirection === 'left' ? currentWordNum - 1 : currentWordNum + 1;
       break;
   }
-  if (featureWordNum >= collectionLen) return modalCreate('end'); // TODO: Check words per day
+  if (featureWordNum >= collectionLen) {
+    const progress = parseInt(sessionStorage.getItem('wordNum'), 10);
+    const progressAll = JSON.parse(sessionStorage.getItem('apiWords')).length;
+    progressBar(progress + 1, progressAll);
+    return modalCreate('end'); // TODO: Check words per day
+  }
   if (featureWordNum !== currentWordNum) {
     console.log(featureWordNum);
     console.log(collectionLen === featureWordNum);
