@@ -28,6 +28,9 @@ export const gameContent = (data = null, wordNum = 0) => {
   sessionStorage.setItem('audioExample', audioExample);
   sessionStorage.setItem('audioMeaning', audioMeaning);
 
+  const allWordsCount = JSON.parse(sessionStorage.getItem('apiWords')).length;
+  sessionStorage.setItem('allWordsCount', allWordsCount);
+
   const cardQuestBlock = document.querySelector('.card-text--quest');
   const firstPartBlock = document.querySelector('.sentence--first-part');
   const wordBlock = document.querySelector('.sentence--target-word');

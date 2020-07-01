@@ -1,10 +1,11 @@
 export const getDayStatistic = () => {
-  const newWordsCount = localStorage.getItem('newWordsCount') || 0;
-  const wordsLearnToday = localStorage.getItem('wordsLearnToday') || 0;
-  const correctAnswersSeries = localStorage.getItem('correctAnswersSeries') || 0;
-  const rightAnswers = localStorage.getItem('rightAnswers') || 0;
-  const wrongAnswers = localStorage.getItem('wrongAnswers') || 0;
-  const percent = rightAnswers / ((rightAnswers + wrongAnswers) / 100) || 0;
+  const newWordsCount = parseInt(localStorage.getItem('newWordsCount'), 10) || 0;
+  const wordsLearnToday = parseInt(localStorage.getItem('wordsLearnToday'), 10) || 0;
+  const correctAnswersSeries = parseInt(localStorage.getItem('correctAnswersSeries'), 10) || 0;
+  const rightAnswers = parseInt(localStorage.getItem('rightAnswers'), 10) || 0;
+  const wrongAnswers = parseInt(localStorage.getItem('wrongAnswers'), 10) || 0;
+
+  const percent = Math.round(((rightAnswers / (rightAnswers + wrongAnswers)) * 100));
   const resultObj = {
     newWordsCount,
     wordsLearnToday,
@@ -13,6 +14,5 @@ export const getDayStatistic = () => {
     wrongAnswers,
     percent,
   };
-  console.log(resultObj);
   return resultObj;
 };
