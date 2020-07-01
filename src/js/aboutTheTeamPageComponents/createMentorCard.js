@@ -1,3 +1,5 @@
+import { aboutTheTeamText } from './constants';
+
 export const createMentorCard = () => `
 <div class="about-team__mentor-card">
     <div class="mentor-card__view-block">
@@ -15,8 +17,7 @@ export const createMentorCard = () => `
         <h2 class="description-block__name">Киселев Иван</h2>
         <p class="description-block__role">Ментор / Наставник</p>
         <p class="description-block__text mentor-text">
-          « Мы постарались сделать уникальное, в своем роде, приложение, которое поможет каждому, кто хочет выучить 
-          английский язык. Заходите, регистрируйтесь и дерзайте! »
+          ${aboutTheTeamText.textIvan}
         </p>
     </div>
 </div>
