@@ -5,14 +5,16 @@ import { findComponentByPath } from './findComponentByPath';
 import { routes } from './routes';
 import { callsNecessaryMethods } from './callsNecessaryMethods';
 
-const packWithHeader = ['/main/word-learning',
+const packWithHeader = [
+  '/main/word-learning',
   '/main/word-repeat',
   '/main/english-puzzle',
   '/main/speak-it',
   '/main/sprint',
   '/main/listening',
   '/main/savannah',
-  '/main/constructor'];
+  '/main/constructor',
+];
 
 export const router = () => {
   const path = parseLocation();
