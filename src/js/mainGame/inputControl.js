@@ -1,4 +1,5 @@
 import { playAudio } from './utils/playAudio';
+import { setTranscription } from './utils/setTranscription';
 
 export const inputControl = (event) => {
   const targetWord = sessionStorage.getItem('word');
@@ -9,5 +10,6 @@ export const inputControl = (event) => {
     const urlMeaning = sessionStorage.getItem('audioMeaning');
     const audioArr = [url, urlExample, urlMeaning];
     playAudio(false, audioArr);
+    setTranscription();
   }
 };

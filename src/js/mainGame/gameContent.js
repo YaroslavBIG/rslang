@@ -20,17 +20,18 @@ export const gameContent = (data = null, wordNum = 0) => {
   sessionStorage.setItem('collectionLen', apiWordsParse.length);
   const {
     textExample, textExampleTranslate, word, wordTranslate,
-    image, textMeaningTranslate, audio, audioExample, audioMeaning,
+    image, textMeaningTranslate, audio, audioExample, audioMeaning, transcription,
   } = apiWordsParse[wordNum];
 
   sessionStorage.setItem('word', word);
   sessionStorage.setItem('audio', audio);
   sessionStorage.setItem('audioExample', audioExample);
   sessionStorage.setItem('audioMeaning', audioMeaning);
+  sessionStorage.setItem('transcription', transcription);
 
-  const allWordsCount = JSON.parse(sessionStorage.getItem('apiWords')).length;
+  const allWordsCount = apiWordsParse.length;
   sessionStorage.setItem('allWordsCount', allWordsCount);
-
+  console.log(transcription);
   const cardQuestBlock = document.querySelector('.card-text--quest');
   const firstPartBlock = document.querySelector('.sentence--first-part');
   const wordBlock = document.querySelector('.sentence--target-word');

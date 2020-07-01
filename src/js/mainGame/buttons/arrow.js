@@ -2,7 +2,6 @@ import { gameContent } from '../gameContent';
 import { addNewWordsPage } from '../newWords';
 import { buttonAnswer } from './buttonAnswer';
 import { setStatistic, setAnswers } from '../statistic/setStatistic';
-import { getDayStatistic } from '../statistic/getStatistic';
 import { modalCreate } from '../modal/modalCreate';
 import { progressBar } from '../progressBar';
 
@@ -28,7 +27,6 @@ export const gameArrows = (event) => {
     setAnswers('right');
     setStatistic('newWordsCount'); // TODO: add validation new or not
     setStatistic('wordsLearnToday');
-    console.log(getDayStatistic());
   }
 
   const currentWordNum = parseInt(sessionStorage.getItem('wordNum'), 10);
@@ -51,8 +49,6 @@ export const gameArrows = (event) => {
     return modalCreate('end'); // TODO: Check words per day
   }
   if (featureWordNum !== currentWordNum) {
-    console.log(featureWordNum);
-    console.log(collectionLen === featureWordNum);
     gameContent(null, featureWordNum);
   }
 };
