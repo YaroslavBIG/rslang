@@ -9,6 +9,7 @@ export const gameArrows = (event) => {
   const { id } = event.target;
   const arrowDirection = id === 'arrow_left' ? 'left' : 'right';
   const wordBlock = document.querySelector('.sentence--target-word');
+  const cardGame = document.querySelector('.card-game');
 
   const word = sessionStorage.getItem('word').toLowerCase();
   const currentWord = wordBlock.innerText.toLowerCase();
@@ -27,6 +28,7 @@ export const gameArrows = (event) => {
     setAnswers('right');
     setStatistic('newWordsCount'); // TODO: add validation new or not
     setStatistic('wordsLearnToday');
+    cardGame.classList.remove('transform--scale');
   }
 
   const currentWordNum = parseInt(sessionStorage.getItem('wordNum'), 10);
@@ -40,6 +42,7 @@ export const gameArrows = (event) => {
       break;
     default:
       featureWordNum = arrowDirection === 'left' ? currentWordNum - 1 : currentWordNum + 1;
+      cardGame.classList.remove('transform--scale');
       break;
   }
   if (featureWordNum >= collectionLen) {

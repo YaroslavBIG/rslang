@@ -70,4 +70,8 @@ export const gameContent = (data = null, wordNum = 0) => {
   wordTranslateBlock.innerText = wordTranslate;
   progressBar(progress, progressAll);
   wordBlock.focus();
+  const cardGame = document.querySelector('.card-game');
+  setTimeout(() => {
+    cardGame.classList.add('transform--scale');
+  }, 1000);
 };
