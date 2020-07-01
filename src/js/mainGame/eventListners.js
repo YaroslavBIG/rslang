@@ -10,6 +10,7 @@ export const addMainGameListners = () => {
 
   const userInput = document.querySelector('#user_input');
   userInput.addEventListener('input', (ev) => inputControl(ev));
+  // userInput.addEventListener('keydown', (ev) => answerCheck(ev));
 
   const answerButton = document.querySelector('#answer');
   answerButton.addEventListener('click', () => buttonAnswer());

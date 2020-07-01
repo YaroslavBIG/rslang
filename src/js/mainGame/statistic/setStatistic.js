@@ -1,3 +1,5 @@
+import { getDayOfYear } from '../utils';
+
 const setLocStats = (name, value = 0) => localStorage.setItem(name, value);
 
 export const setStatistic = (param) => {
@@ -7,6 +9,7 @@ export const setStatistic = (param) => {
   switch (param) {
     case 'card':
       setLocStats('wordsLearnToday', (wordsLearnToday ? wordsLearnToday + 1 : 1));
+
       break;
     case 'newWordsCount':
       setLocStats('newWordsCount', (newWordsCount ? newWordsCount + 1 : 1));
@@ -26,11 +29,12 @@ export const setAnswers = (param) => {
   const rightAnswers = parseInt(localStorage.getItem('rightAnswers'), 10) || 0;
   const wrongAnswers = parseInt(localStorage.getItem('wrongAnswers'), 10) || 0;
   const lastAnswer = localStorage.getItem('lastAnswer');
+  const dayOfLastGame = parseInt(localStorage.getItem('dayOfLastGame'), 10) || 0;
+  const dayYearToday = getDayOfYear();
 
   switch (param) {
     case 'clear':
-    case 'clearAll':
-      if (param === 'clearAll') setLocStats('correctAnswersSeries');
+      if (dayYearToday !== dayOfLastGame) setLocStats('correctAnswersSeries');
       setLocStats('rightAnswers');
       setLocStats('wrongAnswers');
       setLocStats('lastAnswer', 'right');
@@ -38,6 +42,7 @@ export const setAnswers = (param) => {
     case 'right':
       setLocStats('answersSeries', answersSeries() ? answersSeries() + 1 : 1);
       setLocStats('rightAnswers', rightAnswers ? rightAnswers + 1 : 1);
+      setLocStats('dayOfLastGame', dayOfLastGame);
       if (lastAnswer === 'right' && answersSeries() > correctAnswers()) setLocStats('correctAnswersSeries', (correctAnswers() ? correctAnswers() + 1 : 1));
       break;
     case 'wrong':
