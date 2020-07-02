@@ -1,3 +1,5 @@
+export { cutTags } from './cutTags';
+export { randomInteger, randomArr } from './random';
 export { globalUser, actionAuth } from './main';
 export { load } from './load';
 export { loadAuth } from './loadAuth';
