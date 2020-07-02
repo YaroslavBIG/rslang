@@ -1,17 +1,14 @@
 import { aboutTheTeamText } from './constants';
+import { createSocialBlock } from './createSocialBlock';
 
 export const createMentorCard = () => `
 <div class="about-team__mentor-card">
     <div class="mentor-card__view-block">
         <div class="view-block__avatar mentor avatar-Ivan"></div>
-        <div class="view-block__social">
-          <a class="social-link" href="https://github.com/ikisialiou">
-            <i class="fa fa-github"></i>
-          </a>
-          <a class="social-link" href="mailto:ivan_kiselev1990@mail.ru">
-            <i class="fa fa-envelope"></i>
-          </a>
-        </div>
+        ${createSocialBlock(
+    'https://github.com/ikisialiou',
+    'ivan_kiselev1990@mail.ru',
+  )}
     </div>
     <div class="mentor-card__description-block center">
         <h2 class="description-block__name">Киселев Иван</h2>
