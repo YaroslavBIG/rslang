@@ -1,6 +1,6 @@
-import { mainPromoPageHeader } from './mainPromoPageHeader';
-import { mainPromoPageBody } from './mainPromoPageBody';
-import { mainPromoPageFooter } from './mainPromoPageFooter';
+import { mainPromoPageHeader } from '../pageElements/mainPromoPageHeader';
+import { mainPromoPageBody } from '../pageElements/mainPromoPageBody';
+import { mainPromoPageFooter } from '../pageElements/mainPromoPageFooter';
 
 export const mainPromoPage = () => `
 <div id="myModal" class="modal">

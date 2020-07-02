@@ -18,6 +18,6 @@ export const mainPromoPageHeader = () => `
 <div class="modal-footer__go-block">
   <span class="modal-footer__go">Вперёд! К новым начинаниям!</span>
 </div>
-<button class="modal-footer__button-start" ><a href="#/auth" class="modal-footer__button-name">Вперёд!</a></button>
+<button class="modal-footer__button-start" ><a href="#/main" class="click-enter">Вперёд!</a></button>
 </div>
 `;
