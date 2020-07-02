@@ -26,7 +26,7 @@ export const createSignInUpPage = () => `<section class="inner-section__start">
               <p>- одну заглавную букву;</p>
               <p>- одну строчную букву;</p>
               <p>- одну цифру;</p>
-              <p>- один специальный символ;</p>
+              <p>- один специальный символ <strong>( +-_@$!%*?&#.,;:[]{} )</strong>;</p>
               </div>
               <p class="title-block">Выбери свою иконку!</p>
               <div class="icons">
