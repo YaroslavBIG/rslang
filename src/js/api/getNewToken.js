@@ -1,5 +1,5 @@
 import { globalUser } from '../utils';
-import { swaggerUrl } from './constants';
+import { swaggerUrl, baseHeaders } from './constants';
 
 export const getNewToken = async () => {
   const { userId: id, refreshToken: refToken } = globalUser.get();
@@ -11,8 +11,7 @@ export const getNewToken = async () => {
       withCredentials: true,
       headers: {
         Authorization: `Bearer ${refToken}`,
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
+        ...baseHeaders,
       },
     });
 

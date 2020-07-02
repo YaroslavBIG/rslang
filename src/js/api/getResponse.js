@@ -1,5 +1,5 @@
 import { actionAuth, saveAuth } from '../utils';
-import { swaggerUrl } from './constants';
+import { swaggerUrl, baseHeaders } from './constants';
 import { router } from '../router';
 import { getResultToken } from './getResultToken';
 
@@ -23,17 +23,12 @@ export const getResponse = async (url, { ...options }) => {
   const authorization = (isAuth === 'true' || isAuth === true) ? getResultToken() : {};
   const withCredential = (isAuth === 'true' || isAuth === true) ? { withCredentials: true } : {};
 
-  const baseHeaders = {
-    ...authorization,
-    Accept: 'application/json',
-    'Content-Type': 'application/json',
-  };
-
   try {
     const response = await fetch(resURL, {
       ...options,
       ...withCredential,
       headers: {
+        ...authorization,
         ...baseHeaders,
       },
     });
