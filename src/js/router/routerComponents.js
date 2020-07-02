@@ -13,10 +13,11 @@ import {
   createSignInUpPage,
   createMainPage,
   createSprintGamePage,
+  createAboutTheTeamPage,
 } from '../pages';
 
 export const HomeComponent = {
-  render: () => '<a href="#/auth">click</a>',
+  render: () => '<a href="#/auth">click</a><a href="#/main" class="click-enter"></a>',
 };
 export const AuthComponent = {
   render: () => createSignInUpPage(),
@@ -58,7 +59,7 @@ export const StatisticComponent = {
   render: () => '',
 };
 export const AboutUsComponent = {
-  render: () => '',
+  render: () => createAboutTheTeamPage(),
 };
 export const ErrorComponent = {
   render: () => createErrorPage(),
