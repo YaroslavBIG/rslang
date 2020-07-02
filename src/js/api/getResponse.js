@@ -1,7 +1,7 @@
 import { actionAuth, saveAuth } from '../utils';
 import { swaggerUrl } from './constants';
 import { router } from '../router';
-import { getDataToken } from './getDataToken';
+import { getResultToken } from './getResultToken';
 
 /**
  * Get Response.
@@ -17,11 +17,10 @@ import { getDataToken } from './getDataToken';
 
 export const getResponse = async (url, { ...options }) => {
   const isAuth = actionAuth.getAuth();
-  const tokenRes = getDataToken();
   const invalidToken = 401;
 
   const resURL = `${swaggerUrl}${url}`;
-  const authorization = (isAuth === 'true' || isAuth === true) ? { Authorization: `Bearer ${tokenRes}` } : {};
+  const authorization = (isAuth === 'true' || isAuth === true) ? getResultToken() : {};
   const withCredential = (isAuth === 'true' || isAuth === true) ? { withCredentials: true } : {};
 
   const baseHeaders = {

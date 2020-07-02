@@ -5,9 +5,10 @@ export const saveIcon = async (resResp) => {
   const authMess = 'Authenticated';
 
   const bodyIcon = {
-    wordsPerDay: 10,
+    wordsPerDay: 50,
     optional: {
       icon: icon.iconURL,
+      newWordsPerDay: 10,
       maxCardsPerDay: 10,
       soundAutoPlay: true,
       showDeleteBtn: true,
