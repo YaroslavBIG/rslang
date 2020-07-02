@@ -10,7 +10,7 @@
 
   &__mentor-card {
     width: 70%;
-    height: 200px;
+    height: 250px;
     display: flex;
     margin: 0 auto;
     padding-bottom: 35px;
@@ -171,12 +171,29 @@
     }
 
   }
+
+  .about-team__mentor-card {
+    height: auto;
+  }
+
+  .team-cards__membership-card {
+    height: auto;
+  }
+
 }
 
 @media (min-device-width: 700px) and (max-device-width: 899px) {
 
-  .about-team__title {
-    font-size: 24px;
+  .about-team {
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__mentor-card {
+      height: auto;
+    }
+
   }
 
   .membership-card__view-block {
@@ -208,12 +225,9 @@
   .team-cards {
 
     &__membership-card {
-      width: 80%;
-    }
-
-    &__membership-card {
-      height: 170px;
+      height: 200px;
       padding-bottom: 10px;
+      width: 80%;
     }
 
   }
