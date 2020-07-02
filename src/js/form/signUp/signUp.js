@@ -9,11 +9,13 @@ export const signUp = async () => {
 
   const login = document.querySelector('[name="email"]').value;
   const pass = document.querySelector('[name="password-up"]').value;
+  const nameUser = document.querySelector('[name="name"]').value;
   const reg = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[+-_@$!%*?&#.,;:[\]{}]).{8,}$/;
 
   if (reg.test(pass)) {
-    const user = { email: login, password: pass };
+    const user = { name: nameUser, email: login, password: pass };
 
+    globalUser.set('name', nameUser);
     globalUser.set('email', login);
     globalUser.set('password', pass);
 
