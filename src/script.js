@@ -1,11 +1,5 @@
-// import { load } from './js/utils';
-//
-// window.onload = () => {
-//   load();
-// };
-import { createAboutTheTeamPage } from './js/pages/createAboutTheTeamPage';
+import { load } from './js/utils';
 
 window.onload = () => {
-  const root = document.getElementById('root');
-  root.innerHTML = createAboutTheTeamPage();
+  load();
 };

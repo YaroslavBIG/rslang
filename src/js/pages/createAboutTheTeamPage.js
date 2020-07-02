@@ -1,5 +1,4 @@
-import { createMentorCard } from '../aboutTheTeamPageComponents/createMentorCard';
-import { createTeamCards } from '../aboutTheTeamPageComponents/createTeamCards';
+import { createMentorCard, createTeamCards } from '../aboutTheTeamPageComponents';
 
 export const createAboutTheTeamPage = () => `
 <section class="about-team">
