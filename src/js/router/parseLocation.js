@@ -1,3 +1,1 @@
-export const parseLocation = () => {
-  return document.location.hash.slice(1).toLowerCase() || '/';
-}
+export const parseLocation = () => document.location.hash.slice(1).toLowerCase() || '/';
