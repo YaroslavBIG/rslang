@@ -8,7 +8,12 @@
 * pageGame() - название функции, которая отдает вашу начальную верстку для игры.
 */
 
-import { createErrorPage, createSignInUpPage, createMainPage } from '../pages';
+import {
+  createErrorPage,
+  createSignInUpPage,
+  createMainPage,
+  createSprintGamePage,
+} from '../pages';
 
 export const HomeComponent = {
   render: () => '<a href="#/auth">click</a>',
@@ -41,7 +46,7 @@ export const SavannahComponent = {
   render: () => '',
 };
 export const SprintComponent = {
-  render: () => '',
+  render: () => createSprintGamePage(),
 };
 export const WordPuzzleComponent = {
   render: () => '',

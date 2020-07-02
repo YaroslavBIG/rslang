@@ -8,7 +8,6 @@
   * case '/main/word-repeat': {}
   * case '/main/english-puzzle': {}
   * case '/main/speak-it': {}
-  * case '/main/sprint': {}
   * case '/main/audition': {}
   * case '/main/savannah': {}
   * case '/main/word-puzzle': {}
@@ -18,6 +17,7 @@
   */
 
 import { controlForm, submitForm, chooseIcon } from '../form';
+import { startSprintGame } from '../mini-game-sprint/launchSprintGameMethods';
 
 export const callsNecessaryMethods = (path) => {
   switch (path) {
@@ -28,6 +28,10 @@ export const callsNecessaryMethods = (path) => {
       controlForm();
       submitForm();
       chooseIcon();
+      break;
+    }
+    case '/main/sprint': {
+      startSprintGame();
       break;
     }
     default: {
