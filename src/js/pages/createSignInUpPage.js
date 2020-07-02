@@ -17,7 +17,8 @@ export const createSignInUpPage = () => `<section class="inner-section__start">
               <button class="button button_sign-in">Войти</button>
             </form>
             <form class="form form__sign-up" action="" method="post" name="form" data-up>
-   <input required autocomplete="disabled" class="form__styling sign-up__login" type="e-mail" name="email" placeholder="e-mail"/>
+<input required autocomplete="disabled" class="form__styling" type="text" name="name" placeholder="Ваше имя"/>
+<input required autocomplete="disabled" class="form__styling sign-up__login" type="e-mail" name="email" placeholder="e-mail"/>
 <input required autocomplete="disabled" class="form__styling sign-up__pass" type="text" name="password-up" placeholder="пароль"/>
               <div class="error-block-up"></div>
               <div class="rules">
