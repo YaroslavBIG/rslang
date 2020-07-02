@@ -28,6 +28,5 @@ export const handelDictioaryCard = (e) => {
   if (audioWords) {
     const audioSrc = card.dataset.idAudio;
     audioWordsDictionary(audioSrc);
-    console.log('audio');
   }
 };
