@@ -1,6 +1,7 @@
-import { actionAuth, globalUser, saveAuth } from '../utils';
+import { actionAuth, saveAuth } from '../utils';
 import { swaggerUrl } from './constants';
 import { router } from '../router';
+import { getDataToken } from './getDataToken';
 
 /**
  * Get Response.
@@ -16,7 +17,7 @@ import { router } from '../router';
 
 export const getResponse = async (url, { ...options }) => {
   const isAuth = actionAuth.getAuth();
-  const { token: tokenRes } = globalUser.get();
+  const tokenRes = getDataToken();
   const invalidToken = 401;
 
   const resURL = `${swaggerUrl}${url}`;
