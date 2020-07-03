@@ -1,11 +1,10 @@
 import { cutTags, getTextWidth } from '../utils';
 import { progressBar } from './progressBar';
 import { dataUrl } from '../api';
+import { setSessionStorage } from './utils';
 
 export const gameContent = (data = null, wordNum = 0) => {
   const apiWords = () => sessionStorage.getItem('apiWords');
-
-  sessionStorage.setItem('wordNum', wordNum);
 
   if (!apiWords()) {
     sessionStorage.setItem('apiWords', JSON.stringify(data));
@@ -14,24 +13,26 @@ export const gameContent = (data = null, wordNum = 0) => {
   const userWords = apiWords();
   const apiWordsParse = data || JSON.parse(userWords);
   const { page, group } = apiWordsParse[wordNum];
+  const collectionLen = apiWordsParse.length;
 
-  sessionStorage.setItem('page', page);
-  sessionStorage.setItem('group', group);
-  sessionStorage.setItem('collectionLen', apiWordsParse.length);
   const {
     textExample, textExampleTranslate, word, wordTranslate,
     image, textMeaningTranslate, audio, audioExample, audioMeaning, transcription,
   } = apiWordsParse[wordNum];
 
-  sessionStorage.setItem('word', word);
-  sessionStorage.setItem('audio', audio);
-  sessionStorage.setItem('audioExample', audioExample);
-  sessionStorage.setItem('audioMeaning', audioMeaning);
-  sessionStorage.setItem('transcription', transcription);
+  const addToSessionStorage = {
+    wordNum,
+    page,
+    group,
+    word,
+    audio,
+    audioExample,
+    audioMeaning,
+    transcription,
+    collectionLen,
+  };
+  setSessionStorage(addToSessionStorage);
 
-  const allWordsCount = apiWordsParse.length;
-  sessionStorage.setItem('allWordsCount', allWordsCount);
-  console.log(transcription);
   const cardQuestBlock = document.querySelector('.card-text--quest');
   const firstPartBlock = document.querySelector('.sentence--first-part');
   const wordBlock = document.querySelector('.sentence--target-word');
@@ -68,8 +69,11 @@ export const gameContent = (data = null, wordNum = 0) => {
   lastPartBlock.innerText = textAfterWord;
   textTranslateBlock.innerText = textExampleTranslate;
   wordTranslateBlock.innerText = wordTranslate;
+
   progressBar(progress, progressAll);
+
   wordBlock.focus();
+
   const cardGame = document.querySelector('.card-game');
   setTimeout(() => {
     cardGame.classList.add('transform--scale');

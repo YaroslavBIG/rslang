@@ -1,3 +1,5 @@
-import { intervalGameRender } from './js/pages';
+import { mainGameRender } from './js/pages';
+import { startMainGame } from './js/mainGame/startGame';
 
-document.querySelector('#root').innerHTML = intervalGameRender();
+document.querySelector('#root').innerHTML = mainGameRender();
+startMainGame();

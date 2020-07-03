@@ -7,7 +7,7 @@ import { setStatistic, setAnswers } from './statistic/setStatistic';
 export const startMainGame = async () => {
   const gameData = await getWords(0, 0, 10, 2);
   gameContent(gameData);
-  const allWordsCount = sessionStorage.getItem('allWordsCount');
+  const allWordsCount = sessionStorage.getItem('collectionLen');
   progressBar(0, allWordsCount);
   addMainGameListners();
   document.querySelector('.sentence--target-word').focus();
