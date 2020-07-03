@@ -140,10 +140,20 @@
   height: 60px;
   margin-top: 18%;
   cursor: pointer;
-}
-
-.arrow--left {
-  transform: rotateY(180deg);
+  &--left{
+    transform: rotateY(180deg);
+  }
+  &--left:hover,
+  &--right:hover{
+    margin-top: 19%;
+    transition: all 0.2s ease-in-out;
+  }
+  &--left:hover{
+    transform:rotateY(180deg) scale(1.5);
+  }
+  &--right:hover{
+    transform:scale(1.5);
+  }
 }
 
 .hint{
