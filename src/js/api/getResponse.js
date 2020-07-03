@@ -34,6 +34,7 @@ export const getResponse = async (url, { ...options }) => {
     if (response && response.status === invalidToken) {
       actionAuth.setAuth(false);
       saveAuth();
+      window.location.replace('#/auth');
       router();
     }
     return await response.json();
