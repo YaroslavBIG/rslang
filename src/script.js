@@ -1,5 +1,8 @@
-import { mainGameRender } from './js/pages';
-import { startMainGame } from './js/mainGame/startGame';
+import { load } from './js/utils';
+import { router } from './js/router';
 
-document.querySelector('#root').innerHTML = mainGameRender();
-startMainGame();
+window.addEventListener('hashchange', router);
+window.onload = () => {
+  load();
+  router();
+};

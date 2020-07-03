@@ -3,13 +3,13 @@
 @import "./components/index";
 @import './components/media/media-main-game';
 @import "./components/main-page.scss";
-@import "./components/Header/header.scss";
-@import "./components/Main/main.scss";
+@import "components/header/header.scss";
+@import "components/main/main.scss";
 @import "./components/footer.scss";
-@import "./components/Header/logo.scss";
-@import "./components/Header/nav.scss";
-@import "./components/Main/card.scss";
-@import "./components/Main/container.scss";
+@import "components/header/logo.scss";
+@import "components/header/nav.scss";
+@import "components/main/card.scss";
+@import "components/main/container.scss";
 @import "./commons/base";
 @import "./components/buttons/buttons";
 @import "./components/form/form";
@@ -19,3 +19,5 @@
 @import "./components/intervalGame/intervalMain";
 @import "./components/intervalGame/controls";
 @import "./components/media/media-interval";
+@import "./aboutTheTeamPage/aboutTheTeamPage.scss";
+@import "components/sprintGame/sprintGame";
