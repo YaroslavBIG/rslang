@@ -6,8 +6,8 @@ export const mainGameRender = () => `
 
     </div>
     <div class="modal__button_block">
-      <div class="button__main-game button__main"><a href="#/main">Выход</a></div>
-      <button class="button__main-game">Продолжить</button>
+      <div class="button__main-game button__main button"><a href="#/main">Выход</a></div>
+      <button class="button__main-game button">Продолжить</button>
     </div>
   </div>
 </div>
@@ -35,9 +35,9 @@ export const mainGameRender = () => `
       <div class="hint--text_example"></div>
       </div>
       <div class="controls">
-        <button class="button__main-game" id="difficult">Сложно</button>
-        <button class="button__main-game" id="answer">Показать ответ</button>
-        <button class="button__main-game" id ="delete">Удалить</button>
+        <button class="button__main-game button" id="difficult">Сложно</button>
+        <button class="button__main-game button" id="answer">Показать ответ</button>
+        <button class="button__main-game button" id ="delete">Удалить</button>
       </div>
       <div class="progress-bar">
         <div class="progress">

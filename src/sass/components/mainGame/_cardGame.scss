@@ -126,20 +126,6 @@
 
 .button__main-game {
   width: 135px;
-  height: 35px;
-  border: none;
-  border-radius: 8px;
-  text-transform: uppercase;
-  text-align: center;
-  color: $secondary-color;
-  background-color: $active-color;
-  font-size: $primary-font-size;
-  font-weight: $secondary-font-weight;
-  cursor: pointer;
-  a{
-    text-decoration: none;
-    color: $secondary-color;
-  }
 }
 .button__main{
   box-sizing: border-box;
