@@ -4,7 +4,6 @@
   * список кейсов:
   * case '/main': {}
   * case '/main/settings': {}
-  * case '/main/word-learning': {}
   * case '/main/word-repeat': {}
   * case '/main/english-puzzle': {}
   * case '/main/speak-it': {}
@@ -18,6 +17,7 @@
 
 import { controlForm, submitForm, chooseIcon } from '../form';
 import { startSprintGame } from '../mini-game-sprint/launchSprintGameMethods';
+import { startMainGame } from '../mainGame';
 
 export const callsNecessaryMethods = (path) => {
   switch (path) {
@@ -28,6 +28,10 @@ export const callsNecessaryMethods = (path) => {
       controlForm();
       submitForm();
       chooseIcon();
+      break;
+    }
+    case '/main/word-learning': {
+      startMainGame();
       break;
     }
     case '/main/sprint': {

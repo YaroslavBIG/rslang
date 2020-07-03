@@ -14,6 +14,8 @@ import {
   createMainPage,
   createSprintGamePage,
   createAboutTheTeamPage,
+  mainGameRender,
+  intervalGameRender,
 } from '../pages';
 
 export const HomeComponent = {
@@ -29,10 +31,10 @@ export const SettingsComponent = {
   render: () => '',
 };
 export const WordLearningComponent = {
-  render: () => '',
+  render: () => mainGameRender(),
 };
 export const WordRepeatComponent = {
-  render: () => '',
+  render: () => intervalGameRender(),
 };
 export const EnglishPuzzleComponent = {
   render: () => '',

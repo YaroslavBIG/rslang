@@ -1,5 +1,4 @@
 export const intervalGameRender = () => `
-<div style="height: 34px;"></div>
   <section class="interval_main__wrapper">
   <div class="game_main__modal">
   <div class="modal__inner">
@@ -49,5 +48,4 @@ export const intervalGameRender = () => `
     </div>
     </div>
   </section>
-  <div style="height: 34px;"></div>
 `;
