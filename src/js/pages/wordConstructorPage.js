@@ -1,8 +1,7 @@
 export const wordConstructorPage = () => `
 <div class="wrapper-block">
   <div class="wrapper-block__settings-and-raunds-description">
-    <input type="checkbox" class="wrapper-block__checkbox">
-    <span class="wrapper-block__autopronunciation">Автопроизношение</span>
+    <label></label><input type="checkbox" class="wrapper-block__checkbox" id="checkbox"><label for="checkbox"><span class="wrapper-block__autopronunciation">Автопроизношение</label>
     <span class="wrapper-block__raund">1/10</span>
   </div>
   <div class="game-block">
@@ -26,9 +25,11 @@ export const wordConstructorPage = () => `
       <span class="game-block__context-text"></span>
       </div>
     </div>
+    <audio></audio>
     <div class="game-block__footer">
       <span class="game-block__enter">Enter</span>
       <button class="game-block__footer-dont-know-button">Не знаю :(</button>
+      <button class="game-block__footer-continue">Далее →</button>
     </div>
   </div>
 </div>
