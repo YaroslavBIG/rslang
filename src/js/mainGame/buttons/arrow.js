@@ -4,6 +4,7 @@ import { buttonAnswer } from './buttonAnswer';
 import { setStatistic, setAnswers } from '../statistic/setStatistic';
 import { modalCreate } from '../modal/modalCreate';
 import { progressBar } from '../progressBar';
+import { answerCheck } from '../utils';
 
 export const gameArrows = (event) => {
   const { id } = event.target;
@@ -11,12 +12,7 @@ export const gameArrows = (event) => {
   const wordBlock = document.querySelector('.sentence--target-word');
   const cardGame = document.querySelector('.card-game');
 
-  const word = sessionStorage.getItem('word').toLowerCase();
-  const currentWord = wordBlock.innerText.toLowerCase();
-  const hint = wordBlock.firstChild || wordBlock;
-  const isHint = hint.nodeName === 'SPAN';
-
-  if ((word !== currentWord && arrowDirection === 'right') || isHint) {
+  if (!answerCheck() && arrowDirection === 'right') {
     wordBlock.classList.add('target-word--incorrect');
     const userInput = wordBlock.innerText;
     setAnswers('wrong');
@@ -24,7 +20,7 @@ export const gameArrows = (event) => {
     return;
   }
 
-  if (word === currentWord && arrowDirection === 'right') {
+  if (answerCheck() && arrowDirection === 'right') {
     setAnswers('right');
     setStatistic('newWordsCount'); // TODO: add validation new or not
     setStatistic('wordsLearnToday');

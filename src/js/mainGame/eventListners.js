@@ -3,6 +3,7 @@ import { buttonAnswer } from './buttons/buttonAnswer';
 import { buttonDifficult } from './buttons/buttonDifficult';
 import { buttonDelete } from './buttons/buttonDelete';
 import { inputControl } from './inputControl';
+import { pressEnterKey } from './buttons/enter';
 
 export const addMainGameListners = () => {
   const arrows = document.querySelectorAll('.arrow');
@@ -10,7 +11,7 @@ export const addMainGameListners = () => {
 
   const userInput = document.querySelector('#user_input');
   userInput.addEventListener('input', (ev) => inputControl(ev));
-  // userInput.addEventListener('keydown', (ev) => answerCheck(ev));
+  userInput.addEventListener('keydown', (ev) => pressEnterKey(ev));
 
   const answerButton = document.querySelector('#answer');
   answerButton.addEventListener('click', () => buttonAnswer());

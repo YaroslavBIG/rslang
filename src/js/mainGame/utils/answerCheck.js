@@ -6,7 +6,5 @@ export const answerCheck = () => {
 
   const hint = wordBlock.firstChild || wordBlock;
   const isHint = hint.nodeName === 'SPAN';
-
-  console.log((word !== currentWord) || isHint);
-  return ((word !== currentWord) || isHint);
+  return !!((word === currentWord) && !isHint);
 };
