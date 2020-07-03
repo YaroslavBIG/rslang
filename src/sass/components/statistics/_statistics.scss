@@ -1,0 +1,65 @@
+.statistics {
+
+  &-wrapper {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    user-select: none;
+  }
+
+  &-controller {
+    padding-top: 20px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &-chart {
+    padding-top: 30px;
+  }
+
+  &-details {
+    width: 110px;
+    height: 30px;
+    margin: 25px auto 0;
+    border: 1px solid rgb(255, 99, 132);
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 2;
+  }
+
+  &-details:hover {
+    cursor: pointer;
+    background: rgb(255, 99, 132);
+  }
+
+  &-details:active {
+    transform: scale(0.99, 0.97);
+  }
+
+}
+
+.game-btn {
+  width: 13%;
+  height: 55%;
+  margin: auto 0;
+  text-align: center;
+  line-height: 1.7;
+  border: 1px solid rgb(255, 99, 132);;
+  border-radius: 10px;
+}
+
+.game-btn:hover {
+  cursor: pointer;
+  background: rgb(255, 99, 132);
+}
+
+.game-btn:active {
+  transform: scale(0.99, 0.97);
+}
+
+.active-btn {
+  background: rgb(255, 99, 132);
+}
