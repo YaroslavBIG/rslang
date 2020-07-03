@@ -1,5 +1,6 @@
 export const intervalGameRender = () => `
-  <section class="game_main__wrapper">
+<div style="height: 34px;"></div>
+  <section class="interval_main__wrapper">
   <div class="game_main__modal">
   <div class="modal__inner">
     <div class="modal__inner--wrapper" id="modal">
@@ -30,7 +31,9 @@ export const intervalGameRender = () => `
         <div class="arrow arrow--right" id="arrow_right"></div>
       </div>
       <div class="controls">
+        <div class="controls__button">
         <button class="button__main-game" id="answer">Показать ответ</button>
+        </div>
         <div class="word__diff" id="wordDiff">
           <button class="button__main-game intervals_diff">Снова</button>
           <button class="button__main-game intervals_diff">Трудно</button>
@@ -46,4 +49,5 @@ export const intervalGameRender = () => `
     </div>
     </div>
   </section>
-  `;
+  <div style="height: 34px;"></div>
+`;
