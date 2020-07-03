@@ -21,4 +21,7 @@
     text-decoration: none;
     color: $secondary-color;
   }
+  &:hover{
+    box-shadow: 0 0 10px 12px $primary-shadow-color;
+  }
 }
