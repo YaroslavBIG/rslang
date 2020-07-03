@@ -1,6 +1,6 @@
 import { globalUser } from '../../utils';
 import { createUser } from '../../api';
-import { saveIcon } from './saveIcon';
+import { saveSettings } from './saveSettings';
 import { logIn } from '../signIn/login';
 
 export const signUp = async () => {
@@ -21,7 +21,7 @@ export const signUp = async () => {
 
     const createSuccess = await createUser(user);
     const logSuccess = await logIn(createSuccess);
-    const iconSuccess = await saveIcon(logSuccess);
+    const iconSuccess = await saveSettings(logSuccess);
 
     if (iconSuccess) {
       alert('Успешная регистрация!');

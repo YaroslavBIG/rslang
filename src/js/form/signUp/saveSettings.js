@@ -1,7 +1,7 @@
 import { icon } from './chooseIcon';
 import { getResponse } from '../../api';
 
-export const saveIcon = async (resResp) => {
+export const saveSettings = async (resResp) => {
   const authMess = 'Authenticated';
 
   const bodyIcon = {
