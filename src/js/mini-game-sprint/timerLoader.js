@@ -5,7 +5,7 @@ export const timerLoader = () => {
   const timer = document.getElementById('timer');
   let azimuth = 0;
   const pi = Math.PI;
-  const loaderTime = constantsData.loaderTime;
+  const { loaderTime } = constantsData;
 
   const draw = () => {
     azimuth += 1;
