@@ -4,7 +4,7 @@ import { getResponse } from '../../api';
 export const saveSettings = async (resResp) => {
   const authMess = 'Authenticated';
 
-  const bodyIcon = {
+  const bodySettings = {
     wordsPerDay: 50,
     optional: {
       icon: icon.iconURL,
@@ -25,7 +25,7 @@ export const saveSettings = async (resResp) => {
   };
 
   if (resResp.message === authMess) {
-    const content = await getResponse(`users/${resResp.userId}/settings`, { method: 'PUT', body: JSON.stringify(bodyIcon) });
+    const content = await getResponse(`users/${resResp.userId}/settings`, { method: 'PUT', body: JSON.stringify(bodySettings) });
     if (content) {
       return true;
     }

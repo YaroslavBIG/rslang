@@ -21,9 +21,9 @@ export const signUp = async () => {
 
     const createSuccess = await createUser(user);
     const logSuccess = await logIn(createSuccess);
-    const iconSuccess = await saveSettings(logSuccess);
+    const settingsSuccess = await saveSettings(logSuccess);
 
-    if (iconSuccess) {
+    if (settingsSuccess) {
       alert('Успешная регистрация!');
       nextButton.click();
     }
