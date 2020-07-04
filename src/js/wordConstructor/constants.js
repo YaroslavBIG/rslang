@@ -6,4 +6,5 @@ export const constantsData = {
   correctAnswersCounter: 0,
   wrongAnswersCounter: 0,
   backendUrl: dataUrl,
+  errorWord: true,
 };

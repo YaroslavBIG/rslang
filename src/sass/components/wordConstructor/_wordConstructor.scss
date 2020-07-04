@@ -169,3 +169,33 @@
     transition: 0.3s;
   }
 }
+
+.statistic-block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #e6e9ee;
+  width: 700px;
+  height: 600px;
+}
+
+@media screen and (max-width: 500px) {
+  .game-block {
+    width: 100%;
+  }
+  .wrapper-block {
+    align-items: normal;
+    &__settings-and-raunds-description {
+      margin-left: 200px;
+    }
+  }
+}
+
+@media screen and (max-height: 650px) {
+  .wrapper-block {
+    &__settings-and-raunds-description {
+      margin-top: 350px;
+      position: absolute;
+    }
+  }
+}

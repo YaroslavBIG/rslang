@@ -25,6 +25,12 @@ export function answerHandler(
         console.log(letterArr2[0]);
         n++;
         if (letterArr2.length == 0) {
+          if ((constantsData.errorWord = false)) {
+            constantsData.wrongAnswersCounter++;
+            document.getElementsByClassName(
+              'statistic-block'
+            )[0].innerHTML += `<div>${randomWord}</div>`;
+          }
           if (constantsData.checked == true) {
             var sound = document.createElement('audio');
             sound.src = `https://raw.githubusercontent.com/irinainina/rslang/rslang-data/data/${randomAudio}`;
@@ -61,6 +67,7 @@ export function answerHandler(
           )[0].style.width = '50%';
         }
       } else {
+        constantsData.errorWord = false;
         document.getElementsByClassName(
           'game-block__footer-dont-know-button'
         )[0].style.display = 'inline-block';

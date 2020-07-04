@@ -1,5 +1,6 @@
 import { fetchSprintGameData } from './fetchWordConstructorGameData';
 import { randomInteger } from '../utils';
+import { statisticPage } from './statisticPage';
 
 var randomWord = Math.ceil(Math.random() * 19);
 var randomPage = Math.ceil(Math.random() * 29);
@@ -37,12 +38,15 @@ export function continuee() {
       )[0].style.width = '0%';
       t++;
       b++;
+      if (b == 11) {
+        document.getElementsByClassName(
+          'wrapper-block'
+        )[0].innerHTML = statisticPage();
+        return;
+      }
       document.getElementsByClassName(
         'wrapper-block__raund'
       )[0].innerHTML = `${b}/10`;
-      if (b == 11) {
-        document.body.innerHTML = '';
-      }
       document.getElementsByClassName(
         'game-block__footer-dont-know-button'
       )[0].style.display = 'inline-block';
