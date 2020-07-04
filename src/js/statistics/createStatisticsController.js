@@ -3,6 +3,7 @@ import { statisticsData } from './constants';
 
 export const createStatisticsController = () => `
     <div class="statistics-controller" id="statistics-controller">
+        ${createGameBtn(statisticsData.totalId, statisticsData.totalTitle)}
         ${createGameBtn(statisticsData.speakItId, statisticsData.speakItTitle)}
         ${createGameBtn(statisticsData.engPuzzleId, statisticsData.engPuzzleTitle)}
         ${createGameBtn(statisticsData.savannahId, statisticsData.savannahTitle)}

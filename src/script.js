@@ -14,4 +14,4 @@ window.onload = () => {
   const root = document.getElementById('root');
   root.innerHTML = createStatisticsPage();
   launchStatisticsMethods();
-}
+};

@@ -1,8 +1,8 @@
-import { drawChart } from './drawChart';
+import { drawTotalChart } from './drawCharts';
 import { statisticsControllerHandler } from './statisticsControllerHandler';
 import { statisticsData } from './constants';
 
 export const launchStatisticsMethods = () => {
-  drawChart(statisticsData.speakItData);
+  drawTotalChart(statisticsData.speakItData);
   statisticsControllerHandler();
 };
