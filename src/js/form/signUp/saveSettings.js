@@ -1,5 +1,6 @@
 import { icon } from './chooseIcon';
 import { getResponse } from '../../api';
+import { setStorageFromObject } from '../../utils';
 
 export const saveSettings = async (resResp) => {
   const authMess = 'Authenticated';
@@ -23,8 +24,8 @@ export const saveSettings = async (resResp) => {
       },
     },
   };
-
   if (resResp.message === authMess) {
+    setStorageFromObject(bodySettings, 'local');
     const content = await getResponse(`users/${resResp.userId}/settings`, { method: 'PUT', body: JSON.stringify(bodySettings) });
     if (content) {
       return true;
