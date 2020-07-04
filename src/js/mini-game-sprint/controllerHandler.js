@@ -11,7 +11,7 @@ export const controllerHandler = (wordId, translateID) => {
     } else {
       wrongChoice();
     }
-  }
+  };
 
   const rightBtnChoice = () => {
     if (wordId === translateID) {
@@ -19,7 +19,7 @@ export const controllerHandler = (wordId, translateID) => {
     } else {
       wrongChoice();
     }
-  }
+  };
 
   const listener = (event) => {
     listenerRemove(listener);
