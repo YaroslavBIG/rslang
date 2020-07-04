@@ -13,7 +13,6 @@ export const intervalGameRender = () => `
 </div>
   <div class="game_main__wrapper_inner">
     <div class="game_main">
-      <div class="arrow arrow--left" id="arrow_left"></div>
       <div class="card_wrapper">
         <div class="main__field">
           <div class="card-game">
@@ -22,12 +21,11 @@ export const intervalGameRender = () => `
                 <div class="sentence sentence--target-word" id="user_input"contenteditable></div>
                 <span class="sentence sentence--last-part"></span>
               </div>
-              <div class="separator"><hr></div>
+              <div class="separator separator--blue"><hr></div>
               <div class="card-text"><span class="card-text--translate"></span></div>
             </div>
           </div>
         </div>
-        <div class="arrow arrow--right" id="arrow_right"></div>
       </div>
       <div class="controls">
         <div class="controls__button">

@@ -52,6 +52,9 @@
     border: none;
 	  border-top: 1px solid $color-target-word;
   }
+  &--blue hr{
+    border-color: $color-separator-interval;
+  }
 }
 
 .sentence--target-word {
