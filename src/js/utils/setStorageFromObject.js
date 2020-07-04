@@ -16,5 +16,12 @@
 
 export const setStorageFromObject = (obj, storage = 'session') => {
   const stor = storage === 'session' ? sessionStorage : localStorage;
-  Object.entries(obj).map((arr) => stor.setItem(arr[0], arr[1]));
+
+  const enter = (object) => {
+    Object.entries(object).map((arr) => {
+      if (typeof arr[1] !== 'object') return stor.setItem(arr[0], arr[1]);
+      return enter(arr[1]);
+    });
+  };
+  return enter(obj);
 };
