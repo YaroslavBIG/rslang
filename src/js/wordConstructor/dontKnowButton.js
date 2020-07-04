@@ -1,12 +1,14 @@
 import { continuee } from './continue';
 import { fetchSprintGameData } from './fetchWordConstructorGameData';
 import { randomInteger } from '../utils';
+import { constantsData } from './constants';
 
 export function dontKnowButton(
   randomWord,
   randomTranslate,
   randomAudio,
-  randomTextExample
+  randomTextExample,
+  randomImage
 ) {
   var n = 0;
   var buttons = document.getElementsByClassName('game-block__body-cell-answer');
@@ -14,7 +16,6 @@ export function dontKnowButton(
   document
     .getElementsByClassName('game-block__footer-dont-know-button')[0]
     .addEventListener('click', function () {
-      alert(1);
       document.getElementsByClassName(
         'game-block__body-cells-answers'
       )[0].innerHTML = '';
@@ -35,11 +36,33 @@ export function dontKnowButton(
           i
         ].style.backgroundColor = '#28C38A';
       }
+      document.getElementsByClassName('game-block__context-image')[0].src =
+        constantsData.backendUrl + `${randomImage}`;
+      document.getElementsByClassName(
+        'game-block__context-image'
+      )[0].style.display = 'block';
+      document.getElementsByClassName(
+        'game-block__context-text'
+      )[0].style.display = 'block';
+      document.getElementsByClassName(
+        'game-block__context-text'
+      )[0].innerHTML = randomTextExample;
+      document.getElementsByClassName(
+        'game-block__context-name'
+      )[0].style.display = 'block';
+      document.getElementsByClassName(
+        'game-block__header-volume'
+      )[0].style.display = 'block';
+      document.getElementsByClassName('game-block__header')[0].style.width =
+        '75%';
+      document.getElementsByClassName(
+        'game-block__volume-block'
+      )[0].style.width = '50%';
       document.getElementsByClassName(
         'game-block__footer-dont-know-button'
       )[0].style.display = 'none';
       document.getElementsByClassName(
         'game-block__footer-continue'
-      )[0].style.display = 'block';
+      )[0].style.display = 'inline-block';
     });
 }

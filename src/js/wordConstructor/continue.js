@@ -45,7 +45,7 @@ export function continuee() {
       }
       document.getElementsByClassName(
         'game-block__footer-dont-know-button'
-      )[0].style.display = 'block';
+      )[0].style.display = 'inline-block';
       document.getElementsByClassName(
         'game-block__footer-continue'
       )[0].style.display = 'none';

@@ -32,7 +32,10 @@ export function answerHandler(
           }
           document.getElementsByClassName(
             'game-block__footer-dont-know-button'
-          )[0].innerHTML = 'Далее →';
+          )[0].style.display = 'none';
+          document.getElementsByClassName(
+            'game-block__footer-continue'
+          )[0].style.display = 'inline-block';
           document.getElementsByClassName(
             'game-block__context-image'
           )[0].src = `https://raw.githubusercontent.com/irinainina/rslang/rslang-data/data/${randomImage}`;
@@ -58,6 +61,12 @@ export function answerHandler(
           )[0].style.width = '50%';
         }
       } else {
+        document.getElementsByClassName(
+          'game-block__footer-dont-know-button'
+        )[0].style.display = 'inline-block';
+        document.getElementsByClassName(
+          'game-block__footer-continue'
+        )[0].style.display = 'none';
         button.style.backgroundColor = '#ee5838';
         setTimeout(function () {
           button.style.backgroundColor = '#2582e7';

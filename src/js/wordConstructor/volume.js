@@ -1,9 +1,11 @@
+import { constantsData } from './constants';
+
 var sound = document.createElement('audio');
 export function volume(randomAudio) {
   document
     .getElementsByClassName('game-block__header-volume')[0]
     .addEventListener('click', function () {
-      sound.src = `https://raw.githubusercontent.com/irinainina/rslang/rslang-data/data/${randomAudio}`;
+      sound.src = constantsData.backendUrl + `${randomAudio}`;
       sound.play();
       if (sound !== undefined) {
         sound

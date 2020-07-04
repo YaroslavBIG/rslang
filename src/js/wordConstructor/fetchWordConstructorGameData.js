@@ -33,7 +33,13 @@ export const fetchSprintGameData = async (page, group) => {
       randomAudio
     );
     volume(randomAudio);
-    dontKnowButton(randomWord, randomTranslate, randomAudio, randomTextExample);
+    dontKnowButton(
+      randomWord,
+      randomTranslate,
+      randomAudio,
+      randomTextExample,
+      randomImage
+    );
     autoProponuciation();
   }
 };
