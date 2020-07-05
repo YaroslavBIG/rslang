@@ -1,4 +1,4 @@
-export const mainPromoPageHeader = () => `
+export const mainPromoPageFooter = () => `
 <div class="modal-footer">
 <span class="modal-footer__interface">Легкий в понимании интерфейс</span>
 <div class="swiper-container">
