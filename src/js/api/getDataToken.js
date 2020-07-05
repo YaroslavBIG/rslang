@@ -9,7 +9,6 @@ export const getDataToken = async () => {
 
   if (dateNow > dateDie) {
     const result = await getNewToken();
-
     globalUser.set('refreshToken', result.refreshToken);
     globalUser.set('token', result.token);
     saveUser();
