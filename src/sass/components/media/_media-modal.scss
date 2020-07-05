@@ -1,0 +1,27 @@
+@media screen and (max-device-width: 400px) {
+  .modal-body {
+    &__list {
+      width: 50%;
+    }
+  }
+  .modal-header {
+    &__name {
+      font-size: 30px;
+    }
+  }
+}
+
+@media screen and (max-device-width: 700px) {
+  .modal {
+    padding: 0;
+  }
+  h3 {
+    margin-bottom: 50px;
+  }
+  .modal-body {
+    &__description {
+      margin: 0;
+      transform: none;
+    }
+  }
+}

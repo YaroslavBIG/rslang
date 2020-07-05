@@ -1,7 +1,7 @@
 import { globalUser } from '../../utils';
 import { logIn } from './login';
 
-export const signIn = () => {
+export const signIn = async () => {
   const nextButton = document.querySelector('.click-enter');
   const errorBlock = document.querySelector('.error-block');
 
@@ -13,8 +13,10 @@ export const signIn = () => {
 
   if (em === login) {
     if (userPass === pass) {
-      logIn(success);
-      nextButton.click();
+      const logSuccess = await logIn(success);
+      if (logSuccess) {
+        nextButton.click();
+      }
     } else {
       errorBlock.textContent = 'Неверный пароль, попробуйте снова';
     }
