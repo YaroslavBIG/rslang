@@ -19,8 +19,10 @@ export const getResponse = async (url, { ...options }) => {
   const invalidToken = 401;
 
   const resURL = `${swaggerUrl}${url}`;
-  const authorization = (isAuth === 'true' || isAuth === true) ? { Authorization: `Bearer ${tokenRes}` } : {};
-  const withCredential = (isAuth === 'true' || isAuth === true) ? { withCredentials: true } : {};
+  const authorization = isAuth === 'true' || isAuth === true
+    ? { Authorization: `Bearer ${tokenRes}` }
+    : {};
+  const withCredential = isAuth === 'true' || isAuth === true ? { withCredentials: true } : {};
 
   const baseHeaders = {
     ...authorization,

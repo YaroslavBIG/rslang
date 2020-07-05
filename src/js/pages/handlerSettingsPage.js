@@ -8,16 +8,17 @@ import {
   saveAuth,
 } from '../utils';
 import { pushUserSettings, getUserSettings } from '../api';
+
 const renderSettings = (object) => {
   Object.entries(object).map((arr) => {
     if (typeof arr[1] !== 'object') {
       const el = document.getElementById(arr[0]);
       if (el) {
         if (el.type === 'checkbox') {
-          el.checked = arr[1];
+          [, el.checked] = arr;
         }
         if (el.type === 'number') {
-          el.value = arr[1];
+          [, el.value] = arr;
         }
       }
       return;
@@ -26,7 +27,7 @@ const renderSettings = (object) => {
   });
 };
 const settingsValid = (settings) => {
-  const cardInfo = settings.optional.cardInfo;
+  const { cardInfo } = settings.optional;
   const checked = cardInfo.translation || cardInfo.meaning || cardInfo.example;
   if (!checked) {
     alert(`Доллжен быть выбран хотя бы один пунк:
@@ -35,7 +36,7 @@ const settingsValid = (settings) => {
   - предложение с примером использования изучаемого слова
   `);
   }
-  const wordsPerDay = settings.wordsPerDay;
+  const { wordsPerDay } = settings;
   if (!wordsPerDay > 0) {
     alert('Количество слов в день должно быть больше нуля');
   }
