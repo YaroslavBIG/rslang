@@ -1,6 +1,11 @@
 import { statisticsData } from './constants';
+import { createMarkupChart } from './createMarkupChart';
+import { detailsBtnHandler } from './detailsBtnHandler';
 
-export const drawMiniGameChart = (thisData) => {
+export const drawMiniGameChart = (thisData, gameId) => {
+  const thisGameId = gameId;
+  const mainBlock = document.getElementById('main-block');
+  mainBlock.innerHTML = createMarkupChart();
   const statisticsChart = document.getElementById('statistics-chart').getContext('2d');
   /* global Chart */
   (() => new Chart(statisticsChart, {
@@ -18,9 +23,13 @@ export const drawMiniGameChart = (thisData) => {
 
     options: {},
   }))();
+  detailsBtnHandler(thisGameId);
 };
 
-export const drawTotalChart = (thisData) => {
+export const drawTotalChart = (thisData, gameId) => {
+  const thisGameId = gameId;
+  const mainBlock = document.getElementById('main-block');
+  mainBlock.innerHTML = createMarkupChart();
   const statisticsChart = document.getElementById('statistics-chart').getContext('2d');
   (() => new Chart(statisticsChart, {
     type: 'line',
@@ -37,4 +46,5 @@ export const drawTotalChart = (thisData) => {
 
     options: {},
   }))();
+  detailsBtnHandler(thisGameId);
 };

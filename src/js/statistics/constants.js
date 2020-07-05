@@ -14,7 +14,7 @@ export const statisticsData = {
   auditionId: 'audition',
   sprintId: 'sprint',
   yourGameId: 'yourGame',
-  totalData: [20, 40, 60, 90, 200],
+  totalData: [20, 40, 60, 0, 200],
   speakItData: [0, 10, 30, 50, 100],
   engPuzzleData: [0, 10, 20, 25, 40],
   savannahData: [0, 10, 50, 60, 90],

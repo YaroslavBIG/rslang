@@ -12,12 +12,13 @@ export const statisticsControllerHandler = () => {
       controller.querySelectorAll('.game-btn').forEach((btn) => {
         btn.classList.remove('active-btn');
       });
+      const gameId = event.target.id;
       event.target.classList.add('active-btn');
       const newDataUrl = `${event.target.id}Data`;
       if (event.target.id === 'total') {
-        drawTotalChart(statisticsData[newDataUrl]);
+        drawTotalChart(statisticsData[newDataUrl], gameId);
       } else {
-        drawMiniGameChart(statisticsData[newDataUrl]);
+        drawMiniGameChart(statisticsData[newDataUrl], gameId);
       }
     }
   });
