@@ -2,7 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 2%;
+  margin: 1% auto;
+  width: 90%;
   &__item{
     position: relative;
     display: flex;
