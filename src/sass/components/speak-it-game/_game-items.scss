@@ -45,4 +45,8 @@
   &-translate{
     display: none;
   }
+  &_active{
+    border: 1px solid $active-color;
+    background-color: #fffeadb5;
+  }
 }
