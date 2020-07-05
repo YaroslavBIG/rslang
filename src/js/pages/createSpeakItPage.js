@@ -4,12 +4,12 @@ export const createSpeakItPage = () => `
   <div class="game__levels">
     <span>Уровень: </span>
     <select>
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-      <option>6</option>
+      <option data-select="0">1</option>
+      <option data-select="1">2</option>
+      <option data-select="2">3</option>
+      <option data-select="3">4</option>
+      <option data-select="4">5</option>
+      <option data-select="5">6</option>
     </select>
   </div>
   <div class="game__score"></div>

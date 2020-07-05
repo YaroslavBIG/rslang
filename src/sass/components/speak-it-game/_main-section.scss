@@ -6,7 +6,7 @@
 }
 .game{
   &__header{
-    height: 50px;
+    height: 30px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -22,6 +22,7 @@
   }
   &__levels{
     padding: 15px;
+    margin-left: 15%;
   }
   &__score{
     display: flex;
