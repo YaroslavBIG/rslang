@@ -23,7 +23,7 @@
     width: 110px;
     height: 30px;
     margin: 25px auto 0;
-    border: 1px solid rgb(255, 99, 132);
+    border: 1px solid rgb(109, 155, 220);
     border-radius: 5px;
     text-transform: uppercase;
     text-align: center;
@@ -32,7 +32,7 @@
 
   &-details:hover {
     cursor: pointer;
-    background: rgb(255, 99, 132);
+    background: rgb(109, 155, 220);
   }
 
   &-details:active {
@@ -48,13 +48,13 @@
   text-align: center;
   font-size: 14px;
   line-height: 2;
-  border: 1px solid rgb(255, 99, 132);;
+  border: 1px solid rgb(109, 155, 220);
   border-radius: 10px;
 }
 
 .game-btn:hover {
   cursor: pointer;
-  background: rgb(255, 99, 132);
+  background: rgb(109, 155, 220);
 }
 
 .game-btn:active {
@@ -62,5 +62,5 @@
 }
 
 .active-btn {
-  background: rgb(255, 99, 132);
+  background: rgb(109, 155, 220);
 }
