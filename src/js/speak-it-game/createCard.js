@@ -1,5 +1,5 @@
-export const createCard = (word, transcription, translate, audioSrc) => `
-  <div class="answers__item" data-audio=${audioSrc}>
+export const createCard = (word, transcription, translate, audioSrc, imageSrc) => `
+  <div class="answers__item" data-audio=${audioSrc} data-img=${imageSrc}>
   <span class="item-audio">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="currentColor"
     d="M15.788 13.007a3 3 0 110 5.985c.571 3.312 2.064 5.675 3.815 5.675 2.244 0 4.064-3.88

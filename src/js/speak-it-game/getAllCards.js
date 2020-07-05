@@ -8,8 +8,9 @@ export const getAllCards = (array) => {
       transcription,
       wordTranslate,
       audio,
+      image,
     } = element;
-    temp += createCard(word, transcription, wordTranslate, audio);
+    temp += createCard(word, transcription, wordTranslate, audio, image);
   });
   return temp;
 };
