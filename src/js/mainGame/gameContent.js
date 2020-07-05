@@ -1,7 +1,7 @@
 import { cutTags, getTextWidth } from '../utils';
 import { progressBar } from './progressBar';
 import { dataUrl } from '../api';
-import { setSessionStorage } from './utils';
+import { setStorageFromObject } from './utils';
 
 export const gameContent = (data = null, wordNum = 0) => {
   const apiWords = () => sessionStorage.getItem('apiWords');
@@ -17,22 +17,46 @@ export const gameContent = (data = null, wordNum = 0) => {
 
   const {
     textExample, textExampleTranslate, word, wordTranslate,
-    image, textMeaningTranslate, audio, audioExample, audioMeaning, transcription,
+    image, textMeaningTranslate, audio, audioExample, audioMeaning, transcription, id,
   } = apiWordsParse[wordNum];
+
+  console.log(apiWordsParse[wordNum]);
 
   const addToSessionStorage = {
     wordNum,
     page,
     group,
     word,
+    id,
     audio,
     audioExample,
     audioMeaning,
     transcription,
     collectionLen,
   };
-  setSessionStorage(addToSessionStorage);
-
+  setStorageFromObject(addToSessionStorage);
+  // Temp
+  const bodyIcon = {
+    wordsPerDay: 50,
+    optional: {
+      icon: 'iconURL',
+      newWordsPerDay: 10,
+      maxCardsPerDay: 10,
+      soundAutoPlay: true,
+      showDeleteBtn: true,
+      showStrongBtn: true,
+      showAnswerBtn: true,
+      cardInfo: {
+        translation: true,
+        meaning: true,
+        example: true,
+        transcription: false,
+        associationImg: false,
+      },
+    },
+  };
+  // Temp
+  setStorageFromObject(bodyIcon);
   const cardQuestBlock = document.querySelector('.card-text--quest');
   const firstPartBlock = document.querySelector('.sentence--first-part');
   const wordBlock = document.querySelector('.sentence--target-word');
