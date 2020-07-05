@@ -6,6 +6,7 @@ export const loginUser = async (user) => {
 
   if (content) {
     globalUser.set('token', content.token);
+    globalUser.set('refreshToken', content.refreshToken);
     globalUser.set('userId', content.userId);
     saveUser();
     return content;
