@@ -1,0 +1,91 @@
+@import "./commons/vars.scss";
+
+.modal {
+  position: fixed;
+  z-index: 1000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: $color-back-modal;
+  font-family: $primary-font-family;
+}
+
+.modal-content {
+  color: $primary-color;
+  text-align: center;
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+}
+
+.close {
+  color: $primary-color;
+  float: right;
+  width: 20px;
+  height: 20px;
+  font-weight: $primary-font-weight + 300;
+  cursor: pointer;
+  background-image: url(../assets/cross.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  color: $primary-color;
+  &__name {
+    font-weight: $primary-font-weight - 100;
+    text-align: center;
+    white-space: pre-wrap;
+    font-size: $secondary-font-size;
+  }
+}
+
+.modal-body {
+  text-align: center;
+  padding: 2px 16px;
+  &__description {
+    margin-top: 50px;
+    font-size: $secondary-font-size - 24;
+    max-width: 700px;
+    text-align: center;
+    font-weight: $primary-font-weight + 100;
+    margin-left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+  &__list {
+    width: 30%;
+    text-align: left;
+    margin: auto;
+  }
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  color: $primary-color;
+  &__button-start {
+    margin-top: 50px;
+    background-color: $color-button-name;
+    width: 206px;
+    height: 64px;
+    outline: 0;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    color: $primary-color;
+    box-shadow: 0 2px 0 0 $secondary-shadow-color;
+  }
+  &__button-name {
+    font-weight: $primary-font-weight + 100;
+    font-size: $secondary-font-size - 20;
+    text-align: center;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+}

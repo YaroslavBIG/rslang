@@ -1,5 +1,5 @@
 /**
- * Записывеает переданные свойства объекта в storage
+ * Записывает переданные свойства объекта в storage
  *
  * @param {object} obj Объект вида { name: 'param', name2: 'param2'}
  * @param {string} storage Принимает значения 'session' или 'local'
