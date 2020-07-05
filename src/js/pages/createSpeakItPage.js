@@ -1,7 +1,17 @@
 export const createSpeakItPage = () => `
 <section class="game__outer">
 <div class="game__header">
-  <div class="game__levels"></div>
+  <div class="game__levels">
+    <span>Уровень: </span>
+    <select>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+    </select>
+  </div>
   <div class="game__score"></div>
 </div>
 <div class="game__body">
@@ -56,9 +66,9 @@ export const createSpeakItPage = () => `
   </div>
 </div>
 <div class="game__footer">
-  <button class="button" id="restart-speak">Restart</button>
-  <button class="button" id="start-speak">Start speak</button>
-  <button class="button" id="results-speak">Results</button>
+  <button class="button" id="restart-speak">Заново</button>
+  <button class="button" id="start-speak">Начать говорить</button>
+  <button class="button" id="results-speak">Результат</button>
 </div>
 </section>
 `;

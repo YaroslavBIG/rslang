@@ -20,6 +20,16 @@
     justify-content: center;
     margin-bottom: 2%;
   }
+  &__levels{
+    padding: 15px;
+  }
+  &__score{
+    display: flex;
+    justify-content: flex-end;
+    height: 40px;
+    width: 50%;
+    overflow: hidden;
+  }
 }
 
 .hints{
