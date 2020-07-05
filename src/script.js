@@ -1,8 +1,10 @@
 import { load } from './js/utils';
-import { router } from './js/router';
+// import { router } from './js/router';
+import { createSpeakItPage } from './js/pages';
 
-window.addEventListener('hashchange', router);
+// window.addEventListener('hashchange', router);
 window.onload = () => {
   load();
-  router();
+  document.querySelector('#root').innerHTML = createSpeakItPage();
+  // router();
 };
