@@ -1,0 +1,47 @@
+.answers{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2%;
+  &__item{
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 10px 10px 40px;
+    line-height: 1.4;
+    min-width: 200px;
+    min-height: 70px;
+    margin: 1%;
+    border: 1px solid $secondary-color;
+    border-radius: 8px;
+    background-color: $primary-color;
+    transition: .3s;
+    p{
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.item{
+  &-audio{
+    position: absolute;
+    top: 18px;
+    left: 10px;
+    width: 34px;
+    height: 34px;
+    svg{
+      width: 34px;
+      height: 34px;
+      color: $secondary-color;
+    }
+  }
+  &-word{
+    font-size: $primary-font-size + 4px;
+  }
+  &-translate{
+    display: none;
+  }
+}
