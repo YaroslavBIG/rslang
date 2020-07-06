@@ -3,7 +3,7 @@ import { getResponse } from './getResponse';
 
 export const getUserSettings = async () => {
   const user = loadUser();
-  const resp = await getResponse(`users/${user.id}/settings`, {
+  const resp = await getResponse(`users/${user.userId}/settings`, {
     method: 'GET',
   });
   return resp;
