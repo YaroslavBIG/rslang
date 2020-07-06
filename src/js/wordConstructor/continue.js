@@ -1,6 +1,7 @@
 import { fetchSprintGameData } from './fetchWordConstructorGameData';
 import { randomInteger } from '../utils';
 import { statisticPage } from './statisticPage';
+import { restartWordConstructor } from './restartWordConstructor';
 
 var randomWord = Math.ceil(Math.random() * 19);
 var randomPage = Math.ceil(Math.random() * 29);
@@ -42,6 +43,8 @@ export function continuee() {
         document.getElementsByClassName(
           'wrapper-block'
         )[0].innerHTML = statisticPage();
+        restartWordConstructor();
+        b = 1;
         return;
       }
       document.getElementsByClassName(
