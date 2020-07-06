@@ -1,5 +1,7 @@
-import { actionAuth, globalUser, saveAuth } from '../utils';
-import { swaggerUrl } from './constants';
+import { actionAuth, saveAuth } from '../utils';
+import { swaggerUrl, baseHeaders } from './constants';
+import { router } from '../router';
+import { getResultToken } from './getResultToken';
 
 /**
  * Get Response.
@@ -15,30 +17,25 @@ import { swaggerUrl } from './constants';
 
 export const getResponse = async (url, { ...options }) => {
   const isAuth = actionAuth.getAuth();
-  const { token: tokenRes } = globalUser.get();
   const invalidToken = 401;
 
   const resURL = `${swaggerUrl}${url}`;
-  const authorization = (isAuth === 'true' || isAuth === true) ? { Authorization: `Bearer ${tokenRes}` } : {};
+  const authorization = (isAuth === 'true' || isAuth === true) ? await getResultToken() : {};
   const withCredential = (isAuth === 'true' || isAuth === true) ? { withCredentials: true } : {};
-
-  const baseHeaders = {
-    ...authorization,
-    Accept: 'application/json',
-    'Content-Type': 'application/json',
-  };
-
   try {
     const response = await fetch(resURL, {
       ...options,
       ...withCredential,
       headers: {
+        ...authorization,
         ...baseHeaders,
       },
     });
     if (response && response.status === invalidToken) {
       actionAuth.setAuth(false);
       saveAuth();
+      window.location.replace('#/auth');
+      router();
     }
     return await response.json();
   } catch (err) {
