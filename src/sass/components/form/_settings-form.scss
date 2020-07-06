@@ -36,6 +36,23 @@
     text-align: center;
     margin: 15px 0;
   }
+  &__avatars {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &__avatar {
+    box-sizing: border-box;
+    margin: 6px;
+    height: 45px;
+    &:hover {
+      cursor: pointer;
+    }
+    &.active {
+      border: 3px $active-color solid;
+    }
+  }
 }
 .settings-form-wrapper {
   width: 80%;

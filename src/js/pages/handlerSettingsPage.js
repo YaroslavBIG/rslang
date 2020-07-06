@@ -7,65 +7,19 @@ import {
   setStorageFromObject,
   saveAuth,
 } from '../utils';
+import { goToAuthPage, getAvatar } from '../header';
 import { pushUserSettings, getUserSettings } from '../api';
+import {
+  renderSettings,
+  collectSettings,
+  settingsValid,
+} from '../form/settings';
 
-const renderSettings = (object) => {
-  Object.entries(object).map((arr) => {
-    if (typeof arr[1] !== 'object') {
-      const el = document.getElementById(arr[0]);
-      if (el) {
-        if (el.type === 'checkbox') {
-          [, el.checked] = arr;
-        }
-        if (el.type === 'number') {
-          [, el.value] = arr;
-        }
-      }
-      return;
-    }
-    return renderSettings(arr[1]);
-  });
-};
-const settingsValid = (settings) => {
-  const { cardInfo } = settings.optional;
-  const checked = cardInfo.translation || cardInfo.meaning || cardInfo.example;
-  if (!checked) {
-    alert(`Доллжен быть выбран хотя бы один пунк:
-  - перевод слова
-  - предложение с объяснением значения слова
-  - предложение с примером использования изучаемого слова
-  `);
-  }
-  const { wordsPerDay } = settings;
-  if (!wordsPerDay > 0) {
-    alert('Количество слов в день должно быть больше нуля');
-  }
-  return checked && wordsPerDay > 0;
-};
-const collectSettings = (object) => {
-  Object.entries(object).map((arr) => {
-    if (typeof arr[1] !== 'object') {
-      const el = document.getElementById(arr[0]);
-      if (el) {
-        if (el.type === 'checkbox') {
-          object[el.id] = el.checked;
-        }
-        if (el.type === 'number') {
-          object[el.id] = el.value;
-        }
-      }
-      return;
-    }
-    return collectSettings(arr[1]);
-  });
-};
-const goToAuthPage = () => {
-  document.querySelector('.link-to-auth').click();
-};
 export const handlerSettingsPage = async () => {
   loadAuth();
   if (!actionAuth.getAuth() || actionAuth.getAuth() === 'false') {
     goToAuthPage();
+    return;
   }
   const user = loadUser();
   globalUser.set('id', user.id);
@@ -73,11 +27,17 @@ export const handlerSettingsPage = async () => {
   const currentSettings = await getUserSettings();
   renderSettings(currentSettings);
   const newSettings = Object.assign(defaultSettings);
+  getAvatar();
   document
     .querySelector('.settings-form')
     .addEventListener('submit', (event) => {
       event.preventDefault();
       collectSettings(newSettings);
+      const avatarWrapper = document.querySelector('.settings-form__avatars');
+      const chooseAgatar = avatarWrapper.querySelector('.active');
+      if (chooseAgatar) {
+        newSettings.optional.icon = new URL(chooseAgatar.src).pathname;
+      }
       if (settingsValid(newSettings)) {
         pushUserSettings(newSettings).then(() => {
           setStorageFromObject(newSettings);
@@ -89,5 +49,16 @@ export const handlerSettingsPage = async () => {
     actionAuth.setAuth(false);
     saveAuth();
     goToAuthPage();
+  });
+  const avatarsWrapper = document.querySelector('.settings-form__avatars');
+  avatarsWrapper.addEventListener('click', (event) => {
+    const node = event.target;
+    if (node.classList.contains('settings-form__avatar')) {
+      const actives = [...avatarsWrapper.querySelectorAll('.active')];
+      actives.forEach((item) => {
+        item.classList.remove('active');
+      });
+      node.classList.add('active');
+    }
   });
 };
