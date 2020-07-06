@@ -39,6 +39,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.3);
+    text-shadow: 1px 1px 1px #ffffff;
   }
 
   &__timer {
@@ -85,7 +86,7 @@ body {
     width: 100vw;
     height: 100%;
     z-index: -999;
-    background-image: url(../assets/img/sprint-bg.jpg);
+    background-image: url(../assets/img/bg-sprint.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -187,11 +188,10 @@ body {
   &__wrong-btn,
   &__right-btn {
     width: 35%;
-    height: 25%;
     padding: 8px 0;
     text-align: center;
     margin: auto 0;
-    font-size: 23px;
+    font-size: 19px;
     border: 1px solid #49493b;
     border-radius: 10px;
   }
@@ -214,8 +214,7 @@ body {
   &__start-btn {
     border: 1px solid #49493b;
     width: 25%;
-    height: 7%;
-    padding-top: 10px;
+    padding: 10px;
     margin: 0 auto;
     border-radius: 15px;
   }
@@ -277,6 +276,10 @@ body {
       line-height: 1.9;
     }
 
+    &__substrate {
+      left: 0;
+    }
+
   }
 
   .main-content {
@@ -300,9 +303,8 @@ body {
     }
 
     &__start-btn {
-      height: 7%;
-      padding-top: 6px;
-      font-size: 14px;
+      padding: 5px;
+      font-size: 11px;
       border-radius: 10px;
     }
 
@@ -317,8 +319,7 @@ body {
     &__wrong-btn,
     &__right-btn {
       width: 40%;
-      height: 30%;
-      font-size: 18px;
+      font-size: 11px;
       padding-top: 5px;
     }
 
@@ -389,6 +390,10 @@ body {
       margin: 10px auto 0;
     }
 
+    &__substrate {
+      left: 0;
+    }
+
   }
 
   .points__quantity {
@@ -401,6 +406,7 @@ body {
     &__wrong-btn,
     &__right-btn {
       padding-top: 5px;
+      font-size: 13px;
     }
 
   }
@@ -408,8 +414,7 @@ body {
   .result-block {
 
     &__start-btn {
-      height: 7%;
-      padding-top: 10px;
+      padding: 10px;
     }
 
     &__your-result {
@@ -458,6 +463,36 @@ body {
     background-size: 75% 45%;
   }
 
+  .screen-wrapper {
+
+    &__main-content {
+      height: 40%;
+    }
+  }
+
+  .controller {
+
+    &__wrong-btn,
+    &__right-btn {
+      font-size: 12px
+    }
+
+  }
+
+  .result-block {
+
+    &__start-btn {
+      padding: 10px;
+      font-size: 13px;
+      height: auto;
+    }
+
+    &__description {
+      font-size: 28px;
+    }
+
+  }
+
 }
 
 @media (min-device-width: 801px) and (max-device-width: 1100px) {
@@ -468,6 +503,29 @@ body {
 
   .sprint-game__screen-wrapper {
     height: 85vh;
+  }
+
+  .controller {
+
+    &__wrong-btn,
+    &__right-btn {
+      font-size: 14px
+    }
+
+  }
+
+  .result-block {
+
+    &__start-btn {
+      padding: 10px;
+      font-size: 15px;
+      height: auto;
+    }
+
+    &__description {
+      font-size: 28px;
+    }
+
   }
 
 }
