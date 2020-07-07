@@ -14,9 +14,9 @@ export const drawMiniGameChart = (thisData, gameId) => {
     data: {
       labels: [9, 99, 444, 555, 777], // Тут должно быть количество слов за игру
       datasets: [{
-        label: `Процент правильных ответов: ${statisticsData.totalWords}`, // все просто и понятно
-        backgroundColor: 'rgb(109, 155, 220)',
-        borderColor: 'rgb(109, 155, 220)',
+        label: `Правильных ответов: ${statisticsData.totalWords}`, // все просто и понятно
+        backgroundColor: '#4687dc',
+        borderColor: '#4687dc',
         data: thisData, // Здесь правильные ответы из общего количества слов за игру
       }],
     },
@@ -31,6 +31,8 @@ export const drawTotalChart = (thisData, gameId) => {
   const mainBlock = document.getElementById('main-block');
   mainBlock.innerHTML = createMarkupChart();
   const statisticsChart = document.getElementById('statistics-chart').getContext('2d');
+  Chart.defaults.global.defaultFontColor = 'black';
+  Chart.defaults.global.defaultFontSize = 15;
   (() => new Chart(statisticsChart, {
     type: 'line',
 
@@ -38,8 +40,8 @@ export const drawTotalChart = (thisData, gameId) => {
       labels: ['02.07', '03.07', '04.07', '05.07', '06.07'], // Здесь дата изучения слов
       datasets: [{
         label: `Всего слов: ${statisticsData.totalWords}`, // Общее количество слов, которые изучил
-        backgroundColor: 'rgb(109, 155, 220)',
-        borderColor: 'rgb(109, 155, 220)',
+        backgroundColor: '#4687dc',
+        borderColor: '#4687dc',
         data: thisData, // количество изученых слов за день
       }],
     },

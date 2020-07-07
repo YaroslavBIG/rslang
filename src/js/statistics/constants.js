@@ -1,5 +1,5 @@
 export const statisticsData = {
-  totalWords: 'какое-то количество',
+  totalWords: 99,
   totalTitle: 'Общий',
   speakItTitle: 'SpeakIt',
   engPuzzleTitle: 'English puzzle',

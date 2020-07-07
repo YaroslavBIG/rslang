@@ -23,7 +23,7 @@
     width: 110px;
     height: 30px;
     margin: 25px auto 0;
-    border: 1px solid rgb(109, 155, 220);
+    border: 1px solid #4687dc;
     border-radius: 5px;
     text-transform: uppercase;
     text-align: center;
@@ -32,7 +32,9 @@
 
   &-details:hover {
     cursor: pointer;
-    background: rgb(109, 155, 220);
+    background: #4687dc;
+    box-shadow: 1px 2px 3px #49493b;
+    text-shadow: 1px 0 1px #49493b;
   }
 
   &-details:active {
@@ -49,7 +51,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    opacity: 0.4;
+    opacity: 0.5;
     z-index: -99;
   }
 
@@ -62,13 +64,15 @@
   text-align: center;
   font-size: 14px;
   line-height: 2;
-  border: 1px solid rgb(109, 155, 220);
+  border: 1px solid #4687dc;
   border-radius: 10px;
 }
 
 .game-btn:hover {
   cursor: pointer;
-  background: rgb(109, 155, 220);
+  background: #4687dc;
+  box-shadow: 1px 2px 3px #49493b;
+  text-shadow: 1px 0 1px #49493b;
 }
 
 .game-btn:active {
@@ -76,7 +80,7 @@
 }
 
 .active-btn {
-  background: rgb(109, 155, 220);
+  background: #4687dc;
 }
 
 .details-wrapper {
@@ -117,14 +121,16 @@
     height: 7%;
     width: 30%;
     margin: 0 auto;
-    border: 1px solid rgb(109, 155, 220);
+    border: 1px solid #4687dc;
     line-height: 1.7;
     border-radius: 10px;
   }
 
   &__close-btn:hover {
     cursor: pointer;
-    background: rgb(109, 155, 220);
+    background: #4687dc;
+    box-shadow: 1px 2px 3px #49493b;
+    text-shadow: 1px 0 1px #49493b;
   }
 
   &__close-btn:active {
