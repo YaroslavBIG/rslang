@@ -6,7 +6,7 @@ export const createSpeakItPage = () => `
     <select>
       <option data-select="0">1</option>
       <option data-select="1">2</option>
-      <option data-select="2">3</option>
+      <option value="2" data-select="2">3</option>
       <option data-select="3">4</option>
       <option data-select="4">5</option>
       <option data-select="5">6</option>
@@ -19,7 +19,7 @@ export const createSpeakItPage = () => `
     <div class="hints-image">
       <img src="./assets/img/speak-blank.jpg" alt="speak-blank">
     </div>
-    <p class="hints-translation">some trans</p>
+    <p class="hints-translation"></p>
     <input type="text" class="hints-input hidden" readonly>
   </div>
   <div class="answers">
