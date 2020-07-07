@@ -3,7 +3,7 @@ import { progressBar } from './progressBar';
 import { dataUrl } from '../api';
 import { setStorageFromObject } from './utils';
 
-export const gameContent = (data = null, wordNum = 0) => {
+export const gameContent = async (data = null, wordNum = 0) => {
   const apiWords = () => sessionStorage.getItem('apiWords');
 
   if (!apiWords()) {
@@ -19,8 +19,6 @@ export const gameContent = (data = null, wordNum = 0) => {
     textExample, textExampleTranslate, word, wordTranslate,
     image, textMeaningTranslate, audio, audioExample, audioMeaning, transcription, id,
   } = apiWordsParse[wordNum];
-
-  console.log(apiWordsParse[wordNum]);
 
   const addToSessionStorage = {
     wordNum,
