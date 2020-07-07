@@ -5,7 +5,6 @@
     height: auto;
     margin: 5% auto 0;
     user-select: none;
-    position: relative;
   }
 
   &-controller {
@@ -38,6 +37,20 @@
 
   &-details:active {
     transform: scale(0.99, 0.97);
+  }
+
+  &__substrate {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-image: url(../assets/img/background-main-page.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: -99;
   }
 
 }

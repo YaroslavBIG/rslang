@@ -7,5 +7,6 @@ export const createStatisticsPage = () => `
         <div class="main-block" id="main-block">
             ${createMarkupChart()}
         </div>
+        <div class="statistics__substrate"></div>
     </section>
 `;
