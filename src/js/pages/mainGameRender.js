@@ -6,8 +6,8 @@ export const mainGameRender = () => `
 
     </div>
     <div class="modal__button_block">
-      <div class="button__main-game button__main button"><a href="#/main">Выход</a></div>
-      <button class="button__main-game button">Продолжить</button>
+      <div class="button__main-game button__main button" id="exit"><a href="#/main">Выход</a></div>
+      <button class="button__main-game button" id="continue">Продолжить</button>
     </div>
   </div>
 </div>

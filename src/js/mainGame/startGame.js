@@ -1,18 +1,17 @@
-import { getWords } from '../api';
+import { getWords, getResponse } from '../api';
 import { gameContent } from './gameContent';
 import { progressBar } from './progressBar';
 import { addMainGameListners } from './eventListners';
 import { setStatistic, setAnswers } from './statistic/setStatistic';
 import { getAllUserWords } from '../api/words/getAllUserWords';
-import { setStorageFromObject } from '../utils';
-// import { agregatedWords } from '../api/words/agregatedWords';
+import { setStorageFromObject, globalUser } from '../utils';
 
 export const startMainGame = async () => {
   window.allUserWords = await getAllUserWords();
 
   // Temp
   const bodyIcon = {
-    wordsPerDay: 4,
+    wordsPerDay: 100,
     optional: {
       icon: 'iconURL',
       newWordsPerDay: 10,
@@ -32,19 +31,20 @@ export const startMainGame = async () => {
   };
   setStorageFromObject(bodyIcon, 'local');
 
-  // const filterUser = {
-  //   userId: globalUser.id,
-  //   filter: {
-  //     $or: [
-  //       { 'userWord.difficulty': 'good' },
-  //       { 'userWord.difficulty.optional': { date: '07.07.2020' } },
-  //     ],
-  //   },
-  // };
-  // console.log(await agregatedWords(JSON.stringify(filterUser)));
   // temp
-
-  const gameData = await getWords(0, 0, 10, 2);
+  const user = globalUser.get();
+  console.log(user.id);
+  console.log(await getAllUserWords());
+  const filterUser = {
+    userId: user.id,
+    group: 0,
+    wordsPerPage: 10,
+    filter: { $or: [{ 'userWord.difficulty': 'good' }, { userWord: null }] },
+  };
+  const body = JSON.stringify(filterUser);
+  console.log(await getResponse(`/users/${user.id}/aggregatedWords`, { method: 'GET', body }));
+  // Temp
+  const gameData = await getWords(0, 0, 10, 5);
   gameContent(gameData);
   const allWordsCount = sessionStorage.getItem('collectionLen');
   progressBar(0, allWordsCount);
