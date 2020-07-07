@@ -1,9 +1,9 @@
 import { icon } from './chooseIcon';
 import { getResponse } from '../../api';
-import { setStorageFromObject } from '../../utils';
+import { setStorageFromObject, globalUser } from '../../utils';
 
 export const saveSettings = async (resResp) => {
-  const authMess = 'Authenticated';
+  const { userId } = globalUser.get();
 
   const bodySettings = {
     wordsPerDay: 50,
@@ -19,14 +19,14 @@ export const saveSettings = async (resResp) => {
         translation: true,
         meaning: true,
         example: true,
-        transcription: false,
-        associationImg: false,
+        transcription: true,
+        associationImg: true,
       },
     },
   };
-  if (resResp.message === authMess) {
+  if (resResp) {
     setStorageFromObject(bodySettings, 'local');
-    const content = await getResponse(`users/${resResp.userId}/settings`, { method: 'PUT', body: JSON.stringify(bodySettings) });
+    const content = await getResponse(`users/${userId}/settings`, { method: 'PUT', body: JSON.stringify(bodySettings) });
     if (content) {
       return true;
     }
