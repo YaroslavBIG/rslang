@@ -20,7 +20,7 @@ export const createSpeakItPage = () => `
       <img src="./assets/img/speak-blank.jpg" alt="speak-blank">
     </div>
     <p class="hints-translation"></p>
-    <input type="text" class="hints-input hidden" readonly>
+    <input type="text" class="hints-input hidden" >
   </div>
   <div class="answers">
   </div>
