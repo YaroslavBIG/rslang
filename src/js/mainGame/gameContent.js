@@ -31,7 +31,7 @@ export const gameContent = (data = null, wordNum = 0) => {
     audio,
     audioExample,
     audioMeaning,
-    transcription,
+    wordTranscription: transcription,
     collectionLen,
   };
   setStorageFromObject(addToSessionStorage);
