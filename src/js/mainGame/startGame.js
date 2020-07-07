@@ -4,8 +4,8 @@ import { progressBar } from './progressBar';
 import { addMainGameListners } from './eventListners';
 import { setStatistic, setAnswers } from './statistic/setStatistic';
 import { getAllUserWords } from '../api/words/getAllUserWords';
-import { agregatedWords } from '../api/words/agregatedWords';
-import { globalUser, setStorageFromObject } from '../utils';
+import { setStorageFromObject } from '../utils';
+// import { agregatedWords } from '../api/words/agregatedWords';
 
 export const startMainGame = async () => {
   window.allUserWords = await getAllUserWords();
