@@ -35,9 +35,9 @@ export const mainGameRender = () => `
       <div class="hint--text_example"></div>
       </div>
       <div class="controls">
-        <button class="button__main-game button" id="difficult">Сложно</button>
-        <button class="button__main-game button" id="answer">Показать ответ</button>
-        <button class="button__main-game button" id ="delete">Удалить</button>
+        <button class="button__main-game button__main-game--hide button" id="difficult">Сложно</button>
+        <button class="button__main-game button__main-game--hide button" id="answer">Показать ответ</button>
+        <button class="button__main-game button__main-game--hide button" id ="delete">Удалить</button>
       </div>
       <div class="progress-bar">
         <div class="progress">

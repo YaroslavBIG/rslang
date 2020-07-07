@@ -2,6 +2,7 @@ import { cutTags, getTextWidth } from '../utils';
 import { progressBar } from './progressBar';
 import { dataUrl } from '../api';
 import { setStorageFromObject } from './utils';
+import { getSettings } from './utils/getSettings';
 
 export const gameContent = async (data = null, wordNum = 0) => {
   const apiWords = () => sessionStorage.getItem('apiWords');
@@ -9,6 +10,16 @@ export const gameContent = async (data = null, wordNum = 0) => {
   if (!apiWords()) {
     sessionStorage.setItem('apiWords', JSON.stringify(data));
   }
+
+  const settings = getSettings();
+
+  const buttonDifficult = document.querySelector('#difficult');
+  const buttonAnswer = document.querySelector('#answer');
+  const buttonDelete = document.querySelector('#delete');
+
+  if (settings.showStrongBtn) buttonDifficult.setAttribute('style', 'display: initial');
+  if (settings.showAnswerBtn) buttonAnswer.setAttribute('style', 'display: initial');
+  if (settings.showDeleteBtn) buttonDelete.setAttribute('style', 'display: initial');
 
   const userWords = apiWords();
   const apiWordsParse = data || JSON.parse(userWords);
@@ -33,28 +44,7 @@ export const gameContent = async (data = null, wordNum = 0) => {
     collectionLen,
   };
   setStorageFromObject(addToSessionStorage);
-  // Temp
-  const bodyIcon = {
-    wordsPerDay: 50,
-    optional: {
-      icon: 'iconURL',
-      newWordsPerDay: 10,
-      maxCardsPerDay: 10,
-      soundAutoPlay: true,
-      showDeleteBtn: true,
-      showStrongBtn: true,
-      showAnswerBtn: true,
-      cardInfo: {
-        translation: true,
-        meaning: true,
-        example: true,
-        transcription: false,
-        associationImg: false,
-      },
-    },
-  };
-  // Temp
-  setStorageFromObject(bodyIcon);
+
   const cardQuestBlock = document.querySelector('.card-text--quest');
   const firstPartBlock = document.querySelector('.sentence--first-part');
   const wordBlock = document.querySelector('.sentence--target-word');
@@ -73,24 +63,28 @@ export const gameContent = async (data = null, wordNum = 0) => {
   const textAfterWord = targetWordIndex === textLen ? '' : textArr.slice(targetWordIndex + 1, textLen).join(' ');
   const textWidth = getTextWidth(word, font);
 
-  const img = new Image();
-  img.src = `${dataUrl}${image}`;
-  img.onload = () => {
-    wordImageBlock.innerHTML = '';
-    wordImageBlock.append(img);
-  };
-
-  wordTextExample.innerText = textMeaningTranslate;
-
-  const progress = wordNum;
-  const progressAll = apiWordsParse.length;
-
   firstPartBlock.innerText = textBeforeWord;
   wordBlock.innerHTML = '';
   wordBlock.style.width = `${textWidth}px`;
   lastPartBlock.innerText = textAfterWord;
-  textTranslateBlock.innerText = textExampleTranslate;
-  wordTranslateBlock.innerText = wordTranslate;
+
+  if (settings.associationImg) {
+    const img = new Image();
+    img.src = `${dataUrl}${image}`;
+    img.onload = () => {
+      wordImageBlock.innerHTML = '';
+      wordImageBlock.append(img);
+    };
+  }
+
+  if (settings.meaning) wordTextExample.innerText = textMeaningTranslate;
+
+  if (settings.example) textTranslateBlock.innerText = textExampleTranslate;
+
+  if (settings.translation) wordTranslateBlock.innerText = wordTranslate;
+
+  const progress = wordNum;
+  const progressAll = apiWordsParse.length;
 
   progressBar(progress, progressAll);
 

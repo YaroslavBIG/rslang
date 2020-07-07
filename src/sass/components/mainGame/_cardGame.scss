@@ -130,6 +130,11 @@
 .button__main-game {
   width: 135px;
 }
+
+.button__main-game--hide {
+  display: none;
+}
+
 .button__main{
   box-sizing: border-box;
   padding-top: 8px;
