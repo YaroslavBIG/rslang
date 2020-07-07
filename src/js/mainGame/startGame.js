@@ -5,11 +5,9 @@ import { addMainGameListners } from './eventListners';
 import { setStatistic, setAnswers } from './statistic/setStatistic';
 import { getAllUserWords } from '../api/words/getAllUserWords';
 import { setStorageFromObject } from '../utils';
-import { getDate } from './utils/getDate';
-import { getAggregatedWords } from '../api/words/getAggregatedWords';
 
 export const startMainGame = async () => {
-  window.allUserWords = await getAllUserWords();
+  const allUserWords = JSON.stringify(await getAllUserWords());
 
   // Temp
   const bodyIcon = {
@@ -33,10 +31,8 @@ export const startMainGame = async () => {
   };
   setStorageFromObject(bodyIcon, 'local');
 
-  // temp
-  const filterUser = { 'userWord.optional.date': getDate() };
-  console.log(await getAggregatedWords(filterUser));
-  // Temp
+  sessionStorage.setItem('allUserWords', allUserWords);
+
   const gameData = await getWords(0, 0, 10, 5);
   gameContent(gameData);
   const allWordsCount = sessionStorage.getItem('collectionLen');

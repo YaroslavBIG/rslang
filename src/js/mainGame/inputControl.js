@@ -1,6 +1,7 @@
 import { playAudio } from './utils/playAudio';
 import { setTranscription } from './utils/setTranscription';
 import { getSettings } from './utils/getSettings';
+import { isNewUserWord } from './utils/isNewUserWord';
 
 export const inputControl = (event) => {
   const targetWord = sessionStorage.getItem('word');
@@ -13,6 +14,8 @@ export const inputControl = (event) => {
     const urlMeaning = sessionStorage.getItem('audioMeaning');
     const audioPlay = JSON.parse(localStorage.getItem('soundAutoPlay'));
     const transcription = JSON.parse(localStorage.getItem('transcription'));
+    const wordId = sessionStorage.getItem('id');
+    console.log(isNewUserWord(wordId));
 
     const audioArr = [url];
     if (settings.example) audioArr.push(urlExample);
