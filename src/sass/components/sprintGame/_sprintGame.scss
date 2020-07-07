@@ -19,7 +19,7 @@ body {
   position: absolute;
   top: 261px;
   right: -117px;
-  background: #1f953f;
+  background: #00b88e;
   border-radius: 50%;
 
   svg {
@@ -34,10 +34,12 @@ body {
   &__main-content {
     width: 99%;
     height: 60%;
-    border: 3px solid #000000;
+    border: 3px solid rgba(3, 31, 70, 0.7);
     border-radius: 15px;
     display: flex;
     flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.3);
+    text-shadow: 1px 1px 1px #ffffff;
   }
 
   &__timer {
@@ -59,6 +61,7 @@ body {
     text-align: center;
     font-size: 55px;
     font-weight: bold;
+    text-shadow: 1px 1px 2px #ffffff;
   }
 
   &__hints {
@@ -74,6 +77,20 @@ body {
     height: 50%;
     margin: auto 0;
     text-align: center;
+  }
+
+  &__substrate {
+    position: absolute;
+    top: 0;
+    left: -61%;
+    width: 100vw;
+    height: 100%;
+    z-index: -999;
+    background-image: url(../assets/img/bg-sprint.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    opacity: 0.9;
   }
 
 }
@@ -171,19 +188,19 @@ body {
   &__wrong-btn,
   &__right-btn {
     width: 35%;
-    height: 25%;
-    padding-top: 10px;
+    padding: 8px 0;
     text-align: center;
     margin: auto 0;
-    font-size: 23px;
-    border: 1px solid black;
+    font-size: 19px;
+    border: 1px solid #49493b;
     border-radius: 10px;
   }
 
   &__wrong-btn:hover,
   &__right-btn:hover {
     cursor: pointer;
-    background: #515151;
+    background: #ebf06c;
+    box-shadow: 0 0 10px #454545;
   }
 
 }
@@ -195,23 +212,24 @@ body {
 .result-block {
 
   &__start-btn {
-    border: 1px solid #000000;
+    border: 1px solid #49493b;
     width: 25%;
-    height: 7%;
-    padding-top: 15px;
+    padding: 10px;
     margin: 0 auto;
     border-radius: 15px;
   }
 
   &__start-btn:hover {
     cursor: pointer;
-    background: #626b6e;
+    background: #ebf06c;
+    box-shadow: 0 0 10px #454545;
   }
 
   &__description {
     width: 100%;
     height: 50%;
     margin: 0;
+    text-shadow: 1px 1px 2px #ffffff;
   }
 
   &__your-result {
@@ -221,6 +239,7 @@ body {
     font-weight: bold;
     margin: 0;
     line-height: 3;
+    text-shadow: 1px 1px 2px #ffffff;
   }
 
 }
@@ -257,6 +276,10 @@ body {
       line-height: 1.9;
     }
 
+    &__substrate {
+      left: 0;
+    }
+
   }
 
   .main-content {
@@ -280,9 +303,8 @@ body {
     }
 
     &__start-btn {
-      height: 7%;
-      padding-top: 6px;
-      font-size: 14px;
+      padding: 5px;
+      font-size: 11px;
       border-radius: 10px;
     }
 
@@ -297,8 +319,7 @@ body {
     &__wrong-btn,
     &__right-btn {
       width: 40%;
-      height: 30%;
-      font-size: 18px;
+      font-size: 11px;
       padding-top: 5px;
     }
 
@@ -369,6 +390,10 @@ body {
       margin: 10px auto 0;
     }
 
+    &__substrate {
+      left: 0;
+    }
+
   }
 
   .points__quantity {
@@ -381,6 +406,7 @@ body {
     &__wrong-btn,
     &__right-btn {
       padding-top: 5px;
+      font-size: 13px;
     }
 
   }
@@ -388,8 +414,7 @@ body {
   .result-block {
 
     &__start-btn {
-      height: 7%;
-      padding-top: 10px;
+      padding: 10px;
     }
 
     &__your-result {
@@ -438,6 +463,36 @@ body {
     background-size: 75% 45%;
   }
 
+  .screen-wrapper {
+
+    &__main-content {
+      height: 40%;
+    }
+  }
+
+  .controller {
+
+    &__wrong-btn,
+    &__right-btn {
+      font-size: 12px
+    }
+
+  }
+
+  .result-block {
+
+    &__start-btn {
+      padding: 10px;
+      font-size: 13px;
+      height: auto;
+    }
+
+    &__description {
+      font-size: 28px;
+    }
+
+  }
+
 }
 
 @media (min-device-width: 801px) and (max-device-width: 1100px) {
@@ -448,6 +503,29 @@ body {
 
   .sprint-game__screen-wrapper {
     height: 85vh;
+  }
+
+  .controller {
+
+    &__wrong-btn,
+    &__right-btn {
+      font-size: 14px
+    }
+
+  }
+
+  .result-block {
+
+    &__start-btn {
+      padding: 10px;
+      font-size: 15px;
+      height: auto;
+    }
+
+    &__description {
+      font-size: 28px;
+    }
+
   }
 
 }

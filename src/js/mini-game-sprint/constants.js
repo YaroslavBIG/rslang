@@ -1,14 +1,14 @@
 import { dataUrl } from '../api/constants';
 
 export const constantsData = {
-  hintsDescription: `<strong>For convenience, you can use the buttons:</strong>
-  <br />← to select the option "WRONG"
-  <br />→ to select the option "TRUE"`,
+  hintsDescription: `<strong>Для удобства вы можете использовать кнопки клавиатуры:</strong>
+  <br />← выбрать «НЕПРАВИЛЬНО»
+  <br />→ выбрать «ПРАВИЛЬНО»`,
   leadTime: 60,
   oneSec: 1000,
   loaderTime: 167,
-  rightBtnText: 'RIGHT',
-  wrongBtnText: 'WRONG',
+  rightBtnText: 'ПРАВИЛЬНО',
+  wrongBtnText: 'НЕПРАВИЛЬНО',
   minimumScore: 10,
   combo: 1,
   correctAnswersCounter: 0,

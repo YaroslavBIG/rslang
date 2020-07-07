@@ -8,5 +8,6 @@ export const createSprintGamePage = () => `
     </div>
     ${createMainContentBlock()}
     ${createHintsBlock()}
+    <div class="screen-wrapper__substrate"></div>
   </section>
 `;
