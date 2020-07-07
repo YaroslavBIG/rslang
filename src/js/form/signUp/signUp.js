@@ -20,6 +20,10 @@ export const signUp = async () => {
     globalUser.set('password', pass);
 
     const createSuccess = await createUser(user);
+    if (createSuccess) {
+      document.querySelector('.error-block-up').innerHTML = '';
+      document.querySelector('.start-enter__inner').style = 'height: 500px';
+    }
     const logSuccess = await logIn(createSuccess);
     const settingsSuccess = await saveSettings(logSuccess);
 

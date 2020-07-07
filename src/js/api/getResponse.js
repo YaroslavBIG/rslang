@@ -2,6 +2,7 @@ import { actionAuth, saveAuth } from '../utils';
 import { swaggerUrl, baseHeaders } from './constants';
 import { router } from '../router';
 import { getResultToken } from './getResultToken';
+import { addError } from './addError';
 
 /**
  * Get Response.
@@ -36,6 +37,8 @@ export const getResponse = async (url, { ...options }) => {
       saveAuth();
       window.location.replace('#/auth');
       router();
+    } else if (response.status === 417) {
+      addError();
     }
     return await response.json();
   } catch (err) {
