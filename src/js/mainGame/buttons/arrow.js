@@ -11,6 +11,8 @@ export const gameArrows = (event) => {
   const arrowDirection = id === 'arrow_left' ? 'left' : 'right';
   const wordBlock = document.querySelector('.sentence--target-word');
   const cardGame = document.querySelector('.card-game');
+  const cardsLimit = parseInt(localStorage.getItem('wordsPerDay'), 10) || 0;
+  const wordsLearnToday = parseInt(localStorage.getItem('wordsLearnToday'), 10) || 0;
 
   if (!answerCheck() && arrowDirection === 'right') {
     wordBlock.classList.add('target-word--incorrect');
@@ -45,7 +47,10 @@ export const gameArrows = (event) => {
     const progress = parseInt(sessionStorage.getItem('wordNum'), 10);
     const progressAll = JSON.parse(sessionStorage.getItem('apiWords')).length;
     progressBar(progress + 1, progressAll);
-    return modalCreate('end'); // TODO: Check words per day
+    return modalCreate(); // TODO: Check words per day
+  }
+  if (cardsLimit <= wordsLearnToday) {
+    return modalCreate('end');
   }
   if (featureWordNum !== currentWordNum) {
     gameContent(null, featureWordNum);

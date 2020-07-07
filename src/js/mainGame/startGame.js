@@ -12,7 +12,7 @@ export const startMainGame = async () => {
 
   // Temp
   const bodyIcon = {
-    wordsPerDay: 50,
+    wordsPerDay: 4,
     optional: {
       icon: 'iconURL',
       newWordsPerDay: 10,
@@ -23,8 +23,8 @@ export const startMainGame = async () => {
       showAnswerBtn: true,
       cardInfo: {
         translation: true,
-        meaning: false,
-        example: false,
+        meaning: true,
+        example: true,
         transcription: true,
         associationImg: true,
       },

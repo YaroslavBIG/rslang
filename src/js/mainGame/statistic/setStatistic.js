@@ -34,7 +34,10 @@ export const setAnswers = (param) => {
 
   switch (param) {
     case 'clear':
-      if (dayYearToday !== dayOfLastGame) setLocStats('correctAnswersSeries');
+      if (dayYearToday !== dayOfLastGame) {
+        setLocStats('correctAnswersSeries');
+        setLocStats('wordsPerDay');
+      }
       setLocStats('rightAnswers');
       setLocStats('wrongAnswers');
       setLocStats('lastAnswer', 'right');
@@ -42,7 +45,7 @@ export const setAnswers = (param) => {
     case 'right':
       setLocStats('answersSeries', answersSeries() ? answersSeries() + 1 : 1);
       setLocStats('rightAnswers', rightAnswers ? rightAnswers + 1 : 1);
-      setLocStats('dayOfLastGame', dayOfLastGame);
+      setLocStats('dayOfLastGame', getDayOfYear());
       if (lastAnswer === 'right' && answersSeries() > correctAnswers()) setLocStats('correctAnswersSeries', (correctAnswers() ? correctAnswers() + 1 : 1));
       break;
     case 'wrong':
