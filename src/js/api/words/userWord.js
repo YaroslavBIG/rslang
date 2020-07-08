@@ -16,8 +16,7 @@ import { getResponse } from '../getResponse';
  */
 
 export const userWord = async (wordId, method = 'POST', difficulty = 'good', deleted = 'false') => {
-  const user = globalUser.get();
-  const { userId } = user;
+  const { userId } = globalUser.get();
 
   const day = getDayOfYear();
   const repeat = difficulty === 'again';
