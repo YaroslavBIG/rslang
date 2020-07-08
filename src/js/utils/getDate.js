@@ -11,6 +11,6 @@
 
 export const getDate = (cut) => {
   const dateNow = new Date().toLocaleDateString();
-  const cutZero = dateNow.replace(/^0/, '').replace(/\./g, '');
+  const cutZero = dateNow.replace(/^\d|\./g, '');
   return cut ? cutZero : dateNow;
 };

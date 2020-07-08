@@ -8,10 +8,12 @@ import { getResponse } from '../getResponse';
  */
 
 export const getAllUserWords = async () => {
-  const user = globalUser.get();
-  const { id } = user;
-  const url = `users/${id}/words`;
-  const method = { method: 'GET' };
-  const result = await getResponse(url, method);
-  return result;
+  try {
+    const { userId } = globalUser.get();
+    const url = `users/${userId}/words`;
+    const method = { method: 'GET' };
+    return await getResponse(url, method);
+  } catch (err) {
+    return Object.keys(err);
+  }
 };

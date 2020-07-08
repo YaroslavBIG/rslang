@@ -8,6 +8,6 @@ export { loadUser } from './loadUser';
 export { saveAuth } from './saveAuth';
 export { saveUser } from './saveUser';
 export { setStorageFromObject } from './setStorageFromObject';
-export { getDayOfYear } from './getDayOfYear';
 export { getDate } from './getDate';
+export { getDayOfYear } from './getDayOfYear';
 export { addError } from './addError';
