@@ -8,7 +8,7 @@ import { changeLevel } from './js/speak-it-game/changeLevel';
 window.onload = () => {
   load();
   document.querySelector('#root').innerHTML = createSpeakItPage();
-  startSpeakGame(0, 0, 10);
+  startSpeakGame(0, 0);
   changeLevel();
   // router();
 };

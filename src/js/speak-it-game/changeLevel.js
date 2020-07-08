@@ -1,8 +1,10 @@
-import { startSpeakGame } from './startSpeakGame';
+import { getAndStart } from './getAndStart';
 
 export const changeLevel = () => {
-  document.querySelector('select').addEventListener('change', () => {
-    const page = document.querySelector('select').options.selectedIndex;
-    startSpeakGame(page, 0, 10);
+  document.querySelector('#level').addEventListener('change', () => {
+    getAndStart();
+  });
+  document.querySelector('#round').addEventListener('change', () => {
+    getAndStart();
   });
 };
