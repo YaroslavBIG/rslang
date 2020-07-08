@@ -8,8 +8,6 @@
   &__header{
     height: 30px;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
     margin: 20px auto 80px;
   }
   &__body{
@@ -21,7 +19,7 @@
     margin-bottom: 2%;
   }
   &__levels{
-    padding: 15px;
+    padding-top: 15px;
     margin-left: 15%;
   }
   &__score{
@@ -29,6 +27,7 @@
     justify-content: flex-end;
     height: 40px;
     width: 50%;
+    margin-left: 40%;
     overflow: hidden;
   }
 }
