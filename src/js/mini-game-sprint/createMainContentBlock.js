@@ -3,7 +3,7 @@ import { constantsData } from './constants';
 export const createMainContentBlock = () => `
 <div class="screen-wrapper__main-content" id="main-content">
     <div class="main-content__information" id="main-information">
-        YOUR COMBO: x${constantsData.combo}
+        ВАШЕ КОМБО: x${constantsData.combo}
     </div>
     <div class="main-content__combo-block" id="combo-block">
         <div class="combo-block__section" id="star-1"></div>

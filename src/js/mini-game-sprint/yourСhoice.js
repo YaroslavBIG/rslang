@@ -29,7 +29,7 @@ export const rightChoice = () => {
         constantsData.combo *= 2;
         constantsData.rightInARow = 0;
         const information = document.getElementById('main-information');
-        information.innerHTML = `YOUR COMBO: x${constantsData.combo}`;
+        information.innerHTML = `ВАШЕ КОМБО: x${constantsData.combo}`;
       }
     }
     points.innerHTML = `${result}`;
@@ -50,7 +50,7 @@ export const wrongChoice = () => {
   constantsData.rightInARow = 0;
   constantsData.wrongAnswersCounter += 1; // Показать на экране результата
   const information = document.getElementById('main-information');
-  information.innerHTML = `YOUR COMBO: x${constantsData.combo}`;
+  information.innerHTML = `ВАШЕ КОМБО: x${constantsData.combo}`;
   if (points) {
     fetchSprintGameData(randomInteger(0, 59), randomInteger(0, 5));
   }

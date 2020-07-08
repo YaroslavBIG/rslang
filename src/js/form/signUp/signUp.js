@@ -1,10 +1,9 @@
-import { globalUser } from '../../utils';
+import { globalUser, addError } from '../../utils';
 import { createUser } from '../../api';
 import { saveSettings } from './saveSettings';
 import { logIn } from '../signIn/login';
 
 export const signUp = async () => {
-  const errorBlock = document.querySelector('.error-block-up');
   const nextButton = document.querySelector('.click-enter');
 
   const login = document.querySelector('[name="email"]').value;
@@ -28,6 +27,7 @@ export const signUp = async () => {
       nextButton.click();
     }
   } else {
-    errorBlock.innerHTML = 'неверный пароль!';
+    const text = 'неверный пароль!';
+    addError(text);
   }
 };
