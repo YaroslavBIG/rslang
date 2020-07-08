@@ -24,10 +24,29 @@ export const saveSettings = async (resResp) => {
       },
     },
   };
+
+  const bodyStatistics = {
+    learnedWords: 0,
+    optional: {
+      games: {
+        main: [],
+        intervals: [],
+        sprint: [],
+        speakit: [],
+        constructor: [],
+        puzzle: [],
+        savannah: [],
+        audition: [],
+      },
+    },
+  };
   if (resResp) {
     setStorageFromObject(bodySettings, 'local');
     const content = await getResponse(`users/${userId}/settings`, { method: 'PUT', body: JSON.stringify(bodySettings) });
-    if (content) {
+    const statContent = await getResponse(`users/${userId}/statistics`, { method: 'PUT', body: JSON.stringify(bodyStatistics) });
+
+    const res = Promise.all([content, statContent]).then(() => true);
+    if (res) {
       return true;
     }
   }
