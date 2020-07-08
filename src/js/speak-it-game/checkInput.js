@@ -1,9 +1,11 @@
 export const checkInput = () => {
-  document.querySelector('.hints-input').addEventListener('input', () => {
-    const valueInput = document.querySelector('.hints-input').value;
+  const input = document.querySelector('.hints-input');
+
+  input.addEventListener('input', () => {
+    const valueInput = input.value;
     document.querySelectorAll('.item-word').forEach((elem) => {
       if (elem.textContent === valueInput) {
-        elem.classList.add('item_active');
+        elem.closest('.answers__item').classList.add('item_active');
       }
     });
   });
