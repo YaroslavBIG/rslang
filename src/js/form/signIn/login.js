@@ -1,19 +1,14 @@
-import { actionAuth, globalUser, saveAuth } from '../../utils';
+import { actionAuth, saveAuth } from '../../utils';
 import { loginUser } from '../../api';
 
 export const logIn = async (res) => {
-  const { password: pass, email: em } = globalUser.get();
-
+  const authMess = 'Authenticated';
   if (res) {
-    const userInfo = {
-      email: em,
-      password: pass,
-    };
-    const loginSuccess = await loginUser(userInfo);
-    if (loginSuccess) {
+    const loginSuccess = await loginUser(res);
+    if (loginSuccess.message === authMess) {
       actionAuth.setAuth(true);
       saveAuth();
-      return loginSuccess;
+      return true;
     }
   }
 };

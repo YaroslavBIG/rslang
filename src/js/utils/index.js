@@ -10,3 +10,4 @@ export { saveUser } from './saveUser';
 export { setStorageFromObject } from './setStorageFromObject';
 export { getDayOfYear } from './getDayOfYear';
 export { getDate } from './getDate';
+export { addError } from './addError';
