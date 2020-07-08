@@ -1,6 +1,6 @@
 import { goToAuthPage, getAvatar } from '../header';
 import {
-  globalUser, actionAuth, loadAuth, loadUser,
+  globalUser, actionAuth, loadAuth, loadUser, saveAuth,
 } from '../utils';
 
 export const handlerMainPage = () => {
