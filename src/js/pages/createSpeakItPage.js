@@ -1,16 +1,13 @@
+import { createSelect } from './createSelect';
+
 export const createSpeakItPage = () => `
 <section class="game__outer">
 <div class="game__header">
   <div class="game__levels">
     <span>Уровень: </span>
-    <select>
-      <option data-select="0">1</option>
-      <option data-select="1">2</option>
-      <option value="2" data-select="2">3</option>
-      <option data-select="3">4</option>
-      <option data-select="4">5</option>
-      <option data-select="5">6</option>
-    </select>
+    ${createSelect(6, 'level')}
+    <span> Раунд: </span>
+    ${createSelect(30, 'round')}
   </div>
   <div class="game__score"></div>
 </div>
