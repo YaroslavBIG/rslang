@@ -1,6 +1,6 @@
 import { gameArrows } from './buttons/arrow';
 import { buttonAnswer } from './buttons/buttonAnswer';
-import { buttonDifficult } from './buttons/buttonDifficult';
+import { buttonHard } from './buttons/buttonHard';
 import { buttonDelete } from './buttons/buttonDelete';
 import { inputControl } from './inputControl';
 import { pressEnterKey } from './buttons/enter';
@@ -17,7 +17,7 @@ export const addMainGameListners = () => {
   answerButton.addEventListener('click', () => buttonAnswer());
 
   const difficult = document.querySelector('#difficult');
-  difficult.addEventListener('click', () => buttonDifficult());
+  difficult.addEventListener('click', () => buttonHard());
 
   const deleteButton = document.querySelector('#delete');
   deleteButton.addEventListener('click', () => buttonDelete());
