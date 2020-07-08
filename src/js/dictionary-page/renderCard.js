@@ -1,8 +1,10 @@
 import { Card } from './components/Card';
+import { nextRepeatDate } from './nextRepeatDate';
 
 export const renderCard = (word, userSettings, category) => {
   const wordsWrapper = document.querySelector('.words-wrapper');
-  const wordCard = Card(word);
+  const dateRepeat = nextRepeatDate(word);
+  const wordCard = Card(word, dateRepeat);
   const removeBtn = wordCard.querySelector('.word-card__btn');
   const ruWord = wordCard.querySelector('.word-card__ru');
   const transcription = wordCard.querySelector('.word-card__transcription');

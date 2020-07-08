@@ -1,7 +1,8 @@
 import { updateUserWords } from '../api/updateUserWords';
 import { audioWordsDictionary } from './audioWordsDictionary';
+import { getUserWordById } from '../api/getUserWordById';
 
-export const handelDictioaryCard = (e) => {
+export const handelDictioaryCard = async (e) => {
   e.preventDefault();
   const card = e.target.closest('.word-card');
   const removeBtn = e.target.closest('.word-card__btn_remove');
@@ -11,15 +12,35 @@ export const handelDictioaryCard = (e) => {
 
   if (removeBtn) {
     const wordId = card.dataset.idWord;
-    const wordOption = { difficulty: 'weak', optional: { isDelete: true } };
-    updateUserWords(wordId, wordOption);
+    const wordObj = await getUserWordById(wordId);
+    const wordOption = {
+      difficulty: wordObj.difficulty,
+      optional: {
+        day: wordObj.optional.day,
+        date: wordObj.optional.date,
+        deleted: true,
+        repeat: wordObj.optional.repeat,
+        repeatCount: wordObj.optional.repeatCount,
+      },
+    };
+    await updateUserWords(wordId, wordOption);
     card.remove();
     wordsNumber.innerHTML -= 1;
   }
 
   if (returnBtn) {
     const wordId = card.dataset.idWord;
-    const wordOption = { difficulty: 'weak', optional: { isDelete: false } };
+    const wordObj = await getUserWordById(wordId);
+    const wordOption = {
+      difficulty: 'weak',
+      optional: {
+        day: wordObj.optional.day,
+        date: wordObj.optional.date,
+        deleted: false,
+        repeat: wordObj.optional.repeat,
+        repeatCount: wordObj.optional.repeatCount,
+      },
+    };
     updateUserWords(wordId, wordOption);
     card.remove();
     wordsNumber.innerHTML -= 1;

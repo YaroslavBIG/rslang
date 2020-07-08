@@ -3,7 +3,7 @@ import { renderWordsData } from './renderWordsData';
 import { addEventListnersDictionary } from './addEventListnersDictionary';
 
 export const renderDictionaryPage = () => {
-  document.querySelector('#root').innerHTML = renderLayout();
+  renderLayout();
   renderWordsData();
   addEventListnersDictionary();
 };

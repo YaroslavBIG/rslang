@@ -25,7 +25,7 @@ export const renderLayout = () => {
     </div>
   </div>
   <div class="dictonary-count">
-    Чило слов:
+    Число слов:
     <span class="dictonary-count__numder"></span>
   </div>
   <div class="words-wrapper">

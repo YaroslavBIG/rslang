@@ -1,8 +1,8 @@
 import { dataUrl } from '../../api/constants';
 
-export const Card = (word) => {
+export const Card = (word, dateRepeat) => {
   const wordCard = document.createElement('div');
-  wordCard.setAttribute('data-id-word', `${word.id}`);
+  wordCard.setAttribute('data-id-word', `${word._id}`);
   wordCard.setAttribute('data-id-audio', `${word.audio}`);
   wordCard.classList.add('word-card');
   wordCard.innerHTML = `
@@ -31,13 +31,13 @@ export const Card = (word) => {
         </div>
         <div class="word-card__stat">
         <span class="word-card__repeat">
-            Количество повторений:
+            Количество повторений: ${word.userWord.optional.repeatCount} раз
         </span>
         <span class="word-card__last-repeat">
-            Последний раз повторялось:
+            Последний раз повторялось: ${word.userWord.optional.date}
         </span>
         <span class="word-card__next-repeat">
-            Следующееповторение:
+            Следующееповторение: ${dateRepeat}
         </span>
         </div>
         </div>

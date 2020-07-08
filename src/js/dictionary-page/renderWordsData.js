@@ -1,22 +1,25 @@
-import { getInfoWordById } from '../api/getInfoWordById';
 import { renderCard } from './renderCard';
-import { getUserWords } from '../api/getUserWords';
-import { filterDictionaryWords } from './filterDictionaryWords';
 import { getUserSettings } from '../api/getUserSettings';
+import { getAggregatedWords } from './getAggregatedWords';
 
 export const renderWordsData = async (category = 'all') => {
   const wordsWrapper = document.querySelector('.words-wrapper');
   wordsWrapper.innerHTML = '';
   const wordsNumber = document.querySelector('.dictonary-count__numder');
   let words = null;
+  let filter = null;
+  if (category === 'all') {
+    filter = { $and: [{ 'userWord.difficulty': { $ne: 'hard' }, 'userWord.optional.deleted': false }] };
+  } else if (category === 'hard') {
+    filter = { $and: [{ 'userWord.difficulty': 'hard', 'userWord.optional.deleted': false }] };
+  } else if (category === 'delete') {
+    filter = { $and: [{ 'userWord.optional.deleted': true }] };
+  }
+  words = await getAggregatedWords(filter);
   const userSettings = await getUserSettings();
-  words = await getUserWords();
-  words = filterDictionaryWords(words, category);
-  wordsNumber.innerHTML = words.length;
   if (words.length) {
-    const FILTER_WORDS = words.map((word) => getInfoWordById(word.wordId));
-    const WORDS_INFO = await Promise.all(FILTER_WORDS);
-    WORDS_INFO.forEach((word) => {
+    wordsNumber.innerHTML = words[0].paginatedResults.length;
+    words[0].paginatedResults.forEach((word) => {
       renderCard(word, userSettings, category);
     });
   }
