@@ -8,3 +8,4 @@ export { saveAuth } from './saveAuth';
 export { saveUser } from './saveUser';
 export { defaultSettings } from './defaultSettings';
 export { setStorageFromObject } from './setStorageFromObject';
+export { addError } from './addError';
