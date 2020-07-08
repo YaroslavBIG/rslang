@@ -2,7 +2,7 @@ export const settingsValid = (settings) => {
   const { cardInfo } = settings.optional;
   const checked = cardInfo.translation || cardInfo.meaning || cardInfo.example;
   if (!checked) {
-    alert(`Доллжен быть выбран хотя бы один пунк:
+    alert(`Должен быть выбран хотя бы один пункт:
   - перевод слова
   - предложение с объяснением значения слова
   - предложение с примером использования изучаемого слова

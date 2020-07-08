@@ -6,3 +6,4 @@ export { user } from './user';
 export { invisibleLinkToAuth } from './invisibleLinkToAuth';
 export { goToAuthPage } from './goToAuthPage';
 export { getAvatar } from './getAvatar';
+export { dropdown } from './dropdown';

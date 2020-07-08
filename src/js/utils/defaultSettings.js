@@ -1,5 +1,6 @@
+export const icon = { iconURL: 'none' };
 export const defaultSettings = {
-  wordsPerDay: 50,
+  wordsPerDay: icon.iconURL,
   optional: {
     icon: undefined,
     newWordsPerDay: 10,

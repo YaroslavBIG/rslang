@@ -1,8 +1,8 @@
-import { getUserSettings } from '../api';
-
 export const getAvatar = async () => {
-  const settings = await getUserSettings();
-  if (!!settings.optional.icon && settings.optional.icon !== 'none') {
-    document.querySelector('.header__avatar').src = settings.optional.icon;
+  const iconNumb = localStorage.getItem('icon');
+  if (!!iconNumb && iconNumb !== 'none') {
+    document.querySelector(
+      '.header__avatar'
+    ).src = `assets/img/${iconNumb}.svg`;
   }
 };

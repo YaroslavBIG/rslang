@@ -1,8 +1,5 @@
 import {
-  globalUser,
   actionAuth,
-  loadUser,
-  loadAuth,
   defaultSettings,
   setStorageFromObject,
   saveAuth,
@@ -16,14 +13,6 @@ import {
 } from '../form/settings';
 
 export const handlerSettingsPage = async () => {
-  loadAuth();
-  if (!actionAuth.getAuth() || actionAuth.getAuth() === 'false') {
-    goToAuthPage();
-    return;
-  }
-  const user = loadUser();
-  globalUser.set('id', user.id);
-  globalUser.set('token', user.token);
   const currentSettings = await getUserSettings();
   renderSettings(currentSettings);
   const newSettings = Object.assign(defaultSettings);
@@ -36,11 +25,12 @@ export const handlerSettingsPage = async () => {
       const avatarWrapper = document.querySelector('.settings-form__avatars');
       const chooseAgatar = avatarWrapper.querySelector('.active');
       if (chooseAgatar) {
-        newSettings.optional.icon = new URL(chooseAgatar.src).pathname;
+        newSettings.optional.icon = chooseAgatar.alt;
       }
       if (settingsValid(newSettings)) {
         pushUserSettings(newSettings).then(() => {
-          setStorageFromObject(newSettings);
+          setStorageFromObject(newSettings, 'local');
+          getAvatar();
           alert('Настройки сохранены');
         });
       }
@@ -51,6 +41,7 @@ export const handlerSettingsPage = async () => {
     goToAuthPage();
   });
   const avatarsWrapper = document.querySelector('.settings-form__avatars');
+
   avatarsWrapper.addEventListener('click', (event) => {
     const node = event.target;
     if (node.classList.contains('settings-form__avatar')) {
