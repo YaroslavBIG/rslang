@@ -15,8 +15,7 @@ import { getResponse } from '../getResponse';
  */
 
 export const userWord = (wordId, method = 'POST', difficulty = 'good', deleted = 'false') => {
-  const user = globalUser.get();
-  const { id } = user;
+  const { userId } = globalUser.get();
 
   const day = getDayOfYear();
   const repeat = difficulty === 'again';
@@ -30,7 +29,7 @@ export const userWord = (wordId, method = 'POST', difficulty = 'good', deleted =
       repeatCount: 0,
     },
   };
-  const url = `users/${id}/words/${wordId}`;
+  const url = `users/${userId}/words/${wordId}`;
   const methodApi = { method, body: JSON.stringify(newWordObj) };
   return getResponse(url, methodApi);
 };
