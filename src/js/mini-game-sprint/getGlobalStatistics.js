@@ -20,5 +20,6 @@ export const putGlobalStatistics = async () => {
   thisStatistics.optional.games.sprint.push({ test: 90000000 });
 
   await getResponse(getThisUserUrl(), { method: 'PUT', body: JSON.stringify(thisStatistics) });
+  // eslint-disable-next-line no-console
   console.log(thisStatistics);
 };
