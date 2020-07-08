@@ -7,6 +7,6 @@ export const createUser = async (user) => {
   if (content) {
     globalUser.set('id', content.id);
     saveUser();
-    return true;
+    return { email: content.email, password: user.password };
   }
 };
