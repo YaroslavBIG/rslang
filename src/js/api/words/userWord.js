@@ -21,6 +21,7 @@ export const userWord = async (wordId, method = 'POST', difficulty = 'good', del
 
     const day = getDayOfYear();
     const repeat = difficulty === 'again';
+    const repeatCount = parseInt(sessionStorage.getItem('repeatCount'), 10) || 0;
     const newWordObj = {
       difficulty,
       optional: {
@@ -28,7 +29,7 @@ export const userWord = async (wordId, method = 'POST', difficulty = 'good', del
         date: getDate(),
         deleted,
         repeat,
-        repeatCount: 0,
+        repeatCount,
       },
     };
     const url = `users/${userId}/words/${wordId}`;
