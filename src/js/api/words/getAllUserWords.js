@@ -1,6 +1,12 @@
 import { globalUser } from '../../utils';
 import { getResponse } from '../getResponse';
 
+/**
+ * All User Words
+ * Возвращает все слова пользователя
+ * @returns {Array} Массив обектов со словами пользователя, при их отсутствии пустой массив
+ */
+
 export const getAllUserWords = async () => {
   const user = globalUser.get();
   const { id } = user;

@@ -1,7 +1,5 @@
-import { getDayOfYear } from '../../mainGame/utils';
-import { globalUser } from '../../utils';
+import { getDayOfYear, getDate, globalUser } from '../../utils';
 import { getResponse } from '../getResponse';
-import { getDate } from '../../mainGame/utils/getDate';
 
 /**
  * User Word
