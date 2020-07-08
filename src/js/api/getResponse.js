@@ -19,6 +19,7 @@ import { addError } from './addError';
 export const getResponse = async (url, { ...options }) => {
   const isAuth = actionAuth.getAuth();
   const invalidToken = 401;
+  const notFoundUser = 417;
 
   const resURL = `${swaggerUrl}${url}`;
   const authorization = (isAuth === 'true' || isAuth === true) ? await getResultToken() : {};
@@ -37,7 +38,7 @@ export const getResponse = async (url, { ...options }) => {
       saveAuth();
       window.location.replace('#/auth');
       router();
-    } else if (response.status === 417) {
+    } else if (response.status === notFoundUser) {
       addError();
     }
     return await response.json();
