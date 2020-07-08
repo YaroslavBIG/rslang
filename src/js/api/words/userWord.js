@@ -16,22 +16,25 @@ import { getResponse } from '../getResponse';
  */
 
 export const userWord = async (wordId, method = 'POST', difficulty = 'good', deleted = 'false') => {
-  const { userId } = globalUser.get();
+  try {
+    const { userId } = globalUser.get();
 
-  const day = getDayOfYear();
-  const repeat = difficulty === 'again';
-  const newWordObj = {
-    difficulty,
-    optional: {
-      day,
-      date: getDate(),
-      deleted,
-      repeat,
-      repeatCount: 0,
-    },
-  };
-  const url = `users/${userId}/words/${wordId}`;
-  const methodApi = { method, body: JSON.stringify(newWordObj) };
-  const res = await getResponse(url, methodApi);
-  return res;
+    const day = getDayOfYear();
+    const repeat = difficulty === 'again';
+    const newWordObj = {
+      difficulty,
+      optional: {
+        day,
+        date: getDate(),
+        deleted,
+        repeat,
+        repeatCount: 0,
+      },
+    };
+    const url = `users/${userId}/words/${wordId}`;
+    const methodApi = { method, body: JSON.stringify(newWordObj) };
+    return await getResponse(url, methodApi);
+  } catch (err) {
+    return Object.keys(err);
+  }
 };

@@ -11,7 +11,10 @@ import { getResponse } from '../getResponse';
  *
  */
 export const getAggregatedWords = async (filter) => {
-  const { userId } = globalUser.get();
-  const res = await getResponse(`users/${userId}/aggregatedWords?filter=${JSON.stringify(filter)}`, { method: 'GET' });
-  return res;
+  try {
+    const { userId } = globalUser.get();
+    return await getResponse(`users/${userId}/aggregatedWords?filter=${JSON.stringify(filter)}`, { method: 'GET' });
+  } catch (err) {
+    return Object.keys(err);
+  }
 };
