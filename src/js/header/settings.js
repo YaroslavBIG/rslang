@@ -1,5 +1,4 @@
 const settingsIconPath = 'assets/img/settings.png';
-export const settings = () =>
-  `<a href="#/main/settings">
+export const settings = () => `<a href="#/main/settings">
   <img class="header__settings" src="${settingsIconPath}" alt="settings">
   </a>`;
