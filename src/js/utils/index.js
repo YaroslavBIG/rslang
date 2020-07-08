@@ -9,3 +9,4 @@ export { saveUser } from './saveUser';
 export { setStorageFromObject } from './setStorageFromObject';
 export { getDate } from './getDate';
 export { getDayOfYear } from './getDayOfYear';
+export { addError } from './addError';
