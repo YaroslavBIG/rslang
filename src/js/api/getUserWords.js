@@ -20,7 +20,7 @@ import { globalUser } from '../utils/main';
  */
 
 export const getUserWords = () => {
-  const userId = globalUser.get()[0].id || '5ee8922512daba0017bdc957';
+  const { id: userId } = globalUser.get();
   const url = `users/${userId}/words`;
   return getResponse(url, { method: 'GET' });
 };

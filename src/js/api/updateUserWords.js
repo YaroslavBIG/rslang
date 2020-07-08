@@ -5,7 +5,7 @@ import { globalUser } from '../utils/main';
  * Update user words
  * Функция для изменения свойств объекта слова по его id в словах пользователя
  * @param {string} wordId id слова, которое нужно изменить
- * @param {object} wordOption объект с стандартными свойствами объекта слова 
+ * @param {object} wordOption объект с стандартными свойствами объекта слова
  * @example wordOptionn = {
     "id": "5ee9241e12daba0017bdd5a8",
     "difficulty": string, weak - легкое, hard - тяжёлое
@@ -20,7 +20,7 @@ import { globalUser } from '../utils/main';
  */
 
 export const updateUserWords = async (wordId, wordOption) => {
-  const userId = globalUser.get()[0].id || '5ee8922512daba0017bdc957';
+  const { id: userId } = globalUser.get();
   const url = `users/${userId}/words/${wordId}`;
   await getResponse(url, { method: 'PUT', body: JSON.stringify(wordOption) });
 };
