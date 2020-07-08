@@ -6,12 +6,10 @@ export const nav = () => {
     { name: 'О команде', link: '#/about-us' },
   ];
   const input = '<input id="nav__toggle" class="nav__toggle" type="checkbox">';
-  const label =
-    '<label class="nav__btn" for="nav__toggle"><span></span></label>';
+  const label = '<label class="nav__btn" for="nav__toggle"><span></span></label>';
   const items = navLinkNames.reduce(
-    (acc, el) =>
-      `${acc}<li class="nav__item"><a href="${el.link}">${el.name}</a></li>`,
-    ''
+    (acc, el) => `${acc}<li class="nav__item"><a href="${el.link}">${el.name}</a></li>`,
+    '',
   );
   const dropDownLinks = `
   <a href="#/main/word-learning">Изучение слов</a>
@@ -25,7 +23,7 @@ export const nav = () => {
   `;
   const list = `<ul class="nav__list">${items} ${dropdown(
     'Игры',
-    dropDownLinks
+    dropDownLinks,
   )}</ul>`;
   return `<nav class="nav header__nav">${input} ${label} ${list}</nav>`;
 };

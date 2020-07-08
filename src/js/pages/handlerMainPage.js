@@ -1,5 +1,5 @@
 import { goToAuthPage, getAvatar } from '../header';
-import { globalUser, actionAuth, loadAuth, loadUser, saveAuth } from '../utils';
+import { actionAuth, saveAuth } from '../utils';
 
 export const handlerMainPage = () => {
   getAvatar();
