@@ -1,4 +1,4 @@
-import { getDayOfYear } from '../utils';
+import { getDayOfYear } from '../../utils';
 
 const setLocStats = (name, value = 0) => localStorage.setItem(name, value);
 

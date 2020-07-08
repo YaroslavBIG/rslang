@@ -5,6 +5,7 @@ import { addMainGameListners } from './eventListners';
 import { setStatistic, setAnswers } from './statistic/setStatistic';
 import { getAllUserWords } from '../api/words/getAllUserWords';
 import { setStorageFromObject } from '../utils';
+import { getMixWords } from '../api/words/getMixWords';
 
 export const startMainGame = async () => {
   const allUserWords = JSON.stringify(await getAllUserWords());
@@ -30,7 +31,9 @@ export const startMainGame = async () => {
     },
   };
   setStorageFromObject(bodyIcon, 'local');
-
+  console.log(allUserWords);
+  getMixWords();
+  // Temp
   sessionStorage.setItem('allUserWords', allUserWords);
 
   const gameData = await getWords(0, 0, 10, 5);
