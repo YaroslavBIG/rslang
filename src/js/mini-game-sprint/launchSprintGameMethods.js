@@ -4,6 +4,7 @@ import { fetchSprintGameData } from './fetchSprintGameData';
 import { randomInteger } from '../utils';
 import { choiceBtnSoundtracks } from './choiceBtnSoundtracks';
 import { getGlobalStatistics } from './getGlobalStatistics';
+import { test } from './testoviyBlock';
 
 export const startSprintGame = () => {
   fetchSprintGameData(randomInteger(0, 59), randomInteger(0, 5));
@@ -11,4 +12,5 @@ export const startSprintGame = () => {
   countdownTimer();
   choiceBtnSoundtracks();
   getGlobalStatistics();
+  test();
 };
