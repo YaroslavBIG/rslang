@@ -1,3 +1,5 @@
+import { constantsData } from '../wordConstructor/constants';
+
 export const wordConstructorPage = () => `
 <div class="wrapper-block">
   <div class="wrapper-block__settings-and-raunds-description">
@@ -6,6 +8,15 @@ export const wordConstructorPage = () => `
     <a href="#/main"><img src="./assets/black-cross.png" class="wrapper-block__black-cross"></a>
   </div>
   <div class="game-block">
+    <input type="submit" value="Выбрать" id="choice">
+    <select id="select">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+    </select>
     <div class="game-block__header">
       <div class="game-block__volume-block">
         <img src="./assets/img/volume.svg.png" class="game-block__header-volume">
@@ -32,6 +43,13 @@ export const wordConstructorPage = () => `
       <button class="game-block__footer-dont-know-button">Не знаю :(</button>
       <button class="game-block__footer-continue">Далее →</button>
     </div>
+  </div>
+  <div class="statistic-block">
+    <span>Результат:</span>
+    <div class="statistic-block__errors"><p class="statistic-block__error">Ошибок: 0</p></div>
+    <div class="statistic-block__corrects"><p class="statistic-block__correct">Знаю: 0</p></div>
+    <button class="statistic-block__restart">Продолжить тренировку</button>
+    <a href="#/main" class="statistic-block__return">Вернуться к списку мини-игр</a>
   </div>
 </div>
 `;

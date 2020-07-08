@@ -24,5 +24,11 @@ export function cutWord(
       'game-block__body-cells'
     )[0].innerHTML += `<div class="game-block__body-cell"></div>`;
   }
-  answerHandler(randomWord, randomImage, randomTextExample, randomAudio);
+  answerHandler(
+    randomWord,
+    randomImage,
+    randomTextExample,
+    randomAudio,
+    randomTranslate
+  );
 }
