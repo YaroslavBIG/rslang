@@ -1,0 +1,453 @@
+.words-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    transition: all ease .3s;
+}
+
+.word-card {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1rem;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 7px 18px 0px rgba(0,0,0,0.75);
+    margin: 1rem;
+    transition: all ease .3s;
+    overflow: hidden;
+    &__title {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    &__word{
+        display: flex;
+        flex-direction: row;
+        color: rgb(68, 68, 68);
+        text-align: center;
+        padding: 5px;
+        font-size: 1rem;
+    }
+    &__stat{
+        padding: 5px;
+        color: rgb(100, 100, 100);
+        font-size: 1.1rem;
+    }
+    &__picture{
+        width: 190px;
+        height: 190px;
+        border-radius: 100%;
+        display: none;
+    }
+    &__picture-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 215px;
+        height: 215px;
+        border-radius: 100%;
+        box-shadow: 0px -1px 33px -7px rgba(201,48,255,1);
+        background: rgb(255,221,44);
+        background: linear-gradient(319deg, rgba(255,221,44,1) 12%, rgba(255,67,146,1) 59%, rgb(178, 114, 201) 91%);
+        display: none;
+    }
+    &__transcription{
+        display: none;
+    }
+    &__example{
+        display: none;
+    }
+    &__meaning{
+        display: none;
+    }
+    &__ru{
+        display: none;
+    }
+    &__audio{
+        margin-left: 20px;
+        width: 20px;
+        height: 20px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &__btn{
+        color: white;
+        padding: 7px 30px 7px 30px;
+        margin: 5px;
+        box-shadow: 0px -1px 26px -11px rgb(2, 2, 2);
+        background: #ecb100;
+        border: none; 
+        &:hover {
+            cursor: pointer;
+            background: #ffbf01;
+        }
+    }
+
+}
+
+.word-card__word_main{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.show{
+    display: flex !important;
+}
+
+.nav-dictionary{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+    flex-grow: 1;
+    &__list {
+        display: flex;
+        list-style-type: none;
+    }
+    &__link {
+        text-decoration: none;
+        padding: 5px 12px;
+        border-radius: 10px;
+        font-weight: $secondary-font-weight;
+        &:hover {
+            background-color: rgba(55, 56, 60, 0.08);
+        cursor: pointer;
+        }
+        &.active {
+            background-color: $active-color;
+        }
+    }
+}
+
+.dictonary-count{
+    display: flex;
+    padding: 0 7rem 0 7rem;
+    font-size: 1.5rem;
+    color: rgb(68, 68, 68);
+    &__numder{
+        padding-left: 5px;
+    }
+}
+
+@media (min-device-width: 1040px) and (max-device-width: 1290px) {
+    .word-card {
+        width: 65%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        &__stat{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 30px;
+            font-size: 1.4rem;
+        }
+        &__word{
+            display: flex;
+            justify-content: center;
+            font-size: 1.4rem;
+        }
+        &__buttons{
+            display: flex;
+            justify-content: center;  
+        }
+        &__btn{
+            font-size: 1rem;
+            padding: 10px 35px 10px 35px;
+        }
+    }
+    .word-card__word_main{
+        font-weight: 600;
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-device-width: 900px) and (max-device-width: 1039px) {
+    .word-card {
+        width: 65%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        &__stat{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 30px;
+            font-size: 1.2rem;
+        }
+        &__word{
+            display: flex;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        &__buttons{
+            display: flex;
+            justify-content: center;  
+        }
+        &__btn{
+            font-size: 1rem;
+            padding: 10px 35px 10px 35px;
+        }
+    }
+    .word-card__word_main{
+        font-weight: 600;
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-device-width: 660px) and (max-device-width: 899px) {
+    .word-card {
+        width: 65%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        &__stat{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 30px;
+            font-size: 1.2rem;
+        }
+        &__word{
+            display: flex;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        &__buttons{
+            display: flex;
+            justify-content: center;  
+        }
+        &__btn{
+            font-size: 1rem;
+            padding: 10px 35px 10px 35px;
+        }
+    }
+    .word-card__word_main{
+        font-weight: 600;
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-device-width: 540px) and (max-device-width: 659px) {
+    .word-card {
+        width: 65%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        &__stat{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 30px;
+            font-size: 1.2rem;
+        }
+        &__word{
+            display: flex;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        &__buttons{
+            display: flex;
+            justify-content: center;  
+        }
+        &__btn{
+            font-size: 1rem;
+            padding: 10px 35px 10px 35px;
+        }
+    }
+    .word-card__word_main{
+        font-weight: 600;
+        font-size: 1.4rem;
+    }
+
+    .nav-dictionary{
+        justify-content: center;
+        align-items: center;
+        &__item{
+            padding: 10px;
+        }
+        &__list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+        }
+        &__link{
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@media (min-device-width: 460px) and (max-device-width: 539px) {
+    .word-card {
+        width: 65%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        &__stat{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 30px;
+            font-size: 1rem;
+        }
+        &__word{
+            display: flex;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        &__buttons{
+            display: flex;
+            justify-content: center;  
+        }
+        &__btn{
+            font-size: 1rem;
+            padding: 10px 35px 10px 35px;
+        }
+    }
+    .word-card__word_main{
+        font-weight: 600;
+        font-size: 1.4rem;
+    }
+
+    .nav-dictionary{
+        justify-content: center;
+        align-items: center;
+        &__item{
+            padding: 10px;
+        }
+        &__list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+        }
+        &__link{
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@media (min-device-width: 335px) and (max-device-width: 459px) {
+    .word-card {
+        width: 65%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        &__stat{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 30px;
+            font-size: .8rem;
+        }
+        &__word{
+            display: flex;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        &__buttons{
+            display: flex;
+            justify-content: center;  
+        }
+        &__btn{
+            font-size: 1rem;
+            padding: 10px 35px 10px 35px;
+        }
+    }
+    .word-card__word_main{
+        font-weight: 600;
+        font-size: 1.4rem;
+    }
+
+    .nav-dictionary{
+        justify-content: center;
+        align-items: center;
+        &__item{
+            padding: 10px;
+        }
+        &__list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+        }
+        &__link{
+            font-size: 1.4rem;
+        }
+    }
+    .dictonary-count{
+        font-size: 1rem;
+    }
+}
+
+@media (min-device-width: 320px) and (max-device-width: 334px) {
+    .word-card {
+        width: 65%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        &__stat{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 30px;
+            font-size: .8rem;
+        }
+        &__word{
+            display: flex;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        &__buttons{
+            display: flex;
+            justify-content: center;  
+        }
+        &__btn{
+            font-size: 1rem;
+            padding: 10px 35px 10px 35px;
+        }
+    }
+    .word-card__word_main{
+        font-weight: 600;
+        font-size: 1.4rem;
+    }
+
+    .nav-dictionary{
+        justify-content: center;
+        align-items: center;
+        &__item{
+            padding: 10px;
+        }
+        &__list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+        }
+        &__link{
+            font-size: 1.2rem;
+        }
+    }
+    .dictonary-count{
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,60 @@
+.inner-section{
+  &__start{
+    font-family: $primary-font-family;
+    width: 100%;
+    height: 100%;
+    background: url('../assets/img/background.jpg') center center no-repeat fixed;
+  }
+}
+
+.start-enter{
+  padding-top: 8%;
+  &__inner{
+    height: 500px;
+    width: 370px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
+    overflow: hidden;
+    transition: all .5s ease;
+    background-color: $color-back-form;
+  }
+  &__nav{
+    width: 100%;
+    padding-top: 40px;
+    transition: all .5s ease;
+
+    li{
+      padding-left: 10px;
+      font-size: $primary-font-size + 2px;
+      display: inline;
+      text-transform: uppercase;
+      padding-right: 10px;
+    }
+  }
+  &__text{
+    width: 400px;
+    font-size: $primary-font-size + 24px;
+    padding: 100px 0 0 20px;
+    text-align: center;
+    color: $secondary-color;
+  }
+}
+.inner{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.sign{
+  cursor: pointer;
+}
+.animation{
+  transition: all .25s ease;
+}
+.active a{
+  color: $secondary-color;
+  border-bottom: 2px solid $active-color;
+}
+.inactive a{
+  color: $color-inactive-a;
+  border: 0;
+}
