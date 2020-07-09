@@ -7,3 +7,6 @@ export { checkStateButton } from './checkStateButton';
 export { controlButton } from './controlButton';
 export { controlForm } from './controlForm';
 export { submitForm } from './submitForm';
+export { settingsForm } from './settings/settingsForm';
+export { settingsCheckbox } from './settings/settingsCheckbox';
+export { settingsNumber } from './settings/settingsNumber';
