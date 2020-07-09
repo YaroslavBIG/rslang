@@ -1,17 +1,8 @@
-// import { load } from './js/utils';
-// import { router } from './js/router';
-//
-// window.addEventListener('hashchange', router);
-// window.onload = () => {
-//   load();
-//   router();
-// };
+import { load } from './js/utils';
+import { router } from './js/router';
 
-import { createStatisticsPage } from './js/pages';
-import { launchStatisticsMethods } from './js/statistics/launchStatisticsMethods';
-
+window.addEventListener('hashchange', router);
 window.onload = () => {
-  const root = document.getElementById('root');
-  root.innerHTML = createStatisticsPage();
-  launchStatisticsMethods();
+  load();
+  router();
 };

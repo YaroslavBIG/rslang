@@ -18,6 +18,7 @@
 
 import { controlForm, submitForm, chooseIcon } from '../form';
 import { startSprintGame } from '../mini-game-sprint/launchSprintGameMethods';
+import { launchStatisticsMethods } from '../statistics/launchStatisticsMethods';
 
 export const callsNecessaryMethods = (path) => {
   switch (path) {
@@ -32,6 +33,10 @@ export const callsNecessaryMethods = (path) => {
     }
     case '/main/sprint': {
       startSprintGame();
+      break;
+    }
+    case '/statistic': {
+      launchStatisticsMethods();
       break;
     }
     default: {
