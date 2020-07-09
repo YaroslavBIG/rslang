@@ -15,6 +15,7 @@ export const saveSettings = async (resResp) => {
       showDeleteBtn: true,
       showStrongBtn: true,
       showAnswerBtn: true,
+      onlyNewWords: true,
       cardInfo: {
         translation: true,
         meaning: true,

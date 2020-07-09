@@ -15,6 +15,10 @@ export const createSettingsPage = () => {
     'maxCardsPerDay',
     'Максимальное количество карточек со словами в день',
   );
+  const onlyNewWordsChbox = settingsCheckbox(
+    'onlyNewWords',
+    'Использовать только новые слова',
+  );
   const soundAutoPlayChbox = settingsCheckbox(
     'soundAutoPlay',
     'Автоматическое воспроизведение медиафайлов',
@@ -76,6 +80,7 @@ export const createSettingsPage = () => {
         wordsPerDay,
         newWordsPerDay,
         maxCardsPerDay,
+        onlyNewWordsChbox,
         soundAutoPlayChbox,
         showDeleteBtnChbox,
         showStrongBtnChbox,

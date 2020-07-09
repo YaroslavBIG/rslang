@@ -1,6 +1,5 @@
 import {
   actionAuth,
-  defaultSettings,
   setStorageFromObject,
   saveAuth,
 } from '../utils';
@@ -15,7 +14,7 @@ import {
 export const handlerSettingsPage = async () => {
   const currentSettings = await getUserSettings();
   renderSettings(currentSettings);
-  const newSettings = Object.assign(defaultSettings);
+  const newSettings = Object.assign(currentSettings);
   getAvatar();
   document
     .querySelector('.settings-form')
