@@ -10,12 +10,13 @@ export const wordConstructorPage = () => `
   <div class="game-block">
     <input type="submit" value="Выбрать" id="choice">
     <select id="select">
+      <option value="" disabled selected>Выбрать уровень сложности</option>
+      <option value="0">0</option>
       <option value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>
       <option value="4">4</option>
       <option value="5">5</option>
-      <option value="6">6</option>
     </select>
     <div class="game-block__header">
       <div class="game-block__volume-block">

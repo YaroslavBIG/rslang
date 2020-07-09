@@ -16,6 +16,11 @@ export function dontKnowButton(
   document.getElementsByClassName(
     'game-block__footer-dont-know-button'
   )[0].onclick = function () {
+    if (constantsData.checked == true) {
+      var sound = document.createElement('audio');
+      sound.src = `https://raw.githubusercontent.com/irinainina/rslang/rslang-data/data/${randomAudio}`;
+      sound.play();
+    }
     constantsData.errorWord = true;
     document.getElementsByClassName(
       'game-block__body-cells-answers'
@@ -77,6 +82,8 @@ export function dontKnowButton(
   };
   document.onkeydown = function (e) {
     if (
+      document.getElementsByClassName('game-block__footer-dont-know-button')[0]
+        .style.display == '' ||
       document.getElementsByClassName('game-block__footer-dont-know-button')[0]
         .style.display == 'inline-block'
     ) {
@@ -141,6 +148,11 @@ export function dontKnowButton(
           document.getElementsByClassName(
             'statistic-block__errors'
           )[0].innerHTML += `<p>${randomWord} — ${randomTranslate}</p>`;
+        }
+        if (constantsData.checked == true) {
+          var sound = document.createElement('audio');
+          sound.src = `https://raw.githubusercontent.com/irinainina/rslang/rslang-data/data/${randomAudio}`;
+          sound.play();
         }
       }
     }

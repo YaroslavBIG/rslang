@@ -2,6 +2,7 @@ import { fetchSprintGameData } from './fetchWordConstructorGameData';
 import { randomInteger } from '../utils';
 import { statisticPage } from './statisticPage';
 import { restartWordConstructor } from './restartWordConstructor';
+import { dontKnowButton } from './dontKnowButton';
 
 var randomWord = Math.ceil(Math.random() * 19);
 var randomPage = Math.ceil(Math.random() * 29);
@@ -92,6 +93,7 @@ export function continuee() {
         t++;
         b++;
         if (b == 11) {
+          document.onkeydown = function () {};
           var statisticBlock = document.getElementsByClassName(
             'statistic-block'
           );
