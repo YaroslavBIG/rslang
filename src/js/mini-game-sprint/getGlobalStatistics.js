@@ -6,37 +6,44 @@ export const getThisUserUrl = () => {
   return `users/${thisUserId}/statistics`;
 };
 
-export const getGlobalStatistics = async () => {
-  try {
-    return await getResponse(getThisUserUrl(), { method: 'GET' });
-  } catch (error) {
-    return Object.keys(error);
-  }
+const finalPut = async (obj) => {
+  delete obj.id;
+  await getResponse(getThisUserUrl(), { method: 'PUT', body: JSON.stringify(obj) });
 };
 
-export const putGlobalStatistics = async (answersToday, rightAnswers, wrongAnswers, gameCounter) => {
-  const thisStatistics = await getGlobalStatistics();
-  const newDate = new Date().toLocaleDateString().replace(/^\d|\./g, '');
-  const thisDate = thisStatistics.optional.games.sprint[0].date;
+/**
+ *
+ * @param {object} obj - объект, который кладете
+ * @param {string} name - имя вашей игры
+ * на выходе ничего, мы ж кладем туда. ХЕХ
+ */
 
-  if (!thisDate || thisDate !== newDate) {
-    thisStatistics.optional.games.sprint.push({
-      date: newDate,
-      answersToday: answersToday,
-      rightAnswers: rightAnswers,
-      wrongAnswers: wrongAnswers,
-      gameCounter: gameCounter,
+export const putGlobalStatistics = async (name, obj) => {
+  const thisStatistics = await getResponse(getThisUserUrl(), { method: 'GET' });
+  const dateNow = new Date().toLocaleDateString().replace(/^\d|\./g, '');
+
+  const { optional: { games } } = thisStatistics;
+  const innerGames = games[name];
+
+  const comp = innerGames.find((el) => el.date === dateNow) || false;
+
+  if (comp) {
+    const arr = Object.keys(comp);
+
+    arr.forEach((el) => {
+      if (el !== 'date') {
+        comp[el] += obj[el];
+      }
     });
+    await finalPut(thisStatistics);
   } else {
-    thisStatistics.optional.games.sprint[0].answersToday += answersToday;
-    thisStatistics.optional.games.sprint[0].rightAnswers += rightAnswers;
-    thisStatistics.optional.games.sprint[0].wrongAnswers += wrongAnswers;
-    thisStatistics.optional.games.sprint[0].gameCounter += 1;
+    const readyObj = {
+      date: dateNow,
+      ...obj,
+    };
+    innerGames.push(readyObj);
+    await finalPut(thisStatistics);
   }
-
-
-
-  await getResponse(getThisUserUrl(), { method: 'PUT', body: JSON.stringify(thisStatistics) });
   // eslint-disable-next-line no-console
   console.log(thisStatistics);
 };

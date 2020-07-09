@@ -6,9 +6,19 @@ import { choiceBtnSoundtracks } from './choiceBtnSoundtracks';
 import { putGlobalStatistics } from './getGlobalStatistics';
 
 export const startSprintGame = () => {
+  const newDate = new Date().toLocaleDateString().replace(/^\d|\./g, '');
+
+  const obj = {
+    date: newDate,
+    answersToday: 888,
+    rightAnswers: 777,
+    wrongAnswers: 666,
+    gameCounter: 2,
+  };
+
   fetchSprintGameData(randomInteger(0, 59), randomInteger(0, 5));
   voiceBtnHandler();
   countdownTimer();
   choiceBtnSoundtracks();
-  putGlobalStatistics(1, 1, 2, 3);
+  putGlobalStatistics('sprint', obj);
 };

@@ -2,7 +2,6 @@ import { constantsData } from './constants';
 import { timerLoader } from './timerLoader';
 import { repeatButtonHandler } from './repeatButtonHandler';
 import { createResultBlock } from './createResultBlock';
-import { putGlobalStatistics } from './getGlobalStatistics';
 
 export const countdownTimer = () => {
   const timerContainer = document.getElementById('timer');
@@ -26,12 +25,6 @@ export const countdownTimer = () => {
         `${constantsData.backendUrl}files/success.mp3`,
       );
       completedAudio.autoplay = true;
-      putGlobalStatistics(
-        totalAnswers,
-        constantsData.correctAnswersCounter,
-        constantsData.wrongAnswersCounter,
-        1
-        );
       repeatButtonHandler();
     } else {
       timer = setTimeout(tikTak, constantsData.oneSec);
