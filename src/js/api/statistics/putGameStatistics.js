@@ -24,9 +24,9 @@ export const putGameStatistics = async (name, obj) => {
     const arr = Object.keys(comp);
 
     arr.forEach((el) => {
-      if (el !== 'date' && el !== 'c') {
+      if (el !== 'date' && el !== 'counter') {
         comp[el] += obj[el];
-      } else if (el === 'c') {
+      } else if (el === 'counter') {
         comp[el] += 1;
       }
     });
@@ -36,11 +36,9 @@ export const putGameStatistics = async (name, obj) => {
     const readyObj = {
       date: dateNow,
       ...obj,
-      c: count,
+      counter: count,
     };
     innerGames.push(readyObj);
     await finalPut(thisStatistics);
   }
-  // eslint-disable-next-line no-console
-  console.log(thisStatistics);
 };
