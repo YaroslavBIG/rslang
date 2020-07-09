@@ -13,6 +13,7 @@ import { getThisUserUrl } from './getThisUserUrl';
 export const putGameStatistics = async (name, obj) => {
   const thisStatistics = await getResponse(getThisUserUrl(), { method: 'GET' });
   const dateNow = getDate(null);
+  const count = 1;
 
   const { optional: { games } } = thisStatistics;
   const innerGames = games[name];
@@ -23,15 +24,19 @@ export const putGameStatistics = async (name, obj) => {
     const arr = Object.keys(comp);
 
     arr.forEach((el) => {
-      if (el !== 'date') {
+      if (el !== 'date' && el !== 'c') {
         comp[el] += obj[el];
+      } else if (el === 'c') {
+        comp[el] += 1;
       }
     });
+
     await finalPut(thisStatistics);
   } else {
     const readyObj = {
       date: dateNow,
       ...obj,
+      c: count,
     };
     innerGames.push(readyObj);
     await finalPut(thisStatistics);

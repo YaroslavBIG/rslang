@@ -9,7 +9,7 @@ export const startSprintGame = () => {
   const obj = {
     a: 888, // answersToday
     r: 777, // right
-    c: 2, // countGame
+    w: 33,
   };
 
   fetchSprintGameData(randomInteger(0, 59), randomInteger(0, 5));
