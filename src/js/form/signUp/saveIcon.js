@@ -12,7 +12,10 @@ export const saveIcon = async (resResp) => {
   };
 
   if (resResp.message === authMess) {
-    const content = await getResponse(`users/${resResp.userId}/settings`, { method: 'PUT', body: JSON.stringify(bodyIcon) });
+    const content = await getResponse(`users/${resResp.userId}/settings`, {
+      method: 'PUT',
+      body: JSON.stringify(bodyIcon),
+    });
     if (content) {
       return true;
     }

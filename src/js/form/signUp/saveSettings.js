@@ -1,9 +1,9 @@
 import { icon } from './chooseIcon';
 import { getResponse } from '../../api';
-import { setStorageFromObject } from '../../utils';
+import { setStorageFromObject, globalUser } from '../../utils';
 
 export const saveSettings = async (resResp) => {
-  const authMess = 'Authenticated';
+  const { userId } = globalUser.get();
 
   const bodySettings = {
     wordsPerDay: 50,
@@ -15,19 +15,39 @@ export const saveSettings = async (resResp) => {
       showDeleteBtn: true,
       showStrongBtn: true,
       showAnswerBtn: true,
+      onlyNewWords: true,
       cardInfo: {
         translation: true,
         meaning: true,
         example: true,
-        transcription: false,
-        associationImg: false,
+        transcription: true,
+        associationImg: true,
       },
     },
   };
-  if (resResp.message === authMess) {
+
+  const bodyStatistics = {
+    learnedWords: 0,
+    optional: {
+      games: {
+        main: [],
+        intervals: [],
+        sprint: [],
+        speakit: [],
+        constructor: [],
+        puzzle: [],
+        savannah: [],
+        audition: [],
+      },
+    },
+  };
+  if (resResp) {
     setStorageFromObject(bodySettings, 'local');
-    const content = await getResponse(`users/${resResp.userId}/settings`, { method: 'PUT', body: JSON.stringify(bodySettings) });
-    if (content) {
+    const content = await getResponse(`users/${userId}/settings`, { method: 'PUT', body: JSON.stringify(bodySettings) });
+    const statContent = await getResponse(`users/${userId}/statistics`, { method: 'PUT', body: JSON.stringify(bodyStatistics) });
+
+    const res = Promise.all([content, statContent]).then(() => true);
+    if (res) {
       return true;
     }
   }
