@@ -7,3 +7,4 @@ export { getAggregatedWords } from './words/getAggregatedWords';
 export { getAllUserWords } from './words/getAllUserWords';
 export { getMixWords } from './words/getMixWords';
 export { userWord } from './words/userWord';
+export { getWordsByDiff } from './words/getWordsByDif';

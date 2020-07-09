@@ -30,7 +30,7 @@ export const gameContent = async (data = null, wordNum = 0) => {
   const collectionLen = apiWordsParse.length;
 
   const {
-    textExample, textExampleTranslate, word, wordTranslate,
+    textMeaning, textExampleTranslate, word, wordTranslate,
     image, textMeaningTranslate, audio, audioExample, audioMeaning, transcription, id,
   } = apiWordsParse[wordNum];
 
@@ -59,7 +59,7 @@ export const gameContent = async (data = null, wordNum = 0) => {
 
   const font = cardQuestBlock.computedStyleMap().get('font').toString();
 
-  const textArr = textExample.split(' ').map((words) => cutTags(words));
+  const textArr = textMeaning.split(' ').map((words) => cutTags(words));
   const targetWordIndex = textArr.indexOf(word);
   const textLen = textArr.length - 1;
   const textBeforeWord = targetWordIndex === 0 ? '' : textArr.slice(0, targetWordIndex).join(' ');
@@ -80,9 +80,9 @@ export const gameContent = async (data = null, wordNum = 0) => {
     };
   }
 
-  if (settings.meaning) wordTextExample.innerText = textMeaningTranslate;
+  if (settings.meaning) wordTextExample.innerText = textExampleTranslate;
 
-  if (settings.example) textTranslateBlock.innerText = textExampleTranslate;
+  if (settings.example) textTranslateBlock.innerText = textMeaningTranslate;
 
   if (settings.translation) wordTranslateBlock.innerText = wordTranslate;
 

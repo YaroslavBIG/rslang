@@ -1,11 +1,12 @@
-import { getAggregatedWords } from './getAggregatedWords';
+import { getWordsByDiff } from './getWordsByDif';
 
 export const getMixWords = async () => {
-  const repeatWords = await getAggregatedWords({ $or: [{ 'userWord.optional.repeat': 'true' }, { 'userWord.difficulty': 'again' }] });
-  const hardWords = await getAggregatedWords({ 'userWord.difficulty': 'hard' });
-  const goodWords = await getAggregatedWords({ 'userWord.difficulty': 'good' });
-  const weekWords = await getAggregatedWords({ 'userWord.difficulty': 'week' });
+  const repeatWords = await getWordsByDiff('repeat');
+  const hardWords = await getWordsByDiff('hard');
+  const goodWords = await getWordsByDiff('good');
+  const weekWords = await getWordsByDiff('week');
+
   console.log([repeatWords, hardWords, goodWords, weekWords]);
   return [repeatWords, hardWords, goodWords, weekWords];
 };
-// again, hard, good, weak
+// repeatWords, hardWords, goodWords, weekWords

@@ -1,4 +1,5 @@
 import { userWord } from '../../api/words/userWord';
+import { isNewUserWord } from './isNewUserWord';
 
 export const answerCheck = () => {
   const wordBlock = document.querySelector('.sentence--target-word');
@@ -11,7 +12,8 @@ export const answerCheck = () => {
   const isHint = hint.nodeName === 'SPAN';
   const isRightAnswer = ((word === currentWord) && !isHint);
   if (isRightAnswer) {
-    userWord(id);
+    const method = isNewUserWord(id) ? 'POST' : 'PUT';
+    userWord(id, method);
   }
   return isRightAnswer;
 };
