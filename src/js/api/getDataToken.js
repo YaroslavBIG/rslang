@@ -2,7 +2,7 @@ import { globalUser, saveUser } from '../utils';
 import { getNewToken } from './getNewToken';
 
 export const getDataToken = async () => {
-  const { token: tokenRes } = globalUser.get()[0];
+  const { token: tokenRes } = globalUser.get();
   const decodedData = JSON.parse(atob(tokenRes.split('.')[1]));
   const dateNow = Date.now();
   const dateDie = (decodedData.exp * 1000) - 1800000;

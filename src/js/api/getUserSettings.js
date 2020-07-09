@@ -7,7 +7,7 @@ import { globalUser } from '../utils/main';
  */
 
 export const getUserSettings = () => {
-  const userId = globalUser.get()[0].id || '5ee8922512daba0017bdc957';
+  const { id: userId } = globalUser.get();
   const url = `users/${userId}/settings`;
   return getResponse(url, { method: 'GET' });
 };
