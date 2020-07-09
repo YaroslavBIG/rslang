@@ -6,5 +6,5 @@ export const getAndStart = () => {
   checkStart('auto', false, text);
   const page = document.querySelector('#level').options.selectedIndex;
   const group = document.querySelector('#round').options.selectedIndex;
-  startSpeakGame(page, group);
+  startSpeakGame(page, group, false);
 };

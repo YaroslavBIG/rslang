@@ -10,6 +10,7 @@ export const checkStart = (point, isAdd, text) => {
   } else {
     document.querySelector('.hints-translation').classList.remove('hidden');
     document.querySelector('.hints-input').classList.add('hidden');
+    document.querySelector('.hints-input').value = '';
   }
 
   document.querySelector('#start-speak').textContent = text;
