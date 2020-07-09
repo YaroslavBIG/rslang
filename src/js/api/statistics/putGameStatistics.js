@@ -1,15 +1,7 @@
-import { globalUser } from '../utils';
-import { getResponse } from '../api';
-
-export const getThisUserUrl = () => {
-  const thisUserId = globalUser.get().userId;
-  return `users/${thisUserId}/statistics`;
-};
-
-const finalPut = async (obj) => {
-  delete obj.id;
-  await getResponse(getThisUserUrl(), { method: 'PUT', body: JSON.stringify(obj) });
-};
+import { getResponse } from '../getResponse';
+import { getDate } from '../../utils';
+import { finalPut } from './finalPut';
+import { getThisUserUrl } from './getThisUserUrl';
 
 /**
  *
@@ -18,9 +10,9 @@ const finalPut = async (obj) => {
  * на выходе ничего, мы ж кладем туда. ХЕХ
  */
 
-export const putGlobalStatistics = async (name, obj) => {
+export const putGameStatistics = async (name, obj) => {
   const thisStatistics = await getResponse(getThisUserUrl(), { method: 'GET' });
-  const dateNow = new Date().toLocaleDateString().replace(/^\d|\./g, '');
+  const dateNow = getDate(null);
 
   const { optional: { games } } = thisStatistics;
   const innerGames = games[name];
