@@ -32,12 +32,13 @@ export const startMainGame = async () => {
   };
   setStorageFromObject(bodyIcon, 'local');
   console.log(allUserWords);
-  getMixWords();
+  console.log('getMixWords', await getMixWords());
   console.log('words', await getNewWords(12));
   // Temp
   sessionStorage.setItem('allUserWords', allUserWords);
 
   const gameData = await getWords(0, 0, 10, 5);
+  console.log('gameData', gameData);
   gameContent(gameData);
   const allWordsCount = sessionStorage.getItem('collectionLen');
   progressBar(0, allWordsCount);
