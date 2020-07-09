@@ -1,4 +1,4 @@
-import { getWords } from '../api';
+import { getWords, getNewWords } from '../api';
 import { gameContent } from './gameContent';
 import { progressBar } from './progressBar';
 import { addMainGameListners } from './eventListners';
@@ -33,6 +33,7 @@ export const startMainGame = async () => {
   setStorageFromObject(bodyIcon, 'local');
   console.log(allUserWords);
   getMixWords();
+  console.log('words', await getNewWords(50));
   // Temp
   sessionStorage.setItem('allUserWords', allUserWords);
 

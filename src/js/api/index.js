@@ -8,3 +8,4 @@ export { getAllUserWords } from './words/getAllUserWords';
 export { getMixWords } from './words/getMixWords';
 export { userWord } from './words/userWord';
 export { getWordsByDiff } from './words/getWordsByDif';
+export { getNewWords } from './words/getNewWords';

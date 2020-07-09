@@ -1,5 +1,5 @@
 import { getAggregatedWords } from './getAggregatedWords';
-
+// repeat, hard, good, week
 export const getWordsByDiff = async (difficulty) => {
   try {
     const words = await getAggregatedWords({
