@@ -1,5 +1,13 @@
 import { getAggregatedWords } from './getAggregatedWords';
-// repeat, hard, good, week
+
+/**
+ * Words by Difficulty
+ * Возвращает все слова пользователя с указанной сложностью
+ * @param {String} difficulty возможные варианты сложности слов 'week'; 'hard'; 'good'; 'repeat';
+ * 'repeat' - возвращает так же слова со сложнстью 'again'
+ * @returns {Array} Массив обектов со словами пользователя, при их отсутствии пустой массив
+ */
+
 export const getWordsByDiff = async (difficulty) => {
   try {
     const words = await getAggregatedWords({

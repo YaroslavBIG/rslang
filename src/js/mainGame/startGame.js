@@ -33,7 +33,7 @@ export const startMainGame = async () => {
   setStorageFromObject(bodyIcon, 'local');
   console.log(allUserWords);
   getMixWords();
-  console.log('words', await getNewWords(50));
+  console.log('words', await getNewWords(12));
   // Temp
   sessionStorage.setItem('allUserWords', allUserWords);
 
