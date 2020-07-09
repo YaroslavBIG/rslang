@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+
 export function addSwiper() {
   const head = document.getElementsByTagName('head')[0];
   head.innerHTML += `
@@ -21,4 +22,5 @@ export function addSwiper() {
       prevEl: '.swiper-button-prev',
     },
   });
+  return swiper;
 }
