@@ -1,0 +1,25 @@
+.logo {
+  display: flex;
+  align-items: center;
+  &__name {
+    font-size: 24px;
+    margin-left: 10px;
+    color: $attention-color;
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+      margin-left: 40px;
+    }
+    @media screen and (max-width: 400px) {
+      display: none;
+    }
+  }
+  &__icon {
+    height: 38px;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+}
