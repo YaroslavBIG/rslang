@@ -4,35 +4,15 @@ import { progressBar } from './progressBar';
 import { addMainGameListners } from './eventListners';
 import { setStatistic, setAnswers } from './statistic/setStatistic';
 import { getAllUserWords } from '../api/words/getAllUserWords';
-import { setStorageFromObject } from '../utils';
 import { getMixWords } from '../api/words/getMixWords';
+import { getGameWords } from './getGameWords';
 
 export const startMainGame = async () => {
   const allUserWords = JSON.stringify(await getAllUserWords());
-
-  // Temp
-  const bodyIcon = {
-    wordsPerDay: 100,
-    optional: {
-      icon: 'iconURL',
-      newWordsPerDay: 10,
-      maxCardsPerDay: 20,
-      soundAutoPlay: true,
-      showDeleteBtn: true,
-      showStrongBtn: true,
-      showAnswerBtn: true,
-      cardInfo: {
-        translation: true,
-        meaning: true,
-        example: true,
-        transcription: true,
-        associationImg: true,
-      },
-    },
-  };
-  setStorageFromObject(bodyIcon, 'local');
-  console.log(allUserWords);
   console.log('getMixWords', await getMixWords());
+  console.log('gm', await getGameWords());
+  console.log(allUserWords);
+
   console.log('words', await getNewWords(12));
   // Temp
   sessionStorage.setItem('allUserWords', allUserWords);

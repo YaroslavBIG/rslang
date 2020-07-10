@@ -59,8 +59,8 @@ export const gameContent = async (data = null, wordNum = 0) => {
 
   const font = cardQuestBlock.computedStyleMap().get('font').toString();
 
-  const textArr = textMeaning.split(' ').map((words) => cutTags(words));
-  const targetWordIndex = textArr.indexOf(word);
+  const textArr = textMeaning.split(' ').map((words) => cutTags(words.toLowerCase()));
+  const targetWordIndex = textArr.indexOf(word.toLowerCase());
   const textLen = textArr.length - 1;
   const textBeforeWord = targetWordIndex === 0 ? '' : textArr.slice(0, targetWordIndex).join(' ');
   const textAfterWord = targetWordIndex === textLen ? '' : textArr.slice(targetWordIndex + 1, textLen).join(' ');
