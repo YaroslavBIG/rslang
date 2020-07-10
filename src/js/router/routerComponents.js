@@ -1,12 +1,12 @@
 /**
-* каждый компонент возращает вашу template строку, чтобы отрисовывать страницу
-* вместо __''__ вы пишите свой метод.
-* если у вас мини-игра(не основная и не метод интервального повторения),
-* то у вас еще отрисовывается промо
-* и конструкция возврата получается return promo() + pageGame(), где
-* promo() - промо-страница игры, этот метод от Константина
-* pageGame() - название функции, которая отдает вашу начальную верстку для игры.
-*/
+ * каждый компонент возращает вашу template строку, чтобы отрисовывать страницу
+ * вместо __''__ вы пишите свой метод.
+ * если у вас мини-игра(не основная и не метод интервального повторения),
+ * то у вас еще отрисовывается промо
+ * и конструкция возврата получается return promo() + pageGame(), где
+ * promo() - промо-страница игры, этот метод от Константина
+ * pageGame() - название функции, которая отдает вашу начальную верстку для игры.
+ */
 
 import {
   createErrorPage,
@@ -14,6 +14,7 @@ import {
   createMainPage,
   createSprintGamePage,
   createAboutTheTeamPage,
+  createSettingsPage,
 } from '../pages';
 
 export const HomeComponent = {
@@ -26,7 +27,7 @@ export const MainComponent = {
   render: () => createMainPage(),
 };
 export const SettingsComponent = {
-  render: () => '',
+  render: () => createSettingsPage(),
 };
 export const WordLearningComponent = {
   render: () => '',
