@@ -1,5 +1,6 @@
 import { getSettings } from './utils';
 import { getMixWords, getNewWords } from '../api';
+import { randomArr } from '../utils';
 
 export const getGameWords = async () => {
   const { newWordsPerDay, wordsPerDay } = getSettings();
@@ -32,5 +33,8 @@ export const getGameWords = async () => {
     return allWords;
   };
   wordsLen > (+lernedWords) ? spliced() : allWords.push(...newWords);
-  return allWords;
+
+  const randomNums = randomArr(allWords.length + 1);
+  const res = randomNums.map((el) => allWords[el]);
+  return res;
 };

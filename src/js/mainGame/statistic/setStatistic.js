@@ -36,7 +36,7 @@ export const setAnswers = (param) => {
     case 'clear':
       if (dayYearToday !== dayOfLastGame) {
         setLocStats('correctAnswersSeries');
-        setLocStats('wordsPerDay');
+        // setLocStats('wordsPerDay');
       }
       setLocStats('rightAnswers');
       setLocStats('wrongAnswers');

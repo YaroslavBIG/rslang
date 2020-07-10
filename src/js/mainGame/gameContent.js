@@ -28,11 +28,12 @@ export const gameContent = async (data = null, wordNum = 0) => {
   const apiWordsParse = data || JSON.parse(userWords);
   const { page, group } = apiWordsParse[wordNum];
   const collectionLen = apiWordsParse.length;
-
   const {
     textMeaning, textExampleTranslate, word, wordTranslate,
-    image, textMeaningTranslate, audio, audioExample, audioMeaning, transcription, id,
+    image, textMeaningTranslate, audio, audioExample, audioMeaning, transcription, _id,
   } = apiWordsParse[wordNum];
+
+  const id = apiWordsParse[wordNum].id ? apiWordsParse[wordNum].id : _id;
 
   const addToSessionStorage = {
     wordNum,
