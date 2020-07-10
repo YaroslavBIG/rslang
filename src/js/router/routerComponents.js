@@ -18,8 +18,7 @@ import {
 } from '../pages';
 
 export const HomeComponent = {
-  render: () =>
-    '<a href="#/auth">click</a><a href="#/main" class="click-enter"></a>',
+  render: () => '<a href="#/auth">click</a><a href="#/main" class="click-enter"></a>',
 };
 export const AuthComponent = {
   render: () => createSignInUpPage(),
