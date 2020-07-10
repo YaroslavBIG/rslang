@@ -9,3 +9,6 @@ export { getMixWords } from './words/getMixWords';
 export { userWord } from './words/userWord';
 export { getWordsByDiff } from './words/getWordsByDif';
 export { getNewWords } from './words/getNewWords';
+export { putGameStatistics } from './statistics/putGameStatistics';
+export { getUserSettings } from './getUserSettings';
+export { pushUserSettings } from './pushUserSettings';
