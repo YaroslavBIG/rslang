@@ -7,7 +7,7 @@ export const createCard = (word, transcription, translate, audioSrc, imageSrc) =
     0-12-4.144-12-10S15.686 6 19 6s6 4.477 6 10-2.686 10-6 10z" fill-rule="evenodd"></path>
     </svg>
   </span>
-  <p class="item-word">${word}</p>
+  <p class="item-word">${word.toLowerCase()}</p>
   <p class="item-transcription">${transcription}</p>
   <p class="item-translate">${translate}</p>
   </div>`;
