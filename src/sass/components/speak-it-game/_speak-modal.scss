@@ -1,0 +1,34 @@
+.game__modal-speak{
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $primary-shadow-color;
+}
+
+.modal-speak{
+  &__inner{
+    padding: 6%;
+    width: 70%;
+    margin: 10% auto;
+    text-align: center;
+    background-color: $primary-color;
+    border-radius: 8px;
+  }
+  &__controls{
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+#again, #done{
+  width: 25%;
+}
+#next{
+  width: 45%;
+}
+#again, #done, #next{
+  font-size: $primary-font-size - 2px;
+}

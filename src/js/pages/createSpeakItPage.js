@@ -28,5 +28,6 @@ export const createSpeakItPage = () => `
   <button class="button" id="start-speak">Начать говорить</button>
   <button class="button" id="results-speak">Результат</button>
 </div>
+<div class="game__modal-speak" id="speak-modal"></div>
 </section>
 `;
