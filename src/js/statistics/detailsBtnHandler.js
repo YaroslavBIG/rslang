@@ -4,10 +4,10 @@ import { detailsWindowCloseBtnHandler } from './detailsWindowCloseBtnHandler';
 import { titleSelection } from './titleSelection';
 import { getThisGameStatistics } from './getThisGameStatistics';
 
-export const detailsBtnHandler = (id) => {
+export const detailsBtnHandler = async (id) => {
   const choiceGameId = (id) || 'total';
   const thisTitle = titleSelection(choiceGameId);
-  const thisData = getThisGameStatistics();
+  const thisData = (choiceGameId !== 'total') ? await getThisGameStatistics(id) : {}; // дописать метод для общего
   const detailsBtn = document.getElementById('details');
   detailsBtn.onclick = () => {
     const wrapper = document.getElementById('wrapper');
