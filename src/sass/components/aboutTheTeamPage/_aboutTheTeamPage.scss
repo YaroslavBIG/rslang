@@ -16,6 +16,20 @@
     padding-bottom: 35px;
   }
 
+  &__substrate {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: url(../assets/img/background-main-page.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: -99;
+  }
+
 }
 
 .mentor-card__description-block,
@@ -194,6 +208,10 @@
       height: auto;
     }
 
+    &__substrate {
+      display: none;
+    }
+
   }
 
   .membership-card__view-block {
@@ -259,6 +277,10 @@
       margin: 0 auto 10px;
       width: 100%;
       font-size: 18px;
+    }
+
+    &__substrate {
+      display: none;
     }
 
   }

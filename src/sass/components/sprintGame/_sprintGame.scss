@@ -1,8 +1,3 @@
-body {
-  height: 100vh;
-  margin: 0;
-}
-
 .sprint-game__screen-wrapper {
   width: 45%;
   height: 100vh;
@@ -191,7 +186,7 @@ body {
     padding: 8px 0;
     text-align: center;
     margin: auto 0;
-    font-size: 19px;
+    font-size: 15px;
     border: 1px solid #49493b;
     border-radius: 10px;
   }
@@ -201,6 +196,11 @@ body {
     cursor: pointer;
     background: #ebf06c;
     box-shadow: 0 0 10px #454545;
+  }
+
+  &__wrong-btn:active,
+  &__right-btn:active {
+    transform: scale(0.99, 0.97);
   }
 
 }
@@ -223,6 +223,10 @@ body {
     cursor: pointer;
     background: #ebf06c;
     box-shadow: 0 0 10px #454545;
+  }
+
+  &__start-btn:active {
+    transform: scale(0.99, 0.97);
   }
 
   &__description {

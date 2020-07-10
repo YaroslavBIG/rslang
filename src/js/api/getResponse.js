@@ -1,4 +1,4 @@
-import { actionAuth, saveAuth } from '../utils';
+import { actionAuth, saveAuth, addError } from '../utils';
 import { swaggerUrl, baseHeaders } from './constants';
 import { router } from '../router';
 import { getResultToken } from './getResultToken';
@@ -18,10 +18,11 @@ import { getResultToken } from './getResultToken';
 export const getResponse = async (url, { ...options }) => {
   const isAuth = actionAuth.getAuth();
   const invalidToken = 401;
+  const notFoundUser = 417;
 
   const resURL = `${swaggerUrl}${url}`;
-  const authorization = (isAuth === 'true' || isAuth === true) ? await getResultToken() : {};
-  const withCredential = (isAuth === 'true' || isAuth === true) ? { withCredentials: true } : {};
+  const authorization = isAuth === 'true' || isAuth === true ? await getResultToken() : {};
+  const withCredential = isAuth === 'true' || isAuth === true ? { withCredentials: true } : {};
   try {
     const response = await fetch(resURL, {
       ...options,
@@ -36,6 +37,9 @@ export const getResponse = async (url, { ...options }) => {
       saveAuth();
       window.location.replace('#/auth');
       router();
+    } else if (response.status === notFoundUser) {
+      const text = 'Возможно, такой пользователь уже существует';
+      addError(text);
     }
     return await response.json();
   } catch (err) {
