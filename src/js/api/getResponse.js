@@ -21,8 +21,8 @@ export const getResponse = async (url, { ...options }) => {
   const notFoundUser = 417;
 
   const resURL = `${swaggerUrl}${url}`;
-  const authorization = (isAuth === 'true' || isAuth === true) ? await getResultToken() : {};
-  const withCredential = (isAuth === 'true' || isAuth === true) ? { withCredentials: true } : {};
+  const authorization = isAuth === 'true' || isAuth === true ? await getResultToken() : {};
+  const withCredential = isAuth === 'true' || isAuth === true ? { withCredentials: true } : {};
   try {
     const response = await fetch(resURL, {
       ...options,
