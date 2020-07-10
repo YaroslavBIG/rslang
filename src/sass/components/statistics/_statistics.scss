@@ -150,7 +150,7 @@
   }
 }
 
-@media (min-device-width: 315px) and (max-device-width: 560px) {
+@media (min-width: 315px) and (max-width: 560px) {
 
   .statistics {
 
@@ -206,7 +206,7 @@
 
 }
 
-@media (min-device-width: 561px) and (max-device-width: 1100px) {
+@media (min-width: 561px) and (max-width: 1100px) {
 
   .statistics {
 
@@ -241,24 +241,23 @@
 
   .details-window {
     width: 70%;
-    height: 75%;
+    height: 65%;
     top: 30px;
     left: 16%;
 
     &__description {
-      font-size: 25px;
+      font-size: 28px;
     }
 
     &__close-btn {
-      line-height: 1.4;
       font-size: 19px;
     }
 
   }
 
   .description__title {
-    padding-top: 20px;
-    font-size: 32px;
+    padding: 35px 0 40px;
+    font-size: 35px;
   }
 
 }

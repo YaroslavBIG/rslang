@@ -8,7 +8,7 @@ export const fetchStatisticsData = async () => {
   };
 
   try {
-    await getResponse(getThisUserUrl(), { method: 'GET' });
+    return await getResponse(getThisUserUrl(), { method: 'GET' });
   } catch (error) {
     return Object.keys(error);
   }
