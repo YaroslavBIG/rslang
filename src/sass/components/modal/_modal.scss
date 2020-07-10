@@ -29,7 +29,7 @@
   height: 20px;
   font-weight: $primary-font-weight + 300;
   cursor: pointer;
-  background-image: url(/rslang/src/assets/cross.svg);
+  background-image: url(../assets/cross.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -63,6 +63,12 @@
     margin-right: -50%;
     transform: translate(-50%, -50%);
   }
+
+  &__list {
+    width: 30%;
+    text-align: left;
+    margin: auto;
+  }
 }
 
 .modal-footer {
@@ -87,41 +93,5 @@
     box-sizing: border-box;
     display: inline-block;
     width: 100%;
-  }
-}
-
-@media screen and (max-device-width: 650px) {
-  .modal-body {
-    &__video {
-      width: 300px;
-      margin: 0 auto;
-      height: 200px;
-    }
-  }
-}
-
-@media screen and (max-device-width: 1250px) {
-  .modal-footer {
-    &__button-start {
-      margin: 0 auto;
-    }
-  }
-}
-
-@media screen and (max-device-width: 400px) {
-  .modal {
-    padding: 0;
-  }
-
-  .modal-body {
-    &__video {
-      width: 220px;
-    }
-  }
-}
-
-@media screen and (max-device-height: 700px) {
-  .modal {
-    padding: 0;
   }
 }

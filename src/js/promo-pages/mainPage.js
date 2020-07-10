@@ -1,1 +1,1 @@
-export const mainPage = () => ``;
+export const mainPage = () => '';
