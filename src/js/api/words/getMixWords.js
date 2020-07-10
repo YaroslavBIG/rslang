@@ -12,12 +12,7 @@ import { getWordsByDiff } from './getWordsByDif';
 
 export const getMixWords = async () => {
   try {
-    const repeatWords = getWordsByDiff('repeat');
-    const hardWords = getWordsByDiff('hard');
-    const goodWords = getWordsByDiff('good');
-    const weekWords = getWordsByDiff('week');
-
-    return await Promise.all([repeatWords, hardWords, goodWords, weekWords]);
+    return await Promise.all([getWordsByDiff('repeat'), getWordsByDiff('hard'), getWordsByDiff('good'), getWordsByDiff('week')]);
   } catch (err) {
     return Object.keys(err);
   }
