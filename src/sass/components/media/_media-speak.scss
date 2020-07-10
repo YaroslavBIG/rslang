@@ -12,12 +12,18 @@
     min-width: 150px;
     min-height: 30px;
   }
+  #again, #done, #next{
+    font-size: $primary-font-size - 4px;
+  }
 }
 
 @media (max-width: 600px) {
   #restart-speak, #start-speak, #results-speak{
     font-size: $primary-font-size - 4px;
     width: 25%;
+  }
+  #again, #done, #next{
+    font-size: $primary-font-size - 5px;
   }
 }
 
@@ -31,5 +37,8 @@
   .hints-input {
     width: 70%;
     font-size: $primary-font-size;
+  }
+  #again, #done, #next{
+    font-size: $primary-font-size - 7px;
   }
 }
