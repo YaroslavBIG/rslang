@@ -1,6 +1,6 @@
-import { updateUserWords } from '../api/updateUserWords';
+import { updateUserWords } from './updateUserWords';
 import { audioWordsDictionary } from './audioWordsDictionary';
-import { getUserWordById } from '../api/getUserWordById';
+import { getUserWordById } from './getUserWordById';
 
 export const handelDictioaryCard = async (e) => {
   e.preventDefault();
