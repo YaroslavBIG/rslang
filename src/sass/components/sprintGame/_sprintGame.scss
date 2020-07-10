@@ -198,6 +198,11 @@
     box-shadow: 0 0 10px #454545;
   }
 
+  &__wrong-btn:active,
+  &__right-btn:active {
+    transform: scale(0.99, 0.97);
+  }
+
 }
 
 #loader {
@@ -218,6 +223,10 @@
     cursor: pointer;
     background: #ebf06c;
     box-shadow: 0 0 10px #454545;
+  }
+
+  &__start-btn:active {
+    transform: scale(0.99, 0.97);
   }
 
   &__description {
