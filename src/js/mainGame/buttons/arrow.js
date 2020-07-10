@@ -1,5 +1,4 @@
 import { gameContent } from '../gameContent';
-import { addNewWordsPage } from '../newWords';
 import { buttonAnswer } from './buttonAnswer';
 import { setStatistic, setAnswers } from '../statistic/setStatistic';
 import { modalCreate } from '../modal/modalCreate';
@@ -36,7 +35,6 @@ export const gameArrows = (event) => {
   switch (currentWordNum) {
     case 0:
       arrowDirection === 'left' ? featureWordNum = 0 : featureWordNum = 1;
-      addNewWordsPage();
       break;
     default:
       featureWordNum = arrowDirection === 'left' ? currentWordNum - 1 : currentWordNum + 1;

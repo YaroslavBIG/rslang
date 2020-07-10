@@ -7,12 +7,7 @@ import { getGameWords } from './getGameWords';
 
 export const startMainGame = async () => {
   const allUserWords = JSON.stringify(await getAllUserWords());
-  // console.log('getMixWords', await getMixWords());
-  // console.log('gm', await getGameWords());
-  // console.log(allUserWords);
 
-  // console.log('words', await getNewWords(12));
-  // Temp
   sessionStorage.setItem('allUserWords', allUserWords);
 
   const gameData = await getGameWords();

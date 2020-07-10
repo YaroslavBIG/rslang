@@ -18,7 +18,7 @@ export const buttonsHardDel = (diff = 'good', del = 'false') => {
   }
   if (diff === 'hard') {
     buttonAnswer();
-    alert('Слову присвоенна категория: сложные'); // TODO: MODAL
+    alert('Слову присвоенна категория: сложные');
   }
   wordBlock.innerText = '';
 };
