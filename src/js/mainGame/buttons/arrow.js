@@ -9,7 +9,7 @@ export const gameArrows = (event) => {
   const arrowDirection = id === 'arrow_left' ? 'left' : 'right';
   const wordBlock = document.querySelector('.sentence--target-word');
   const cardGame = document.querySelector('.card-game');
-  const cardsLimit = parseInt(localStorage.getItem('wordsPerDay'), 10) || 0;
+  const cardsLimit = parseInt(localStorage.getItem('maxCardsPerDay'), 10) || 0;
   const wordsLearnToday = parseInt(localStorage.getItem('wordsLearnToday'), 10) || 0;
   const ansCheck = answerCheck();
 

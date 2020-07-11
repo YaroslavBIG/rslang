@@ -3,10 +3,8 @@ import { progressBar } from './progressBar';
 import { dataUrl } from '../api';
 import { setStorageFromObject } from './utils';
 import { getSettings } from './utils/getSettings';
-import { cardCount } from './utils/cardCount';
 
 export const gameContent = async (data = null, wordNum = 0) => {
-  cardCount();
   if (data) sessionStorage.setItem('apiWords', JSON.stringify(data));
 
   const settings = getSettings();
