@@ -7,7 +7,7 @@ import { cardCount } from './utils/cardCount';
 
 export const gameContent = async (data = null, wordNum = 0) => {
   cardCount();
-
+  console.log(data);
   const apiWords = () => sessionStorage.getItem('apiWords');
 
   if (!apiWords()) {

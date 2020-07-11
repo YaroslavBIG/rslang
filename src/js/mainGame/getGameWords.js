@@ -1,6 +1,6 @@
 import { getSettings } from './utils';
 import { getMixWords, getNewWords } from '../api';
-import { randomArr } from '../utils';
+import { randomArr, getDayOfYear } from '../utils';
 
 export const getGameWords = async () => {
   const { newWordsPerDay, wordsPerDay } = getSettings();
@@ -27,14 +27,18 @@ export const getGameWords = async () => {
   if (hardCount !== 0) allWords.push(...hard);
   if (goodCount !== 0) allWords.push(...good);
   if (weekCount !== 0) allWords.push(...week);
-  const wordsLen = allWords.length;
-  const spliced = () => {
-    allWords.splice(+lernedWords, wordsLen - (+lernedWords - 1), ...newWords);
-    return allWords;
-  };
-  wordsLen > (+lernedWords) ? spliced() : allWords.push(...newWords);
+  const day = getDayOfYear();
+  const filtred = allWords.filter((obj) => obj.userWord.optional.day !== day);
 
-  const randomNums = randomArr(allWords.length + 1);
-  const res = randomNums.map((el) => allWords[el]);
+  const wordsLen = filtred.length;
+  const spliced = () => {
+    filtred.splice(+lernedWords, wordsLen - (+lernedWords - 1), ...newWords);
+    return filtred;
+  };
+  wordsLen > (+lernedWords) ? spliced() : filtred.push(...newWords);
+
+  const randomNums = randomArr(filtred.length);
+  const res = randomNums.map((el) => filtred[el]);
+
   return res;
 };

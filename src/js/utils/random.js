@@ -22,7 +22,7 @@ export const randomInteger = (min, max) => {
 export const randomArr = (len) => {
   const result = [];
   const size = len - 1;
-  while (result.length < size) {
+  while (result.length <= size) {
     const num = randomInteger(0, size);
     if (!result.includes(num)) result.push(num);
   }

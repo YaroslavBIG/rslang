@@ -7,7 +7,7 @@ export const mainGameRender = () => `
     </div>
     <div class="modal__button_block">
       <div class="button__main-game button__main button" id="exit"><a href="#/main">Выход</a></div>
-      <button class="button__main-game button" id="continue">Продолжить</button>
+      <button class="button__main-game button" id="continue"><a href="#/main/settings">Продолжить</a></button>
     </div>
   </div>
 </div>

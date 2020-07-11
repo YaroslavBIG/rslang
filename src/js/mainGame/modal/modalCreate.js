@@ -1,4 +1,6 @@
 import { statisticPage } from '../statistic/statisticPage';
+import { getGameWords } from '../getGameWords';
+import { gameContent } from '../gameContent';
 
 export const modalCreate = (end) => {
   const modalBlock = document.querySelector('#modal');
@@ -17,6 +19,15 @@ export const modalCreate = (end) => {
     modalBlock.innerHTML = `${gameEnd}${statistic}`;
     return;
   }
+
+  const modalContinue = document.querySelector('#continue');
+  modalContinue.addEventListener('click', async (event) => {
+    event.preventDefault();
+    const gameData = await getGameWords();
+    sessionStorage.setItem('wordNum', 0);
+    modalWindow.style.display = 'none';
+    gameContent(gameData);
+  });
 
   modalBlock.innerHTML = statistic;
 };
