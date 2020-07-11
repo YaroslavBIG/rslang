@@ -5,4 +5,5 @@ export { createSettingsPage } from './createSettingsPage';
 export { handlerSettingsPage } from './handlerSettingsPage';
 export { createAboutTheTeamPage } from './createAboutTheTeamPage';
 export { createSprintGamePage } from './createSprintGamePage';
+export { createStatisticsPage } from './createStatisticsPage';
 export { handlerMainPage } from './handlerMainPage';
