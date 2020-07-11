@@ -1,6 +1,7 @@
 import { createShortStatistic } from './createShortStatistic';
 import { returnBlockWithWrong } from './returnBlockWithWrong';
 import { showPlayDescription } from './showPlayDescription';
+import { clickReturn } from './clickReturn';
 
 const createResult = () => {
   const rightRes = document.querySelectorAll('.item_active').length;
@@ -23,5 +24,6 @@ export const clickResult = () => {
     returnBlockWithWrong(obj);
     modal.style.display = 'block';
     showPlayDescription(true);
+    clickReturn();
   });
 };

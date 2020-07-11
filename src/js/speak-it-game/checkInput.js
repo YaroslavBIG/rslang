@@ -1,4 +1,5 @@
 import { createShortStatistic } from './createShortStatistic';
+import { clickContinueWithoutRepeat } from './clickContinueWithoutRepeat';
 
 export const checkInput = () => {
   const input = document.querySelector('.hints-input');
@@ -12,7 +13,7 @@ export const checkInput = () => {
       if (elem.textContent === valueInput) {
         elem.closest('.answers__item').classList.add('item_active');
         rightCount += 1;
-        if (rightCount === 1) {
+        if (rightCount === 2) {
           const obj = {
             total: allRight,
             right: rightCount,
@@ -20,6 +21,7 @@ export const checkInput = () => {
           };
           modal.innerHTML = createShortStatistic(obj);
           modal.style.display = 'block';
+          clickContinueWithoutRepeat();
         }
       }
     });
