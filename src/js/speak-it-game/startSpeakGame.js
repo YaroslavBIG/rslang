@@ -14,6 +14,6 @@ export const startSpeakGame = async (page, group, isRepeat) => {
   const resTemp = getAllCards(resultTen);
   document.querySelector('.answers').innerHTML = resTemp;
 
-  showPlayDescription();
+  showPlayDescription(false);
   clickStart();
 };

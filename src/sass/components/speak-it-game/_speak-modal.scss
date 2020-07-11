@@ -10,9 +10,9 @@
 
 .modal-speak{
   &__inner{
-    padding: 6%;
+    padding: 1% 6%;
     width: 70%;
-    margin: 10% auto;
+    margin: 1% auto;
     text-align: center;
     background-color: $primary-color;
     border-radius: 8px;
@@ -31,4 +31,7 @@
 }
 #again, #done, #next{
   font-size: $primary-font-size - 2px;
+}
+#speak-items{
+  font-size: $primary-font-size - 3px;
 }

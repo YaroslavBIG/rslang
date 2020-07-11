@@ -4,6 +4,7 @@ import { createSpeakItPage } from './js/pages';
 import { startSpeakGame } from './js/speak-it-game/startSpeakGame';
 import { changeLevel } from './js/speak-it-game/changeLevel';
 import { clickRestart } from './js/speak-it-game/clickRestart';
+import { clickResult } from './js/speak-it-game/clickResult';
 
 // window.addEventListener('hashchange', router);
 window.onload = () => {
@@ -12,5 +13,6 @@ window.onload = () => {
   startSpeakGame(0, 0, false);
   changeLevel();
   clickRestart();
+  clickResult();
   // router();
 };
