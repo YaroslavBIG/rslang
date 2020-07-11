@@ -25,3 +25,39 @@
     }
   }
 }
+
+@media screen and (max-device-width: 650px) {
+  .modal-body {
+    &__video {
+      width: 300px;
+      margin: 0 auto;
+      height: 200px;
+    }
+  }
+}
+
+@media screen and (max-device-width: 1250px) {
+  .modal-footer {
+    &__button-start {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-device-width: 400px) {
+  .modal {
+    padding: 0;
+  }
+
+  .modal-body {
+    &__video {
+      width: 220px;
+    }
+  }
+}
+
+@media screen and (max-device-height: 700px) {
+  .modal {
+    padding: 0;
+  }
+}
