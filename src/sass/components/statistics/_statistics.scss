@@ -3,7 +3,7 @@
   &-wrapper {
     width: 70%;
     height: auto;
-    margin: 5% auto 0;
+    margin: 45px auto 0;
     user-select: none;
   }
 
@@ -58,12 +58,12 @@
 }
 
 .game-btn {
-  width: 11%;
+  width: 19%;
   height: 55%;
   margin: auto 0;
   text-align: center;
-  font-size: 14px;
-  line-height: 2;
+  font-size: 13px;
+  line-height: 2.1;
   border: 1px solid #4687dc;
   border-radius: 10px;
 }
@@ -137,6 +137,12 @@
     transform: scale(0.99, 0.97);
   }
 
+  &__study-description {
+    height: 85%;
+    font-size: 21px;
+    font-style: italic;
+  }
+
 }
 
 .description {
@@ -148,6 +154,15 @@
     padding-top: 35px;
     font-style: normal;
   }
+
+  &__study-title {
+    margin: 0 0 25px 0;
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 25px;
+    font-style: normal;
+  }
+
 }
 
 @media (min-width: 315px) and (max-width: 560px) {
@@ -182,6 +197,12 @@
     margin-bottom: 10px;
   }
 
+  .game-btn:nth-last-child(1) {
+    font-size: 13px;
+    width: 60%;
+    line-height: 2;
+  }
+
   .details-window {
     width: 70%;
     height: 75%;
@@ -192,16 +213,28 @@
       font-size: 19px;
     }
 
+    &__study-description {
+      font-size: 18px;
+    }
+
     &__close-btn {
-      line-height: 1.4;
+      line-height: 2;
       font-size: 13px;
     }
 
   }
 
-  .description__title {
-    padding-top: 10px;
-    font-size: 24px;
+  .description {
+
+    &__title {
+      padding-top: 10px;
+      font-size: 24px;
+    }
+
+    &__study-title {
+      font-size: 15px;
+    }
+
   }
 
 }
@@ -239,10 +272,20 @@
     font-size: 19px;
   }
 
+  .game-btn:nth-last-child(1) {
+    width: 45%;
+    font-size: 19px;
+    line-height: 2.1;
+  }
+
+  .game-btn:nth-last-child(2) {
+    width: 45%;
+  }
+
   .details-window {
     width: 70%;
     height: 65%;
-    top: 30px;
+    top: 50px;
     left: 16%;
 
     &__description {

@@ -3,11 +3,14 @@ import { createDetailsWindowMarkup } from './createDetailsWindowMarkup';
 import { detailsWindowCloseBtnHandler } from './detailsWindowCloseBtnHandler';
 import { titleSelection } from './titleSelection';
 import { getThisGameStatistics } from './getThisGameStatistics';
+import { getStudyStatistics } from './getStudyStatistics';
+import { createDetailsWindowStudy } from './createDetailsWindowStudy';
 
 export const detailsBtnHandler = async (id) => {
-  const choiceGameId = (id) || 'total';
+  const choiceGameId = (id) || 'main';
   const thisTitle = titleSelection(choiceGameId);
-  const thisData = (choiceGameId !== 'total') ? await getThisGameStatistics(id) : {}; // дописать метод для общего
+  const choiceStudy = (choiceGameId === 'main' || choiceGameId === 'intervals');
+  const thisData = (choiceStudy) ? await getStudyStatistics(id) : await getThisGameStatistics(id);
   const detailsBtn = document.getElementById('details');
   detailsBtn.onclick = () => {
     const wrapper = document.getElementById('wrapper');
@@ -19,11 +22,19 @@ export const detailsBtnHandler = async (id) => {
       detailsWrapper,
       '',
     );
-    appendNewElement(
-      'details-window',
-      detailsWrapper,
-      createDetailsWindowMarkup(thisTitle, thisData),
-    );
+    if (choiceStudy) {
+      appendNewElement(
+        'details-window',
+        detailsWrapper,
+        createDetailsWindowStudy(thisTitle, thisData),
+      );
+    } else {
+      appendNewElement(
+        'details-window',
+        detailsWrapper,
+        createDetailsWindowMarkup(thisTitle, thisData),
+      );
+    }
     wrapper.append(detailsWrapper);
     detailsWindowCloseBtnHandler();
   };

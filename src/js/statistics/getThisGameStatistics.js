@@ -1,39 +1,27 @@
-import { fetchStatisticsData } from './fetchStatisticsData';
 import { calculationOfPercentage } from './calculationOfPercentage';
+import { concatObjects } from './concatObjects';
+import { emptyGameObj } from './constants';
+import { dataArraySelection } from './dataArraySelection';
 
 export const getThisGameStatistics = async (gameName) => {
-  const thisData = await fetchStatisticsData();
-  const thisGameStatisticsArr = thisData.optional.games[gameName];
+  const thisGameStatisticsArr = await dataArraySelection(gameName);
 
-  if (thisGameStatisticsArr) {
-    if (thisGameStatisticsArr.length === 1) {
-      const { total } = thisGameStatisticsArr[0];
-      const { right } = thisGameStatisticsArr[0];
-      const { wrong } = thisGameStatisticsArr[0];
-      return {
-        total,
-        right,
-        wrong,
-        percent: calculationOfPercentage(total, right),
-      };
-    }
-
-    const totalData = {
-      total: 0,
-      right: 0,
-      wrong: 0,
+  if (thisGameStatisticsArr && thisGameStatisticsArr.length === 1) {
+    const { total } = thisGameStatisticsArr[0];
+    const { right } = thisGameStatisticsArr[0];
+    const { wrong } = thisGameStatisticsArr[0];
+    return {
+      total,
+      right,
+      wrong,
+      percent: calculationOfPercentage(total, right),
     };
-    thisGameStatisticsArr.forEach((el) => {
-      const arrayOfDays = Object.keys(el);
-      arrayOfDays.forEach((key) => {
-        if (key !== 'date') {
-          totalData[key] += el[key];
-        }
-      });
-    });
+  }
+  if (thisGameStatisticsArr && thisGameStatisticsArr.length > 1) {
+    const totalData = { ...emptyGameObj };
+    concatObjects(thisGameStatisticsArr, totalData);
     totalData.percent = calculationOfPercentage(totalData.total, totalData.right);
     return totalData;
   }
-  // eslint-disable-next-line no-console
-  console.log('Не успели сделать эту игру');
+  return emptyGameObj;
 };

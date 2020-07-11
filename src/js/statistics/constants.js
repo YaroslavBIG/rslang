@@ -1,24 +1,28 @@
 export const statisticsData = {
-  totalWords: 99,
-  totalTitle: 'Общий',
+  mainTitle: 'Общий',
   speakItTitle: 'SpeakIt',
-  engPuzzleTitle: 'English puzzle',
-  savannahTitle: 'Саванна',
-  auditionTitle: 'Аудиовызов',
+  constructorTitle: 'Конструктор',
+  intervalsTitle: 'Интервальное повторение',
   sprintTitle: 'Спринт',
-  yourGameTitle: 'Своя игра',
-  totalId: 'total',
-  speakItId: 'speakIt',
-  engPuzzleId: 'engPuzzle',
-  savannahId: 'savannah',
-  auditionId: 'audition',
+  mainId: 'main',
+  speakItId: 'speakit',
+  constructorId: 'constructor',
+  intervalsId: 'intervals',
   sprintId: 'sprint',
-  yourGameId: 'yourGame',
-  totalData: [20, 40, 60, 0, 200],
-  speakItData: [0, 10, 30, 50, 100],
-  engPuzzleData: [0, 10, 20, 25, 40],
-  savannahData: [0, 10, 50, 60, 90],
-  auditionData: [0, 10, 100, 400, 559],
-  sprintData: [0, 5, 7, 9, 13],
-  yourGameData: [0, 2, 4, 6, 8],
+};
+
+export const emptyGameObj = {
+  total: 0,
+  right: 0,
+  wrong: 0,
+  percent: 0,
+};
+
+export const emptyStudyObj = {
+  newWords: 0,
+  today: 0,
+  correctSeries: 0,
+  right: 0,
+  wrong: 0,
+  percent: 0,
 };

@@ -1,33 +1,43 @@
-import { statisticsData } from './constants';
+import { calculationOfPercentage } from './calculationOfPercentage';
 import { createMarkupChart } from './createMarkupChart';
 import { detailsBtnHandler } from './detailsBtnHandler';
+import { fetchMainChartData } from './fetchMainChartData';
+import { fetchMiniGameChartData } from './fetchMiniGameChartData';
+import { percentCheck } from './percentCheck';
 
-export const drawMiniGameChart = (thisData, gameId) => {
+export const drawMiniGameChart = async (gameId) => {
   const thisGameId = gameId;
+  const chartGameData = await fetchMiniGameChartData(thisGameId);
+  const sumTotal = chartGameData.total.reduce((acc, cV) => acc + cV, 0);
+  const sumRight = chartGameData.right.reduce((acc, cV) => acc + cV, 0);
+  const percentRight = calculationOfPercentage(sumTotal, sumRight);
   const mainBlock = document.getElementById('main-block');
   mainBlock.innerHTML = createMarkupChart();
   const statisticsChart = document.getElementById('statistics-chart').getContext('2d');
+  Chart.defaults.global.defaultFontColor = 'black';
+  Chart.defaults.global.defaultFontSize = 15;
   /* global Chart */
   (() => new Chart(statisticsChart, {
     type: 'bar',
 
     data: {
-      labels: [9, 99, 444, 555, 777], // Тут должно быть количество слов за игру
+      labels: chartGameData.right, // Тут должно быть количество слов за игру
       datasets: [{
-        label: `Правильных ответов: ${statisticsData.totalWords}`, // все просто и понятно
+        label: `В среднем правильно: ${percentCheck(percentRight)}%`, // все просто и понятно
         backgroundColor: '#4687dc',
         borderColor: '#4687dc',
-        data: thisData, // Здесь правильные ответы из общего количества слов за игру
+        data: chartGameData.total, // Здесь правильные ответы из общего количества слов за игру
       }],
     },
 
     options: {},
   }))();
-  detailsBtnHandler(thisGameId);
+  await detailsBtnHandler(thisGameId);
 };
 
-export const drawTotalChart = (thisData, gameId) => {
-  const thisGameId = gameId;
+export const drawTotalChart = async (yourId) => {
+  const thisStudyId = yourId;
+  const chartData = await fetchMainChartData(thisStudyId);
   const mainBlock = document.getElementById('main-block');
   mainBlock.innerHTML = createMarkupChart();
   const statisticsChart = document.getElementById('statistics-chart').getContext('2d');
@@ -37,16 +47,16 @@ export const drawTotalChart = (thisData, gameId) => {
     type: 'line',
 
     data: {
-      labels: ['02.07', '03.07', '04.07', '05.07', '06.07'], // Здесь дата изучения слов
+      labels: chartData.date, // Здесь дата изучения слов
       datasets: [{
-        label: `Всего слов: ${statisticsData.totalWords}`, // Общее количество слов, которые изучил
+        label: `Всего слов: ${chartData.totalWords}`, // Общее количество слов, которые изучил
         backgroundColor: '#4687dc',
         borderColor: '#4687dc',
-        data: thisData, // количество изученых слов за день
+        data: chartData.newWords, // количество изученых слов за день
       }],
     },
 
     options: {},
   }))();
-  detailsBtnHandler(thisGameId);
+  await detailsBtnHandler(thisStudyId);
 };

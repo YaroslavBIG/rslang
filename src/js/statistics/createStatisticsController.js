@@ -3,12 +3,10 @@ import { statisticsData } from './constants';
 
 export const createStatisticsController = () => `
     <div class="statistics-controller" id="statistics-controller">
-        ${createGameBtn(statisticsData.totalId, statisticsData.totalTitle)}
+        ${createGameBtn(statisticsData.mainId, statisticsData.mainTitle)}
         ${createGameBtn(statisticsData.speakItId, statisticsData.speakItTitle)}
-        ${createGameBtn(statisticsData.engPuzzleId, statisticsData.engPuzzleTitle)}
-        ${createGameBtn(statisticsData.savannahId, statisticsData.savannahTitle)}
-        ${createGameBtn(statisticsData.auditionId, statisticsData.auditionTitle)}
+        ${createGameBtn(statisticsData.constructorId, statisticsData.constructorTitle)}
         ${createGameBtn(statisticsData.sprintId, statisticsData.sprintTitle)}
-        ${createGameBtn(statisticsData.yourGameId, statisticsData.yourGameTitle)}
+        ${createGameBtn(statisticsData.intervalsId, statisticsData.intervalsTitle)}
     </div>
 `;
