@@ -7,9 +7,9 @@ export const startSpeakGame = async (page, group, isRepeat) => {
   const result = await getWords(page, group, 0, 10);
   let resultTen = null;
   if (!isRepeat) {
-    resultTen = result.filter((el, index) => index < 10);
+    resultTen = result.length > 10 ? result.filter((el, index) => index < 10) : result;
   } else {
-    resultTen = result.filter((el, index) => index > 10);
+    resultTen = result.length > 10 ? result.filter((el, index) => index > 10) : result;
   }
   const resTemp = getAllCards(resultTen);
   document.querySelector('.answers').innerHTML = resTemp;

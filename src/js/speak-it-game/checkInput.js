@@ -1,6 +1,5 @@
 import { createShortStatistic } from './createShortStatistic';
 import { clickContinueWithoutRepeat } from './clickContinueWithoutRepeat';
-import { recognition } from './recognition';
 
 export const checkInput = () => {
   const input = document.querySelector('.hints-input');
