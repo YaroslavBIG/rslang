@@ -11,3 +11,4 @@ export { setStorageFromObject } from './setStorageFromObject';
 export { getDate } from './getDate';
 export { getDayOfYear } from './getDayOfYear';
 export { addError } from './addError';
+export { addComma } from './addComma';

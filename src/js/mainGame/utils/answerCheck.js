@@ -12,7 +12,6 @@ export const answerCheck = () => {
   const isHint = hint.nodeName === 'SPAN';
   const isRightAnswer = ((word === currentWord) && !isHint);
   if (isRightAnswer) {
-    console.log(isNewUserWord(id));
     const method = isNewUserWord(id) ? 'POST' : 'PUT';
     userWord(id, method);
   }

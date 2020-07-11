@@ -1,4 +1,4 @@
-import { cutTags, getTextWidth } from '../utils';
+import { cutTags, getTextWidth, addComma } from '../utils';
 import { progressBar } from './progressBar';
 import { dataUrl } from '../api';
 import { setStorageFromObject } from './utils';
@@ -58,8 +58,12 @@ export const gameContent = async (data = null, wordNum = 0) => {
   const font = cardQuestBlock.computedStyleMap().get('font').toString();
 
   const textArr = textMeaning.split(' ').map((words) => cutTags(words.toLowerCase()));
-  const targetWordIndex = textArr.indexOf(word.toLowerCase());
+
+  let targetWordIndex = textArr.indexOf(word.toLowerCase());
+  if (targetWordIndex === -1) targetWordIndex = textArr.indexOf(addComma(word).toLowerCase());
+
   const textLen = textArr.length - 1;
+
   const textBeforeWord = targetWordIndex === 0 ? '' : textArr.slice(0, targetWordIndex).join(' ');
   const textAfterWord = targetWordIndex === textLen ? '' : textArr.slice(targetWordIndex + 1, textLen).join(' ');
   const textWidth = getTextWidth(word, font);
