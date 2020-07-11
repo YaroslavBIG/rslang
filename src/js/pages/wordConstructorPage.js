@@ -1,11 +1,11 @@
-import { constantsData } from '../wordConstructor/constants';
-
 export const wordConstructorPage = () => `
 <div class="wrapper-block">
   <div class="wrapper-block__settings-and-raunds-description">
-    <label><input type="checkbox" class="wrapper-block__checkbox" id="checkbox"><label for="checkbox"><span class="wrapper-block__autopronunciation">Автопроизношение</label>
+    <label><input type="checkbox" class="wrapper-block__checkbox" id="checkbox"><label for="checkbox"><span class="wrapper-block__autopronunciation">Автопроизношение</label></label>
     <span class="wrapper-block__raund">1/10</span>
-    <a href="#/main"><img src="./assets/black-cross.png" class="wrapper-block__black-cross"></a>
+    <a href="#/main" id="confirmed"></a>
+    <a href="#/" id="cancellation"></a>
+    <img src="./assets/black-cross.png" class="wrapper-block__black-cross">
   </div>
   <div class="game-block">
     <input type="submit" value="Выбрать" id="choice">

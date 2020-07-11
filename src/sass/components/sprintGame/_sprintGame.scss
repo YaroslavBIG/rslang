@@ -1,0 +1,535 @@
+.sprint-game__screen-wrapper {
+  width: 45%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  user-select: none;
+}
+
+.timer__loader-wrapper {
+  width: 103px;
+  height: 103px;
+  position: absolute;
+  top: 261px;
+  right: -117px;
+  background: #00b88e;
+  border-radius: 50%;
+
+  svg {
+    width: 103px;
+    height: 103px;
+  }
+
+}
+
+.screen-wrapper {
+
+  &__main-content {
+    width: 99%;
+    height: 60%;
+    border: 3px solid rgba(3, 31, 70, 0.7);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.3);
+    text-shadow: 1px 1px 1px #ffffff;
+  }
+
+  &__timer {
+    width: 95px;
+    height: 95px;
+    position: absolute;
+    top: 265px;
+    right: -113px;
+    background: #ffffff;
+    border-radius: 50%;
+    font-size: 55px;
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  &__points {
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    font-size: 55px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #ffffff;
+  }
+
+  &__hints {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__result-block {
+    width: 100%;
+    height: 50%;
+    margin: auto 0;
+    text-align: center;
+  }
+
+  &__substrate {
+    position: absolute;
+    top: 0;
+    left: -61%;
+    width: 100vw;
+    height: 100%;
+    z-index: -999;
+    background-image: url(../assets/img/bg-sprint.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    opacity: 0.9;
+  }
+
+}
+
+.hints {
+  &__description {
+    text-align: center;
+    font-size: 22px;
+  }
+
+  &__voice {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  &__voice--off {
+    width: 40px;
+    height: 40px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: none;
+  }
+
+  &__voice:hover {
+    cursor: pointer;
+    filter: invert(0.2);
+  }
+
+  &__voice:active {
+    transform: scale(0.99, 0.99);
+  }
+
+}
+
+.inactive {
+  display: block;
+}
+
+.main-content {
+
+  &__information,
+  &__combo-block {
+    width: 70%;
+    height: 20%;
+    margin: 0 auto;
+  }
+
+  &__combo-block {
+    display: flex;
+  }
+
+  &__information {
+    font-size: 25px;
+    text-align: center;
+    line-height: 3;
+  }
+
+  &__task-container {
+    width: 100%;
+    height: 30%;
+
+    p {
+      height: 50%;
+      margin: 0;
+      line-height: 2.5;
+      text-align: center;
+      font-size: 22px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__controller {
+    display: flex;
+    justify-content: space-around;
+    width: 85%;
+    height: 30%;
+    margin: 0 auto;
+  }
+
+}
+
+.combo-block__section {
+  width: 25%;
+  height: 100%;
+  background-size: 55% 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.controller {
+
+  &__wrong-btn,
+  &__right-btn {
+    width: 35%;
+    padding: 8px 0;
+    text-align: center;
+    margin: auto 0;
+    font-size: 15px;
+    border: 1px solid #49493b;
+    border-radius: 10px;
+  }
+
+  &__wrong-btn:hover,
+  &__right-btn:hover {
+    cursor: pointer;
+    background: #ebf06c;
+    box-shadow: 0 0 10px #454545;
+  }
+
+  &__wrong-btn:active,
+  &__right-btn:active {
+    transform: scale(0.99, 0.97);
+  }
+
+}
+
+#loader {
+  transform: translate(125px, 125px);
+}
+
+.result-block {
+
+  &__start-btn {
+    border: 1px solid #49493b;
+    width: 25%;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 15px;
+  }
+
+  &__start-btn:hover {
+    cursor: pointer;
+    background: #ebf06c;
+    box-shadow: 0 0 10px #454545;
+  }
+
+  &__start-btn:active {
+    transform: scale(0.99, 0.97);
+  }
+
+  &__description {
+    width: 100%;
+    height: 50%;
+    margin: 0;
+    text-shadow: 1px 1px 2px #ffffff;
+  }
+
+  &__your-result {
+    width: 100%;
+    height: 30%;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 3;
+    text-shadow: 1px 1px 2px #ffffff;
+  }
+
+}
+
+@media screen and (max-device-width: 320px) {
+
+  .sprint-game__screen-wrapper {
+    width: 100%;
+  }
+
+  .screen-wrapper {
+
+    &__points {
+      font-size: 45px;
+      height: 15%;
+    }
+
+    &__main-content {
+      width: 95%;
+      margin: 10px auto 0;
+    }
+
+    &__hints {
+      padding-top: 20px;
+    }
+
+    &__timer {
+      right: 64px;
+      top: 77.6%;
+      height: 65px;
+      width: 65px;
+      border-radius: 50%;
+      font-size: 35px;
+      line-height: 1.9;
+    }
+
+    &__substrate {
+      left: 0;
+    }
+
+  }
+
+  .main-content {
+
+    &__information {
+      font-size: 20px;
+      line-height: 4;
+    }
+
+    &__task-container p {
+      line-height: 3;
+      font-size: 17px;
+    }
+
+  }
+
+  .result-block {
+
+    &__your-result {
+      font-size: 30px;
+    }
+
+    &__start-btn {
+      padding: 5px;
+      font-size: 11px;
+      border-radius: 10px;
+    }
+
+    &__description {
+      font-size: 18px;
+    }
+
+  }
+
+  .controller {
+
+    &__wrong-btn,
+    &__right-btn {
+      width: 40%;
+      font-size: 11px;
+      padding-top: 5px;
+    }
+
+  }
+
+  .hints {
+
+    &__description {
+      display: none;
+    }
+
+    &__voice {
+      margin: 30px auto 0 60px;
+    }
+
+  }
+
+  .combo-block__section {
+    background-size: 55% 47%;
+  }
+
+  .points__quantity {
+    margin: 0;
+    padding-top: 15px;
+  }
+
+  .timer__loader-wrapper {
+    right: 60px;
+    top: 77%;
+    width: 73px;
+    height: 73px;
+
+    svg {
+      width: 73px;
+      height: 73px;
+    }
+  }
+
+}
+
+@media (min-device-width: 321px) and (max-device-width: 460px) {
+
+  .sprint-game__screen-wrapper {
+    width: 100%;
+  }
+
+  .screen-wrapper {
+
+    &__points {
+      font-size: 50px;
+      height: 10%;
+      margin-top: 15px;
+    }
+
+    &__timer {
+      right: 64px;
+      top: 67.5%;;
+      height: 75px;
+      width: 75px;
+      border-radius: 50%;
+      font-size: 40px;
+      line-height: 1.9;
+    }
+
+    &__main-content {
+      height: 50%;
+      width: 95%;
+      margin: 10px auto 0;
+    }
+
+    &__substrate {
+      left: 0;
+    }
+
+  }
+
+  .points__quantity {
+    margin: 0;
+    padding-top: 15px;
+  }
+
+  .controller {
+
+    &__wrong-btn,
+    &__right-btn {
+      padding-top: 5px;
+      font-size: 13px;
+    }
+
+  }
+
+  .result-block {
+
+    &__start-btn {
+      padding: 10px;
+    }
+
+    &__your-result {
+      font-size: 30px;
+    }
+
+    &__description {
+      font-size: 23px;
+    }
+
+  }
+
+  .hints {
+
+    &__description {
+      display: none;
+    }
+
+    &__voice {
+      margin: 47px auto 0 75px;
+    }
+
+  }
+
+  .timer__loader-wrapper {
+    right: 60px;
+    top: 67%;
+    width: 83px;
+    height: 83px;
+
+    svg {
+      width: 83px;
+      height: 83px;
+    }
+  }
+
+  .combo-block__section {
+    background-size: 75% 50%;
+  }
+
+}
+
+@media (min-device-width: 461px) and (max-device-width: 800px) {
+
+  .combo-block__section {
+    background-size: 75% 45%;
+  }
+
+  .screen-wrapper {
+
+    &__main-content {
+      height: 40%;
+    }
+  }
+
+  .controller {
+
+    &__wrong-btn,
+    &__right-btn {
+      font-size: 12px
+    }
+
+  }
+
+  .result-block {
+
+    &__start-btn {
+      padding: 10px;
+      font-size: 13px;
+      height: auto;
+    }
+
+    &__description {
+      font-size: 28px;
+    }
+
+  }
+
+}
+
+@media (min-device-width: 801px) and (max-device-width: 1100px) {
+
+  .combo-block__section {
+    background-size: 75% 50%;
+  }
+
+  .sprint-game__screen-wrapper {
+    height: 85vh;
+  }
+
+  .controller {
+
+    &__wrong-btn,
+    &__right-btn {
+      font-size: 14px
+    }
+
+  }
+
+  .result-block {
+
+    &__start-btn {
+      padding: 10px;
+      font-size: 15px;
+      height: auto;
+    }
+
+    &__description {
+      font-size: 28px;
+    }
+
+  }
+
+}

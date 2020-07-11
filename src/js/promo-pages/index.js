@@ -1,0 +1,1 @@
+export { intervalRepeatPromoPage } from './intervalRepeatPromoPage';

@@ -1,0 +1,334 @@
+.about-team {
+  width: 90%;
+  margin: 0 auto;
+
+  &__title {
+    text-align: center;
+    margin: 0;
+    padding: 15px 0 35px;
+  }
+
+  &__mentor-card {
+    width: 70%;
+    height: 250px;
+    display: flex;
+    margin: 0 auto;
+    padding-bottom: 35px;
+  }
+
+  &__substrate {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: url(../assets/img/background-main-page.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: -99;
+  }
+
+}
+
+.mentor-card__description-block,
+.membership-card__description-block {
+  width: 75%;
+  padding: 0 25px;
+}
+
+.description-block {
+
+  &__name {
+    font-size: 30px;
+    margin: 20px 0 10px 0;
+  }
+
+  &__role {
+    margin: 0 0 15px 0;
+  }
+
+  &__text {
+    font-size: 19px;
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+}
+
+.mentor-text {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.view-block {
+
+  &__avatar {
+    width: 140px;
+    height: 140px;
+    margin: auto;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  &__social {
+    text-align: center;
+    width: 100%;
+    height: 20%;
+    font-size: 20px;
+    line-height: 1.7;
+    display: flex;
+    justify-content: center;
+
+    .social-link {
+      text-decoration: none;
+      color: #000000;
+      padding: 0 7px;
+    }
+
+    .social-link:hover {
+      color: #f50808;
+    }
+
+  }
+
+}
+
+.about-team__team-cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.team-cards__membership-card {
+  width: 50%;
+  height: 200px;
+  display: flex;
+  padding-bottom: 35px;
+}
+
+.right {
+  text-align: end;
+}
+
+.left {
+  text-align: start;
+}
+
+.center {
+  text-align: center;
+}
+
+.membership-card__view-block,
+.mentor-card__view-block {
+  width: 28%;
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar {
+
+  &-Ivan {
+    background-image: url(../assets/img/Ivan.png);
+  }
+
+  &-Elfimov {
+    background-image: url(../assets/img/Artem.jpg);
+  }
+
+  &-Yaroslav {
+    background-image: url(../assets/img/Yaroslav.jpg);
+  }
+
+  &-Rina {
+    background-image: url(../assets/img/Rina.jpg);
+  }
+
+  &-Natalia {
+    background-image: url(../assets/img/Natalia.jpg);
+  }
+
+  &-Doge {
+    background-image: url(../assets/img/Doge.png);
+  }
+
+  &-Vadim {
+    background-image: url(../assets/img/Vadim.png);
+  }
+
+}
+
+@media (min-device-width: 900px) and (max-device-width: 1150px) {
+
+  .membership-card {
+
+    &__description-block {
+      width: 65%;
+    }
+
+    &__view-block {
+      width: 35%;
+    }
+
+  }
+
+  .description-block {
+
+    &__name {
+      font-size: 24px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+
+  }
+
+  .about-team__mentor-card {
+    height: auto;
+  }
+
+  .team-cards__membership-card {
+    height: auto;
+  }
+
+}
+
+@media (min-device-width: 700px) and (max-device-width: 899px) {
+
+  .about-team {
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__mentor-card {
+      height: auto;
+    }
+
+    &__substrate {
+      display: none;
+    }
+
+  }
+
+  .membership-card__view-block {
+    width: 140px;
+  }
+
+  .description-block {
+
+    &__name {
+      font-size: 21px;
+      margin: 10px 0 5px 0;
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+
+    &__role {
+      font-size: 13px;
+    }
+
+  }
+
+  .about-team__team-cards {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .team-cards {
+
+    &__membership-card {
+      height: 200px;
+      padding-bottom: 10px;
+      width: 80%;
+    }
+
+  }
+
+  .right-card {
+    margin: 0 0 0 auto;
+  }
+
+}
+
+@media (min-device-width: 320px) and (max-device-width: 699px) {
+
+  .about-team {
+    width: 100%;
+    margin: 0;
+
+    &__title {
+      font-size: 30px;
+      line-height: 1.5;
+    }
+
+    &__mentor-card {
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+    }
+
+    &__team-cards {
+      margin: 0 auto 10px;
+      width: 100%;
+      font-size: 18px;
+    }
+
+    &__substrate {
+      display: none;
+    }
+
+  }
+
+  .mentor-card {
+
+    &__view-block {
+      width: 100%;
+    }
+
+    &__description-block {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+  }
+
+  .team-cards__membership-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #000000;
+    height: auto;
+    padding: 15px 0;
+  }
+
+  .membership-card {
+    &__view-block {
+      width: 45%;
+      margin: 0 auto;
+    }
+
+    &__description-block {
+      text-align: center;
+      padding: 0;
+      width: 100%;
+    }
+
+  }
+
+  .view-block__social {
+    font-size: 27px;
+  }
+
+  .student {
+    margin-bottom: 10px;
+    width: 140px;
+  }
+
+}

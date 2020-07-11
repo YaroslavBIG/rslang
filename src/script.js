@@ -1,13 +1,12 @@
 import { load } from './js/utils';
-
-window.onload = () => {
-  load();
-};
-
+import { router } from './js/router';
 import { wordConstructorPage } from './js/pages/wordConstructorPage';
 import { launchWordConstructorGame } from './js/wordConstructor/launchWordConstructorGame';
 
+window.addEventListener('hashchange', router);
 window.onload = () => {
-  document.querySelector('body').innerHTML = wordConstructorPage();
-  launchWordConstructorGame();
+  load();
+  router();
+  //document.body.innerHTML = wordConstructorPage();
+  //launchWordConstructorGame();
 };

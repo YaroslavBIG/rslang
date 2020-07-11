@@ -3,6 +3,7 @@ import { randomInteger } from '../utils';
 import { statisticPage } from './statisticPage';
 import { restartWordConstructor } from './restartWordConstructor';
 import { dontKnowButton } from './dontKnowButton';
+import { constantsData } from './constants';
 
 var randomWord = Math.ceil(Math.random() * 19);
 var randomPage = Math.ceil(Math.random() * 29);
@@ -16,6 +17,7 @@ export function continuee() {
   document
     .getElementsByClassName('game-block__footer-continue')[0]
     .addEventListener('click', function () {
+      constantsData.total += 1;
       document.getElementsByClassName(
         'game-block__context-image'
       )[0].style.display = 'none';
@@ -68,6 +70,7 @@ export function continuee() {
         .display == 'inline-block'
     ) {
       if (e.code == 'Enter') {
+        constantsData.total += 1;
         document.getElementsByClassName(
           'game-block__context-image'
         )[0].style.display = 'none';

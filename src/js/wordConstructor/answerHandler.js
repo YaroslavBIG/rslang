@@ -31,6 +31,7 @@ export function answerHandler(
           console.log(constantsData.errorWord == false);
           if (constantsData.errorWord == false) {
             constantsData.wrongAnswersCounter += 1;
+            constantsData.longWrongAnswersCounter += 1;
             document.getElementsByClassName(
               'statistic-block__error'
             )[0].innerHTML = `ОШИБОК: ${constantsData.wrongAnswersCounter}`;
@@ -40,6 +41,7 @@ export function answerHandler(
           }
           if (constantsData.errorWord == 'correct') {
             constantsData.correctAnswersCounter += 1;
+            constantsData.longCorrectAnswersCounter += 1;
             document.getElementsByClassName(
               'statistic-block__correct'
             )[0].innerHTML = `ЗНАЮ: ${constantsData.correctAnswersCounter}`;

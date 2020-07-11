@@ -72,6 +72,7 @@ export function dontKnowButton(
     if (constantsData.errorWord == true) {
       console.log(randomWord);
       constantsData.wrongAnswersCounter += 1;
+      constantsData.longWrongAnswersCounter += 1;
       document.getElementsByClassName(
         'statistic-block__error'
       )[0].innerHTML = `ОШИБОК: ${constantsData.wrongAnswersCounter}`;
@@ -142,6 +143,7 @@ export function dontKnowButton(
         if (constantsData.errorWord == true) {
           console.log(randomWord);
           constantsData.wrongAnswersCounter += 1;
+          constantsData.longWrongAnswersCounter += 1;
           document.getElementsByClassName(
             'statistic-block__error'
           )[0].innerHTML = `ОШИБОК: ${constantsData.wrongAnswersCounter}`;
