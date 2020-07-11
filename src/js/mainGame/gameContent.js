@@ -7,12 +7,7 @@ import { cardCount } from './utils/cardCount';
 
 export const gameContent = async (data = null, wordNum = 0) => {
   cardCount();
-  console.log(data);
-  const apiWords = () => sessionStorage.getItem('apiWords');
-
-  if (!apiWords()) {
-    sessionStorage.setItem('apiWords', JSON.stringify(data));
-  }
+  if (data) sessionStorage.setItem('apiWords', JSON.stringify(data));
 
   const settings = getSettings();
 
@@ -24,8 +19,10 @@ export const gameContent = async (data = null, wordNum = 0) => {
   if (settings.showAnswerBtn) buttonAnswer.setAttribute('style', 'display: initial');
   if (settings.showDeleteBtn) buttonDelete.setAttribute('style', 'display: initial');
 
-  const userWords = apiWords();
-  const apiWordsParse = data || JSON.parse(userWords);
+  const userWords = sessionStorage.getItem('apiWords');
+
+  const apiWordsParse = JSON.parse(userWords);
+
   const { page, group } = apiWordsParse[wordNum];
   const collectionLen = apiWordsParse.length;
   const {

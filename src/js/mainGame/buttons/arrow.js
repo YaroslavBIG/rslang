@@ -3,7 +3,7 @@ import { buttonAnswer } from './buttonAnswer';
 import { setStatistic, setAnswers } from '../statistic/setStatistic';
 import { modalCreate } from '../modal/modalCreate';
 import { progressBar } from '../progressBar';
-import { answerCheck } from '../utils';
+import { answerCheck, isNewUserWord } from '../utils';
 
 export const gameArrows = (event) => {
   const { id } = event.target;
@@ -21,9 +21,11 @@ export const gameArrows = (event) => {
     return;
   }
 
+  const wordId = sessionStorage.getItem('id');
+
   if (answerCheck() && arrowDirection === 'right') {
     setAnswers('right');
-    setStatistic('newWordsCount'); // TODO: add validation new or not
+    if (isNewUserWord(wordId)) setStatistic('newWordsCount');
     setStatistic('wordsLearnToday');
     cardGame.classList.remove('transform--scale');
   }

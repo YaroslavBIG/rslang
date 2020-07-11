@@ -3,8 +3,8 @@ import { getDayOfYear } from '../../utils';
 const setLocStats = (name, value = 0) => localStorage.setItem(name, value);
 
 export const setStatistic = (param) => {
-  const wordsLearnToday = parseInt(localStorage.getItem('wordsLearnToday'), 10) || 0;
-  const newWordsCount = parseInt(localStorage.getItem('newWordsCount'), 10) || 0;
+  const wordsLearnToday = parseInt(localStorage.getItem('wordsLearnToday'), 10);
+  const newWordsCount = parseInt(localStorage.getItem('newWordsCount'), 10);
 
   switch (param) {
     case 'card':
