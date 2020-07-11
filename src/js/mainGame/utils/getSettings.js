@@ -1,5 +1,6 @@
 export const getSettings = () => {
   const settings = {
+    onlyNewWords: JSON.parse(localStorage.getItem('onlyNewWords')),
     wordsPerDay: JSON.parse(localStorage.getItem('wordsPerDay')),
     newWordsPerDay: JSON.parse(localStorage.getItem('newWordsPerDay')),
     maxCardsPerDay: JSON.parse(localStorage.getItem('maxCardsPerDay')),

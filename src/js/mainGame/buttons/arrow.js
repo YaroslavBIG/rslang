@@ -1,9 +1,8 @@
 import { gameContent } from '../gameContent';
 import { buttonAnswer } from './buttonAnswer';
-import { setStatistic, setAnswers } from '../statistic/setStatistic';
 import { modalCreate } from '../modal/modalCreate';
 import { progressBar } from '../progressBar';
-import { answerCheck, isNewUserWord } from '../utils';
+import { answerCheck } from '../utils';
 
 export const gameArrows = (event) => {
   const { id } = event.target;
@@ -16,17 +15,11 @@ export const gameArrows = (event) => {
   if (!answerCheck() && arrowDirection === 'right') {
     wordBlock.classList.add('target-word--incorrect');
     const userInput = wordBlock.innerText;
-    setAnswers('wrong');
     if (userInput !== '') buttonAnswer();
     return;
   }
 
-  const wordId = sessionStorage.getItem('id');
-
   if (answerCheck() && arrowDirection === 'right') {
-    setAnswers('right');
-    if (isNewUserWord(wordId)) setStatistic('newWordsCount');
-    setStatistic('wordsLearnToday');
     cardGame.classList.remove('transform--scale');
   }
 

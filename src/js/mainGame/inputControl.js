@@ -11,14 +11,12 @@ export const inputControl = (event) => {
     const url = sessionStorage.getItem('audio');
     const urlExample = sessionStorage.getItem('audioExample');
     const urlMeaning = sessionStorage.getItem('audioMeaning');
-    const audioPlay = JSON.parse(localStorage.getItem('soundAutoPlay'));
-    const transcription = JSON.parse(localStorage.getItem('transcription'));
 
     const audioArr = [url];
     if (settings.meaning) audioArr.push(urlMeaning);
     if (settings.example) audioArr.push(urlExample);
 
-    if (audioPlay) playAudio(false, audioArr);
-    if (transcription) setTranscription();
+    if (settings.soundAutoPlay) playAudio(false, audioArr);
+    if (settings.transcription) setTranscription();
   }
 };

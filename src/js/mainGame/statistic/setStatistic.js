@@ -1,22 +1,31 @@
-import { getDayOfYear } from '../../utils';
-
-const setLocStats = (name, value = 0) => localStorage.setItem(name, value);
+import { getDayOfYear, globalUser } from '../../utils';
+import { setLocStats } from '../utils/setLocStats';
 
 export const setStatistic = (param) => {
   const wordsLearnToday = parseInt(localStorage.getItem('wordsLearnToday'), 10);
   const newWordsCount = parseInt(localStorage.getItem('newWordsCount'), 10);
 
+  const lastUserId = localStorage.getItem('lastUserId');
+  const { UserId } = globalUser.get();
+
+  const dayNow = getDayOfYear();
+  const dayOfLastGame = localStorage.getItem('dayOfLastGame');
+
   switch (param) {
     case 'card':
       setLocStats('wordsLearnToday', (wordsLearnToday ? wordsLearnToday + 1 : 1));
-
       break;
     case 'newWordsCount':
       setLocStats('newWordsCount', (newWordsCount ? newWordsCount + 1 : 1));
       break;
     case 'clear':
-      setLocStats('newWordsCount');
-      setLocStats('wordsLearnToday');
+      if (UserId !== lastUserId || dayNow !== dayOfLastGame) {
+        setLocStats('newWordsCount');
+        setLocStats('wordsLearnToday');
+        setLocStats('correctAnswersSeries');
+        setLocStats('rightAnswers');
+        setLocStats('wrongAnswers');
+      }
       break;
     default:
       break;
@@ -36,7 +45,6 @@ export const setAnswers = (param) => {
     case 'clear':
       if (dayYearToday !== dayOfLastGame) {
         setLocStats('correctAnswersSeries');
-        // setLocStats('wordsPerDay');
       }
       setLocStats('rightAnswers');
       setLocStats('wrongAnswers');

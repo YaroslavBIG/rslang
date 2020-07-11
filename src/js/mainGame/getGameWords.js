@@ -3,7 +3,12 @@ import { getMixWords, getNewWords } from '../api';
 import { randomArr, getDayOfYear } from '../utils';
 
 export const getGameWords = async () => {
-  const { newWordsPerDay, wordsPerDay } = getSettings();
+  const { newWordsPerDay, wordsPerDay, onlyNewWords } = getSettings();
+
+  if (onlyNewWords) {
+    const newW = await getNewWords(wordsPerDay);
+    return newW[0].paginatedResults;
+  }
   const lernedWords = (+wordsPerDay) - (+newWordsPerDay);
   const userWordsArr = await getMixWords();
 
