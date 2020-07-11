@@ -35,6 +35,7 @@ export const userWord = async (wordId, method = 'POST', difficulty = 'good', del
 
     const url = `users/${userId}/words/${wordId}`;
     const methodApi = { method, body: JSON.stringify(newWordObj) };
+
     return await getResponse(url, methodApi);
   } catch (err) {
     return Object.keys(err);

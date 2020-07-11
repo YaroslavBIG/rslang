@@ -11,15 +11,16 @@ export const gameArrows = (event) => {
   const cardGame = document.querySelector('.card-game');
   const cardsLimit = parseInt(localStorage.getItem('wordsPerDay'), 10) || 0;
   const wordsLearnToday = parseInt(localStorage.getItem('wordsLearnToday'), 10) || 0;
+  const ansCheck = answerCheck();
 
-  if (!answerCheck() && arrowDirection === 'right') {
+  if (!ansCheck && arrowDirection === 'right') {
     wordBlock.classList.add('target-word--incorrect');
     const userInput = wordBlock.innerText;
     if (userInput !== '') buttonAnswer();
     return;
   }
 
-  if (answerCheck() && arrowDirection === 'right') {
+  if (ansCheck && arrowDirection === 'right') {
     cardGame.classList.remove('transform--scale');
   }
 
