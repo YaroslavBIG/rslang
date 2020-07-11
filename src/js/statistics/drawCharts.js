@@ -6,8 +6,7 @@ import { fetchMiniGameChartData } from './fetchMiniGameChartData';
 import { percentCheck } from './percentCheck';
 
 export const drawMiniGameChart = async (gameId) => {
-  const thisGameId = gameId;
-  const chartGameData = await fetchMiniGameChartData(thisGameId);
+  const chartGameData = await fetchMiniGameChartData(gameId);
   const sumTotal = chartGameData.total.reduce((acc, cV) => acc + cV, 0);
   const sumRight = chartGameData.right.reduce((acc, cV) => acc + cV, 0);
   const percentRight = calculationOfPercentage(sumTotal, sumRight);
@@ -32,12 +31,11 @@ export const drawMiniGameChart = async (gameId) => {
 
     options: {},
   }))();
-  await detailsBtnHandler(thisGameId);
+  await detailsBtnHandler(gameId);
 };
 
 export const drawTotalChart = async (yourId) => {
-  const thisStudyId = yourId;
-  const chartData = await fetchMainChartData(thisStudyId);
+  const chartData = await fetchMainChartData(yourId);
   const mainBlock = document.getElementById('main-block');
   mainBlock.innerHTML = createMarkupChart();
   const statisticsChart = document.getElementById('statistics-chart').getContext('2d');
@@ -58,5 +56,5 @@ export const drawTotalChart = async (yourId) => {
 
     options: {},
   }))();
-  await detailsBtnHandler(thisStudyId);
+  await detailsBtnHandler(yourId);
 };
