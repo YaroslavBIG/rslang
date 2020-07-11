@@ -1,5 +1,6 @@
 import { createShortStatistic } from './createShortStatistic';
 import { clickContinueWithoutRepeat } from './clickContinueWithoutRepeat';
+import { recognition } from './recognition';
 
 export const checkInput = () => {
   const input = document.querySelector('.hints-input');
@@ -24,6 +25,7 @@ export const checkInput = () => {
           modal.innerHTML = createShortStatistic(obj);
           modal.style.display = 'block';
           clickContinueWithoutRepeat();
+          recognition(false);
         }
       } else {
         wrongCount += 1;

@@ -6,7 +6,7 @@ export const createShortStatistic = (obj, isResult) => {
   const resultControls = isResult ? `
     <button class="button" id="return">Вернуться</button>
   ` : `
-    <button class="button" id="again">Повторить</button>
+    <button class="button" id="again">Повторить изученные</button>
     <button class="button" id="next">Продолжить без повторения</button>
     <div class="button" id="done"><a href="#/main">Закончить</a></div>`;
 

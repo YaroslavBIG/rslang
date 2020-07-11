@@ -15,6 +15,7 @@ import {
   createSprintGamePage,
   createAboutTheTeamPage,
   createSettingsPage,
+  createSpeakItPage,
 } from '../pages';
 
 export const HomeComponent = {
@@ -39,7 +40,7 @@ export const EnglishPuzzleComponent = {
   render: () => '',
 };
 export const SpeakItComponent = {
-  render: () => '',
+  render: () => createSpeakItPage(),
 };
 export const AuditionComponent = {
   render: () => '',

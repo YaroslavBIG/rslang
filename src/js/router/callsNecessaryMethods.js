@@ -2,12 +2,9 @@
  * в switch каждый забирает свой кейс, чтобы не пушить пустые болванки.
  * в нем пишет те функции, которые вызываются у него на странице.
  * список кейсов:
- * case '/main': {}
- * case '/main/settings': {}
  * case '/main/word-learning': {}
  * case '/main/word-repeat': {}
  * case '/main/english-puzzle': {}
- * case '/main/speak-it': {}
  * case '/main/audition': {}
  * case '/main/savannah': {}
  * case '/main/word-puzzle': {}
@@ -19,6 +16,7 @@
 import { controlForm, submitForm, chooseIcon } from '../form';
 import { startSprintGame } from '../mini-game-sprint/launchSprintGameMethods';
 import { handlerSettingsPage, handlerMainPage } from '../pages';
+import { launchGame } from '../speak-it-game';
 
 export const callsNecessaryMethods = (path) => {
   switch (path) {
@@ -41,6 +39,10 @@ export const callsNecessaryMethods = (path) => {
     }
     case '/main/settings': {
       handlerSettingsPage();
+      break;
+    }
+    case '/main/speak-it': {
+      launchGame();
       break;
     }
     default: {
