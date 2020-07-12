@@ -7,3 +7,4 @@ export { createAboutTheTeamPage } from './createAboutTheTeamPage';
 export { createSprintGamePage } from './createSprintGamePage';
 export { createStatisticsPage } from './createStatisticsPage';
 export { handlerMainPage } from './handlerMainPage';
+export { createVocabularyPage } from './createVocabularyPage';
