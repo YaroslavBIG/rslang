@@ -6,7 +6,8 @@ export const getDayStatistic = () => {
   const wrongAnswers = parseInt(localStorage.getItem('wrongAnswers'), 10) || 0;
 
   const percent = Math.round(((rightAnswers / (rightAnswers + wrongAnswers)) * 100));
-  const resultObj = {
+
+  return {
     newWordsCount,
     wordsLearnToday,
     correctAnswersSeries,
@@ -14,5 +15,4 @@ export const getDayStatistic = () => {
     wrongAnswers,
     percent,
   };
-  return resultObj;
 };

@@ -4,9 +4,6 @@ export const pressEnterKey = (event) => {
   if (event.key === 'Enter') {
     event.preventDefault();
 
-    const obj = {
-      target: 'right',
-    };
-    gameArrows(obj);
+    gameArrows({ target: 'right' });
   }
 };
