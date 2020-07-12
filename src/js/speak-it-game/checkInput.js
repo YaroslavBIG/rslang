@@ -7,7 +7,6 @@ export const checkInput = () => {
   const input = document.querySelector('.hints-input');
   const modal = document.querySelector('#speak-modal');
   let rightCount = 0;
-  let wrongCount = 0;
   const allRight = 10;
 
   input.addEventListener('focus', () => {
@@ -21,7 +20,7 @@ export const checkInput = () => {
           const obj = {
             total: allRight,
             right: rightCount,
-            wrong: wrongCount,
+            wrong: allRight - rightCount,
           };
           putGameStatistics('speakit', obj);
           modal.innerHTML = createShortStatistic(obj);
@@ -29,8 +28,6 @@ export const checkInput = () => {
           clickContinueWithoutRepeat();
           recognition(false);
         }
-      } else {
-        wrongCount += 1;
       }
     });
   });
