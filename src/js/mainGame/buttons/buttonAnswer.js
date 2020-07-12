@@ -1,11 +1,8 @@
 import { correctionBlock } from '../utils/correctionBlock';
+import { deleteAnswer } from '../utils';
 
 export const buttonAnswer = () => {
   const wordBlock = document.querySelector('.sentence--target-word');
-  const deleteAnswer = () => {
-    wordBlock.classList.remove('target-word--incorrect');
-    wordBlock.innerHTML = '';
-  };
   const userAnswer = wordBlock.innerText;
   const word = sessionStorage.getItem('word');
 

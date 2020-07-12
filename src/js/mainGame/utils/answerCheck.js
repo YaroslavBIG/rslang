@@ -17,7 +17,6 @@ export const answerCheck = () => {
     const method = isNew ? 'POST' : 'PUT';
     if (isNew) setStatistic('newWordsCount');
     userWord(id, method);
-    setStatistic('card');
     setAnswers('right');
   }
   if (!isRightAnswer) setAnswers('wrong');

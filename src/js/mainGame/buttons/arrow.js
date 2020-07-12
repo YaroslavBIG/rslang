@@ -13,6 +13,10 @@ export const gameArrows = (event) => {
   const wordsLearnToday = parseInt(localStorage.getItem('wordsLearnToday'), 10) || 0;
   const ansCheck = answerCheck();
 
+  if (cardsLimit <= wordsLearnToday) {
+    return modalCreate('end');
+  }
+
   if (!ansCheck && arrowDirection === 'right') {
     wordBlock.classList.add('target-word--incorrect');
     const userInput = wordBlock.innerText;
@@ -36,9 +40,6 @@ export const gameArrows = (event) => {
       featureWordNum = arrowDirection === 'left' ? currentWordNum - 1 : currentWordNum + 1;
       cardGame.classList.remove('transform--scale');
       break;
-  }
-  if (cardsLimit <= wordsLearnToday) {
-    return modalCreate('end');
   }
   if (featureWordNum >= collectionLen) {
     const progress = parseInt(sessionStorage.getItem('wordNum'), 10);

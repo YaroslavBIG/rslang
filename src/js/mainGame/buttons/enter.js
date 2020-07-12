@@ -1,4 +1,5 @@
 import { gameArrows } from './arrow';
+import { deleteAnswer } from '../utils';
 
 export const pressEnterKey = (event) => {
   if (event.key === 'Enter' && document.querySelector('.game_main__modal').style.display !== 'unset') {
@@ -6,8 +7,14 @@ export const pressEnterKey = (event) => {
 
     const modalWindow = document.querySelector('.game_main__modal');
     const modalIsClose = modalWindow.style.display !== 'unset';
+    const wordBlock = document.querySelector('.sentence--target-word');
+    const hint = wordBlock.firstChild || wordBlock;
+    const isHint = hint.nodeName === 'SPAN';
+    if (isHint) {
+      return deleteAnswer();
+    }
     if (modalIsClose) {
-      gameArrows({ target: 'right' });
+      return gameArrows({ target: 'right' });
     }
   }
 };

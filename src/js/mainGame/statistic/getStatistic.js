@@ -1,4 +1,5 @@
 import { getWordsLernedToday } from './getWordsLernedToday';
+import { putGameStatistics } from '../../api';
 
 export const getDayStatistic = async () => {
   const today = await getWordsLernedToday();
@@ -8,13 +9,16 @@ export const getDayStatistic = async () => {
   const wrong = parseInt(localStorage.getItem('wrongAnswers'), 10) || 0;
 
   const percent = Math.round(((right / (right + wrong)) * 100));
-
-  return {
-    newWords, // Новых за сегодня
-    today, // Всего за сегодня
+  const statistic = {
+    newWords,
+    today,
     correctSeries,
     right,
     wrong,
     percent,
   };
+
+  putGameStatistics('main', statistic);
+
+  return statistic;
 };
