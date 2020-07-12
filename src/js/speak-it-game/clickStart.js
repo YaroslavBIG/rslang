@@ -6,18 +6,20 @@ import { start } from './constants';
 export const clickStart = async () => {
   let isStart = start.get();
 
-  document.querySelector('#start-speak').onclick = () => {
-    isStart = !isStart;
-    start.set(isStart);
+  document.querySelector('#start-speak').addEventListener('click', () => {
+    isStart = !start.get();
     if (isStart) {
       const speak = 'Закончить говорить';
       checkStart('none', true, speak);
       recognition();
+      start.set(true);
       checkInput();
     } else {
       const speak = 'Начать говорить';
       checkStart('auto', false, speak);
+      start.set(false);
       recognition();
     }
-  };
+    start.set(isStart);
+  });
 };

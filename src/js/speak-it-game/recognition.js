@@ -1,14 +1,10 @@
-import { start } from './constants';
-
-export const recognition = () => {
+export const recognition = (isStart) => {
   const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
   const recognitionSpeech = new SpeechRecognition();
   recognitionSpeech.interimResults = false;
   recognitionSpeech.lang = 'en-US';
 
-  let isStart = start.get();
-  console.log(isStart);
   const input = document.querySelector('.hints-input');
 
   if (isStart) {
@@ -26,8 +22,6 @@ export const recognition = () => {
       recognitionSpeech.start();
     };
   } else {
-    isStart = !isStart;
-    start.set(isStart);
     recognitionSpeech.stop();
   }
 };

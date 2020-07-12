@@ -1,7 +1,9 @@
 import { startSpeakGame } from './startSpeakGame';
 import { checkStart } from './checkStart';
+import { recognition } from './recognition';
 
 export const getAndStart = () => {
+  recognition(false);
   const text = 'Начать говорить';
   checkStart('auto', false, text);
   const page = document.querySelector('#level').options.selectedIndex;
