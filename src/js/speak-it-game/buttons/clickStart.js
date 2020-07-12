@@ -1,7 +1,7 @@
 import { checkInput } from '../checkInput';
 import { checkStart } from '../checkStart';
 import { recognition } from '../utils/recognition';
-import { start } from '../utils/constants';
+import { start, textEnd, textStart } from '../utils/constants';
 
 export const clickStart = async () => {
   let isStart = start.get();
@@ -9,14 +9,12 @@ export const clickStart = async () => {
   document.querySelector('#start-speak').addEventListener('click', () => {
     isStart = !start.get();
     if (isStart) {
-      const speak = 'Закончить говорить';
-      checkStart('none', true, speak);
+      checkStart('none', true, textEnd);
       recognition();
       start.set(true);
       checkInput();
     } else {
-      const speak = 'Начать говорить';
-      checkStart('auto', false, speak);
+      checkStart('auto', false, textStart);
       start.set(false);
       recognition();
     }

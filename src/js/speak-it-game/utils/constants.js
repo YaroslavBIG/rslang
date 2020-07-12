@@ -7,3 +7,6 @@ export const start = {
     this.isStart = bool;
   },
 };
+
+export const textEnd = 'Закончить говорить';
+export const textStart = 'Начать говорить';
