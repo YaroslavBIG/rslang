@@ -1,4 +1,6 @@
 import { logIn } from './login';
+import { getUserSettings } from '../../api';
+import { setStorageFromObject } from '../../utils';
 
 export const signIn = async () => {
   const nextButton = document.querySelector('.click-enter');
@@ -9,6 +11,8 @@ export const signIn = async () => {
 
   const logSuccess = await logIn({ email: login, password: pass });
   if (logSuccess) {
+    const userSettings = await getUserSettings();
+    setStorageFromObject(userSettings, 'local');
     nextButton.click();
   } else {
     errorBlock.textContent = 'Неверные данные, попробуйте снова';

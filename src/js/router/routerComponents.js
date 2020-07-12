@@ -16,6 +16,7 @@ import {
   createAboutTheTeamPage,
   mainGameRender,
   intervalGameRender,
+  createStatisticsPage,
   createSettingsPage,
 } from '../pages';
 
@@ -59,7 +60,7 @@ export const VocabularyComponent = {
   render: () => '',
 };
 export const StatisticComponent = {
-  render: () => '',
+  render: () => createStatisticsPage(),
 };
 export const AboutUsComponent = {
   render: () => createAboutTheTeamPage(),

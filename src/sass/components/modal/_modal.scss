@@ -48,6 +48,11 @@
 .modal-body {
   text-align: center;
   padding: 2px 16px;
+  &__video {
+    margin-top: 100px;
+    width: 560px;
+    height: 315px;
+  }
   &__description {
     margin-top: 50px;
     font-size: $secondary-font-size - 24;
@@ -58,6 +63,7 @@
     margin-right: -50%;
     transform: translate(-50%, -50%);
   }
+
   &__list {
     width: 30%;
     text-align: left;
