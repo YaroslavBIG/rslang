@@ -19,7 +19,7 @@ export const renderLayout = () => {
             </a>
           </li>
           <li class="nav-dictionary__item">
-          <a href="#" class="nav-dictionary__link">Главная</a>
+          <a href="#/main" class="nav-dictionary__link">Главная</a>
           </li>
       </ul>
     </div>
@@ -27,6 +27,8 @@ export const renderLayout = () => {
   <div class="dictonary-count">
     Число слов:
     <span class="dictonary-count__numder"></span>
+  </div>
+  <div class="dictonary-count dictonary-learned">
   </div>
   <div class="words-wrapper">
   </div>
