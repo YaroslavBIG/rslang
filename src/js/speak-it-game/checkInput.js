@@ -1,12 +1,12 @@
-import { createShortStatistic } from './createShortStatistic';
 import { clickContinueWithoutRepeat } from './clickContinueWithoutRepeat';
 import { recognition } from './recognition';
 import { putGameStatistics } from '../api';
 import { start } from './constants';
+import { clickContinueWithRepeat } from './clickContinueWithRepeat';
+import { showStatistics } from './showStatistics';
 
 export const checkInput = () => {
   const input = document.querySelector('.hints-input');
-  const modal = document.querySelector('#speak-modal');
   let rightCount = 0;
   const allRight = 10;
   const isStart = start.get();
@@ -18,7 +18,7 @@ export const checkInput = () => {
       if (elem.textContent === valueInput) {
         elem.closest('.answers__item').classList.add('item_active');
         rightCount += 1;
-        if (rightCount === 2 && isStart) {
+        if (rightCount === allRight && isStart) {
           const obj = {
             total: allRight,
             right: rightCount,
@@ -26,10 +26,10 @@ export const checkInput = () => {
           };
           start.set(false);
           putGameStatistics('speakit', obj);
-          modal.innerHTML = createShortStatistic(obj);
-          modal.style.display = 'block';
+          showStatistics(obj, false);
           clickContinueWithoutRepeat();
-          recognition();
+          clickContinueWithRepeat();
+          recognition(false);
         }
       }
     });

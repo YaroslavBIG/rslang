@@ -3,7 +3,6 @@ import { swaggerUrl, baseHeaders } from './constants';
 
 export const getNewToken = async () => {
   const { userId: id, refreshToken: refToken } = globalUser.get();
-  console.log('REF ', refToken);
   const resURL = `${swaggerUrl}users/${id}/tokens`;
   try {
     const response = await fetch(resURL, {

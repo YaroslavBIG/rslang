@@ -7,7 +7,7 @@ import { randomArr } from '../utils';
 export const startSpeakGame = async (page, group, isRepeatWithout) => {
   const resp = await getMixWords();
   let result = [];
-  if (resp.length > 10 && !isRepeatWithout) {
+  if (resp.length < 10 && !isRepeatWithout) {
     resp.forEach((el) => {
       const item = el[0].paginatedResults;
       result.push(...item);
