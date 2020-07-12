@@ -1,6 +1,7 @@
 import { createShortStatistic } from './createShortStatistic';
 import { clickContinueWithoutRepeat } from './clickContinueWithoutRepeat';
 import { recognition } from './recognition';
+import { putGameStatistics } from '../api';
 
 export const checkInput = () => {
   const input = document.querySelector('.hints-input');
@@ -22,6 +23,7 @@ export const checkInput = () => {
             right: rightCount,
             wrong: wrongCount,
           };
+          putGameStatistics('speakit', obj);
           modal.innerHTML = createShortStatistic(obj);
           modal.style.display = 'block';
           clickContinueWithoutRepeat();
