@@ -1,5 +1,5 @@
-import { recognition } from './recognition';
-import { getAndStart } from './getAndStart';
+import { recognition } from '../utils/recognition';
+import { getAndStart } from '../getAndStart';
 
 export const clickContinueWithRepeat = () => {
   document.getElementById('again').addEventListener('click', () => {

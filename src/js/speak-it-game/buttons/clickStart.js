@@ -1,7 +1,7 @@
-import { checkInput } from './checkInput';
-import { checkStart } from './checkStart';
-import { recognition } from './recognition';
-import { start } from './constants';
+import { checkInput } from '../checkInput';
+import { checkStart } from '../checkStart';
+import { recognition } from '../utils/recognition';
+import { start } from '../utils/constants';
 
 export const clickStart = async () => {
   let isStart = start.get();

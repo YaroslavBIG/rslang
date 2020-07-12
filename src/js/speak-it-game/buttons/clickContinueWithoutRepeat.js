@@ -1,5 +1,5 @@
-import { getAndStart } from './getAndStart';
-import { recognition } from './recognition';
+import { getAndStart } from '../getAndStart';
+import { recognition } from '../utils/recognition';
 
 export const clickContinueWithoutRepeat = () => {
   document.getElementById('next').addEventListener('click', () => {

@@ -1,5 +1,5 @@
-import { checkStart } from './checkStart';
-import { start } from './constants';
+import { checkStart } from '../checkStart';
+import { start } from '../utils/constants';
 
 export const clickRestart = () => {
   document.querySelector('#restart-speak').onclick = () => {

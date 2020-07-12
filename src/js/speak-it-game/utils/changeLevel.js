@@ -1,4 +1,4 @@
-import { getAndStart } from './getAndStart';
+import { getAndStart } from '../getAndStart';
 
 export const changeLevel = () => {
   document.querySelector('#level').addEventListener('change', () => {

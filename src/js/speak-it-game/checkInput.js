@@ -1,9 +1,9 @@
-import { clickContinueWithoutRepeat } from './clickContinueWithoutRepeat';
-import { recognition } from './recognition';
+import { clickContinueWithoutRepeat } from './buttons/clickContinueWithoutRepeat';
+import { recognition } from './utils/recognition';
 import { putGameStatistics } from '../api';
-import { start } from './constants';
-import { clickContinueWithRepeat } from './clickContinueWithRepeat';
-import { showStatistics } from './showStatistics';
+import { start } from './utils/constants';
+import { clickContinueWithRepeat } from './buttons/clickContinueWithRepeat';
+import { showStatistics } from './showing/showStatistics';
 
 export const checkInput = () => {
   const input = document.querySelector('.hints-input');

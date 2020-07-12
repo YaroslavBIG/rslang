@@ -1,4 +1,4 @@
-import { dataUrl } from '../api/constants';
+import { dataUrl } from '../../api/constants';
 
 export const showPlayDescription = (isResult) => {
   const audio = document.querySelector('.audio');

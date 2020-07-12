@@ -1,17 +1,15 @@
 import { getWords } from '../api';
-import { getAllCards } from './getAllCards';
-import { getMixWords } from '../api/words/getMixWords';
-import { showPlayDescription } from './showPlayDescription';
+import { getAllCards } from './creating/getAllCards';
+import { showPlayDescription } from './showing/showPlayDescription';
 import { randomArr } from '../utils';
+import { returnUserWordsArr } from './returnUserWordsArr';
 
 export const startSpeakGame = async (page, group, isRepeatWithout) => {
-  const resp = await getMixWords();
-  let result = [];
-  if (resp.length < 10 && !isRepeatWithout) {
-    resp.forEach((el) => {
-      const item = el[0].paginatedResults;
-      result.push(...item);
-    });
+  const resultResp = await returnUserWordsArr();
+
+  let result = null;
+  if (resultResp.length >= 10 && !isRepeatWithout) {
+    result = resultResp;
   } else {
     result = await getWords(page, group, 0, 10);
   }

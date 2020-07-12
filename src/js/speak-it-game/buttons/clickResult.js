@@ -1,8 +1,8 @@
-import { returnBlockWithWrong } from './returnBlockWithWrong';
-import { showPlayDescription } from './showPlayDescription';
+import { returnBlockWithWrong } from '../creating/returnBlockWithWrong';
+import { showPlayDescription } from '../showing/showPlayDescription';
 import { clickReturn } from './clickReturn';
-import { createResult } from './createResult';
-import { showStatistics } from './showStatistics';
+import { createResult } from '../creating/createResult';
+import { showStatistics } from '../showing/showStatistics';
 
 export const clickResult = () => {
   document.querySelector('#results-speak').addEventListener('click', () => {

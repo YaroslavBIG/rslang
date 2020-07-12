@@ -1,4 +1,4 @@
-import { createSelect } from '../speak-it-game/createSelect';
+import { createSelect } from '../speak-it-game/creating/createSelect';
 
 export const createSpeakItPage = () => `
 <section class="game__outer">

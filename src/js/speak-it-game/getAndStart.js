@@ -1,6 +1,6 @@
 import { startSpeakGame } from './startSpeakGame';
 import { checkStart } from './checkStart';
-import { recognition } from './recognition';
+import { recognition } from './utils/recognition';
 
 export const getAndStart = (repeatWithout) => {
   recognition(false);
