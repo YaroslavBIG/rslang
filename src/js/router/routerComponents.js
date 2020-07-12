@@ -16,6 +16,7 @@ import {
   createAboutTheTeamPage,
   createStatisticsPage,
   createSettingsPage,
+  createSavannahPage,
 } from '../pages';
 
 export const HomeComponent = {
@@ -46,7 +47,7 @@ export const AuditionComponent = {
   render: () => '',
 };
 export const SavannahComponent = {
-  render: () => '',
+  render: () => createSavannahPage(),
 };
 export const SprintComponent = {
   render: () => createSprintGamePage(),
