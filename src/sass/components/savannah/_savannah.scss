@@ -1,0 +1,32 @@
+.hints-bar {
+
+  &__voice {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  &__voice:hover {
+    cursor: pointer;
+    filter: invert(0.2);
+  }
+
+  &__voice:active {
+    transform: scale(0.99, 0.99);
+  }
+
+  &__voice--off {
+    width: 40px;
+    height: 40px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: none;
+  }
+
+}
+
+.inactive {
+  display: block;
+}

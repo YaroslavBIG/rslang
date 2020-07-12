@@ -1,3 +1,5 @@
-export const launchSavannahMethods = () => {
+import { voiceHintBtnHandler } from './voiceHintBtnHandler';
 
+export const launchSavannahMethods = () => {
+  voiceHintBtnHandler();
 };

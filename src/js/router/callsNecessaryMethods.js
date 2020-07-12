@@ -45,7 +45,7 @@ export const callsNecessaryMethods = (path) => {
       launchStatisticsMethods();
       break;
     }
-    case '/savannah': {
+    case '/main/savannah': {
       launchSavannahMethods();
       break;
     }
