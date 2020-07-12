@@ -1,7 +1,14 @@
 .word__diff{
   transform: scale(0);
-  transition: all 1s ease-in-out;
   text-align: center;
+}
+
+.intervals_answer {
+  transition: all 0.8s ease-in-out;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -ms-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
 }
 
 .intervals_diff{

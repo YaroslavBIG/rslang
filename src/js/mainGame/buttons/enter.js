@@ -1,5 +1,6 @@
 import { gameArrows } from './arrow';
 import { deleteAnswer } from '../utils';
+import { buttonsChange } from '../interval/buttonsChange';
 
 export const pressEnterKey = (event, intervals = false) => {
   if (event.key === 'Enter' && document.querySelector('.game_main__modal').style.display !== 'unset') {
@@ -15,6 +16,9 @@ export const pressEnterKey = (event, intervals = false) => {
     }
     if (modalIsClose && !intervals) {
       return gameArrows({ target: 'right' });
+    }
+    if (modalIsClose && !intervals) {
+      buttonsChange('hide');
     }
   }
 };

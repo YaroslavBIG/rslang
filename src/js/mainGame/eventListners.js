@@ -3,6 +3,7 @@ import { buttonAnswer } from './buttons/buttonAnswer';
 import { buttonsHardDel } from './buttons/buttonsHardDel';
 import { inputControl } from './inputControl';
 import { pressEnterKey } from './buttons/enter';
+import { buttonsDiff } from './interval';
 
 export const addMainGameListners = (intervals = false) => {
   if (!intervals) {
@@ -14,6 +15,10 @@ export const addMainGameListners = (intervals = false) => {
 
     const deleteButton = document.querySelector('#delete');
     deleteButton.addEventListener('click', () => buttonsHardDel('good', 'true'));
+  }
+  if (intervals) {
+    const buttonsIntervalDiff = document.querySelectorAll('.intervals_diff');
+    buttonsIntervalDiff.forEach((button) => button.addEventListener('click', (ev) => buttonsDiff(ev)));
   }
   const userInput = document.querySelector('#user_input');
   userInput.addEventListener('input', (ev) => inputControl(ev, intervals));

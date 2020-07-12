@@ -3,10 +3,11 @@ import { progressBar } from './progressBar';
 import { dataUrl } from '../api';
 import { setStorageFromObject } from './utils';
 import { getSettings } from './utils/getSettings';
+import { setWordNum } from './utils/setWordNum';
 
 export const gameContent = async (data = null, wordNum = 0) => {
   if (data) sessionStorage.setItem('apiWords', JSON.stringify(data));
-
+  setWordNum(wordNum);
   const settings = getSettings();
 
   const buttonDifficult = document.querySelector('#difficult');

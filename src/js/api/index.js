@@ -12,3 +12,4 @@ export { getNewWords } from './words/getNewWords';
 export { putGameStatistics } from './statistics/putGameStatistics';
 export { getUserSettings } from './getUserSettings';
 export { pushUserSettings } from './pushUserSettings';
+export { setWordDiff } from './words/setWordDiff';

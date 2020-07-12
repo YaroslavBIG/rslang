@@ -1,10 +1,10 @@
-import { getSettings, setStorageFromObject } from '../utils';
+import { getSettings, setStorageFromObject, setWordNum } from '../utils';
 import { progressBar } from '../progressBar';
 import { getTextWidth, addComma, cutTags } from '../../utils';
 
-export const gameContent = async (data = null, wordNum = 0) => {
+export const intervalGameContent = async (data = null, wordNum = 0) => {
   if (data) sessionStorage.setItem('apiWords', JSON.stringify(data));
-
+  setWordNum(wordNum);
   const settings = getSettings();
 
   const userWords = sessionStorage.getItem('apiWords');

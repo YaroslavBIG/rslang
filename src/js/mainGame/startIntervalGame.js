@@ -1,4 +1,4 @@
-import { gameContent } from './interval/intervalGameContent';
+import { intervalGameContent } from './interval/intervalGameContent';
 import { progressBar } from './progressBar';
 import { addMainGameListners } from './eventListners';
 import { setStatistic, setAnswers } from './statistic/setStatistic';
@@ -13,7 +13,7 @@ export const startIntervalGame = async () => {
   sessionStorage.setItem('allUserWords', allUserWords);
 
   const gameData = await getGameWords();
-  gameContent(gameData);
+  intervalGameContent(gameData);
   const allWordsCount = sessionStorage.getItem('collectionLen');
   progressBar(0, allWordsCount);
   addMainGameListners('intervals');

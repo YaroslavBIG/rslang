@@ -1,12 +1,9 @@
-import { isNewUserWord } from '../utils';
-import { userWord } from '../../api/words/userWord';
 import { gameArrows } from './arrow';
 import { buttonAnswer } from './buttonAnswer';
+import { setWordDiff } from '../../api';
 
 export const buttonsHardDel = (diff = 'good', del = 'false') => {
-  const wordId = sessionStorage.getItem('id');
-  const method = isNewUserWord(wordId) ? 'POST' : 'PUT';
-  userWord(wordId, method, diff, del);
+  setWordDiff(false, diff, del);
 
   const wordBlock = document.querySelector('.sentence--target-word');
   if (del === 'true') {
