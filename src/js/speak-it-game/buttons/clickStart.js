@@ -10,13 +10,13 @@ export const clickStart = async () => {
     isStart = !start.get();
     if (isStart) {
       checkStart('none', true, textEnd);
-      recognition();
+      recognition(true);
       start.set(true);
       checkInput();
     } else {
       checkStart('auto', false, textStart);
       start.set(false);
-      recognition();
+      recognition(false);
     }
     start.set(isStart);
   });
