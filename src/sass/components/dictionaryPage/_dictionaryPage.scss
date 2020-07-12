@@ -123,9 +123,11 @@
         padding: 5px 12px;
         border-radius: 10px;
         color: rgb(44, 44, 44);
+        background: none;
         font-weight: $secondary-font-weight;
+        border: none;
         &:hover {
-            background-color: rgba(55, 56, 60, 0.08);
+            // background-color: rgba(55, 56, 60, 0.08);
             cursor: pointer;
         }
         &.active {
