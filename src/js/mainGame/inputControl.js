@@ -3,8 +3,8 @@ import { setTranscription } from './utils/setTranscription';
 import { getSettings } from './utils/getSettings';
 
 export const inputControl = (event) => {
-  const targetWord = sessionStorage.getItem('word');
-  const userInput = event.target.innerText;
+  const targetWord = sessionStorage.getItem('word').toLowerCase();
+  const userInput = event.target.innerText.toLowerCase();
   const settings = getSettings();
 
   if (targetWord === userInput) {

@@ -1,6 +1,7 @@
 import { statisticPage } from '../statistic/statisticPage';
 import { getGameWords } from '../getGameWords';
 import { gameContent } from '../gameContent';
+import { setLocStats } from '../utils/setLocStats';
 
 export const modalCreate = async (end) => {
   const modalBlock = document.querySelector('#modal');
@@ -27,6 +28,7 @@ export const modalCreate = async (end) => {
     const gameData = await getGameWords();
     sessionStorage.setItem('wordNum', 0);
     modalWindow.style.display = 'none';
+    setLocStats('newWordsCount');
     gameContent(gameData);
   });
 
