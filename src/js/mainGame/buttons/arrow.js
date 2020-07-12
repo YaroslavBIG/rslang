@@ -37,14 +37,14 @@ export const gameArrows = (event) => {
       cardGame.classList.remove('transform--scale');
       break;
   }
+  if (cardsLimit <= wordsLearnToday) {
+    return modalCreate('end');
+  }
   if (featureWordNum >= collectionLen) {
     const progress = parseInt(sessionStorage.getItem('wordNum'), 10);
     const progressAll = JSON.parse(sessionStorage.getItem('apiWords')).length;
     progressBar(progress + 1, progressAll);
     return modalCreate(); // TODO: Check words per day
-  }
-  if (cardsLimit <= wordsLearnToday) {
-    return modalCreate('end');
   }
   if (featureWordNum !== currentWordNum) {
     gameContent(null, featureWordNum);

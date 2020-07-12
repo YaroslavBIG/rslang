@@ -1,18 +1,20 @@
-export const getDayStatistic = () => {
-  const newWordsCount = parseInt(localStorage.getItem('newWordsCount'), 10) || 0;
-  const wordsLearnToday = parseInt(localStorage.getItem('wordsLearnToday'), 10) || 0;
-  const correctAnswersSeries = parseInt(localStorage.getItem('correctAnswersSeries'), 10) || 0;
-  const rightAnswers = parseInt(localStorage.getItem('rightAnswers'), 10) || 0;
-  const wrongAnswers = parseInt(localStorage.getItem('wrongAnswers'), 10) || 0;
+import { getWordsLernedToday } from './getWordsLernedToday';
 
-  const percent = Math.round(((rightAnswers / (rightAnswers + wrongAnswers)) * 100));
+export const getDayStatistic = async () => {
+  const today = await getWordsLernedToday();
+  const newWords = parseInt(localStorage.getItem('newWordsCount'), 10) || 0;
+  const correctSeries = parseInt(localStorage.getItem('correctAnswersSeries'), 10) || 0;
+  const right = parseInt(localStorage.getItem('rightAnswers'), 10) || 0;
+  const wrong = parseInt(localStorage.getItem('wrongAnswers'), 10) || 0;
+
+  const percent = Math.round(((right / (right + wrong)) * 100));
 
   return {
-    newWordsCount,
-    wordsLearnToday,
-    correctAnswersSeries,
-    rightAnswers,
-    wrongAnswers,
+    newWords, // Новых за сегодня
+    today, // Всего за сегодня
+    correctSeries,
+    right,
+    wrong,
     percent,
   };
 };

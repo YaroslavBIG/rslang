@@ -6,10 +6,10 @@ export const setStatistic = (param) => {
   const newWordsCount = parseInt(localStorage.getItem('newWordsCount'), 10);
 
   const lastUserId = localStorage.getItem('lastUserId');
-  const { UserId } = globalUser.get();
+  const { userId } = globalUser.get();
 
   const dayNow = getDayOfYear();
-  const dayOfLastGame = localStorage.getItem('dayOfLastGame');
+  const dayOfLastGame = parseInt(localStorage.getItem('dayOfLastGame'), 10);
 
   switch (param) {
     case 'card':
@@ -19,7 +19,7 @@ export const setStatistic = (param) => {
       setLocStats('newWordsCount', (newWordsCount ? newWordsCount + 1 : 1));
       break;
     case 'clear':
-      if (UserId !== lastUserId || dayNow !== dayOfLastGame) {
+      if (userId !== lastUserId || dayNow !== dayOfLastGame) {
         setLocStats('newWordsCount');
         setLocStats('wordsLearnToday');
         setLocStats('correctAnswersSeries');

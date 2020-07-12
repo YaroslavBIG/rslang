@@ -18,8 +18,9 @@ export const answerCheck = () => {
     if (isNew) setStatistic('newWordsCount');
     userWord(id, method);
     setStatistic('card');
-    setStatistic('right');
+    setAnswers('right');
   }
   if (!isRightAnswer) setAnswers('wrong');
+
   return isRightAnswer;
 };

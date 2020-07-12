@@ -5,6 +5,7 @@ import { setStatistic, setAnswers } from './statistic/setStatistic';
 import { getAllUserWords } from '../api/words/getAllUserWords';
 import { getGameWords } from './getGameWords';
 import { globalUser } from '../utils';
+import { getWordsLernedToday } from './statistic/getWordsLernedToday';
 
 export const startMainGame = async () => {
   const allUserWords = JSON.stringify(await getAllUserWords());
@@ -20,4 +21,5 @@ export const startMainGame = async () => {
   document.querySelector('.sentence--target-word').focus();
   setStatistic('clear');
   setAnswers('clear');
+  await getWordsLernedToday();
 };

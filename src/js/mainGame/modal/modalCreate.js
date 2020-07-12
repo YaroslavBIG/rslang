@@ -2,7 +2,7 @@ import { statisticPage } from '../statistic/statisticPage';
 import { getGameWords } from '../getGameWords';
 import { gameContent } from '../gameContent';
 
-export const modalCreate = (end) => {
+export const modalCreate = async (end) => {
   const modalBlock = document.querySelector('#modal');
   const modalWindow = document.querySelector('.game_main__modal');
 
@@ -13,7 +13,7 @@ export const modalCreate = (end) => {
     имейте в виду, что чем больше новых карточек вы посмотрите,
     тем больше вам надо будет повторять в ближайшее время.</p>
     `;
-  const statistic = statisticPage();
+  const statistic = await statisticPage();
 
   modalWindow.style.display = 'unset';
   if (end) {
