@@ -4,15 +4,15 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .loader {
   animation:spin 1s infinite linear;
   border:solid 2vmin transparent;
   border-radius:50%;
-  border-right-color:#09f;
-  border-top-color:#09f;
+  border-right-color:#ffff;
+  border-top-color:#ffff;
   box-sizing:border-box;
   height:20vmin;
   left:calc(50% - 10vmin);
@@ -24,8 +24,8 @@
     animation:spin 2s infinite linear;
     border:solid 2vmin transparent;
     border-radius:50%;
-    border-right-color:#3cf;
-    border-top-color:#3cf;
+    border-right-color:#c86665;
+    border-top-color:#c86665;
     box-sizing:border-box;
     content:"";
     height:16vmin;
@@ -38,8 +38,8 @@
     animation:spin 3s infinite linear;
     border:solid 2vmin transparent;
     border-radius:50%;
-    border-right-color:#6ff;
-    border-top-color:#6ff;
+    border-right-color:#8fafca;
+    border-top-color:#8fafca;
     box-sizing:border-box;
     content:"";
     height:12vmin;
