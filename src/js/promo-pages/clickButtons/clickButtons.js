@@ -1,7 +1,9 @@
 export const clickButtonIntervalRepeatContinue = () => {
-  document.getElementById('modal-footer__continue').addEventListener('click', () => {
-    document.getElementById('myModal').style.display = 'none';
-  });
+  document
+    .getElementById('modal-footer__continue')
+    .addEventListener('click', () => {
+      document.getElementById('myModal').style.display = 'none';
+    });
 };
 
 export const clickButtonSpeakIt = () => {

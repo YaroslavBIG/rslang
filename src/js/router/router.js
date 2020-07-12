@@ -13,7 +13,7 @@ const packWithHeader = [
   '/main/sprint',
   '/main/listening',
   '/main/savannah',
-  '/main/constructor',
+  '/main/word-puzzle',
 ];
 
 export const router = () => {

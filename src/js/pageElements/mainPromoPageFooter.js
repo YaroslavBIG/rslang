@@ -3,9 +3,9 @@ export const mainPromoPageFooter = () => `
   <span class="wrapper-footer__interface">Легкий в понимании интерфейс</span>
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide"><img src="./assets/main-game-for-swiper.png" style="width: 100%; height: 100%"></div>
+      <div class="swiper-slide"><img src="./assets/main-page-for-swiper.png" style="width: 100%; height: 100%"></div>
+      <div class="swiper-slide"><img src="./assets/sprint-game-for-swiper.png" style="width: 100%; height: 100%"></div>
     </div>
     <div class="swiper-pagination"></div>
     <div class="swiper-button-prev"></div>
@@ -13,13 +13,7 @@ export const mainPromoPageFooter = () => `
     <div class="swiper-scrollbar"></div>
   </div>
   <span class="wrapper-footer__familiarize">Краткий обзор приложения</span>
-  <iframe
-    src="https://www.youtube.com/embed/f4ioMGDQblI"
-    frameborder="0"
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-    class="wrapper-footer__video"
-  ></iframe>
+  <video class="wrapper-footer__video" src="./assets/view-of-app.mp4" controls></video>
   <div class="wrapper-footer__go-block">
     <span class="wrapper-footer__go">Вперёд! К новым начинаниям!</span>
   </div>
