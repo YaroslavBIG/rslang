@@ -21,6 +21,7 @@ import { startSprintGame } from '../mini-game-sprint/launchSprintGameMethods';
 import { launchStatisticsMethods } from '../statistics/launchStatisticsMethods';
 import { handlerSettingsPage, handlerMainPage } from '../pages';
 import { startMainGame } from '../mainGame/startGame';
+import { startIntervalGame } from '../mainGame';
 
 export const callsNecessaryMethods = (path) => {
   switch (path) {
@@ -37,6 +38,9 @@ export const callsNecessaryMethods = (path) => {
       startMainGame();
       break;
     }
+    case '/main/word-repeat':
+      startIntervalGame();
+      break;
     case '/main': {
       handlerMainPage();
       break;

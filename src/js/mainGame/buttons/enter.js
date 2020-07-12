@@ -1,7 +1,7 @@
 import { gameArrows } from './arrow';
 import { deleteAnswer } from '../utils';
 
-export const pressEnterKey = (event) => {
+export const pressEnterKey = (event, intervals = false) => {
   if (event.key === 'Enter' && document.querySelector('.game_main__modal').style.display !== 'unset') {
     event.preventDefault();
 
@@ -13,7 +13,7 @@ export const pressEnterKey = (event) => {
     if (isHint) {
       return deleteAnswer();
     }
-    if (modalIsClose) {
+    if (modalIsClose && !intervals) {
       return gameArrows({ target: 'right' });
     }
   }
