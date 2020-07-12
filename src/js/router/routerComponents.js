@@ -16,6 +16,7 @@ import {
   createAboutTheTeamPage,
   createStatisticsPage,
   createSettingsPage,
+  createVocabularyPage,
 } from '../pages';
 
 export const HomeComponent = {
@@ -55,7 +56,7 @@ export const WordPuzzleComponent = {
   render: () => '',
 };
 export const VocabularyComponent = {
-  render: () => '',
+  render: () => createVocabularyPage(),
 };
 export const StatisticComponent = {
   render: () => createStatisticsPage(),
