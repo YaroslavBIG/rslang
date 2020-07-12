@@ -8,17 +8,17 @@ export const getDayStatistic = async () => {
   const right = parseInt(localStorage.getItem('rightAnswers'), 10) || 0;
   const wrong = parseInt(localStorage.getItem('wrongAnswers'), 10) || 0;
 
-  const percent = Math.round(((right / (right + wrong)) * 100));
   const statistic = {
     newWords,
     today,
     correctSeries,
     right,
     wrong,
-    percent,
   };
 
-  putGameStatistics('main', statistic);
+  putGameStatistics('main', { ...statistic });
 
+  const percent = Math.round(((right / (right + wrong)) * 100));
+  statistic.percent = percent;
   return statistic;
 };

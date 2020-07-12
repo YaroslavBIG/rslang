@@ -17,9 +17,9 @@ export const startMainGame = async () => {
   const allWordsCount = sessionStorage.getItem('collectionLen');
   progressBar(0, allWordsCount);
   addMainGameListners();
-  localStorage.setItem('lastUserId', globalUser.get().userId);
   document.querySelector('.sentence--target-word').focus();
   setStatistic('clear');
   setAnswers('clear');
+  localStorage.setItem('lastUserId', globalUser.get().userId);
   await getWordsLernedToday();
 };

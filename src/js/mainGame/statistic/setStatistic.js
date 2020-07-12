@@ -19,8 +19,8 @@ export const setStatistic = (param) => {
       setLocStats('newWordsCount', (newWordsCount ? newWordsCount + 1 : 1));
       break;
     case 'clear':
+      setLocStats('newWordsCount');
       if (userId !== lastUserId || dayNow !== dayOfLastGame) {
-        setLocStats('newWordsCount');
         setLocStats('wordsLearnToday');
         setLocStats('correctAnswersSeries');
         setLocStats('rightAnswers');
