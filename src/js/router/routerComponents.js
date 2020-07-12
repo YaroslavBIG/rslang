@@ -14,6 +14,7 @@ import {
   createMainPage,
   createSprintGamePage,
   createAboutTheTeamPage,
+  createStatisticsPage,
   createSettingsPage,
   createSpeakItPage,
 } from '../pages';
@@ -58,7 +59,7 @@ export const VocabularyComponent = {
   render: () => '',
 };
 export const StatisticComponent = {
-  render: () => '',
+  render: () => createStatisticsPage(),
 };
 export const AboutUsComponent = {
   render: () => createAboutTheTeamPage(),

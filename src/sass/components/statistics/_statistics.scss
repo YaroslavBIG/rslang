@@ -1,0 +1,306 @@
+.statistics {
+
+  &-wrapper {
+    width: 70%;
+    height: auto;
+    margin: 45px auto 0;
+    user-select: none;
+  }
+
+  &-controller {
+    padding-top: 20px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &-chart {
+    padding-top: 30px;
+  }
+
+  &-details {
+    width: 110px;
+    height: 30px;
+    margin: 25px auto 0;
+    border: 1px solid #4687dc;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 2;
+  }
+
+  &-details:hover {
+    cursor: pointer;
+    background: #4687dc;
+    box-shadow: 1px 2px 3px #49493b;
+    text-shadow: 1px 0 1px #49493b;
+  }
+
+  &-details:active {
+    transform: scale(0.99, 0.97);
+  }
+
+  &__substrate {
+    position: absolute;
+    width: 100vw;
+    height: 108vh;
+    left: 0;
+    top: 0;
+    background-image: url(../assets/img/background-main-page.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: -99;
+  }
+
+}
+
+.game-btn {
+  width: 19%;
+  height: 55%;
+  margin: auto 0;
+  text-align: center;
+  font-size: 13px;
+  line-height: 2.1;
+  border: 1px solid #4687dc;
+  border-radius: 10px;
+}
+
+.game-btn:hover {
+  cursor: pointer;
+  background: #4687dc;
+  box-shadow: 1px 2px 3px #49493b;
+  text-shadow: 1px 0 1px #49493b;
+}
+
+.game-btn:active {
+  transform: scale(0.99, 0.97);
+}
+
+.active-btn {
+  background: #4687dc;
+}
+
+.details-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.substrate {
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.details-window {
+  width: 40%;
+  height: 60%;
+  position: absolute;
+  top: 95px;
+  left: 31%;
+  background: #ffffff;
+  text-align: center;
+  border-radius: 5%;
+
+  &__description {
+    height: 85%;
+    font-size: 21px;
+    font-style: italic;
+  }
+
+  &__close-btn {
+    height: 7%;
+    width: 30%;
+    margin: 0 auto;
+    border: 1px solid #4687dc;
+    line-height: 1.7;
+    border-radius: 10px;
+  }
+
+  &__close-btn:hover {
+    cursor: pointer;
+    background: #4687dc;
+    box-shadow: 1px 2px 3px #49493b;
+    text-shadow: 1px 0 1px #49493b;
+  }
+
+  &__close-btn:active {
+    transform: scale(0.99, 0.97);
+  }
+
+  &__study-description {
+    height: 85%;
+    font-size: 21px;
+    font-style: italic;
+  }
+
+}
+
+.description {
+
+  &__title {
+    margin: 0 0 30px 0;
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 35px;
+    font-style: normal;
+  }
+
+  &__study-title {
+    margin: 0 0 25px 0;
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 25px;
+    font-style: normal;
+  }
+
+}
+
+@media (min-width: 315px) and (max-width: 560px) {
+
+  .statistics {
+
+    &-wrapper {
+      width: 95%;
+    }
+
+    &-controller {
+      padding: 0;
+      flex-wrap: wrap;
+      height: auto;
+    }
+
+    &-chart {
+      padding: 10px 0 0;
+    }
+
+    &-details {
+      width: 80px;
+      height: 24px;
+      font-size: 11px;
+      border-radius: 10px;
+    }
+
+  }
+
+  .game-btn {
+    width: 40%;
+    margin-bottom: 10px;
+  }
+
+  .game-btn:nth-last-child(1) {
+    font-size: 13px;
+    width: 60%;
+    line-height: 2;
+  }
+
+  .details-window {
+    width: 70%;
+    height: 75%;
+    top: 30px;
+    left: 16%;
+
+    &__description {
+      font-size: 19px;
+    }
+
+    &__study-description {
+      font-size: 18px;
+    }
+
+    &__close-btn {
+      line-height: 2;
+      font-size: 13px;
+    }
+
+  }
+
+  .description {
+
+    &__title {
+      padding-top: 10px;
+      font-size: 24px;
+    }
+
+    &__study-title {
+      font-size: 15px;
+    }
+
+  }
+
+}
+
+@media (min-width: 561px) and (max-width: 1100px) {
+
+  .statistics {
+
+    &-wrapper {
+      width: 95%;
+    }
+
+    &-controller {
+      padding: 0;
+      flex-wrap: wrap;
+      height: auto;
+    }
+
+    &-chart {
+      padding: 10px 0 0;
+    }
+
+    &-details {
+      width: 125px;
+      height: 35px;
+      font-size: 18px;
+      border-radius: 10px;
+    }
+
+  }
+
+  .game-btn {
+    width: 30%;
+    margin-bottom: 10px;
+    font-size: 19px;
+  }
+
+  .game-btn:nth-last-child(1) {
+    width: 45%;
+    font-size: 19px;
+    line-height: 2.1;
+  }
+
+  .game-btn:nth-last-child(2) {
+    width: 45%;
+  }
+
+  .details-window {
+    width: 70%;
+    height: 65%;
+    top: 50px;
+    left: 16%;
+
+    &__description {
+      font-size: 28px;
+    }
+
+    &__close-btn {
+      font-size: 19px;
+    }
+
+  }
+
+  .description__title {
+    padding: 35px 0 40px;
+    font-size: 35px;
+  }
+
+}

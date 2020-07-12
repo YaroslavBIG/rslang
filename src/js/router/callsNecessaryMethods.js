@@ -15,6 +15,7 @@
 
 import { controlForm, submitForm, chooseIcon } from '../form';
 import { startSprintGame } from '../mini-game-sprint/launchSprintGameMethods';
+import { launchStatisticsMethods } from '../statistics/launchStatisticsMethods';
 import { handlerSettingsPage, handlerMainPage } from '../pages';
 import { launchGame } from '../speak-it-game';
 
@@ -35,6 +36,10 @@ export const callsNecessaryMethods = (path) => {
     }
     case '/main/sprint': {
       startSprintGame();
+      break;
+    }
+    case '/statistic': {
+      launchStatisticsMethods();
       break;
     }
     case '/main/settings': {
