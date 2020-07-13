@@ -2,8 +2,9 @@ import { statisticPage } from '../statistic/statisticPage';
 import { getGameWords } from '../getGameWords';
 import { gameContent } from '../gameContent';
 import { setLocStats } from '../utils/setLocStats';
+import { intervalGameContent } from '../interval';
 
-export const modalCreate = async (end) => {
+export const modalCreate = async (end, game = 'main') => {
   const modalBlock = document.querySelector('#modal');
   const modalWindow = document.querySelector('.game_main__modal');
 
@@ -17,7 +18,7 @@ export const modalCreate = async (end) => {
   const statistic = await statisticPage();
 
   modalWindow.style.display = 'unset';
-  if (end) {
+  if (end === 'end') {
     modalBlock.innerHTML = `${gameEnd}${statistic}`;
     return;
   }
@@ -29,7 +30,7 @@ export const modalCreate = async (end) => {
     sessionStorage.setItem('wordNum', 0);
     modalWindow.style.display = 'none';
     setLocStats('newWordsCount');
-    gameContent(gameData);
+    game === 'main' ? gameContent(gameData) : intervalGameContent(gameData);
   });
 
   modalBlock.innerHTML = statistic;

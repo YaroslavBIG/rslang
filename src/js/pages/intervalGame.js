@@ -7,7 +7,7 @@ export const intervalGameRender = () => `
     </div>
     <div class="modal__button_block">
       <div class="button__main-game button__main button"><a href="#/main">Выход</a></div>
-      <button class="button__main-game button">Продолжить</button>
+      <button class="button__main-game button" id="continue"><a href="#/main/settings">Продолжить</a></button>
     </div>
   </div>
 </div>
@@ -18,7 +18,7 @@ export const intervalGameRender = () => `
           <div class="card-game">
               <div class="card-text card-text--quest">
                 <span class="sentence sentence--first-part"></span>
-                <div class="sentence sentence--target-word" id="user_input"contenteditable></div>
+                <div class="sentence sentence--target-word" id="user_input" contenteditable></div>
                 <span class="sentence sentence--last-part"></span>
               </div>
               <div class="separator separator--blue"><hr></div>

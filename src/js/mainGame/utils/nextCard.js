@@ -12,7 +12,7 @@ export const nextCard = (arrowDirection, game = 'main') => {
   const wordsLearnToday = parseInt(localStorage.getItem('wordsLearnToday'), 10) || 0;
 
   if (cardsLimit <= wordsLearnToday) {
-    return modalCreate('end');
+    return modalCreate('end', game);
   }
 
   const featureWordNum = nextWordNum(arrowDirection);
@@ -25,7 +25,7 @@ export const nextCard = (arrowDirection, game = 'main') => {
     const progress = parseInt(sessionStorage.getItem('wordNum'), 10);
     const progressAll = JSON.parse(sessionStorage.getItem('apiWords')).length;
     progressBar(progress + 1, progressAll);
-    return modalCreate();
+    return modalCreate('continue', game);
   }
 
   if (featureWordNum !== currentWordNum) {

@@ -9,3 +9,4 @@ export { deleteAnswer } from './deleteAnswer';
 export { nextWordNum } from './nextWordNum';
 export { nextCard } from './nextCard';
 export { setWordNum } from './setWordNum';
+export { isHint } from './isHint';

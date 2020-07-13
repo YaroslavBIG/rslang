@@ -6,17 +6,18 @@ import { getAllUserWords } from '../api/words/getAllUserWords';
 import { getGameWords } from './getGameWords';
 import { globalUser } from '../utils';
 import { getWordsLernedToday } from './statistic/getWordsLernedToday';
+import { intervalGameContent } from './interval';
 
-export const startMainGame = async () => {
+export const startMainGame = async (intervals = false) => {
   const allUserWords = JSON.stringify(await getAllUserWords());
 
   sessionStorage.setItem('allUserWords', allUserWords);
 
   const gameData = await getGameWords();
-  gameContent(gameData);
+  intervals ? intervalGameContent(gameData) : gameContent(gameData);
   const allWordsCount = sessionStorage.getItem('collectionLen');
   progressBar(0, allWordsCount);
-  addMainGameListners();
+  addMainGameListners(intervals);
   document.querySelector('.sentence--target-word').focus();
   setStatistic('clear');
   setAnswers('clear');
