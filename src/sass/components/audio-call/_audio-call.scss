@@ -1,0 +1,73 @@
+.audio-call-wrap {
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.audio-call-head {
+    border: solid 1px black;
+    width: 100%;
+    padding: 1rem;
+}
+
+.audio-call-main {
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.audio-call-content {
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 40%;
+    width: 60%;
+    padding: 1rem;
+    &__word__img {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+    }
+    &__word__word {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+    }
+    &__audio {
+        padding: 20px;
+    }
+    &__audio-img {
+        border-radius: 100%;
+        width: 100px;
+        height: 100px;
+        &:hover {
+            cursor: pointer;
+            box-shadow: -1px 0px 41px 6px rgba(171,210,252,1);
+        }
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.audio-call-answers {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    &__item {
+        border: solid 1px gray;
+        padding: 5px 20px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
