@@ -11,7 +11,7 @@ const packWithHeader = [
   '/main/english-puzzle',
   '/main/speak-it',
   '/main/sprint',
-  '/main/listening',
+  '/main/audition',
   '/main/savannah',
   '/main/constructor',
 ];

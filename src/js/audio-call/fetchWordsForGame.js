@@ -8,7 +8,7 @@ export const fetchWordsForGame = async () => {
   const filter = { $and: [{ 'userWord.optional.deleted': false }] };
   const userWords = await getAggregatedWords(filter);
   const randomPage = randomInteger(0, 29);
-  if (userWords[0].paginatedResults.length >= 20) {
+  if (userWords[0].paginatedResults.length >= 15) {
     wordsForGame = userWords[0].paginatedResults;
   } else {
     wordsForGame = await getWords(randomPage);

@@ -3,4 +3,5 @@ export const DATA = {
   rightAnswer: 0,
   wrongAnswer: 0,
   indexForGame: 0,
+  points: 0,
 };
