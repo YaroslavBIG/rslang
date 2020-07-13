@@ -13,7 +13,7 @@ export const mainPromoPageFooter = () => `
     <div class="swiper-scrollbar"></div>
   </div>
   <span class="wrapper-footer__familiarize">Краткий обзор приложения</span>
-  <video class="wrapper-footer__video" src="./assets/view-of-app.mp4" controls></video>
+  <video class="wrapper-footer__video" src="./assets/view-of-app.mp4" controls width="100%"></video>
   <div class="wrapper-footer__go-block">
     <span class="wrapper-footer__go">Вперёд! К новым начинаниям!</span>
   </div>

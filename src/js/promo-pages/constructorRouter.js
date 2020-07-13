@@ -8,7 +8,7 @@ export const constructorGame = () => `
         <div class="modal-body">
           <p class="modal-body__description">Constructor - это мини-игра в которой надо собирать слова с помощью предоставленных букв.</p>
           <p>Вы имеете карточки с буквами кликая по которым вы собираете буквы, кликать по карточкам надо в правильном порядке.</p>
-          <video class="modal-body__video" src="./assets/video-constructor-game.mp4"></video>
+          <video class="modal-body__video" src="./assets/video-constructor-game.mp4" controls></video>
         </div>
         <div class="modal-footer">
           <button class="modal-footer__button-start" id="constructorGame"><span class="modal-footer__button-name">Начать</span></button>

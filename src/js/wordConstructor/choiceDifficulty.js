@@ -1,7 +1,10 @@
-import { fetchSprintGameData } from './fetchWordConstructorGameData';
+import { fetchConstructorGameData } from './fetchWordConstructorGameData';
 import { randomInteger } from '../utils';
+import { answerHandler } from './answerHandler';
+import { cutWord } from './cutWord';
+import { userWordHandler } from './userWordHandler';
 
-export function choiceDifficulty() {
+export const choiceDifficulty = () => {
   document.getElementById('choice').onclick = function () {
     var select = document.getElementById('select');
     var value = select.value;
@@ -14,9 +17,13 @@ export function choiceDifficulty() {
         'block';
       document.getElementById('choice').style.display = 'none';
       document.getElementById('select').style.display = 'none';
-      fetchSprintGameData(randomInteger(0, 59), value);
+      /*if (n == arrUserWords) {
+        fetchConstructorGameData(randomInteger(0, 59), value);
+      } else {*/
+      userWordHandler();
+      //}
     } else {
       alert('Уровень не выбран!');
     }
   };
-}
+};

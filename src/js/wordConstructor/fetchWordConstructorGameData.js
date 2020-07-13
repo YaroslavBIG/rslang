@@ -5,7 +5,7 @@ import { volume } from './volume';
 import { dontKnowButton } from './dontKnowButton';
 import { autoProponuciation } from './autoPronunciation';
 
-export const fetchSprintGameData = async (page, group) => {
+export const fetchConstructorGameData = async (page, group) => {
   const gameData = await getWords(page, group, 10, 2);
   console.log(gameData);
   if (gameData) {

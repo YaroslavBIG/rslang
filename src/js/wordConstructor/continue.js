@@ -4,6 +4,8 @@ import { statisticPage } from './statisticPage';
 import { restartWordConstructor } from './restartWordConstructor';
 import { dontKnowButton } from './dontKnowButton';
 import { constantsData } from './constants';
+import { choiceDifficulty } from './choiceDifficulty';
+import { userWordHandler } from './userWordHandler';
 
 var randomWord = Math.ceil(Math.random() * 19);
 var randomPage = Math.ceil(Math.random() * 29);
@@ -62,7 +64,8 @@ export function continuee() {
       document.getElementsByClassName(
         'game-block__footer-continue'
       )[0].style.display = 'none';
-      fetchSprintGameData(randomInteger(0, 59), randomInteger(0, 5));
+      userWordHandler();
+      //fetchSprintGameData(randomInteger(0, 59), randomInteger(0, 5));
     });
   document.addEventListener('keydown', function (e) {
     if (
@@ -119,7 +122,7 @@ export function continuee() {
         document.getElementsByClassName(
           'game-block__footer-continue'
         )[0].style.display = 'none';
-        fetchSprintGameData(randomInteger(0, 59), randomInteger(0, 5));
+        //fetchSprintGameData(randomInteger(0, 59), randomInteger(0, 5));
       }
     }
   });

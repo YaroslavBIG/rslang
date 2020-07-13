@@ -10,20 +10,8 @@ export function launchWordConstructorGame() {
   if (constantsData.checked == true) {
     document.getElementById('checkbox').checked = constantsData.checked;
   }
-  var userWords = getAllUserWords();
-  if (userWords.length == 0) {
-    var confirirmed = confirm(
-      'У вас нету изученных слов. Предлагаем изучить слова в основной игре или играть со случайными словами.'
-    );
-    if (confirirmed) {
-      document.getElementById('confirmed').click();
-    } else {
-      document.getElementById('cancellation').click();
-    }
-  } else {
-  }
-  exitInGame();
-  exitInStatistic();
   continuee();
   choiceDifficulty();
+  exitInGame();
+  exitInStatistic();
 }

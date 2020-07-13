@@ -38,7 +38,6 @@ export const wordConstructorPage = () => `
       <span class="game-block__context-text"></span>
       </div>
     </div>
-    <audio></audio>
     <div class="game-block__footer">
       <span class="game-block__enter">Enter</span>
       <button class="game-block__footer-dont-know-button">Не знаю :(</button>
