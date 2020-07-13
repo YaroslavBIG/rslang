@@ -1,3 +1,6 @@
+import { startSprintGame } from '../../mini-game-sprint/launchSprintGameMethods';
+import { launchWordConstructorGame } from '../../wordConstructor/launchWordConstructorGame';
+
 export const clickButtonIntervalRepeatContinue = () => {
   document
     .getElementById('modal-footer__continue')
@@ -33,11 +36,13 @@ export const clickButtonListeningGame = () => {
 export const clickButtonSprintGame = () => {
   document.getElementById('sprintGame').addEventListener('click', () => {
     document.getElementById('myModal').style.display = 'none';
+    startSprintGame();
   });
 };
 
 export const clickButtonConstructorGame = () => {
   document.getElementById('constructorGame').addEventListener('click', () => {
     document.getElementById('myModal').style.display = 'none';
+    launchWordConstructorGame();
   });
 };

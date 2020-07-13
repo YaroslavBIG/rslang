@@ -17,10 +17,7 @@
  */
 
 import { controlForm, submitForm, chooseIcon } from '../form';
-import { startSprintGame } from '../mini-game-sprint/launchSprintGameMethods';
-import { launchStatisticsMethods } from '../statistics/launchStatisticsMethods';
 import { handlerSettingsPage, handlerMainPage } from '../pages';
-import { launchWordConstructorGame } from '../wordConstructor/launchWordConstructorGame';
 import {
   clickButtonConstructorGame,
   clickButtonSprintGame,
@@ -47,11 +44,6 @@ export const callsNecessaryMethods = (path) => {
     }
     case '/main/sprint': {
       clickButtonSprintGame();
-      startSprintGame();
-      break;
-    }
-    case '/statistic': {
-      launchStatisticsMethods();
       break;
     }
     case '/main/settings': {
@@ -60,14 +52,15 @@ export const callsNecessaryMethods = (path) => {
     }
     case '/main/word-puzzle': {
       clickButtonConstructorGame();
-      launchWordConstructorGame();
       break;
     }
     case '/main/speak-it': {
       clickButtonSpeakIt();
+      break;
     }
     case '/main/word-repeat': {
       clickButtonIntervalRepeatContinue();
+      break;
     }
     default: {
       return 'default';
