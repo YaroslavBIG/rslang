@@ -1,10 +1,11 @@
 import { checkInput } from '../checkInput';
 import { checkStart } from '../checkStart';
 import { recognition } from '../utils/recognition';
-import { start, textEnd, textStart } from '../utils/constants';
+import { start, phrases } from '../utils/constants';
 
 export const clickStart = async () => {
   let isStart = start.get();
+  const { textEnd, textStart } = phrases;
 
   document.querySelector('#start-speak').addEventListener('click', () => {
     isStart = !isStart;

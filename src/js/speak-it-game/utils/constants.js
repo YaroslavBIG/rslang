@@ -8,5 +8,9 @@ export const start = {
   },
 };
 
-export const textEnd = 'Закончить говорить';
-export const textStart = 'Начать говорить';
+export const phrases = {
+  textEnd: 'Закончить говорить',
+  textStart: 'Начать говорить',
+  textUserWords: 'Повторяем Ваши слова!',
+  textNoWords: 'Недостаточно Ваших слов!',
+};
