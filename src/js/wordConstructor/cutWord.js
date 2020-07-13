@@ -1,10 +1,10 @@
 import { answerHandler } from './answerHandler';
 export function cutWord(
   randomWord,
-  randomIamge,
+  randomImage,
   randomTextExample,
-  randomAudio,
-  randomTranslate
+  randomTranslate,
+  randomAudio
 ) {
   document.getElementsByClassName(
     'game-block__header-name'
@@ -26,9 +26,9 @@ export function cutWord(
   }
   answerHandler(
     randomWord,
-    randomIamge,
+    randomImage,
     randomTextExample,
-    randomAudio,
-    randomTranslate
+    randomTranslate,
+    randomAudio
   );
 }

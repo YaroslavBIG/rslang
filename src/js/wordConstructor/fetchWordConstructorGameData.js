@@ -27,9 +27,9 @@ export const fetchConstructorGameData = async (page, group) => {
 
     cutWord(
       randomWord,
-      randomTranslate,
       randomImage,
       randomTextExample,
+      randomTranslate,
       randomAudio
     );
     volume(randomAudio);

@@ -4,8 +4,8 @@ export function answerHandler(
   randomWord,
   randomImage,
   randomText,
-  randomAudio,
-  randomTranslate
+  randomTranslate,
+  randomAudio
 ) {
   var letterArr2 = randomWord.split('');
   var n = 0;
@@ -62,7 +62,7 @@ export function answerHandler(
           )[0].style.display = 'inline-block';
           document.getElementsByClassName(
             'game-block__context-image'
-          )[0].src = `https://raw.githubusercontent.com/irinainina/rslang/rslang-data/data/${randomImage}`;
+          )[0].src = `${constantsData.backendUrl}${randomImage}`;
           document.getElementsByClassName(
             'game-block__context-image'
           )[0].style.display = 'block';
