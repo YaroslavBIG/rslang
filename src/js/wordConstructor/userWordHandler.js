@@ -9,11 +9,11 @@ import { randomInteger } from '../utils/index';
 var n = 0;
 export const userWordHandler = async () => {
   var arrUserWords = await userWords();
-  var word = result[n].word;
-  var image = result[n].image;
-  var text = result[n].textExample;
-  var audio = result[n].audio;
-  var translate = result[n].wordTranslate;
-  cutWord(word, image, text, audio, translate, result);
+  var word = arrUserWords[n].word;
+  var image = arrUserWords[n].image;
+  var text = arrUserWords[n].textExample;
+  var audio = arrUserWords[n].audio;
+  var translate = arrUserWords[n].wordTranslate;
+  cutWord(word, image, text, audio, translate);
   n++;
 };
