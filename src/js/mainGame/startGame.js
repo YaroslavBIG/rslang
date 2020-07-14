@@ -13,7 +13,8 @@ export const startMainGame = async (intervals = false) => {
 
   sessionStorage.setItem('allUserWords', allUserWords);
 
-  const gameData = await getGameWords();
+  const gameData = intervals ? await getGameWords('intervals') : await getGameWords();
+
   intervals ? intervalGameContent(gameData) : gameContent(gameData);
   const allWordsCount = sessionStorage.getItem('collectionLen');
   progressBar(0, allWordsCount);
