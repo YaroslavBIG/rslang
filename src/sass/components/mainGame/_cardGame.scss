@@ -79,9 +79,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('../assets/img/backMainGame.svg');
-  background-size: cover;
-  background-position: center center;
+  background: url('../assets/img/backMainGame.svg') no-repeat center / cover;
   min-height: calc(100vh - 64px - 44px);
   &_inner{
     max-width: 600px;
