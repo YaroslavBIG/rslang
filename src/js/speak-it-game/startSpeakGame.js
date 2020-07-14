@@ -1,10 +1,10 @@
 import { getWords } from '../api';
 import { getAllCards } from './creating/getAllCards';
 import { showPlayDescription } from './showing/showPlayDescription';
-import { returnUserWordsArr } from './returnUserWordsArr';
+import { returnUserWordsArr } from './utils/returnUserWordsArr';
 import { phrases } from './utils/constants';
-import { shuffleArray } from './shuffleArray';
-import { disabledOptions } from './disabledOptions';
+import { shuffleArray } from './utils/shuffleArray';
+import { disabledOptions } from './showing/disabledOptions';
 
 export const startSpeakGame = async (page, group, isRepeatWithout) => {
   const loader = document.querySelector('.spinner-overlay');

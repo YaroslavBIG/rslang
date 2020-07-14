@@ -1,4 +1,4 @@
-import { getMixWords } from '../api/words/getMixWords';
+import { getMixWords } from '../../api/words/getMixWords';
 
 export const returnUserWordsArr = async () => {
   const resp = await getMixWords();

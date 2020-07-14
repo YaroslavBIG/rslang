@@ -19,4 +19,6 @@ export const phrases = {
   textEnd: 'Закончить говорить',
   textStart: 'Начать говорить',
   textUserWords: 'Повторяем Ваши слова!',
+  textResult: 'Результат',
+  textEndGame: 'Закончить игру',
 };

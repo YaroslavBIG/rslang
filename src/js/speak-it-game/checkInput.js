@@ -1,8 +1,5 @@
-import { clickContinueWithoutRepeat } from './buttons/clickContinueWithoutRepeat';
-import { putGameStatistics } from '../api';
 import { start } from './utils/constants';
-import { clickContinueWithRepeat } from './buttons/clickContinueWithRepeat';
-import { showStatistics } from './showing/showStatistics';
+import { callMethodsForStat } from './callMethodsForStat';
 
 export const checkInput = () => {
   const input = document.querySelector('.hints-input');
@@ -21,11 +18,7 @@ export const checkInput = () => {
             right: rightCount,
             wrong: allRight - rightCount,
           };
-          start.set(false);
-          putGameStatistics('speakit', obj);
-          showStatistics(obj, false);
-          clickContinueWithoutRepeat();
-          clickContinueWithRepeat();
+          callMethodsForStat(obj);
         }
       }
     });
