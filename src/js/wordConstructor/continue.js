@@ -99,13 +99,9 @@ export function continuee() {
         t++;
         b++;
         if (b == 11) {
-          document.onkeydown = function () {};
-          var statisticBlock = document.getElementsByClassName(
-            'statistic-block'
-          );
+          var statisticBlock = document.getElementsByClassName('statistic-block');
           statisticBlock[0].style.display = 'flex';
-          document.getElementsByClassName('game-block')[0].style.display =
-            'none';
+          document.getElementsByClassName('game-block')[0].style.display = 'none';
           document.getElementsByClassName(
             'wrapper-block__settings-and-raunds-description'
           )[0].style.display = 'none';
@@ -122,6 +118,7 @@ export function continuee() {
         document.getElementsByClassName(
           'game-block__footer-continue'
         )[0].style.display = 'none';
+        userWordHandler();
         //fetchSprintGameData(randomInteger(0, 59), randomInteger(0, 5));
       }
     }

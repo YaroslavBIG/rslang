@@ -18,7 +18,7 @@ export function answerHandler(
         button.style.background = '#28C38A';
         document
           .getElementsByClassName('game-block__body-cell')
-          [n].appendChild(button);
+        [n].appendChild(button);
         button.style.margin = '0 auto';
         button.setAttribute('disabled', 'true');
         button.style.cursor = 'auto';
@@ -49,9 +49,11 @@ export function answerHandler(
               'statistic-block__corrects'
             )[0].innerHTML += `<p>${randomWord} — ${randomTranslate}</p>`;
           }
+          alert(constantsData.checked);
           if (constantsData.checked == true) {
             var sound = document.createElement('audio');
             sound.src = `https://raw.githubusercontent.com/irinainina/rslang/rslang-data/data/${randomAudio}`;
+            console.log(sound);
             sound.play();
           }
           document.getElementsByClassName(

@@ -5,8 +5,10 @@ import { saveSettings } from '../form';
 import { exitInGame } from './exitInGame';
 import { exitInStatistic } from './exitInStatistic';
 import { getAllUserWords } from '../api/words/getAllUserWords';
+import { autoProponuciation } from './autoPronunciation';
 
 export function launchWordConstructorGame() {
+  autoProponuciation();
   if (constantsData.checked == true) {
     document.getElementById('checkbox').checked = constantsData.checked;
   }
