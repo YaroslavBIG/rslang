@@ -15,7 +15,7 @@ export const cardsBlockListner = (e) => {
       playAudio('files/correct.mp3');
       audioImgContainer.classList.add('hide');
       mainWordContent.classList.remove('hide');
-      cardAnswer.classList.add('active');
+      cardAnswer.classList.add('right-answer');
       DATA.rightAnswer += 1;
       DATA.indexForGame += 1;
       DATA.points += 10;
