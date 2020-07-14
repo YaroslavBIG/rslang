@@ -1,7 +1,7 @@
 import { getDayStatistic } from './getStatistic';
 
-export const statisticPage = async () => {
-  const statistic = await getDayStatistic();
+export const statisticPage = async (game) => {
+  const statistic = await getDayStatistic(game);
 
   return `
   <h2>Статистика на сегодня</h2>

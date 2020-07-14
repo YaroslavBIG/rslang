@@ -32,7 +32,7 @@ export const intervalGameRender = () => `
         <button class="button__main-game button intervals_answer" id="answer">Показать ответ</button>
         </div>
         <div class="word__diff" id="wordDiff">
-          <button class="button__main-game button intervals_diff" id="agan">Снова</button>
+          <button class="button__main-game button intervals_diff" id="again">Снова</button>
           <button class="button__main-game button intervals_diff" id="hard">Трудно</button>
           <button class="button__main-game button intervals_diff" id="good">Хорошо</button>
           <button class="button__main-game button intervals_diff" id="week">Легко</button>

@@ -16,7 +16,7 @@ export const modalCreate = async (end, game = 'main') => {
     имейте в виду, что чем больше новых карточек вы посмотрите,
     тем больше вам надо будет повторять в ближайшее время.</p>
     `;
-  const statistic = await statisticPage();
+  const statistic = await statisticPage(game);
 
   modalWindow.style.display = 'unset';
   if (end === 'end') {
