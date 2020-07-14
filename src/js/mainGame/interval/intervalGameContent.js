@@ -1,6 +1,7 @@
 import { getSettings, setStorageFromObject, setWordNum } from '../utils';
 import { progressBar } from '../progressBar';
 import { getTextWidth, addComma, cutTags } from '../../utils';
+import { spinnerControl } from '../utils/spinnerControl';
 
 export const intervalGameContent = async (data = null, wordNum = 0) => {
   if (data) sessionStorage.setItem('apiWords', JSON.stringify(data));
@@ -66,6 +67,7 @@ export const intervalGameContent = async (data = null, wordNum = 0) => {
   wordBlock.focus();
 
   const cardGame = document.querySelector('.card-game');
+  spinnerControl('off');
   setTimeout(() => {
     cardGame.classList.add('transform--scale');
   }, 1000);

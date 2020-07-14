@@ -7,8 +7,10 @@ import { getGameWords } from './getGameWords';
 import { globalUser } from '../utils';
 import { getWordsLernedToday } from './statistic/getWordsLernedToday';
 import { intervalGameContent } from './interval';
+import { spinnerControl } from './utils/spinnerControl';
 
 export const startMainGame = async (intervals = false) => {
+  spinnerControl('on');
   const allUserWords = JSON.stringify(await getAllUserWords());
 
   sessionStorage.setItem('allUserWords', allUserWords);
@@ -24,4 +26,5 @@ export const startMainGame = async (intervals = false) => {
   setAnswers('clear');
   localStorage.setItem('lastUserId', globalUser.get().userId);
   await getWordsLernedToday();
+  spinnerControl('off');
 };

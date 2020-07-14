@@ -4,6 +4,7 @@ import { dataUrl } from '../api';
 import { setStorageFromObject } from './utils';
 import { getSettings } from './utils/getSettings';
 import { setWordNum } from './utils/setWordNum';
+import { spinnerControl } from './utils/spinnerControl';
 
 export const gameContent = async (data = null, wordNum = 0) => {
   if (data) sessionStorage.setItem('apiWords', JSON.stringify(data));
@@ -94,6 +95,7 @@ export const gameContent = async (data = null, wordNum = 0) => {
   wordBlock.focus();
 
   const cardGame = document.querySelector('.card-game');
+  spinnerControl('off');
   setTimeout(() => {
     cardGame.classList.add('transform--scale');
   }, 1000);

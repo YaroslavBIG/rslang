@@ -3,6 +3,7 @@ import { getGameWords } from '../getGameWords';
 import { gameContent } from '../gameContent';
 import { setLocStats } from '../utils/setLocStats';
 import { intervalGameContent } from '../interval';
+import { spinnerControl } from '../utils/spinnerControl';
 
 export const modalCreate = async (end, game = 'main') => {
   const modalBlock = document.querySelector('#modal');
@@ -26,6 +27,7 @@ export const modalCreate = async (end, game = 'main') => {
   const modalContinue = document.querySelector('#continue');
   modalContinue.addEventListener('click', async (event) => {
     event.preventDefault();
+    spinnerControl('on');
     const gameData = await getGameWords();
     sessionStorage.setItem('wordNum', 0);
     modalWindow.style.display = 'none';
