@@ -1,4 +1,7 @@
-export const recognition = (isStart) => {
+import { start } from './constants';
+import { clickStart } from '../buttons/clickStart';
+
+export const recognition = () => {
   const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
   const recognitionSpeech = new SpeechRecognition();
@@ -7,21 +10,23 @@ export const recognition = (isStart) => {
 
   const input = document.querySelector('.hints-input');
 
-  if (isStart) {
-    recognitionSpeech.start();
-    recognitionSpeech.addEventListener('result', (ev) => {
-      const transcript = Array.from(ev.results)
-        .map((result) => result[0])
-        .map((result) => result.transcript)
-        .join('');
-      input.value = transcript;
-      input.focus();
-    });
-    recognitionSpeech.onend = () => {
-      input.blur();
+  clickStart(recognitionSpeech);
+
+  recognitionSpeech.onresult = (ev) => {
+    const transcript = Array.from(ev.results)
+      .map((result) => result[0])
+      .map((result) => result.transcript)
+      .join('');
+    input.value = transcript;
+    input.focus();
+  };
+  recognitionSpeech.onend = () => {
+    input.blur();
+    const rec = start.getRecog();
+    if (rec) {
       recognitionSpeech.start();
-    };
-  } else {
-    recognitionSpeech.stop();
-  }
+    } else {
+      recognitionSpeech.stop();
+    }
+  };
 };

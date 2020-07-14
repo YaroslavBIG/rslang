@@ -2,8 +2,8 @@ import { startSpeakGame } from './startSpeakGame';
 import { changeLevel } from './utils/changeLevel';
 import { clickRestart } from './buttons/clickRestart';
 import { clickResult } from './buttons/clickResult';
-import { clickStart } from './buttons/clickStart';
 import { spinner } from '../spinner/spinner';
+import { recognition } from './utils/recognition';
 
 export const launchGame = () => {
   const loader = spinner();
@@ -12,5 +12,5 @@ export const launchGame = () => {
   changeLevel();
   clickRestart();
   clickResult();
-  clickStart();
+  recognition();
 };

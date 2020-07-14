@@ -11,7 +11,7 @@ export const startSpeakGame = async (page, group, isRepeatWithout) => {
   const phrase = document.querySelector('.game__score');
   loader.style = 'display: flex; z-index: 4';
 
-  const { textNoWords, textUserWords } = phrases;
+  const { textUserWords } = phrases;
   const resultResp = await returnUserWordsArr();
 
   let result = null;
@@ -21,7 +21,7 @@ export const startSpeakGame = async (page, group, isRepeatWithout) => {
     result = resultResp;
   } else {
     disabledOptions(false);
-    phrase.textContent = textNoWords;
+    phrase.textContent = '';
     result = await getWords(page, group, 0, 10);
   }
 

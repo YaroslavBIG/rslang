@@ -1,21 +1,21 @@
-import { checkInput } from '../checkInput';
-import { checkStart } from '../checkStart';
-import { recognition } from '../utils/recognition';
 import { start, phrases } from '../utils/constants';
+import { checkStart } from '../checkStart';
+import { checkInput } from '../checkInput';
 
-export const clickStart = async () => {
-  let isStart = start.get();
+export const clickStart = (speech) => {
   const { textEnd, textStart } = phrases;
 
   document.querySelector('#start-speak').addEventListener('click', () => {
-    isStart = !isStart;
+    const isStart = !start.get();
     if (isStart) {
+      start.setRecog(true);
+      speech.start();
       checkStart('none', true, textEnd);
-      recognition(true);
       checkInput();
     } else {
+      start.setRecog(false);
+      speech.stop();
       checkStart('auto', false, textStart);
-      recognition(false);
     }
     start.set(isStart);
   });
