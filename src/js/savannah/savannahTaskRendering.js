@@ -7,11 +7,15 @@ export const savannahTaskRendering = (data) => {
   const third = document.getElementById('third-word');
   const fourth = document.getElementById('fourth-word');
   const question = document.getElementById('question');
+  const questionId = randomInteger(0, 3);
 
   wordBlockData(first, data, 0);
   wordBlockData(second, data, 1);
   wordBlockData(third, data, 2);
   wordBlockData(fourth, data, 3);
-  question.innerHTML = data[randomInteger(0, 3)].wordTranslate;
-  question.dataset.id = data[randomInteger(0, 3)].id;
+
+  if (question) {
+    question.innerHTML = data[questionId].wordTranslate;
+    question.dataset.id = data[questionId].id;
+  }
 };

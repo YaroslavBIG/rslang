@@ -120,3 +120,34 @@
   top: 60%;
   margin-left: 15%;
 }
+
+.game-over-window {
+  width: 250px;
+  height: 400px;
+  margin: 0 auto;
+  text-align: center;
+
+  & button {
+    margin-top: 30px;
+    text-align: center;
+    line-height: 2.3;
+    border: 1px solid #343a40;
+    border-radius: 15px;
+    width: 150px;
+  }
+
+  & h1 {
+    margin-bottom: 40px;
+  }
+
+  & button:hover {
+    cursor: pointer;
+    background: #938e8e;
+    box-shadow: 1px 1px 1px #525050;
+  }
+
+  & button:active {
+    transform: scale(0.99, 0.98);
+  }
+
+}
