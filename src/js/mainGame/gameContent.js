@@ -45,13 +45,13 @@ export const gameContent = async (data = null, wordNum = 0) => {
   };
   setStorageFromObject(addToSessionStorage);
 
+  const cardWrapper = document.querySelector('#cardWrapper');
   const cardQuestBlock = document.querySelector('.card-text--quest');
   const firstPartBlock = document.querySelector('.sentence--first-part');
   const wordBlock = document.querySelector('.sentence--target-word');
   const lastPartBlock = document.querySelector('.sentence--last-part');
   const textTranslateBlock = document.querySelector('.card-text--translate');
   const wordTranslateBlock = document.querySelector('.hint--translate_word');
-  const wordImageBlock = document.querySelector('.hint--image');
   const wordTextExample = document.querySelector('.hint--text_example');
 
   const font = cardQuestBlock.computedStyleMap().get('font').toString();
@@ -76,8 +76,7 @@ export const gameContent = async (data = null, wordNum = 0) => {
     const img = new Image();
     img.src = `${dataUrl}${image}`;
     img.onload = () => {
-      wordImageBlock.innerHTML = '';
-      wordImageBlock.append(img);
+      cardWrapper.style.backgroundImage = `url(${dataUrl}${image})`;
     };
   }
 

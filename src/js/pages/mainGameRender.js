@@ -14,7 +14,7 @@ export const mainGameRender = () => `
   <div class="game_main__wrapper_inner">
     <div class="game_main">
       <div class="arrow arrow--left" id="arrow_left"></div>
-      <div class="card_wrapper">
+      <div class="card_wrapper" id="cardWrapper">
         <div class="main__field">
           <div class="card-game">
               <div class="card-text card-text--quest">
@@ -31,7 +31,6 @@ export const mainGameRender = () => `
       </div>
       <div class="hint">
       <div class="hint--translate_word"></div>
-      <div class="hint--image"></div>
       <div class="hint--text_example"></div>
       </div>
       <div class="controls">
