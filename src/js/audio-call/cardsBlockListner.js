@@ -8,7 +8,7 @@ export const cardsBlockListner = (e) => {
   const audioImgContainer = document.querySelector('.audio-call-content__audio');
   const mainWordContent = document.querySelector('.audio-call-content__word');
   const button = document.querySelector('.audio-call-buttons__button');
-  if (cardAnswer && !button.classList.contains('next')) {
+  if (cardAnswer && !button.classList.contains('next') && !cardAnswer.classList.contains('wrong')) {
     const mainWordId = mainCard.dataset.idWord;
     const answerWordId = cardAnswer.dataset.idWord;
     if (mainWordId === answerWordId) {
@@ -23,6 +23,7 @@ export const cardsBlockListner = (e) => {
       button.innerHTML = 'Следующее';
     } else {
       playAudio('files/error.mp3');
+      cardAnswer.classList.add('wrong');
       DATA.wrongAnswer += 1;
     }
   }

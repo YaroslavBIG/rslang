@@ -68,6 +68,10 @@
     background-color: rgba(25, 139, 77, 0.5);
 }
 
+.wrong {
+    background-color: rgba(139, 25, 25, 0.5);
+}
+
 .audio-call-buttons {
     &__button {
         margin: 10px;
@@ -85,5 +89,30 @@
         &:hover {
             background-color: #dab307;
         }
+    }
+}
+
+.audio-call-stat {
+    text-align: center;
+}
+
+@media (min-device-width: 320px) and (max-device-width: 700px) {
+    .audio-call-answers {
+        flex-direction: column;
+        &__item {
+            text-align: center;
+            margin: 5px;
+        }
+    }
+
+    .audio-call-buttons {
+        &__button {
+            position: relative;
+            bottom: 20px;
+        }
+    }
+
+    .audio-call-main {
+        height: 100vh;
     }
 }
