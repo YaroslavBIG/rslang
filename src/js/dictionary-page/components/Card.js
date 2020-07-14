@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import { dataUrl } from '../../api/constants';
 
 export const Card = (word, dateRepeat) => {

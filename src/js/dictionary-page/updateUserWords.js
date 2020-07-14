@@ -20,7 +20,7 @@ import { globalUser } from '../utils/main';
  */
 
 export const updateUserWords = async (wordId, wordOption) => {
-  const { id: userId } = globalUser.get();
+  const { userId } = globalUser.get();
   const url = `users/${userId}/words/${wordId}`;
   await getResponse(url, { method: 'PUT', body: JSON.stringify(wordOption) });
 };

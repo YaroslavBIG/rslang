@@ -21,7 +21,7 @@ import { globalUser } from '../utils/main';
  */
 
 export const getUserWordById = (wordId) => {
-  const { id: userId } = globalUser.get();
+  const { userId } = globalUser.get();
   const url = `users/${userId}/words/${wordId}`;
   return getResponse(url, { method: 'GET' });
 };
