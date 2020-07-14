@@ -11,7 +11,7 @@ export const createSavannahPage = () => `
         <div class="hints-bar__text hint">${savannahData.hintText}</div>
         <div class="hints-bar__lives hint" id="lives"></div>
     </div>
-    <div class="screen-wrapper__words-container">
+    <div class="screen-wrapper__words-container" id="words-container">
         <button class="words-container__word" id="first-word">Первое</button>
         <button class="words-container__word" id="second-word">Второе</button>
         <button class="words-container__word" id="third-word">Третье</button>
