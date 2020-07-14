@@ -130,11 +130,13 @@
   &__button_block{
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 2%
   }
 }
 
 .button__main-game {
   width: 135px;
+  min-width: 113px;
 }
 
 .button__main-game--hide {
