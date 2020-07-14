@@ -21,6 +21,8 @@ import { startSprintGame } from '../mini-game-sprint/launchSprintGameMethods';
 import { launchStatisticsMethods } from '../statistics/launchStatisticsMethods';
 import { handlerSettingsPage, handlerMainPage } from '../pages';
 import { startMainGame } from '../mainGame/startGame';
+import { renderWordsData } from '../dictionary-page/renderWordsData';
+import { addEventListnersDictionary } from '../dictionary-page/addEventListnersDictionary';
 
 export const callsNecessaryMethods = (path) => {
   switch (path) {
@@ -54,6 +56,11 @@ export const callsNecessaryMethods = (path) => {
     }
     case '/main/settings': {
       handlerSettingsPage();
+      break;
+    }
+    case '/vocabulary': {
+      renderWordsData();
+      addEventListnersDictionary();
       break;
     }
     default: {
