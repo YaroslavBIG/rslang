@@ -34,7 +34,7 @@ export function dontKnowButton(
       ].style.margin = '0 auto';
       document
         .getElementsByClassName('game-block__body-cell-answer')
-      [i].setAttribute('disabled', 'true');
+        [i].setAttribute('disabled', 'true');
       document.getElementsByClassName('game-block__body-cell-answer')[
         i
       ].style.cursor = 'auto';
@@ -94,7 +94,9 @@ export function dontKnowButton(
           'game-block__body-cells-answers'
         )[0].innerHTML = '';
         for (let i = 0; i < letterArr3.length; i++) {
-          let cell = document.getElementsByClassName('game-block__body-cell')[i];
+          let cell = document.getElementsByClassName('game-block__body-cell')[
+            i
+          ];
           cell.innerHTML = `<button class="game-block__body-cell-answer">${letterArr3[i]}</button>`;
 
           document.getElementsByClassName('game-block__body-cell-answer')[
@@ -102,7 +104,7 @@ export function dontKnowButton(
           ].style.margin = '0 auto';
           document
             .getElementsByClassName('game-block__body-cell-answer')
-          [i].setAttribute('disabled', 'true');
+            [i].setAttribute('disabled', 'true');
           document.getElementsByClassName('game-block__body-cell-answer')[
             i
           ].style.cursor = 'auto';
@@ -129,8 +131,9 @@ export function dontKnowButton(
         )[0].style.display = 'block';
         document.getElementsByClassName('game-block__header')[0].style.width =
           '75%';
-        document.getElementsByClassName('game-block__volume-block')[0].style.width =
-          '50%';
+        document.getElementsByClassName(
+          'game-block__volume-block'
+        )[0].style.width = '50%';
         document.getElementsByClassName(
           'game-block__footer-dont-know-button'
         )[0].style.display = 'none';

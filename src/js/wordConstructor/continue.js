@@ -16,63 +16,62 @@ var group = randomGroup;
 var t = 0;
 var b = 1;
 export function continuee() {
-  document
-    .getElementsByClassName('game-block__footer-continue')[0]
-    .addEventListener('click', function () {
-      constantsData.total += 1;
+  document.getElementsByClassName(
+    'game-block__footer-continue'
+  )[0].onclick = function () {
+    constantsData.total += 1;
+    document.getElementsByClassName(
+      'game-block__context-image'
+    )[0].style.display = 'none';
+    document.getElementsByClassName(
+      'game-block__context-text'
+    )[0].style.display = 'none';
+    document.getElementsByClassName(
+      'game-block__context-name'
+    )[0].style.display = 'none';
+    document.getElementsByClassName('game-block__body-cells')[0].innerHTML = '';
+    document.getElementsByClassName(
+      'game-block__body-cells-answers'
+    )[0].innerHTML = '';
+    document.getElementsByClassName(
+      'game-block__header-volume'
+    )[0].style.display = 'none';
+    document.getElementsByClassName('game-block__header')[0].style.width =
+      '100%';
+    document.getElementsByClassName('game-block__volume-block')[0].style.width =
+      '0%';
+    t++;
+    b++;
+    if (b == 11) {
+      var statisticBlock = document.getElementsByClassName('statistic-block');
+      statisticBlock[0].style.display = 'flex';
+      document.getElementsByClassName('game-block')[0].style.display = 'none';
       document.getElementsByClassName(
-        'game-block__context-image'
+        'wrapper-block__settings-and-raunds-description'
       )[0].style.display = 'none';
-      document.getElementsByClassName(
-        'game-block__context-text'
-      )[0].style.display = 'none';
-      document.getElementsByClassName(
-        'game-block__context-name'
-      )[0].style.display = 'none';
-      document.getElementsByClassName('game-block__body-cells')[0].innerHTML =
-        '';
-      document.getElementsByClassName(
-        'game-block__body-cells-answers'
-      )[0].innerHTML = '';
-      document.getElementsByClassName(
-        'game-block__header-volume'
-      )[0].style.display = 'none';
-      document.getElementsByClassName('game-block__header')[0].style.width =
-        '100%';
-      document.getElementsByClassName(
-        'game-block__volume-block'
-      )[0].style.width = '0%';
-      t++;
-      b++;
-      if (b == 11) {
-        var statisticBlock = document.getElementsByClassName('statistic-block');
-        statisticBlock[0].style.display = 'flex';
-        document.getElementsByClassName('game-block')[0].style.display = 'none';
-        document.getElementsByClassName(
-          'wrapper-block__settings-and-raunds-description'
-        )[0].style.display = 'none';
-        restartWordConstructor();
-        b = 1;
-        return;
-      }
-      document.getElementsByClassName(
-        'wrapper-block__raund'
-      )[0].innerHTML = `${b}/10`;
-      document.getElementsByClassName(
-        'game-block__footer-dont-know-button'
-      )[0].style.display = 'inline-block';
-      document.getElementsByClassName(
-        'game-block__footer-continue'
-      )[0].style.display = 'none';
-      userWordHandler();
-      //fetchSprintGameData(randomInteger(0, 59), randomInteger(0, 5));
-    });
-  document.addEventListener('keydown', function (e) {
+      restartWordConstructor();
+      b = 1;
+      return;
+    }
+    document.getElementsByClassName(
+      'wrapper-block__raund'
+    )[0].innerHTML = `${b}/10`;
+    document.getElementsByClassName(
+      'game-block__footer-dont-know-button'
+    )[0].style.display = 'inline-block';
+    document.getElementsByClassName(
+      'game-block__footer-continue'
+    )[0].style.display = 'none';
+    userWordHandler();
+    //fetchSprintGameData(randomInteger(0, 59), randomInteger(0, 5));
+  };
+  document.onkeydown = function (e) {
     if (
       document.getElementsByClassName('game-block__footer-continue')[0].style
         .display == 'inline-block'
     ) {
       if (e.code == 'Enter') {
+        alert();
         constantsData.total += 1;
         document.getElementsByClassName(
           'game-block__context-image'
@@ -99,9 +98,12 @@ export function continuee() {
         t++;
         b++;
         if (b == 11) {
-          var statisticBlock = document.getElementsByClassName('statistic-block');
+          var statisticBlock = document.getElementsByClassName(
+            'statistic-block'
+          );
           statisticBlock[0].style.display = 'flex';
-          document.getElementsByClassName('game-block')[0].style.display = 'none';
+          document.getElementsByClassName('game-block')[0].style.display =
+            'none';
           document.getElementsByClassName(
             'wrapper-block__settings-and-raunds-description'
           )[0].style.display = 'none';
@@ -122,5 +124,5 @@ export function continuee() {
         //fetchSprintGameData(randomInteger(0, 59), randomInteger(0, 5));
       }
     }
-  });
+  };
 }

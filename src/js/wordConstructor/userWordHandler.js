@@ -7,48 +7,25 @@ import { getWords } from '../api';
 import { randomInteger } from '../utils/index';
 import { dontKnowButton } from './dontKnowButton';
 import { volume } from './volume';
+import { constantsData } from './constants';
+import { saveSettings } from '../form';
 
 var n = -1;
 var r = 0;
 export const userWordHandler = async () => {
-  var arrUserWords = await userWords();
-  if (arrUserWords.length % 10 != 0) {
-    let resp = await getNewWords(10 - (arrUserWords.length % 10));
-    var resultArr = arrUserWords.concat(resp[0].paginatedResults);
-    const userWordsArr = resultArr;
-    const size = 10;
-    var res = userWordsArr.reduce((p, c) => { if (p[p.length - 1].length === size) { p.push([]); } p[p.length - 1].push(c); return p; }, [[]]); console.log(res);
-  }
-  n++;
-  var word = res[r][n].word;
-  var image = res[r][n].image;
-  var text = res[r][n].textExample;
-  var audio = res[r][n].audio;
-  var translate = res[r][n].wordTranslate;
+  var res = JSON.parse(sessionStorage.getItem('userWords'));
+  console.log(res);
+  var word = res[r][constantsData.counter].word;
+  var image = res[r][constantsData.counter].image;
+  var text = res[r][constantsData.counter].textExample;
+  var audio = res[r][constantsData.counter].audio;
+  var translate = res[r][constantsData.counter].wordTranslate;
   cutWord(word, image, text, translate, audio);
   dontKnowButton(word, translate, audio, text, image);
   volume(audio);
-  if (n == 10) {
+  constantsData.counter += 1;
+  if (constantsData.counter == 10) {
     r++;
-  }
-  if (n == res.length) {
-    n = 0;
-    r = 0;
-    document
-      .getElementsByClassName('statistic-block__restart')[0]
-      .addEventListener('click', function () {
-        var conf = confirm('У вас закончились слова, поиграйте в основную игру');
-        if (conf) {
-          document.getElementById('confirmed').click();
-          const statisticObj = {
-            total: constantsData.total,
-            right: constantsData.longCorrectAnswersCounter,
-            wrong: constantsData.longWrongAnswersCounter,
-          };
-          putGameStatistics('word-constructor', statisticObj);
-        } else {
-          document.getElementById('cancellation').click();
-        }
-      });
+    constantsData.counter = 0;
   }
 };
