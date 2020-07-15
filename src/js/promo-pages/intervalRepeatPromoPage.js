@@ -2,7 +2,7 @@ export const intervalRepeatPromoPage = () => `
 <div id="myModal" class="modal">
   <div class="modal-content">
     <div class="modal-header">
-      <a href="#/" class="close"></a>
+      <a href="#/main" class="close"></a>
       <span class="modal-header__name">Метод интервального повторения</span>
     </div>
     <div class="modal-body">

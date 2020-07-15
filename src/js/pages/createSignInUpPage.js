@@ -1,5 +1,5 @@
 export const createSignInUpPage = () => `<section class="inner-section__start">
-    <a href="#/main" class="click-enter"></a>
+    <a href="#/main" class="click-enter-main"></a>
       <div class="start-enter">
       <div class="inner">
         <div class="start-enter__inner">

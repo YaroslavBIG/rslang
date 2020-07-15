@@ -1,14 +1,6 @@
-import Swiper from 'swiper';
+import Swiper from 'swiper/bundle';
 
 export function addSwiper() {
-  const head = document.getElementsByTagName('head')[0];
-  head.innerHTML += `
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-  
-  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  `;
   const swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
     spaceBetween: 30,
