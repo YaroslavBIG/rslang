@@ -34,7 +34,7 @@ export const rightChoice = () => {
     }
     points.innerHTML = `${result}`;
   }
-  fetchSprintGameData(randomInteger(0, 59), randomInteger(0, 5));
+  fetchSprintGameData(constantsData.enough, randomInteger(0, 59), randomInteger(0, 5));
 };
 
 export const wrongChoice = () => {
@@ -52,6 +52,6 @@ export const wrongChoice = () => {
   const information = document.getElementById('main-information');
   information.innerHTML = `ВАШЕ КОМБО: x${constantsData.combo}`;
   if (points) {
-    fetchSprintGameData(randomInteger(0, 59), randomInteger(0, 5));
+    fetchSprintGameData(constantsData.enough, randomInteger(0, 59), randomInteger(0, 5));
   }
 };
