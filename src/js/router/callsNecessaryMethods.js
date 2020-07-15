@@ -29,6 +29,8 @@ import { startMainGame } from '../mainGame/startGame';
 import { renderWordsData } from '../dictionary-page/renderWordsData';
 import { addEventListnersDictionary } from '../dictionary-page/addEventListnersDictionary';
 import { addSwiper } from '../swiper/swiper';
+import { startGame } from '../audio-call/startGame';
+import { addEventListnerAudioGame } from '../audio-call/addEventListnerAudioGame';
 
 export const callsNecessaryMethods = (path) => {
   switch (path) {
@@ -79,8 +81,9 @@ export const callsNecessaryMethods = (path) => {
       clickButtonSpeakIt();
       break;
     }
-    case '/main/word-repeat': {
-      clickButtonIntervalRepeatContinue();
+    case '/main/audition': {
+      startGame();
+      addEventListnerAudioGame();
       break;
     }
     default: {

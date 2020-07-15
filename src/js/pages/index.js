@@ -13,3 +13,4 @@ export { wordConstructorPage } from './wordConstructorPage';
 export { createVocabularyPage } from './createVocabularyPage';
 export { createSpeakItPage } from './createSpeakItPage';
 export { mainPromoPage } from './mainPromoPage';
+export { createAuditionPage } from './createAuditionPage';

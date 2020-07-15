@@ -22,6 +22,7 @@ import {
   createVocabularyPage,
   createSpeakItPage,
   mainPromoPage,
+  createAuditionPage,
 } from '../pages';
 import {
   intervalRepeatPromoPage,
@@ -58,7 +59,7 @@ export const SpeakItComponent = {
   render: () => speakitGame() + createSpeakItPage(),
 };
 export const AuditionComponent = {
-  render: () => listeningGame(),
+  render: () => listeningGame() + createAuditionPage(),
 };
 export const SavannahComponent = {
   render: () => savannahGame(),
