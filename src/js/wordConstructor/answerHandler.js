@@ -18,7 +18,6 @@ export function answerHandler(
     button.style.margin = '0 auto';
     button.setAttribute('disabled', 'true');
     button.style.cursor = 'auto';
-    // letterArr2.splice(0, 1);
     constantsData.placeIndex += 1;
     const answerCells = document.querySelectorAll('.game-block__body-cell-answer');
     let answer = '';
