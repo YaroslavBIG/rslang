@@ -18,7 +18,7 @@ export function answerHandler(
         button.style.background = '#28C38A';
         document
           .getElementsByClassName('game-block__body-cell')
-          [placeIndex].appendChild(button);
+        [placeIndex].appendChild(button);
         button.style.margin = '0 auto';
         button.setAttribute('disabled', 'true');
         button.style.cursor = 'auto';

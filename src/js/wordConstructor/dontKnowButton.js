@@ -29,7 +29,7 @@ export function dontKnowButton(
       ].style.margin = '0 auto';
       document
         .getElementsByClassName('game-block__body-cell-answer')
-        [i].setAttribute('disabled', 'true');
+      [i].setAttribute('disabled', 'true');
       document.getElementsByClassName('game-block__body-cell-answer')[
         i
       ].style.cursor = 'auto';
@@ -98,7 +98,7 @@ export function dontKnowButton(
           ].style.margin = '0 auto';
           document
             .getElementsByClassName('game-block__body-cell-answer')
-            [i].setAttribute('disabled', 'true');
+          [i].setAttribute('disabled', 'true');
           document.getElementsByClassName('game-block__body-cell-answer')[
             i
           ].style.cursor = 'auto';

@@ -17,9 +17,9 @@ export const getAggregatedWords = async (filter, wordsPerPage = 3600) => {
     const { userId } = globalUser.get();
     return await getResponse(
       `users/${userId}/aggregatedWords?wordsPerPage=${wordsPerPage}&filter=${JSON.stringify(
-        filter
+        filter,
       )}`,
-      { method: 'GET' }
+      { method: 'GET' },
     );
   } catch (err) {
     return Object.keys(err);

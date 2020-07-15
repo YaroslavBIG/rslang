@@ -25,7 +25,6 @@ import {
   clickButtonIntervalRepeatContinue,
 } from '../promo-pages/clickButtons/clickButtons';
 import { launchStatisticsMethods } from '../statistics/launchStatisticsMethods';
-import { handlerSettingsPage, handlerMainPage } from '../pages';
 import { startMainGame } from '../mainGame/startGame';
 import { renderWordsData } from '../dictionary-page/renderWordsData';
 import { addEventListnersDictionary } from '../dictionary-page/addEventListnersDictionary';

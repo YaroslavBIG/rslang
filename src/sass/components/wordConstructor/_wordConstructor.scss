@@ -1,6 +1,8 @@
 @import "./commons/vars.scss";
 
 .wrapper-block {
+  overflow-x: hidden;
+  overflow-y: auto;
   font-family: $primary-font-family;
   width: 100%;
   height: 100vh;

@@ -28,10 +28,7 @@ export const router = () => {
   const { component = ErrorComponent } = findComponentByPath(path, routes);
 
   if (packWithHeader.includes(path)) {
-    document.getElementById('root').innerHTML = `${header(
-      settings(),
-      user()
-    )} <main class="main">${component.render()}</main> ${footer()}`;
+    document.getElementById('root').innerHTML = `${header(settings(), user())} <main class="main">${component.render()}</main> ${footer()}`;
   } else {
     document.getElementById('root').innerHTML = component.render();
   }
