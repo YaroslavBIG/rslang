@@ -15,4 +15,9 @@ export const constantsData = {
   wrongAnswersCounter: 0,
   rightInARow: 0,
   backendUrl: dataUrl,
+  preloaderFirstStr: 'Загрузка слов...',
+  preloaderSecondStr: 'Пожалуйста подождите!',
+  enough: false,
+  dictionaryCheck: false,
+  enoughWords: 70,
 };

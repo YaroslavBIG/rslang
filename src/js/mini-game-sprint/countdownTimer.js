@@ -21,11 +21,13 @@ export const countdownTimer = () => {
       const totalAnswers = constantsData.correctAnswersCounter + constantsData.wrongAnswersCounter;
       wrapper.innerHTML = createResultBlock(totalAnswers, yourResult);
       const completedAudio = document.getElementById('audio-completed');
-      completedAudio.setAttribute(
-        'src',
-        `${constantsData.backendUrl}files/success.mp3`,
-      );
-      completedAudio.autoplay = true;
+      if (completedAudio) {
+        completedAudio.setAttribute(
+          'src',
+          `${constantsData.backendUrl}files/success.mp3`,
+        );
+        completedAudio.autoplay = true;
+      }
       createSprintStatistics(
         totalAnswers,
         constantsData.correctAnswersCounter,

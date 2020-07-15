@@ -4,6 +4,8 @@ import { ErrorComponent } from './routerComponents';
 import { findComponentByPath } from './findComponentByPath';
 import { routes } from './routes';
 import { callsNecessaryMethods } from './callsNecessaryMethods';
+import { header, settings, user } from '../header';
+import { footer } from '../footer';
 
 const packWithHeader = [
   '/main/word-learning',
@@ -11,9 +13,12 @@ const packWithHeader = [
   '/main/english-puzzle',
   '/main/speak-it',
   '/main/sprint',
-  '/main/listening',
+  '/main/audition',
   '/main/savannah',
-  '/main/constructor',
+  '/main/word-puzzle',
+  '/vocabulary',
+  '/statistic',
+  '/about-us',
 ];
 
 export const router = () => {
@@ -23,7 +28,7 @@ export const router = () => {
   const { component = ErrorComponent } = findComponentByPath(path, routes);
 
   if (packWithHeader.includes(path)) {
-    document.querySelector('.main').innerHTML = component.render();
+    document.getElementById('root').innerHTML = `${header(settings(), user())} <main class="main">${component.render()}</main> ${footer()}`;
   } else {
     document.getElementById('root').innerHTML = component.render();
   }

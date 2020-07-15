@@ -17,17 +17,23 @@
  */
 
 import { controlForm, submitForm, chooseIcon } from '../form';
-import { startSprintGame } from '../mini-game-sprint/launchSprintGameMethods';
 import { launchStatisticsMethods } from '../statistics/launchStatisticsMethods';
 import { handlerSettingsPage, handlerMainPage } from '../pages';
 import { launchSavannahMethods } from '../savannah/launchSavannahMethods';
 import { startMainGame } from '../mainGame/startGame';
 import { renderWordsData } from '../dictionary-page/renderWordsData';
 import { addEventListnersDictionary } from '../dictionary-page/addEventListnersDictionary';
+import { addSwiper } from '../swiper/swiper';
+import {
+  clickButtonSprintGame,
+  clickButtonSpeakIt,
+  clickButtonIntervalRepeatContinue,
+} from '../promo-pages/clickButtons/clickButtons';
 
 export const callsNecessaryMethods = (path) => {
   switch (path) {
     case '/': {
+      addSwiper();
       break;
     }
     case '/auth': {
@@ -40,15 +46,16 @@ export const callsNecessaryMethods = (path) => {
       startMainGame();
       break;
     }
-    case '/main/word-repeat':
-      startMainGame('intervals');
+    case '/main/word-repeat': {
+      clickButtonIntervalRepeatContinue();
       break;
+    }
     case '/main': {
       handlerMainPage();
       break;
     }
     case '/main/sprint': {
-      startSprintGame();
+      clickButtonSprintGame();
       break;
     }
     case '/statistic': {
@@ -66,6 +73,10 @@ export const callsNecessaryMethods = (path) => {
     case '/vocabulary': {
       renderWordsData();
       addEventListnersDictionary();
+      break;
+    }
+    case '/main/speak-it': {
+      clickButtonSpeakIt();
       break;
     }
     default: {

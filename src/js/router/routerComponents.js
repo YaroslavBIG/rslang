@@ -20,10 +20,20 @@ import {
   createSettingsPage,
   createSavannahPage,
   createVocabularyPage,
+  createSpeakItPage,
+  mainPromoPage,
 } from '../pages';
+import {
+  intervalRepeatPromoPage,
+  englishPuzzleGame,
+  listeningGame,
+  savannahGame,
+  speakitGame,
+  sprintGame,
+} from '../promo-pages';
 
 export const HomeComponent = {
-  render: () => '<a href="#/auth">click</a><a href="#/main" class="click-enter"></a>',
+  render: () => mainPromoPage(),
 };
 export const AuthComponent = {
   render: () => createSignInUpPage(),
@@ -38,22 +48,22 @@ export const WordLearningComponent = {
   render: () => mainGameRender(),
 };
 export const WordRepeatComponent = {
-  render: () => intervalGameRender(),
+  render: () => intervalRepeatPromoPage() + intervalGameRender(),
 };
 export const EnglishPuzzleComponent = {
-  render: () => '',
+  render: () => englishPuzzleGame(),
 };
 export const SpeakItComponent = {
-  render: () => '',
+  render: () => speakitGame() + createSpeakItPage(),
 };
 export const AuditionComponent = {
-  render: () => '',
+  render: () => listeningGame(),
 };
 export const SavannahComponent = {
-  render: () => createSavannahPage(),
+  render: () => savannahGame() + createSavannahPage(),
 };
 export const SprintComponent = {
-  render: () => createSprintGamePage(),
+  render: () => sprintGame() + createSprintGamePage(),
 };
 export const WordPuzzleComponent = {
   render: () => '',
