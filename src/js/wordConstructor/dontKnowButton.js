@@ -1,4 +1,5 @@
 import { constantsData } from './constants';
+import { continuee } from './continue';
 
 const sound = document.createElement('audio');
 export function dontKnowButton(
@@ -29,8 +30,12 @@ export function dontKnowButton(
       ].style.margin = '0 auto';
       document
         .getElementsByClassName('game-block__body-cell-answer')[i].setAttribute('disabled', 'true');
-      document.getElementsByClassName('game-block__body-cell-answer')[i].style.cursor = 'auto';
-      document.getElementsByClassName('game-block__body-cell-answer')[i].style.backgroundColor = '#28C38A';
+      document.getElementsByClassName('game-block__body-cell-answer')[
+        i
+      ].style.cursor = 'auto';
+      document.getElementsByClassName('game-block__body-cell-answer')[
+        i
+      ].style.backgroundColor = '#28C38A';
     }
     document.getElementsByClassName('game-block__context-image')[0].src = `${constantsData.backendUrl}${randomImage}`;
     document.getElementsByClassName(
@@ -66,6 +71,7 @@ export function dontKnowButton(
         'statistic-block__errors',
       )[0].innerHTML += `<p>${randomWord} — ${randomTranslate}</p>`;
     }
+    continuee();
   };
   document.onkeydown = function keyD(e) {
     if (
@@ -90,7 +96,9 @@ export function dontKnowButton(
           ].style.margin = '0 auto';
           document
             .getElementsByClassName('game-block__body-cell-answer')[i].setAttribute('disabled', 'true');
-          document.getElementsByClassName('game-block__body-cell-answer')[i].style.cursor = 'auto';
+          document.getElementsByClassName('game-block__body-cell-answer')[
+            i
+          ].style.cursor = 'auto';
           document.getElementsByClassName('game-block__body-cell-answer')[
             i
           ].style.backgroundColor = '#28C38A';
@@ -137,5 +145,6 @@ export function dontKnowButton(
         }
       }
     }
+    continuee();
   };
 }
