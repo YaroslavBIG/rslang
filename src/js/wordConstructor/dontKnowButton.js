@@ -1,4 +1,5 @@
 import { constantsData } from './constants';
+import { continuee } from './continue';
 
 const sound = document.createElement('audio');
 export function dontKnowButton(
@@ -29,7 +30,7 @@ export function dontKnowButton(
       ].style.margin = '0 auto';
       document
         .getElementsByClassName('game-block__body-cell-answer')
-        [i].setAttribute('disabled', 'true');
+      [i].setAttribute('disabled', 'true');
       document.getElementsByClassName('game-block__body-cell-answer')[
         i
       ].style.cursor = 'auto';
@@ -71,6 +72,7 @@ export function dontKnowButton(
         'statistic-block__errors',
       )[0].innerHTML += `<p>${randomWord} — ${randomTranslate}</p>`;
     }
+    continuee();
   };
   document.onkeydown = function (e) {
     if (
@@ -95,7 +97,7 @@ export function dontKnowButton(
           ].style.margin = '0 auto';
           document
             .getElementsByClassName('game-block__body-cell-answer')
-            [i].setAttribute('disabled', 'true');
+          [i].setAttribute('disabled', 'true');
           document.getElementsByClassName('game-block__body-cell-answer')[
             i
           ].style.cursor = 'auto';
@@ -145,5 +147,6 @@ export function dontKnowButton(
         }
       }
     }
+    continuee();
   };
 }
