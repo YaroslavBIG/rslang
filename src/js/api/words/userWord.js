@@ -19,21 +19,23 @@ export const userWord = async (wordId, method = 'POST', difficulty = 'good', del
   try {
     const { userId } = globalUser.get();
 
-    const day = getDayOfYear();
     const repeat = difficulty === 'again';
     const repeatCount = parseInt(sessionStorage.getItem('repeatCount'), 10) || 0;
+
     const newWordObj = {
       difficulty,
       optional: {
-        day,
+        day: getDayOfYear(),
         date: getDate(),
         deleted,
         repeat,
         repeatCount,
       },
     };
+
     const url = `users/${userId}/words/${wordId}`;
     const methodApi = { method, body: JSON.stringify(newWordObj) };
+
     return await getResponse(url, methodApi);
   } catch (err) {
     return Object.keys(err);
