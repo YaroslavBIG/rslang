@@ -4,8 +4,8 @@ import { constantsData } from './constants';
 export function exitInGame() {
   document
     .getElementsByClassName('wrapper-block__black-cross')[0]
-    .addEventListener('click', function () {
-      var conf = confirm('Вы уверены что хотите выйти?');
+    .addEventListener('click', () => {
+      const conf = confirm('Вы уверены что хотите выйти?');
       if (conf) {
         document.getElementById('confirmed').click();
         const statisticObj = {

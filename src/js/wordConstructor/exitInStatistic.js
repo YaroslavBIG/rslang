@@ -4,7 +4,7 @@ import { constantsData } from './constants';
 export function exitInStatistic() {
   document
     .getElementsByClassName('statistic-block__return')[0]
-    .addEventListener('click', function () {
+    .addEventListener('click', () => {
       const statisticObj = {
         total: constantsData.total,
         right: constantsData.longCorrectAnswersCounter,

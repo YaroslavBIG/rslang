@@ -17,11 +17,11 @@ export async function launchWordConstructorGame() {
   choiceDifficulty();
   exitInGame();
   exitInStatistic();
-  var arrUserWords = await userWords();
-  var settings = await getUserSettings();
+  const arrUserWords = await userWords();
+  const settings = await getUserSettings();
   if (settings.optional.onlyNewWords) {
     if (arrUserWords.length % 10 != 0) {
-      let resp = await getNewWords(10 - (arrUserWords.length % 10));
+      const resp = await getNewWords(10 - (arrUserWords.length % 10));
       var resultArr = arrUserWords.concat(resp[0].paginatedResults);
       var userWordsArr = resultArr;
       constantsData.end = userWordsArr.length;
@@ -34,13 +34,13 @@ export async function launchWordConstructorGame() {
           p[p.length - 1].push(c);
           return p;
         },
-        [[]]
+        [[]],
       );
     }
     sessionStorage.setItem('userWords', JSON.stringify(res));
   } else {
     if (arrUserWords.length % 10 != 0) {
-      let resp = await getNewWords();
+      const resp = await getNewWords();
       var resultArr = resp[0].paginatedResults;
       var userWordsArr = resultArr;
       constantsData.end = userWordsArr;
@@ -53,7 +53,7 @@ export async function launchWordConstructorGame() {
           p[p.length - 1].push(c);
           return p;
         },
-        [[]]
+        [[]],
       );
     }
     sessionStorage.setItem('userWords', JSON.stringify(res));
