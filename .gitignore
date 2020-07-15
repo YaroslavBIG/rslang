@@ -4,3 +4,4 @@ node_modules
 todo
 .editorconfig
 package-lock
+package-lock.json

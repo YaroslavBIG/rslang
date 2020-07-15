@@ -24,6 +24,11 @@ import {
   clickButtonSpeakIt,
   clickButtonIntervalRepeatContinue,
 } from '../promo-pages/clickButtons/clickButtons';
+import { launchStatisticsMethods } from '../statistics/launchStatisticsMethods';
+import { handlerSettingsPage, handlerMainPage } from '../pages';
+import { startMainGame } from '../mainGame/startGame';
+import { renderWordsData } from '../dictionary-page/renderWordsData';
+import { addEventListnersDictionary } from '../dictionary-page/addEventListnersDictionary';
 import { addSwiper } from '../swiper/swiper';
 
 export const callsNecessaryMethods = (path) => {
@@ -38,6 +43,14 @@ export const callsNecessaryMethods = (path) => {
       chooseIcon();
       break;
     }
+    case '/main/word-learning': {
+      startMainGame();
+      break;
+    }
+    case '/main/word-repeat': {
+      clickButtonIntervalRepeatContinue();
+      break;
+    }
     case '/main': {
       handlerMainPage();
       break;
@@ -46,12 +59,20 @@ export const callsNecessaryMethods = (path) => {
       clickButtonSprintGame();
       break;
     }
+    case '/statistic': {
+      launchStatisticsMethods();
+      break;
+    }
     case '/main/settings': {
       handlerSettingsPage();
       break;
     }
     case '/main/word-puzzle': {
       clickButtonConstructorGame();
+    }
+    case '/vocabulary': {
+      renderWordsData();
+      addEventListnersDictionary();
       break;
     }
     case '/main/speak-it': {

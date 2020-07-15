@@ -3,7 +3,7 @@ export const savannahGame = () => `
       <div class="modal-content">
         <div class="modal-header">
         <a href="#/main" class="close"></a>
-          <span class="modal-header__name">Мини-игра Savannah</span> 
+          <span class="modal-header__name">Мини-игра Savannah</span>
         </div>
         <div class="modal-body">
           <p class="modal-body__description">Savannah - это мини-игра в которой за определённое время надо угадать перевод слова.</p>

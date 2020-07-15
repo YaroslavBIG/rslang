@@ -14,9 +14,13 @@ import {
   createMainPage,
   createSprintGamePage,
   createAboutTheTeamPage,
+  mainGameRender,
+  intervalGameRender,
   createStatisticsPage,
   createSettingsPage,
   wordConstructorPage,
+  createVocabularyPage,
+  createSpeakItPage,
   mainPromoPage,
 } from '../pages';
 import {
@@ -42,16 +46,16 @@ export const SettingsComponent = {
   render: () => createSettingsPage(),
 };
 export const WordLearningComponent = {
-  render: () => '',
+  render: () => mainGameRender(),
 };
 export const WordRepeatComponent = {
-  render: () => intervalRepeatPromoPage(),
+  render: () => intervalRepeatPromoPage() + intervalGameRender(),
 };
 export const EnglishPuzzleComponent = {
   render: () => englishPuzzleGame(),
 };
 export const SpeakItComponent = {
-  render: () => speakitGame(),
+  render: () => speakitGame() + createSpeakItPage(),
 };
 export const AuditionComponent = {
   render: () => listeningGame(),
@@ -66,7 +70,7 @@ export const WordPuzzleComponent = {
   render: () => constructorGame() + wordConstructorPage(),
 };
 export const VocabularyComponent = {
-  render: () => '',
+  render: () => createVocabularyPage(),
 };
 export const StatisticComponent = {
   render: () => createStatisticsPage(),

@@ -1,17 +1,21 @@
 import { startSprintGame } from '../../mini-game-sprint/launchSprintGameMethods';
 import { launchWordConstructorGame } from '../../wordConstructor/launchWordConstructorGame';
+import { startMainGame } from '../../mainGame/startGame';
+import { launchGame } from '../../speak-it-game';
 
 export const clickButtonIntervalRepeatContinue = () => {
   document
     .getElementById('modal-footer__continue')
     .addEventListener('click', () => {
       document.getElementById('myModal').style.display = 'none';
+      startMainGame('intervals');
     });
 };
 
 export const clickButtonSpeakIt = () => {
-  document.getElementById('speakItGame').addEventListener('click', () => {
+  document.getElementById('speakitGame').addEventListener('click', () => {
     document.getElementById('myModal').style.display = 'none';
+    launchGame();
   });
 };
 

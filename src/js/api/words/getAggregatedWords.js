@@ -11,7 +11,8 @@ import { getResponse } from '../getResponse';
  * @return {Promise} promise
  *
  */
-export const getAggregatedWords = async (filter, wordsPerPage = 1000) => {
+
+export const getAggregatedWords = async (filter, wordsPerPage = 3600) => {
   try {
     const { userId } = globalUser.get();
     return await getResponse(

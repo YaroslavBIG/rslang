@@ -51,7 +51,7 @@ label {
 }
 
 .form__sign-in input:focus, textarea:focus, .form__sign-up input:focus, textarea:focus {
-  background: $color-back-form;
+  background: $color-back-input;
   color: $secondary-color;
   border: none;
   font-size: $primary-font-size;
