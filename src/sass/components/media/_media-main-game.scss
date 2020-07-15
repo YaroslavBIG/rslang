@@ -1,0 +1,50 @@
+@media (max-width: 700px) {
+  .arrow {
+    margin-top: 21%;
+  }
+}
+@media (max-width: 500px) {
+  .hint {
+    &--image img{
+      width: 90%;
+    }
+    &--translate_word, &--text_example{
+      font-size: $primary-font-size - 2px;
+    }
+  }
+  .card-game{
+    height: 200px;
+  }
+  .card-text{
+    &--quest{
+      font-size: $primary-font-size;
+    }
+    &--translate{
+      font-size: $primary-font-size - 2px;
+    }
+  }
+  .button__main-game {
+    margin-bottom: 2px;
+    width: 84px;
+    font-size: 13px;
+  }
+  .arrow {
+    margin-top: 27%;
+  }
+  .game_main__modal{
+    & h2{
+      font-size: $primary-font-size + 8px;
+    }
+    & p{
+      font-size: $primary-font-size;
+    }
+  }
+}
+@media (max-width: 390px) {
+  .arrow {
+    margin-top: 32%;
+  }
+  .game_main__modal {
+    padding-top: 6%;
+  }
+}
