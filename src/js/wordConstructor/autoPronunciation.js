@@ -7,6 +7,5 @@ export function autoProponuciation() {
       constantsData.checked = document.getElementsByClassName(
         'wrapper-block__checkbox'
       )[0].checked;
-      alert(constantsData.checked);
     });
 }

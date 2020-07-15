@@ -38,7 +38,6 @@ export async function launchWordConstructorGame() {
         },
         [[]]
       );
-      console.log(res);
     }
     sessionStorage.setItem('userWords', JSON.stringify(res));
   } else {
@@ -58,7 +57,6 @@ export async function launchWordConstructorGame() {
         },
         [[]]
       );
-      console.log(res);
     }
     sessionStorage.setItem('userWords', JSON.stringify(res));
   }

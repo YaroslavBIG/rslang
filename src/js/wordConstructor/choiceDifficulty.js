@@ -17,11 +17,7 @@ export const choiceDifficulty = () => {
         'block';
       document.getElementById('choice').style.display = 'none';
       document.getElementById('select').style.display = 'none';
-      /*if (n == arrUserWords) {
-        fetchConstructorGameData(randomInteger(0, 59), value);
-      } else {*/
       userWordHandler();
-      //}
     } else {
       alert('Уровень не выбран!');
     }

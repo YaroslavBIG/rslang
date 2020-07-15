@@ -70,7 +70,6 @@ export function dontKnowButton(
       'game-block__footer-continue'
     )[0].style.display = 'inline-block';
     if (constantsData.errorWord == true) {
-      console.log(randomWord);
       constantsData.wrongAnswersCounter += 1;
       constantsData.longWrongAnswersCounter += 1;
       document.getElementsByClassName(
@@ -141,7 +140,6 @@ export function dontKnowButton(
           'game-block__footer-continue'
         )[0].style.display = 'inline-block';
         if (constantsData.errorWord == true) {
-          console.log(randomWord);
           constantsData.wrongAnswersCounter += 1;
           constantsData.longWrongAnswersCounter += 1;
           document.getElementsByClassName(

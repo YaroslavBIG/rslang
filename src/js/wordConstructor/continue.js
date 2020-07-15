@@ -63,7 +63,6 @@ export function continuee() {
       'game-block__footer-continue'
     )[0].style.display = 'none';
     userWordHandler();
-    //fetchSprintGameData(randomInteger(0, 59), randomInteger(0, 5));
   };
   document.onkeydown = function (e) {
     if (
@@ -121,7 +120,6 @@ export function continuee() {
           'game-block__footer-continue'
         )[0].style.display = 'none';
         userWordHandler();
-        //fetchSprintGameData(randomInteger(0, 59), randomInteger(0, 5));
       }
     }
   };

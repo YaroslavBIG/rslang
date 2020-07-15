@@ -18,17 +18,13 @@ export function answerHandler(
         button.style.background = '#28C38A';
         document
           .getElementsByClassName('game-block__body-cell')
-        [n].appendChild(button);
+          [n].appendChild(button);
         button.style.margin = '0 auto';
         button.setAttribute('disabled', 'true');
         button.style.cursor = 'auto';
         letterArr2.splice(0, 1);
-        console.log(letterArr2);
-        console.log(letterArr2[0]);
         n++;
         if (letterArr2.length == 0) {
-          console.log(constantsData.errorWord);
-          console.log(constantsData.errorWord == false);
           if (constantsData.errorWord == false) {
             constantsData.wrongAnswersCounter += 1;
             constantsData.longWrongAnswersCounter += 1;
@@ -53,7 +49,6 @@ export function answerHandler(
           if (constantsData.checked == true) {
             var sound = document.createElement('audio');
             sound.src = `https://raw.githubusercontent.com/irinainina/rslang/rslang-data/data/${randomAudio}`;
-            console.log(sound);
             sound.play();
           }
           document.getElementsByClassName(

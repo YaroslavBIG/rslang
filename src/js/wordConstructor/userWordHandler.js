@@ -14,7 +14,6 @@ var n = -1;
 var r = 0;
 export const userWordHandler = async () => {
   var res = JSON.parse(sessionStorage.getItem('userWords'));
-  console.log(res);
   var word = res[r][constantsData.counter].word;
   var image = res[r][constantsData.counter].image;
   var text = res[r][constantsData.counter].textExample;
