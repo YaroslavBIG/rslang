@@ -68,6 +68,7 @@ export const callsNecessaryMethods = (path) => {
     }
     case '/main/word-puzzle': {
       clickButtonConstructorGame();
+      break;
     }
     case '/vocabulary': {
       renderWordsData();

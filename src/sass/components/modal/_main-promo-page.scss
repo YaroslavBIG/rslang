@@ -1,8 +1,6 @@
 @import "./commons/vars.scss";
 
 .wrapper {
-  overflow-x: hidden;
-  overflow-y: auto;
   position: fixed;
   z-index: 1000;
   padding-top: 100px;
