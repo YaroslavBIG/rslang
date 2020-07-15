@@ -1,5 +1,6 @@
 import { constantsData } from './constants';
 
+var sound = document.createElement('audio');
 export function dontKnowButton(
   randomWord,
   randomTranslate,
@@ -11,8 +12,7 @@ export function dontKnowButton(
   document.getElementsByClassName(
     'game-block__footer-dont-know-button'
   )[0].onclick = function () {
-    if (constantsData.checked == true) {
-      var sound = document.createElement('audio');
+    if (constantsData.checked) {
       sound.src = `https://raw.githubusercontent.com/irinainina/rslang/rslang-data/data/${randomAudio}`;
       sound.play();
     }
@@ -64,7 +64,7 @@ export function dontKnowButton(
     document.getElementsByClassName(
       'game-block__footer-continue'
     )[0].style.display = 'inline-block';
-    if (constantsData.errorWord == true) {
+    if (constantsData.errorWord) {
       constantsData.wrongAnswersCounter += 1;
       constantsData.longWrongAnswersCounter += 1;
       document.getElementsByClassName(
@@ -134,7 +134,7 @@ export function dontKnowButton(
         document.getElementsByClassName(
           'game-block__footer-continue'
         )[0].style.display = 'inline-block';
-        if (constantsData.errorWord == true) {
+        if (constantsData.errorWord) {
           constantsData.wrongAnswersCounter += 1;
           constantsData.longWrongAnswersCounter += 1;
           document.getElementsByClassName(
@@ -144,8 +144,7 @@ export function dontKnowButton(
             'statistic-block__errors'
           )[0].innerHTML += `<p>${randomWord} — ${randomTranslate}</p>`;
         }
-        if (constantsData.checked == true) {
-          var sound = document.createElement('audio');
+        if (constantsData.checked) {
           sound.src = `https://raw.githubusercontent.com/irinainina/rslang/rslang-data/data/${randomAudio}`;
           sound.play();
         }
