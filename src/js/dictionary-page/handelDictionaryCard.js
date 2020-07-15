@@ -18,7 +18,7 @@ export const handelDictioaryCard = async (e) => {
       optional: {
         day: wordObj.optional.day,
         date: wordObj.optional.date,
-        deleted: true,
+        deleted: 'true',
         repeat: wordObj.optional.repeat,
         repeatCount: wordObj.optional.repeatCount,
       },
@@ -36,7 +36,7 @@ export const handelDictioaryCard = async (e) => {
       optional: {
         day: wordObj.optional.day,
         date: wordObj.optional.date,
-        deleted: false,
+        deleted: 'false',
         repeat: wordObj.optional.repeat,
         repeatCount: wordObj.optional.repeatCount,
       },
