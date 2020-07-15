@@ -11,3 +11,4 @@ export { createStatisticsPage } from './createStatisticsPage';
 export { handlerMainPage } from './handlerMainPage';
 export { createVocabularyPage } from './createVocabularyPage';
 export { createSpeakItPage } from './createSpeakItPage';
+export { mainPromoPage } from './mainPromoPage';

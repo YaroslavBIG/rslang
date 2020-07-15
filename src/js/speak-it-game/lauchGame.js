@@ -7,7 +7,7 @@ import { recognition } from './utils/recognition';
 
 export const launchGame = () => {
   const loader = spinner();
-  document.querySelector('.main').prepend(loader);
+  document.querySelector('#root').prepend(loader);
   startSpeakGame(0, 0, false);
   changeLevel();
   clickRestart();
