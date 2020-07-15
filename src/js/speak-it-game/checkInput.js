@@ -12,7 +12,7 @@ export const checkInput = () => {
       if (elem.textContent === valueInput) {
         elem.closest('.answers__item').classList.add('item_active');
         rightCount += 1;
-        if (rightCount === allRight && start.get()) {
+        if (rightCount === 1 && start.get()) {
           const obj = {
             total: allRight,
             right: rightCount,
