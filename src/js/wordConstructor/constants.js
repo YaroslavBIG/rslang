@@ -12,4 +12,5 @@ export const constantsData = {
   total: 0,
   counter: 0,
   end: 0,
+  raundsCounter: 0,
 };

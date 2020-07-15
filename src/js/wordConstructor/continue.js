@@ -2,8 +2,7 @@ import { restartWordConstructor } from './restartWordConstructor';
 import { constantsData } from './constants';
 import { userWordHandler } from './userWordHandler';
 
-var t = 0;
-var b = 1;
+var raundsCounter = 1;
 export function continuee() {
   document.getElementsByClassName(
     'game-block__footer-continue'
@@ -29,9 +28,8 @@ export function continuee() {
       '100%';
     document.getElementsByClassName('game-block__volume-block')[0].style.width =
       '0%';
-    t++;
-    b++;
-    if (b == 11) {
+    raundsCounter++;
+    if (raundsCounter == 11) {
       var statisticBlock = document.getElementsByClassName('statistic-block');
       statisticBlock[0].style.display = 'flex';
       document.getElementsByClassName('game-block')[0].style.display = 'none';
@@ -39,12 +37,12 @@ export function continuee() {
         'wrapper-block__settings-and-raunds-description'
       )[0].style.display = 'none';
       restartWordConstructor();
-      b = 1;
+      raundsCounter = 1;
       return;
     }
     document.getElementsByClassName(
       'wrapper-block__raund'
-    )[0].innerHTML = `${b}/10`;
+    )[0].innerHTML = `${raundsCounter}/10`;
     document.getElementsByClassName(
       'game-block__footer-dont-know-button'
     )[0].style.display = 'inline-block';
@@ -82,9 +80,8 @@ export function continuee() {
         document.getElementsByClassName(
           'game-block__volume-block'
         )[0].style.width = '0%';
-        t++;
-        b++;
-        if (b == 11) {
+        raundsCounter++;
+        if (raundsCounter == 11) {
           var statisticBlock = document.getElementsByClassName(
             'statistic-block'
           );
@@ -95,12 +92,12 @@ export function continuee() {
             'wrapper-block__settings-and-raunds-description'
           )[0].style.display = 'none';
           restartWordConstructor();
-          b = 1;
+          raundsCounter = 1;
           return;
         }
         document.getElementsByClassName(
           'wrapper-block__raund'
-        )[0].innerHTML = `${b}/10`;
+        )[0].innerHTML = `${raundsCounter}/10`;
         document.getElementsByClassName(
           'game-block__footer-dont-know-button'
         )[0].style.display = 'inline-block';

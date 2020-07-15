@@ -8,7 +8,7 @@ export function answerHandler(
   randomAudio
 ) {
   var letterArr2 = randomWord.split('');
-  var n = 0;
+  var placeIndex = 0;
   var buttons = document.getElementsByClassName('game-block__body-cell-answer');
   constantsData.errorWord = 'correct';
   for (let i = 0; i < buttons.length; i++) {
@@ -18,12 +18,12 @@ export function answerHandler(
         button.style.background = '#28C38A';
         document
           .getElementsByClassName('game-block__body-cell')
-          [n].appendChild(button);
+          [placeIndex].appendChild(button);
         button.style.margin = '0 auto';
         button.setAttribute('disabled', 'true');
         button.style.cursor = 'auto';
         letterArr2.splice(0, 1);
-        n++;
+        placeIndex++;
         if (letterArr2.length == 0) {
           if (constantsData.errorWord == false) {
             constantsData.wrongAnswersCounter += 1;
