@@ -20,6 +20,7 @@ import { controlForm, submitForm, chooseIcon } from '../form';
 import { startSprintGame } from '../mini-game-sprint/launchSprintGameMethods';
 import { launchStatisticsMethods } from '../statistics/launchStatisticsMethods';
 import { handlerSettingsPage, handlerMainPage } from '../pages';
+import { startMainGame } from '../mainGame/startGame';
 import { renderWordsData } from '../dictionary-page/renderWordsData';
 import { addEventListnersDictionary } from '../dictionary-page/addEventListnersDictionary';
 
@@ -34,6 +35,13 @@ export const callsNecessaryMethods = (path) => {
       chooseIcon();
       break;
     }
+    case '/main/word-learning': {
+      startMainGame();
+      break;
+    }
+    case '/main/word-repeat':
+      startMainGame('intervals');
+      break;
     case '/main': {
       handlerMainPage();
       break;
