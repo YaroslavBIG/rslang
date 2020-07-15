@@ -28,6 +28,8 @@ import {
   clickButtonSpeakIt,
   clickButtonIntervalRepeatContinue,
 } from '../promo-pages/clickButtons/clickButtons';
+import { startGame } from '../audio-call/startGame';
+import { addEventListnerAudioGame } from '../audio-call/addEventListnerAudioGame';
 
 export const callsNecessaryMethods = (path) => {
   switch (path) {
@@ -72,6 +74,11 @@ export const callsNecessaryMethods = (path) => {
     }
     case '/main/speak-it': {
       clickButtonSpeakIt();
+      break;
+    }
+    case '/main/audition': {
+      startGame();
+      addEventListnerAudioGame();
       break;
     }
     default: {

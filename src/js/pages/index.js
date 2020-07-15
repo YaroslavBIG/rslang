@@ -12,3 +12,4 @@ export { handlerMainPage } from './handlerMainPage';
 export { createVocabularyPage } from './createVocabularyPage';
 export { createSpeakItPage } from './createSpeakItPage';
 export { mainPromoPage } from './mainPromoPage';
+export { createAuditionPage } from './createAuditionPage';
