@@ -10,7 +10,7 @@ import { getUserSettings } from '../api';
 
 export async function launchWordConstructorGame() {
   autoProponuciation();
-  if (constantsData.checked == true) {
+  if (constantsData.checked) {
     document.getElementById('checkbox').checked = constantsData.checked;
   }
   continuee();
