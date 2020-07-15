@@ -110,7 +110,8 @@
 
 .screen-wrapper__question {
   position: absolute;
-  width: 220px;
+  width: auto;
+  padding: 5px 15px;
   height: 60px;
   font-size: 37px;
   text-align: center;
