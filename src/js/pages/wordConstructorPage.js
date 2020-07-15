@@ -4,7 +4,7 @@ export const wordConstructorPage = () => `
     <label><input type="checkbox" class="wrapper-block__checkbox" id="checkbox"><label for="checkbox"><span class="wrapper-block__autopronunciation">Автопроизношение</label></label>
     <span class="wrapper-block__raund">1/10</span>
     <a href="#/main" id="confirmed"></a>
-    <a href="#/" id="cancellation"></a>
+    <a href="#/main/word-puzzle" id="cancellation"></a>
     <img src="./assets/black-cross.png" class="wrapper-block__black-cross">
   </div>
   <div class="game-block">

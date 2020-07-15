@@ -5,5 +5,4 @@ window.addEventListener('hashchange', router);
 window.onload = () => {
   load();
   router();
-  localStorage.clear();
 };
