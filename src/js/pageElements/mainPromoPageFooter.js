@@ -25,6 +25,7 @@ export const mainPromoPageFooter = () => `
   </div>
   <button class="wrapper-footer__button-start">
     <a href="#/auth" class="click-enter">Вперёд!</a>
+    <a href="#/main" class="click-enter-main"></a>
   </button>
 </div>
 `;

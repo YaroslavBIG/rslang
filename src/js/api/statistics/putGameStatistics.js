@@ -38,6 +38,8 @@ export const putGameStatistics = async (name, obj) => {
             comp[el] = obj[el];
           }
           break;
+        case 'date':
+          break;
         default:
           comp[el] += obj[el];
           break;
