@@ -18,6 +18,7 @@ import {
   intervalGameRender,
   createStatisticsPage,
   createSettingsPage,
+  wordConstructorPage,
   createVocabularyPage,
   createSpeakItPage,
   mainPromoPage,
@@ -25,6 +26,7 @@ import {
 } from '../pages';
 import {
   intervalRepeatPromoPage,
+  constructorGame,
   englishPuzzleGame,
   listeningGame,
   savannahGame,
@@ -66,7 +68,7 @@ export const SprintComponent = {
   render: () => sprintGame() + createSprintGamePage(),
 };
 export const WordPuzzleComponent = {
-  render: () => '',
+  render: () => constructorGame() + wordConstructorPage(),
 };
 export const VocabularyComponent = {
   render: () => createVocabularyPage(),

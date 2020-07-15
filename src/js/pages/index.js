@@ -9,6 +9,7 @@ export { createAboutTheTeamPage } from './createAboutTheTeamPage';
 export { createSprintGamePage } from './createSprintGamePage';
 export { createStatisticsPage } from './createStatisticsPage';
 export { handlerMainPage } from './handlerMainPage';
+export { wordConstructorPage } from './wordConstructorPage';
 export { createVocabularyPage } from './createVocabularyPage';
 export { createSpeakItPage } from './createSpeakItPage';
 export { mainPromoPage } from './mainPromoPage';

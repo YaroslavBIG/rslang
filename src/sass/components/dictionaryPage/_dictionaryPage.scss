@@ -87,7 +87,7 @@
         margin: 5px;
         box-shadow: 0px -1px 26px -11px rgb(2, 2, 2);
         background: #ecb100;
-        border: none; 
+        border: none;
         &:hover {
             cursor: pointer;
             background: #ffbf01;
@@ -127,7 +127,6 @@
         font-weight: $secondary-font-weight;
         border: none;
         &:hover {
-            // background-color: rgba(55, 56, 60, 0.08);
             cursor: pointer;
         }
         &.active {
@@ -166,7 +165,7 @@
         }
         &__buttons{
             display: flex;
-            justify-content: center;  
+            justify-content: center;
         }
         &__btn{
             font-size: 1rem;
@@ -199,7 +198,7 @@
         }
         &__buttons{
             display: flex;
-            justify-content: center;  
+            justify-content: center;
         }
         &__btn{
             font-size: 1rem;
@@ -232,7 +231,7 @@
         }
         &__buttons{
             display: flex;
-            justify-content: center;  
+            justify-content: center;
         }
         &__btn{
             font-size: 1rem;
@@ -265,7 +264,7 @@
         }
         &__buttons{
             display: flex;
-            justify-content: center;  
+            justify-content: center;
         }
         &__btn{
             font-size: 1rem;
@@ -316,7 +315,7 @@
         }
         &__buttons{
             display: flex;
-            justify-content: center;  
+            justify-content: center;
         }
         &__btn{
             font-size: 1rem;
@@ -367,7 +366,7 @@
         }
         &__buttons{
             display: flex;
-            justify-content: center;  
+            justify-content: center;
         }
         &__btn{
             font-size: 1rem;
@@ -422,7 +421,7 @@
         }
         &__buttons{
             display: flex;
-            justify-content: center;  
+            justify-content: center;
         }
         &__btn{
             font-size: 1rem;

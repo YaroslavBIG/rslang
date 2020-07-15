@@ -1,0 +1,218 @@
+@import "./commons/vars.scss";
+
+.wrapper-block {
+  font-family: $primary-font-family;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__raund {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #7e919f;
+  }
+  &__settings-and-raunds-description {
+    display: flex;
+    flex-direction: row;
+    width: 35%;
+    justify-content: flex-end;
+  }
+  &__autopronunciation {
+    margin-top: 25px;
+    font-size: 15px;
+    color: #7e919f;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  &__checkbox {
+    margin-top: 20px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  &__black-cross {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+}
+
+.game-block {
+  border: 1px solid #e6e9ee;
+  width: 700px;
+  height: 600px;
+  text-align: center;
+  &__header {
+    width: 100%;
+    height: 20%;
+    display: none;
+    justify-content: space-between;
+  }
+  &__body {
+    width: 100%;
+    height: 60%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__footer {
+    width: 100%;
+    height: 20%;
+    background-color: #f5f7f8;
+    display: none;
+  }
+  &__header-name {
+    font-size: 27px;
+    color: #37383c;
+  }
+  &__header-description {
+    font-size: 15px;
+    color: #7e919f;
+  }
+  &__footer-dont-know-button {
+    width: 30%;
+    height: 75%;
+    margin-top: 12px;
+    border: 0px solid white;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #e5e9ec;
+    transition: 0.3s;
+  }
+  &__footer-dont-know-button:hover {
+    background-color: #dfe4e7;
+  }
+  &__body-cell {
+    width: 62px;
+    height: 50px;
+    background-color: #f5f7f8;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 3px 0 #eaebec;
+    margin-left: 10px;
+  }
+  &__body-cells {
+    display: flex;
+    display: flex;
+    width: auto;
+    flex-wrap: wrap;
+  }
+  &__body-cells-answers {
+    display: flex;
+    width: auto;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  &__body-cell-answer {
+    width: 62px;
+    height: 50px;
+    background-color: #2582e7;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 45px;
+    transition: 0.3s;
+    margin-left: 10px;
+    outline: 0px;
+    border: 0px solid white;
+  }
+  &__body-cell-answer:hover {
+    background-color: #247dd7;
+  }
+  &__enter {
+    font-size: 15px;
+    font-weight: 600;
+    color: #7e919f;
+    cursor: pointer;
+  }
+  &__context-image {
+    width: 200px;
+    height: 140px;
+    display: none;
+    margin: 0 auto;
+  }
+  &__context-text {
+    font-size: 14px;
+  }
+  &__context-name {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #7e919e;
+    display: none;
+  }
+  &__header-volume {
+    width: 50px;
+    height: 50px;
+    display: none;
+    cursor: pointer;
+  }
+  &__header-context {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  &__volume-block {
+    display: flex;
+    width: 0%;
+    justify-content: center;
+    align-items: center;
+  }
+  &__footer-continue {
+    display: none;
+    width: 30%;
+    height: 75%;
+    margin-top: 12px;
+    border: 0px solid white;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #e5e9ec;
+    transition: 0.3s;
+  }
+}
+
+.statistic-block {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #e6e9ee;
+  width: 700px;
+  height: 600px;
+  text-align: center;
+  &__restart {
+    margin-top: 25px;
+    cursor: pointer;
+    border: none;
+    outline: 0;
+    border-radius: 10px;
+    height: 50px;
+    background-color: #2582e7;
+    color: $primary-color;
+  }
+  &__return {
+    margin-top: 25px;
+    color: #2582e7;
+  }
+  &__error {
+    color: #ed593b;
+  }
+  &__correct {
+    color: #28c38a;
+  }
+}
+
+#choice {
+  margin-top: 250px;
+  color: $primary-color;
+  background-color: #2582e7;
+  cursor: pointer;
+  border: none;
+  outline: 0;
+  border-radius: 10px;
+  width: 100px;
+  height: 25px;
+}

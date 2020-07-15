@@ -17,17 +17,18 @@
  */
 
 import { controlForm, submitForm, chooseIcon } from '../form';
-import { launchStatisticsMethods } from '../statistics/launchStatisticsMethods';
 import { handlerSettingsPage, handlerMainPage } from '../pages';
-import { startMainGame } from '../mainGame/startGame';
-import { renderWordsData } from '../dictionary-page/renderWordsData';
-import { addEventListnersDictionary } from '../dictionary-page/addEventListnersDictionary';
-import { addSwiper } from '../swiper/swiper';
 import {
+  clickButtonConstructorGame,
   clickButtonSprintGame,
   clickButtonSpeakIt,
   clickButtonIntervalRepeatContinue,
 } from '../promo-pages/clickButtons/clickButtons';
+import { launchStatisticsMethods } from '../statistics/launchStatisticsMethods';
+import { startMainGame } from '../mainGame/startGame';
+import { renderWordsData } from '../dictionary-page/renderWordsData';
+import { addEventListnersDictionary } from '../dictionary-page/addEventListnersDictionary';
+import { addSwiper } from '../swiper/swiper';
 import { startGame } from '../audio-call/startGame';
 import { addEventListnerAudioGame } from '../audio-call/addEventListnerAudioGame';
 
@@ -65,6 +66,10 @@ export const callsNecessaryMethods = (path) => {
     }
     case '/main/settings': {
       handlerSettingsPage();
+      break;
+    }
+    case '/main/word-puzzle': {
+      clickButtonConstructorGame();
       break;
     }
     case '/vocabulary': {
