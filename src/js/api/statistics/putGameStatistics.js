@@ -24,10 +24,23 @@ export const putGameStatistics = async (name, obj) => {
     const arr = Object.keys(comp);
 
     arr.forEach((el) => {
-      if (el !== 'date' && el !== 'counter') {
-        comp[el] += obj[el];
-      } else if (el === 'counter') {
-        comp[el] += 1;
+      switch (el) {
+        case 'counter':
+          comp[el] += 1;
+          break;
+        case 'correctSeries':
+          if (comp[el] < obj[el]) {
+            comp[el] = obj[el];
+          }
+          break;
+        case 'today':
+          if (comp[el]) {
+            comp[el] = obj[el];
+          }
+          break;
+        default:
+          comp[el] += obj[el];
+          break;
       }
     });
 

@@ -1,3 +1,5 @@
+export { mainGameRender } from './mainGameRender';
+export { intervalGameRender } from './intervalGame';
 export { createErrorPage } from './createErrorPage';
 export { createSignInUpPage } from './createSignInUpPage';
 export { createMainPage } from './createMainPage';
@@ -8,3 +10,4 @@ export { createSprintGamePage } from './createSprintGamePage';
 export { createStatisticsPage } from './createStatisticsPage';
 export { handlerMainPage } from './handlerMainPage';
 export { createSavannahPage } from './createSavannahPage';
+export { createVocabularyPage } from './createVocabularyPage';
