@@ -1,5 +1,5 @@
-import Swiper from '../../../node_modules/swiper/swiper-bundle';
-import '../../../node_modules/swiper/swiper-bundle.css';
+import Swiper from 'swiper/bundle';
+import 'swiper/swiper-bundle.css';
 
 export function addSwiper() {
   const swiper = new Swiper('.swiper-container', {

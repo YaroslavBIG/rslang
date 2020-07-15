@@ -10,5 +10,4 @@ export const constantsData = {
   longWrongAnswersCounter: 0,
   longCorrectAnswersCounter: 0,
   total: 0,
-  userWords: true,
 };
