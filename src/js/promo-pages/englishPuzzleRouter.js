@@ -2,8 +2,8 @@ export const englishPuzzleGame = () => `
       <div id="myModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
-        <a href="#/" class="close"></a>
-          <span class="modal-header__name">Мини-игра English puzzle</span> 
+        <a href="#/main" class="close"></a>
+          <span class="modal-header__name">Мини-игра English puzzle</span>
         </div>
         <div class="modal-body">
           <p class="modal-body__description">English puzzle - это мини-игра в которой пазлы со словами надо сладывать в предложения.</p>

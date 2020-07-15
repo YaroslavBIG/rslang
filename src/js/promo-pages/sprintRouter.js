@@ -2,8 +2,8 @@ export const sprintGame = () => `
       <div id="myModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
-        <a href="#/" class="close"></a>
-          <span class="modal-header__name">Мини-игра Sprint</span> 
+        <a href="#/main" class="close"></a>
+          <span class="modal-header__name">Мини-игра Sprint</span>
         </div>
         <div class="modal-body">
           <p class="modal-body__description">Sprint - это мини-игра в которой вам надо определить правильный ли перевод слова или нет.</p>

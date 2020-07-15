@@ -1,6 +1,7 @@
 @import "./commons/normalize.scss";
 @import "./commons/vars.scss";
 @import "./components/index";
+@import './components/media/media-main-game';
 @import "./components/main-page.scss";
 @import "./components/main/main.scss";
 @import "./components/main/card.scss";
@@ -17,6 +18,9 @@
 @import "./components/form/icon-auth";
 @import "./components/form/start-section";
 @import "./components/media/media-form";
+@import "./components/intervalGame/intervalMain";
+@import "./components/intervalGame/controls";
+@import "./components/media/media-interval";
 @import "./components/modal/main-promo-page";
 @import "./components/media/media-main-promo-page";
 @import "./components/modal/modal";
@@ -24,4 +28,11 @@
 @import "components/aboutTheTeamPage/aboutTheTeamPage.scss";
 @import "components/sprintGame/sprintGame";
 @import "components/statistics/statistics";
+@import "./components/spinner/spinner";
+@import "components/dictionaryPage/dictionaryPage";
+@import "./components/speak-it-game/main-section";
+@import "./components/speak-it-game/game-items";
+@import "./components/speak-it-game/buttons-game";
+@import "./components/media/media-speak";
+@import "./components/speak-it-game/speak-modal";
 @import "components/audio-call/audio-call";

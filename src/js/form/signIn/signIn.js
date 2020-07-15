@@ -3,7 +3,7 @@ import { getUserSettings } from '../../api';
 import { setStorageFromObject } from '../../utils';
 
 export const signIn = async () => {
-  const nextButton = document.querySelector('.click-enter');
+  const nextButton = document.querySelector('.click-enter-main');
   const errorBlock = document.querySelector('.error-block');
 
   const login = document.querySelector('[name="login"]').value;
