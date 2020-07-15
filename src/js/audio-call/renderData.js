@@ -4,6 +4,7 @@ import { playAudio } from './playAudio';
 
 export const renderData = (wordsForGame, index = 0) => {
   if (wordsForGame.length) {
+    const spinnerOverlay = document.querySelector('.spinner-overlay');
     const contentContainer = document.querySelector('.audio-call-content');
     const currentWords = [];
     const indexForGame = index;
@@ -17,6 +18,7 @@ export const renderData = (wordsForGame, index = 0) => {
     allWords.sort(() => Math.random() - 0.5);
     const cards = renderCards(allWords);
     contentContainer.append(cards);
+    spinnerOverlay.remove();
     setTimeout(playAudio(mainWord.audio), 1000);
   }
 };
