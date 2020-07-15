@@ -1,0 +1,204 @@
+.card_wrapper{
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.card-game{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 250px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 0 1px 0 rgba(0, 0, 0, 0.12);
+  filter: drop-shadow(2px 4px 6px black);
+  background-color: $color-back-main-game;
+  text-align: center;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  font: $primary-font-weight $primary-font-size+6px $primary-font-family;
+  .anwser {
+    color: $color-incorrect;
+  }
+  .anwser--wright {
+    color: $color-correct;
+  }
+}
+
+.transform--scale {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+}
+
+.card-text{
+  &:last-child {
+    line-height: 0.9;
+  }
+  &--quest{
+    margin-bottom: 10px;
+  }
+  &--translate{
+    font-size: $primary-font-size + 2px;
+  }
+}
+.separator{
+  margin-bottom: 10px;
+  width: 80%;
+  align-self: center;
+  hr{
+    border: none;
+	  border-top: 1px solid $color-target-word;
+  }
+  &--blue hr{
+    border-color: $color-separator-interval;
+  }
+}
+
+.sentence--target-word {
+  display: inline-block;
+  overflow: hidden;
+  overflow-wrap: normal;
+  background-color: $color-target-word;
+  &:focus{
+    outline: 2px solid $active-color;
+  }
+}
+
+.target-word--incorrect {
+  outline: 1px solid $color-incorrect;
+}
+
+.game_main__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('../assets/img/backMainGame.svg') no-repeat center / cover;
+  min-height: calc(100vh - 64px - 44px);
+  &_inner{
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+    color: $primary-color;
+  }
+}
+
+.game_main {
+ display: flex;
+ margin-top: 1%;
+ &__modal{
+  display: none;
+  padding-top: 2%;
+  width: 100%;
+  background: #00000082;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  bottom: 0;
+ }
+}
+
+.modal{
+  &__inner{
+    background: $primary-color;
+    padding: 0 10px 10px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 0px;
+    color: $secondary-color;
+    overflow-x: hidden;
+    overflow-y: auto;
+    & h2, p{
+      font-weight: $primary-font-weight;
+      font-family: $primary-font-family;
+    }
+    & h2{
+      font-size: $primary-font-size + 16px;
+    }
+    & p{
+      font-size: $primary-font-size + 3px;
+    }
+  }
+  &__button_block{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2%
+  }
+}
+
+.button__main-game {
+  width: 135px;
+  min-width: 113px;
+}
+
+.button__main-game--hide {
+  display: none;
+}
+
+.button__main{
+  box-sizing: border-box;
+}
+
+.arrow {
+  background-image: url(../assets/img/arrow.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 60px;
+  margin-top: 18%;
+  cursor: pointer;
+  &--left{
+    transform: rotateY(180deg);
+  }
+  &--left:hover,
+  &--right:hover{
+    margin-top: 19%;
+    transition: all 0.2s ease-in-out;
+  }
+  &--left:hover{
+    transform:rotateY(180deg) scale(1.5);
+  }
+  &--right:hover{
+    transform:scale(1.5);
+  }
+}
+
+.hint{
+  padding: 30px 20px 0;
+  &--translate_word, &--text_example, &--image{
+    text-align: center;
+    font: $secondary-font-weight $primary-font-size $primary-font-family;
+    margin-bottom: 10px;
+  }
+  &--image{
+    img{
+      border-radius: 8px;
+      border: 2px solid $active-color;
+    }
+  }
+}
+
+.controls{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 30px 0 0 0;
+  &__button{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2%;
+  }
+}

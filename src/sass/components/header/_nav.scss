@@ -1,0 +1,109 @@
+.nav {
+  flex-grow: 1;
+  &__list {
+    display: flex;
+    list-style-type: none;
+  }
+  &__item {
+    margin-left: 8px;
+    padding: 5px 12px;
+    border-radius: 10px;
+    font-weight: $secondary-font-weight;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    &:hover {
+      background-color: rgba(55, 56, 60, 0.08);
+      cursor: pointer;
+    }
+    &.active {
+      background-color: $active-color;
+    }
+  }
+  .nav__btn,
+  .nav__toggle {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    .nav__toggle {
+      display: initial;
+      opacity: 0;
+      position: fixed;
+      left: -100px;
+    }
+    .nav__toggle:checked ~ .nav__btn > span {
+      transform: rotate(45deg);
+    }
+    .nav__toggle:checked ~ .nav__btn > span::before {
+      top: 0;
+      transform: rotate(0);
+    }
+    .nav__toggle:checked ~ .nav__btn > span::after {
+      top: 0;
+      transform: rotate(90deg);
+    }
+    .nav__toggle:checked ~ .nav__list {
+      visibility: visible;
+      left: 0;
+    }
+    .nav__btn {
+      display: flex;
+      align-items: center;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+      z-index: 101;
+    }
+    .nav__btn > span,
+    .nav__btn > span::before,
+    .nav__btn > span::after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #616161;
+      transition-duration: 0.25s;
+    }
+    .nav__btn > span::before {
+      content: "";
+      top: -8px;
+    }
+    .nav__btn > span::after {
+      content: "";
+      top: 8px;
+    }
+    .nav__list {
+      display: block;
+      position: fixed;
+      visibility: hidden;
+      top: 0;
+      left: -100%;
+      width: 200px;
+      height: 100%;
+      margin: 0;
+      padding: 80px 20px;
+      list-style: none;
+      background-color: #eceff1eb;
+      box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+      transition-duration: 0.25s;
+      z-index: 100;
+    }
+    .nav__item {
+      display: block;
+      padding: 12px 24px;
+      color: #333;
+      font-family: "Roboto", sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration: none;
+      transition-duration: 0.25s;
+    }
+    .nav__item:hover {
+      background-color: #cfd8dc;
+    }
+  }
+}
