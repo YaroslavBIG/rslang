@@ -16,7 +16,7 @@ export const userWordHandler = async () => {
   dontKnowButton(word, translate, audio, text, image);
   volume(audio);
   constantsData.counter += 1;
-  if (constantsData.counter == 10) {
+  if (constantsData.counter == constantsData.raunds) {
     constantsData.raundsCounter += 1;
     constantsData.counter = 0;
   }
