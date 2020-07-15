@@ -12,6 +12,6 @@ import { getResponse } from '../api/getResponse';
  */
 export const getAggregatedWords = async (filter) => {
   const { userId } = globalUser.get();
-  const res = await getResponse(`users/${userId}/aggregatedWords?filter=${JSON.stringify(filter)}`, { method: 'GET' });
+  const res = await getResponse(`users/${userId}/aggregatedWords?wordsPerPage=1000&filter=${JSON.stringify(filter)}`, { method: 'GET' });
   return res;
 };

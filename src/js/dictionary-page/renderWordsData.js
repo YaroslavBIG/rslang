@@ -14,13 +14,13 @@ export const renderWordsData = async (category = 'all') => {
   const learnedWords = await getTodayLearnedWords();
   if (category === 'all') {
     dictonaryLearned.innerHTML = `Изучено сегодня: ${learnedWords[0].paginatedResults.length}`;
-    filter = { $and: [{ 'userWord.difficulty': { $ne: 'hard' }, 'userWord.optional.deleted': false }] };
+    filter = { $and: [{ 'userWord.difficulty': { $ne: 'hard' }, 'userWord.optional.deleted': 'false' }] };
   } else if (category === 'hard') {
     dictonaryLearned.innerHTML = '';
-    filter = { $and: [{ 'userWord.difficulty': 'hard', 'userWord.optional.deleted': false }] };
+    filter = { $and: [{ 'userWord.difficulty': 'hard', 'userWord.optional.deleted': 'false' }] };
   } else if (category === 'delete') {
     dictonaryLearned.innerHTML = '';
-    filter = { $and: [{ 'userWord.optional.deleted': true }] };
+    filter = { $and: [{ 'userWord.optional.deleted': 'true' }] };
   }
   words = await getAggregatedWords(filter);
   const userSettings = await getUserSettings();
