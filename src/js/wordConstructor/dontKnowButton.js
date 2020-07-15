@@ -1,6 +1,3 @@
-import { continuee } from './continue';
-import { fetchSprintGameData } from './fetchWordConstructorGameData';
-import { randomInteger } from '../utils';
 import { constantsData } from './constants';
 
 export function dontKnowButton(

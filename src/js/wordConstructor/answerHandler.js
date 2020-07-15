@@ -45,7 +45,6 @@ export function answerHandler(
               'statistic-block__corrects'
             )[0].innerHTML += `<p>${randomWord} — ${randomTranslate}</p>`;
           }
-          alert(constantsData.checked);
           if (constantsData.checked == true) {
             var sound = document.createElement('audio');
             sound.src = `https://raw.githubusercontent.com/irinainina/rslang/rslang-data/data/${randomAudio}`;

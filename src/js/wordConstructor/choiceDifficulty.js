@@ -1,7 +1,3 @@
-import { fetchConstructorGameData } from './fetchWordConstructorGameData';
-import { randomInteger } from '../utils';
-import { answerHandler } from './answerHandler';
-import { cutWord } from './cutWord';
 import { userWordHandler } from './userWordHandler';
 
 export const choiceDifficulty = () => {

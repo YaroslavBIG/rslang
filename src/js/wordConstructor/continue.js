@@ -1,10 +1,5 @@
-import { fetchSprintGameData } from './fetchWordConstructorGameData';
-import { randomInteger } from '../utils';
-import { statisticPage } from './statisticPage';
 import { restartWordConstructor } from './restartWordConstructor';
-import { dontKnowButton } from './dontKnowButton';
 import { constantsData } from './constants';
-import { choiceDifficulty } from './choiceDifficulty';
 import { userWordHandler } from './userWordHandler';
 
 var randomWord = Math.ceil(Math.random() * 19);
@@ -70,7 +65,6 @@ export function continuee() {
         .display == 'inline-block'
     ) {
       if (e.code == 'Enter') {
-        alert();
         constantsData.total += 1;
         document.getElementsByClassName(
           'game-block__context-image'
