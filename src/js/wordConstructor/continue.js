@@ -2,12 +2,6 @@ import { restartWordConstructor } from './restartWordConstructor';
 import { constantsData } from './constants';
 import { userWordHandler } from './userWordHandler';
 
-var randomWord = Math.ceil(Math.random() * 19);
-var randomPage = Math.ceil(Math.random() * 29);
-var randomGroup = Math.ceil(Math.random() * 5);
-var j = randomWord;
-var page = randomPage;
-var group = randomGroup;
 var t = 0;
 var b = 1;
 export function continuee() {

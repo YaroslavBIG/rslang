@@ -7,8 +7,6 @@ export function dontKnowButton(
   randomTextExample,
   randomImage
 ) {
-  var n = 0;
-  var buttons = document.getElementsByClassName('game-block__body-cell-answer');
   var letterArr3 = randomWord.split('');
   document.getElementsByClassName(
     'game-block__footer-dont-know-button'
