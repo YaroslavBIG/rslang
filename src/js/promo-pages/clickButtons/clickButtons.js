@@ -1,6 +1,7 @@
 import { startSprintGame } from '../../mini-game-sprint/launchSprintGameMethods';
 import { startMainGame } from '../../mainGame/startGame';
 import { launchGame } from '../../speak-it-game';
+import { launchSavannahMethods } from '../../savannah/launchSavannahMethods';
 
 export const clickButtonIntervalRepeatContinue = () => {
   document
@@ -27,6 +28,7 @@ export const clickButtonEnglishPuzzle = () => {
 export const clickButtonSavannahGame = () => {
   document.getElementById('savannahGame').addEventListener('click', () => {
     document.getElementById('myModal').style.display = 'none';
+    launchSavannahMethods();
   });
 };
 

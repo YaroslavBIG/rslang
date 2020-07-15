@@ -19,7 +19,6 @@
 import { controlForm, submitForm, chooseIcon } from '../form';
 import { launchStatisticsMethods } from '../statistics/launchStatisticsMethods';
 import { handlerSettingsPage, handlerMainPage } from '../pages';
-import { launchSavannahMethods } from '../savannah/launchSavannahMethods';
 import { startMainGame } from '../mainGame/startGame';
 import { renderWordsData } from '../dictionary-page/renderWordsData';
 import { addEventListnersDictionary } from '../dictionary-page/addEventListnersDictionary';
@@ -28,6 +27,7 @@ import {
   clickButtonSprintGame,
   clickButtonSpeakIt,
   clickButtonIntervalRepeatContinue,
+  clickButtonSavannahGame,
 } from '../promo-pages/clickButtons/clickButtons';
 
 export const callsNecessaryMethods = (path) => {
@@ -63,7 +63,7 @@ export const callsNecessaryMethods = (path) => {
       break;
     }
     case '/main/savannah': {
-      launchSavannahMethods();
+      clickButtonSavannahGame();
       break;
     }
     case '/main/settings': {
