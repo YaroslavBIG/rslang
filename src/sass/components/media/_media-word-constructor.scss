@@ -13,8 +13,86 @@
 @media screen and (max-height: 650px) {
   .wrapper-block {
     &__settings-and-raunds-description {
-      margin-top: 350px;
+      margin-top: 300px;
+      margin-left: -80px;
       position: absolute;
+    }
+  }
+  .game-block {
+    height: 500px;
+  }
+  #choice {
+    margin-top: 100px;
+  }
+  .game-block {
+    &__header-name {
+      font-size: 15px;
+    }
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .wrapper-block {
+    &__settings-and-raunds-description {
+      margin-top: 250px;
+    }
+  }
+  .game-block {
+    height: 400px;
+  }
+  .game-block {
+    &__body-cell {
+      width: 30px;
+      height: 30px;
+    }
+    &__body-cell-answer {
+      width: 30px;
+      height: 30px;
+      line-height: 10px;
+    }
+    &__header-description {
+      font-size: 12px;
+    }
+    &__context-image {
+      width: 200px;
+      height: 100px;
+    }
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .wrapper-block {
+    &__settings-and-raunds-description {
+      margin-top: 210px;
+    }
+  }
+}
+
+@media screen and (max-height: 410px) {
+  .wrapper-block {
+    &__settings-and-raunds-description {
+      margin-top: 160px;
+    }
+  }
+  .game-block {
+    height: 350px;
+    &__body-cell {
+      width: 30px;
+      height: 30px;
+    }
+    &__body-cell-answer {
+      width: 30px;
+      height: 30px;
+      line-height: 10px;
+    }
+    &__header-description {
+      font-size: 10px;
+    }
+    &__footer {
+      height: 15%;
+    }
+    &__context-image {
+      display: none;
     }
   }
 }
@@ -39,8 +117,8 @@
   }
   .wrapper-block {
     &__settings-and-raunds-description {
-      margin-top: 260px;
-      margin-left: 175px;
+      margin-top: 240px;
+      margin-left: 200px;
     }
   }
 }
