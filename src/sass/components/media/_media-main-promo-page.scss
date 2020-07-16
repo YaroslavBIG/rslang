@@ -16,8 +16,14 @@
 
 @media screen and (max-device-width: 1000px) {
   .wrapper-body {
-    &__gifs-block {
-      width: 100%;
+    .wrapper-body {
+      &__first-gifs,
+      &__second-gifs {
+        flex-direction: column;
+      }
+      &__gifs-block {
+        width: 100%;
+      }
     }
   }
   .swiper-container {
