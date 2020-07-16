@@ -5,6 +5,7 @@ export function exitInGame() {
   document
     .getElementsByClassName('wrapper-block__black-cross')[0]
     .addEventListener('click', () => {
+      // eslint-disable-next-line no-restricted-globals
       const conf = confirm('Вы уверены что хотите выйти?');
       if (conf) {
         document.getElementById('confirmed').click();

@@ -23,6 +23,7 @@ import {
   clickButtonSprintGame,
   clickButtonSpeakIt,
   clickButtonIntervalRepeatContinue,
+  clickButtonSavannahGame,
 } from '../promo-pages/clickButtons/clickButtons';
 import { launchStatisticsMethods } from '../statistics/launchStatisticsMethods';
 import { startMainGame } from '../mainGame/startGame';
@@ -62,6 +63,10 @@ export const callsNecessaryMethods = (path) => {
     }
     case '/statistic': {
       launchStatisticsMethods();
+      break;
+    }
+    case '/main/savannah': {
+      clickButtonSavannahGame();
       break;
     }
     case '/main/settings': {

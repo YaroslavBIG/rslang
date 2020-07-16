@@ -18,6 +18,7 @@ import {
   intervalGameRender,
   createStatisticsPage,
   createSettingsPage,
+  createSavannahPage,
   wordConstructorPage,
   createVocabularyPage,
   createSpeakItPage,
@@ -62,7 +63,7 @@ export const AuditionComponent = {
   render: () => listeningGame() + createAuditionPage(),
 };
 export const SavannahComponent = {
-  render: () => savannahGame(),
+  render: () => savannahGame() + createSavannahPage(),
 };
 export const SprintComponent = {
   render: () => sprintGame() + createSprintGamePage(),
