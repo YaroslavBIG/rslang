@@ -63,8 +63,7 @@
     font-size: $secondary-font-size;
   }
   &__gifs-block {
-    width: 30%;
-    height: 300px;
+    max-width: 30%;
   }
 }
 
@@ -72,7 +71,9 @@
   padding: 2px 16px;
   margin-top: 100px;
   &__button-start {
-    background-color: $color-button-name;
+    display: flex;
+    margin: 0 auto;
+    background-color: $active-color;
     width: 206px;
     height: 64px;
     outline: 0;
@@ -81,8 +82,7 @@
     cursor: pointer;
     color: $primary-color;
     box-shadow: 0 2px 0 0 $secondary-shadow-color;
-    margin-bottom: 200px;
-    margin-top: 100px;
+    margin-top: 10px;
   }
   &__button-name {
     font-weight: $primary-font-weight + 100;
@@ -102,9 +102,7 @@
   }
   &__video {
     margin-top: 100px;
-    height: 600px;
-    width: 70%;
-    margin-bottom: 100px;
+    max-width: 70%;
   }
   &__familiarize {
     font-weight: $primary-font-weight - 100;
@@ -127,8 +125,6 @@
 
 .swiper-container {
   margin-top: 50px;
-  width: 1000px;
-  height: 500px;
   margin-bottom: 50px;
 }
 
@@ -156,4 +152,6 @@
   background-color: rgba(0, 0, 0, 0);
   color: $primary-color;
   text-decoration: none;
+  align-self: center;
+  margin: 0 auto;
 }
