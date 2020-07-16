@@ -19,5 +19,6 @@ export const fetchWordsForGame = async () => {
   }
   wordsForGame.sort(() => Math.random() - 0.5);
   DATA.words = wordsForGame;
+  loader.remove()
   return wordsForGame;
 };
