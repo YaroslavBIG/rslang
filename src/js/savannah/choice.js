@@ -17,7 +17,6 @@ export const choice = async (firstId, secondId) => {
     savannahData.falseQuestions += 1;
     if (live.length === 1) {
       gameOver(live[0], question, wordsContainer);
-      console.log('game over');
     } else {
       live[0].remove();
       recreationQuestionBlock();

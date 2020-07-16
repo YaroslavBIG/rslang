@@ -13,7 +13,6 @@ export const timeOutQuestion = () => {
   }
   if (live.length === 1) {
     gameOver(live[0], question, wordsContainer);
-    console.log('game over');
   }
   savannahData.falseQuestions += 1;
   recreationQuestionBlock();
