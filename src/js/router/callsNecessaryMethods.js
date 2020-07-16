@@ -25,6 +25,7 @@ import {
   clickButtonIntervalRepeatContinue,
   clickButtonListeningGame,
   clickButtonSavannahGame,
+  clickButtonListeningGame,
 } from '../promo-pages/clickButtons/clickButtons';
 import { launchStatisticsMethods } from '../statistics/launchStatisticsMethods';
 import { startMainGame } from '../mainGame/startGame';
