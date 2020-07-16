@@ -27,6 +27,8 @@
 @import "./components/media/media-modal";
 @import "components/aboutTheTeamPage/aboutTheTeamPage.scss";
 @import "components/sprintGame/sprintGame";
+@import "components/wordConstructor/wordConstructor";
+@import "components/media/media-word-constructor";
 @import "components/statistics/statistics";
 @import "components/savannah/savannah";
 @import "./components/spinner/spinner";
@@ -36,3 +38,4 @@
 @import "./components/speak-it-game/buttons-game";
 @import "./components/media/media-speak";
 @import "./components/speak-it-game/speak-modal";
+@import "components/audio-call/audio-call";
