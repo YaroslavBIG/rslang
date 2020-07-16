@@ -12,7 +12,7 @@ export function dontKnowButton(
   const letterArr3 = randomWord.split('');
   document.getElementsByClassName(
     'game-block__footer-dont-know-button',
-  )[0].onclick = function () {
+  )[0].onclick = function dontKnow() {
     if (constantsData.checked) {
       sound.src = `https://raw.githubusercontent.com/irinainina/rslang/rslang-data/data/${randomAudio}`;
       sound.play();
@@ -21,7 +21,7 @@ export function dontKnowButton(
     document.getElementsByClassName(
       'game-block__body-cells-answers',
     )[0].innerHTML = '';
-    for (let i = 0; i < letterArr3.length; i++) {
+    for (let i = 0; i < letterArr3.length; i += 1) {
       const cell = document.getElementsByClassName('game-block__body-cell')[i];
       cell.innerHTML = `<button class="game-block__body-cell-answer">${letterArr3[i]}</button>`;
 
@@ -29,8 +29,7 @@ export function dontKnowButton(
         i
       ].style.margin = '0 auto';
       document
-        .getElementsByClassName('game-block__body-cell-answer')
-      [i].setAttribute('disabled', 'true');
+        .getElementsByClassName('game-block__body-cell-answer')[i].setAttribute('disabled', 'true');
       document.getElementsByClassName('game-block__body-cell-answer')[
         i
       ].style.cursor = 'auto';
@@ -74,19 +73,19 @@ export function dontKnowButton(
     }
     continuee();
   };
-  document.onkeydown = function (e) {
+  document.onkeydown = function keyD(e) {
     if (
       document.getElementsByClassName('game-block__footer-dont-know-button')[0]
-        .style.display == ''
+        .style.display === ''
       || document.getElementsByClassName('game-block__footer-dont-know-button')[0]
-        .style.display == 'inline-block'
+        .style.display === 'inline-block'
     ) {
-      if (e.code == 'Enter') {
+      if (e.code === 'Enter') {
         constantsData.errorWord = true;
         document.getElementsByClassName(
           'game-block__body-cells-answers',
         )[0].innerHTML = '';
-        for (let i = 0; i < letterArr3.length; i++) {
+        for (let i = 0; i < letterArr3.length; i += 1) {
           const cell = document.getElementsByClassName('game-block__body-cell')[
             i
           ];
@@ -96,8 +95,7 @@ export function dontKnowButton(
             i
           ].style.margin = '0 auto';
           document
-            .getElementsByClassName('game-block__body-cell-answer')
-          [i].setAttribute('disabled', 'true');
+            .getElementsByClassName('game-block__body-cell-answer')[i].setAttribute('disabled', 'true');
           document.getElementsByClassName('game-block__body-cell-answer')[
             i
           ].style.cursor = 'auto';

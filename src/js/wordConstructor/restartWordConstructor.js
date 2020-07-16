@@ -7,7 +7,7 @@ export function restartWordConstructor() {
   document
     .getElementsByClassName('statistic-block__restart')[0]
     .addEventListener('click', () => {
-      if (constantsData.counter != constantsData.end) {
+      if (constantsData.counter !== constantsData.end) {
         document.querySelector('.main').innerHTML = wordConstructorPage();
         constantsData.wrongAnswersCounter = 0;
         constantsData.correctAnswersCounter = 0;

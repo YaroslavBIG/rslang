@@ -6,7 +6,7 @@ let raundsCounter = 1;
 export function continuee() {
   document.getElementsByClassName(
     'game-block__footer-continue',
-  )[0].onclick = function () {
+  )[0].onclick = function cont() {
     constantsData.total += 1;
     document.getElementsByClassName(
       'game-block__context-image',
@@ -26,8 +26,8 @@ export function continuee() {
     )[0].style.display = 'none';
     document.getElementsByClassName('game-block__header')[0].style.width = '100%';
     document.getElementsByClassName('game-block__volume-block')[0].style.width = '0%';
-    raundsCounter++;
-    if (raundsCounter == 11) {
+    raundsCounter += 1;
+    if (raundsCounter === 11) {
       const statisticBlock = document.getElementsByClassName('statistic-block');
       statisticBlock[0].style.display = 'flex';
       document.getElementsByClassName('game-block')[0].style.display = 'none';
@@ -49,12 +49,12 @@ export function continuee() {
     )[0].style.display = 'none';
     userWordHandler();
   };
-  document.onkeydown = function (e) {
+  document.onkeydown = function key(e) {
     if (
       document.getElementsByClassName('game-block__footer-continue')[0].style
-        .display == 'inline-block'
+        .display === 'inline-block'
     ) {
-      if (e.code == 'Enter') {
+      if (e.code === 'Enter') {
         constantsData.total += 1;
         document.getElementsByClassName(
           'game-block__context-image',
@@ -76,8 +76,8 @@ export function continuee() {
         document.getElementsByClassName(
           'game-block__volume-block',
         )[0].style.width = '0%';
-        raundsCounter++;
-        if (raundsCounter == 11) {
+        raundsCounter += 1;
+        if (raundsCounter === 11) {
           const statisticBlock = document.getElementsByClassName(
             'statistic-block',
           );

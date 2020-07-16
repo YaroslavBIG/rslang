@@ -22,14 +22,14 @@ export async function launchWordConstructorGame() {
   const arrUserWords = await userWords();
   const settings = await getUserSettings();
   if (settings.optional.onlyNewWords) {
-    if (arrUserWords.length % 10 != 0) {
+    if (arrUserWords.length % 10 !== 0) {
       const resp = await getNewWords(10 - (arrUserWords.length % 10));
       spinnerControl('off');
-      var resultArr = arrUserWords.concat(resp[0].paginatedResults);
-      var userWordsArr = resultArr;
+      const resultArr = arrUserWords.concat(resp[0].paginatedResults);
+      const userWordsArr = resultArr;
       constantsData.end = userWordsArr.length;
       const size = 10;
-      var res = userWordsArr.reduce(
+      const res = userWordsArr.reduce(
         (p, c) => {
           if (p[p.length - 1].length === size) {
             p.push([]);
@@ -39,26 +39,24 @@ export async function launchWordConstructorGame() {
         },
         [[]],
       );
+      sessionStorage.setItem('userWords', JSON.stringify(res));
     }
-    sessionStorage.setItem('userWords', JSON.stringify(res));
-  } else {
-    if (arrUserWords.length % 10 != 0) {
-      const resp = await getNewWords();
-      var resultArr = resp[0].paginatedResults;
-      var userWordsArr = resultArr;
-      constantsData.end = userWordsArr;
-      const size = 10;
-      var res = userWordsArr.reduce(
-        (p, c) => {
-          if (p[p.length - 1].length === size) {
-            p.push([]);
-          }
-          p[p.length - 1].push(c);
-          return p;
-        },
-        [[]],
-      );
-    }
+  } else if (arrUserWords.length % 10 !== 0) {
+    const resp = await getNewWords();
+    const resultArr = resp[0].paginatedResults;
+    const userWordsArr = resultArr;
+    constantsData.end = userWordsArr;
+    const size = 10;
+    const res = userWordsArr.reduce(
+      (p, c) => {
+        if (p[p.length - 1].length === size) {
+          p.push([]);
+        }
+        p[p.length - 1].push(c);
+        return p;
+      },
+      [[]],
+    );
     sessionStorage.setItem('userWords', JSON.stringify(res));
   }
 }

@@ -14,4 +14,5 @@ export const constantsData = {
   end: 0,
   raundsCounter: 0,
   raunds: 10,
+  placeIndex: 0,
 };
