@@ -71,28 +71,16 @@
 @media screen and (max-height: 410px) {
   .wrapper-block {
     &__settings-and-raunds-description {
-      margin-top: 160px;
+      margin-top: 180px;
     }
   }
   .game-block {
     height: 350px;
-    &__body-cell {
-      width: 30px;
-      height: 30px;
-    }
-    &__body-cell-answer {
-      width: 30px;
-      height: 30px;
-      line-height: 10px;
-    }
     &__header-description {
       font-size: 10px;
     }
     &__footer {
       height: 15%;
-    }
-    &__context-image {
-      display: none;
     }
   }
 }

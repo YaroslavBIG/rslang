@@ -28,7 +28,12 @@ export function answerHandler(
     answerCells.forEach((but) => {
       if (but.innerText !== '') answer += but.innerText;
     });
-    if (answer === randomWord) {
+    if (
+      answer === randomWord &&
+      document.getElementsByClassName('game-block__body-cells-answers')[0]
+        .childElementCount === 0
+    ) {
+      constantsData.placeIndex = 0;
       if (constantsData.errorWord === false) {
         constantsData.wrongAnswersCounter += 1;
         constantsData.longWrongAnswersCounter += 1;
