@@ -14,8 +14,8 @@
 
 ## Запуск сборки
 
-development mode: npm run dev
-production: npm run prod
+* development mode: npm run dev
+* production: npm run prod
 
 ## Технологии которые мы исользовали:
 
