@@ -52,6 +52,14 @@
     display: flex;
     justify-content: space-around;
     padding-bottom: 100px;
+    .hint {
+      width: 25%;
+    }
+
+    .hint:nth-child(1) {
+      width: 20%;
+      margin-right: 20px;
+    }
   }
 
   &__words-container {
@@ -67,15 +75,6 @@
     padding-top: 280px;
   }
 
-}
-
-.hint {
-  width: 25%;
-}
-
-.hint:nth-child(1) {
-  width: 20%;
-  margin-right: 20px;
 }
 
 .live {
