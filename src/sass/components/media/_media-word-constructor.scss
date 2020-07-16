@@ -5,7 +5,7 @@
   .wrapper-block {
     align-items: normal;
     &__settings-and-raunds-description {
-      margin-left: 200px;
+      margin-left: 150px;
     }
   }
 }
@@ -79,9 +79,6 @@
     &__header-description {
       font-size: 10px;
     }
-    &__footer {
-      height: 15%;
-    }
   }
 }
 
@@ -96,9 +93,6 @@
       height: 30px;
       line-height: 10px;
     }
-    &__footer {
-      height: 10%;
-    }
     &__header-description {
       font-size: 12px;
     }
@@ -106,7 +100,15 @@
   .wrapper-block {
     &__settings-and-raunds-description {
       margin-top: 240px;
-      margin-left: 200px;
+      margin-left: 250px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .wrapper-block {
+    &__settings-and-raunds-description {
+      margin-left: 170px;
     }
   }
 }
