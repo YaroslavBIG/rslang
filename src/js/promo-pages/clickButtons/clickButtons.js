@@ -3,6 +3,7 @@ import { launchWordConstructorGame } from '../../wordConstructor/launchWordConst
 import { startMainGame } from '../../mainGame/startGame';
 import { launchGame } from '../../speak-it-game';
 import { launchSavannahMethods } from '../../savannah/launchSavannahMethods';
+import { startGame } from '../../audio-call/startGame';
 
 export const clickButtonIntervalRepeatContinue = () => {
   document
@@ -36,6 +37,7 @@ export const clickButtonSavannahGame = () => {
 export const clickButtonListeningGame = () => {
   document.getElementById('listeningGame').addEventListener('click', () => {
     document.getElementById('myModal').style.display = 'none';
+    startGame();
   });
 };
 
