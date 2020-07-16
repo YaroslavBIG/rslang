@@ -18,12 +18,16 @@ import {
   intervalGameRender,
   createStatisticsPage,
   createSettingsPage,
+  createSavannahPage,
+  wordConstructorPage,
   createVocabularyPage,
   createSpeakItPage,
   mainPromoPage,
+  createAuditionPage,
 } from '../pages';
 import {
   intervalRepeatPromoPage,
+  constructorGame,
   englishPuzzleGame,
   listeningGame,
   savannahGame,
@@ -56,16 +60,16 @@ export const SpeakItComponent = {
   render: () => speakitGame() + createSpeakItPage(),
 };
 export const AuditionComponent = {
-  render: () => listeningGame(),
+  render: () => listeningGame() + createAuditionPage(),
 };
 export const SavannahComponent = {
-  render: () => savannahGame(),
+  render: () => savannahGame() + createSavannahPage(),
 };
 export const SprintComponent = {
   render: () => sprintGame() + createSprintGamePage(),
 };
 export const WordPuzzleComponent = {
-  render: () => '',
+  render: () => constructorGame() + wordConstructorPage(),
 };
 export const VocabularyComponent = {
   render: () => createVocabularyPage(),

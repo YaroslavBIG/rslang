@@ -1,0 +1,118 @@
+.audio-call-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 73vh;
+    padding: 1rem;
+    background: rgb(133,96,173);
+    background: linear-gradient(180deg, rgba(133,96,173,1) 22%, rgba(189,123,159,1) 99%);
+}
+
+.audio-call-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 40%;
+    width: 60%;
+    padding: 1rem;
+    &__word__img {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+    }
+    &__word__word {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+    }
+    &__audio {
+        padding: 20px;
+    }
+    &__audio-img {
+        border-radius: 100%;
+        width: 100px;
+        height: 100px;
+        &:hover {
+            cursor: pointer;
+            box-shadow: -1px 0px 41px 6px rgba(171,210,252,1);
+        }
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.audio-call-answers {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    &__item {
+        border: solid 1px #5c5c5c;
+        color: #313131;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        padding: 5px 20px;
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.5);
+            box-shadow: -1px 0px 56px -12px rgba(255,255,255,1);
+        }
+    }
+}
+
+.right-answer{
+    background-color: rgba(25, 139, 77, 0.5);
+}
+
+.wrong {
+    background-color: rgba(139, 25, 25, 0.5);
+}
+
+.audio-call-buttons {
+    &__button {
+        margin: 10px;
+        width: 170px;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        text-transform: uppercase;
+        text-align: center;
+        color: #343a40;
+        background-color: #f5c908;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        &:hover {
+            background-color: #dab307;
+        }
+    }
+}
+
+.audio-call-stat {
+    text-align: center;
+}
+
+@media (min-device-width: 320px) and (max-device-width: 700px) {
+    .audio-call-answers {
+        flex-direction: column;
+        &__item {
+            text-align: center;
+            margin: 5px;
+        }
+    }
+
+    .audio-call-buttons {
+        &__button {
+            position: relative;
+            bottom: 20px;
+        }
+    }
+
+    .audio-call-main {
+        height: 100vh;
+    }
+}

@@ -56,8 +56,21 @@
   }
 }
 
-@media screen and (max-device-height: 700px) {
+@media screen and (max-device-height: 800px) {
   .modal {
     padding: 0;
+  }
+  .modal-footer {
+    &__button-start {
+      margin-bottom: 50px;
+    }
+  }
+  .modal-body {
+    &__video {
+      margin: 0 auto;
+    }
+  }
+  .close {
+    margin-top: 5px;
   }
 }
