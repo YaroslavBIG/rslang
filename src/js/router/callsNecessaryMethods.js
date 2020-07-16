@@ -23,13 +23,13 @@ import {
   clickButtonSprintGame,
   clickButtonSpeakIt,
   clickButtonIntervalRepeatContinue,
+  clickButtonListeningGame,
 } from '../promo-pages/clickButtons/clickButtons';
 import { launchStatisticsMethods } from '../statistics/launchStatisticsMethods';
 import { startMainGame } from '../mainGame/startGame';
 import { renderWordsData } from '../dictionary-page/renderWordsData';
 import { addEventListnersDictionary } from '../dictionary-page/addEventListnersDictionary';
 import { addSwiper } from '../swiper/swiper';
-import { startGame } from '../audio-call/startGame';
 import { addEventListnerAudioGame } from '../audio-call/addEventListnerAudioGame';
 
 export const callsNecessaryMethods = (path) => {
@@ -82,7 +82,7 @@ export const callsNecessaryMethods = (path) => {
       break;
     }
     case '/main/audition': {
-      startGame();
+      clickButtonListeningGame();
       addEventListnerAudioGame();
       break;
     }
