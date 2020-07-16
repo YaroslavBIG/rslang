@@ -4,7 +4,6 @@ import { startMainGame } from '../../mainGame/startGame';
 import { launchGame } from '../../speak-it-game';
 import { startGame } from '../../audio-call/startGame';
 import { launchSavannahMethods } from '../../savannah/launchSavannahMethods';
-import { startGame } from '../../audio-call/startGame';
 
 export const clickButtonIntervalRepeatContinue = () => {
   document
