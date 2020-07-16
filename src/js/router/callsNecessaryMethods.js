@@ -17,18 +17,20 @@
  */
 
 import { controlForm, submitForm, chooseIcon } from '../form';
-import { launchStatisticsMethods } from '../statistics/launchStatisticsMethods';
 import { handlerSettingsPage, handlerMainPage } from '../pages';
+import {
+  clickButtonConstructorGame,
+  clickButtonSprintGame,
+  clickButtonSpeakIt,
+  clickButtonIntervalRepeatContinue,
+  clickButtonListeningGame,
+  clickButtonSavannahGame,
+} from '../promo-pages/clickButtons/clickButtons';
+import { launchStatisticsMethods } from '../statistics/launchStatisticsMethods';
 import { startMainGame } from '../mainGame/startGame';
 import { renderWordsData } from '../dictionary-page/renderWordsData';
 import { addEventListnersDictionary } from '../dictionary-page/addEventListnersDictionary';
 import { addSwiper } from '../swiper/swiper';
-import {
-  clickButtonSprintGame,
-  clickButtonSpeakIt,
-  clickButtonIntervalRepeatContinue,
-} from '../promo-pages/clickButtons/clickButtons';
-import { startGame } from '../audio-call/startGame';
 import { addEventListnerAudioGame } from '../audio-call/addEventListnerAudioGame';
 
 export const callsNecessaryMethods = (path) => {
@@ -63,8 +65,16 @@ export const callsNecessaryMethods = (path) => {
       launchStatisticsMethods();
       break;
     }
+    case '/main/savannah': {
+      clickButtonSavannahGame();
+      break;
+    }
     case '/main/settings': {
       handlerSettingsPage();
+      break;
+    }
+    case '/main/word-puzzle': {
+      clickButtonConstructorGame();
       break;
     }
     case '/vocabulary': {
@@ -77,7 +87,7 @@ export const callsNecessaryMethods = (path) => {
       break;
     }
     case '/main/audition': {
-      startGame();
+      clickButtonListeningGame();
       addEventListnerAudioGame();
       break;
     }

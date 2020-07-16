@@ -4,7 +4,7 @@ import { saveSettings } from './saveSettings';
 import { logIn } from '../signIn/login';
 
 export const signUp = async () => {
-  const nextButton = document.querySelector('.click-enter');
+  const nextButton = document.querySelector('.click-enter-main');
 
   const login = document.querySelector('[name="email"]').value;
   const pass = document.querySelector('[name="password-up"]').value;

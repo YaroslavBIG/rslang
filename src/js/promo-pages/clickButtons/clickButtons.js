@@ -1,6 +1,9 @@
 import { startSprintGame } from '../../mini-game-sprint/launchSprintGameMethods';
+import { launchWordConstructorGame } from '../../wordConstructor/launchWordConstructorGame';
 import { startMainGame } from '../../mainGame/startGame';
 import { launchGame } from '../../speak-it-game';
+import { startGame } from '../../audio-call/startGame';
+import { launchSavannahMethods } from '../../savannah/launchSavannahMethods';
 
 export const clickButtonIntervalRepeatContinue = () => {
   document
@@ -27,12 +30,14 @@ export const clickButtonEnglishPuzzle = () => {
 export const clickButtonSavannahGame = () => {
   document.getElementById('savannahGame').addEventListener('click', () => {
     document.getElementById('myModal').style.display = 'none';
+    launchSavannahMethods();
   });
 };
 
 export const clickButtonListeningGame = () => {
   document.getElementById('listeningGame').addEventListener('click', () => {
     document.getElementById('myModal').style.display = 'none';
+    startGame();
   });
 };
 
@@ -46,5 +51,6 @@ export const clickButtonSprintGame = () => {
 export const clickButtonConstructorGame = () => {
   document.getElementById('constructorGame').addEventListener('click', () => {
     document.getElementById('myModal').style.display = 'none';
+    launchWordConstructorGame();
   });
 };

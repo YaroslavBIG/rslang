@@ -3,7 +3,7 @@
 .modal {
   position: fixed;
   z-index: 1000;
-  padding-top: 100px;
+  padding-top: 10px;
   left: 0;
   top: 0;
   width: 100%;
@@ -19,7 +19,6 @@
   position: relative;
   margin: auto;
   padding: 0;
-  width: 80%;
 }
 
 .close {
@@ -49,25 +48,19 @@
   text-align: center;
   padding: 2px 16px;
   &__video {
-    margin-top: 100px;
-    width: 560px;
-    height: 315px;
-  }
-  &__description {
-    margin-top: 50px;
-    font-size: $secondary-font-size - 24;
-    max-width: 700px;
-    text-align: center;
-    font-weight: $primary-font-weight + 100;
-    margin-left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+    max-width: -webkit-fill-available;
+    max-height: -webkit-fill-available;
+    margin: 0px 100px 0px 100px;
   }
 
   &__list {
-    width: 30%;
+    list-style-type: none;
+    width: fit-content;
     text-align: left;
-    margin: auto;
+    margin: 0 auto;
+    li{
+      padding-bottom: 3px;
+    }
   }
 }
 
@@ -75,7 +68,6 @@
   padding: 2px 16px;
   color: $primary-color;
   &__button-start {
-    margin-top: 50px;
     background-color: $color-button-name;
     width: 206px;
     height: 64px;
