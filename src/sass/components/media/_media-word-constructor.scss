@@ -2,22 +2,9 @@
   .game-block {
     width: 100%;
   }
-  .wrapper-block {
-    align-items: normal;
-    &__settings-and-raunds-description {
-      margin-left: 150px;
-    }
-  }
 }
 
 @media screen and (max-height: 650px) {
-  .wrapper-block {
-    &__settings-and-raunds-description {
-      margin-top: 300px;
-      margin-left: -80px;
-      position: absolute;
-    }
-  }
   .game-block {
     height: 500px;
   }
@@ -32,11 +19,6 @@
 }
 
 @media screen and (max-height: 600px) {
-  .wrapper-block {
-    &__settings-and-raunds-description {
-      margin-top: 250px;
-    }
-  }
   .game-block {
     height: 400px;
   }
@@ -60,20 +42,7 @@
   }
 }
 
-@media screen and (max-height: 500px) {
-  .wrapper-block {
-    &__settings-and-raunds-description {
-      margin-top: 210px;
-    }
-  }
-}
-
 @media screen and (max-height: 410px) {
-  .wrapper-block {
-    &__settings-and-raunds-description {
-      margin-top: 180px;
-    }
-  }
   .game-block {
     height: 350px;
     &__header-description {
@@ -95,12 +64,6 @@
     }
     &__header-description {
       font-size: 12px;
-    }
-  }
-  .wrapper-block {
-    &__settings-and-raunds-description {
-      margin-top: 240px;
-      margin-left: 250px;
     }
   }
 }

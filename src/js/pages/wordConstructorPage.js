@@ -8,7 +8,6 @@ export const wordConstructorPage = () => `
     <img src="./assets/black-cross.png" class="wrapper-block__black-cross">
   </div>
   <div class="game-block">
-    <input type="submit" value="Выбрать" id="choice">
     <select id="select">
       <option value="" disabled selected>Выбрать уровень сложности</option>
       <option value="0">0</option>
@@ -18,6 +17,7 @@ export const wordConstructorPage = () => `
       <option value="4">4</option>
       <option value="5">5</option>
     </select>
+    <input type="submit" value="Выбрать" id="choice">
     <div class="game-block__header">
       <div class="game-block__volume-block">
         <img src="./assets/img/volume.svg.png" class="game-block__header-volume">
