@@ -2,19 +2,51 @@
   .game-block {
     width: 100%;
   }
-  .wrapper-block {
-    align-items: normal;
-    &__settings-and-raunds-description {
-      margin-left: 200px;
+}
+
+@media screen and (max-height: 650px) {
+  .game-block {
+    height: 500px;
+  }
+  #choice {
+    margin-top: 100px;
+  }
+  .game-block {
+    &__header-name {
+      font-size: 15px;
     }
   }
 }
 
-@media screen and (max-height: 650px) {
-  .wrapper-block {
-    &__settings-and-raunds-description {
-      margin-top: 350px;
-      position: absolute;
+@media screen and (max-height: 600px) {
+  .game-block {
+    height: 400px;
+  }
+  .game-block {
+    &__body-cell {
+      width: 30px;
+      height: 30px;
+    }
+    &__body-cell-answer {
+      width: 30px;
+      height: 30px;
+      line-height: 10px;
+    }
+    &__header-description {
+      font-size: 12px;
+    }
+    &__context-image {
+      width: 200px;
+      height: 100px;
+    }
+  }
+}
+
+@media screen and (max-height: 410px) {
+  .game-block {
+    height: 350px;
+    &__header-description {
+      font-size: 10px;
     }
   }
 }
@@ -30,17 +62,16 @@
       height: 30px;
       line-height: 10px;
     }
-    &__footer {
-      height: 10%;
-    }
     &__header-description {
       font-size: 12px;
     }
   }
+}
+
+@media screen and (max-width: 550px) {
   .wrapper-block {
     &__settings-and-raunds-description {
-      margin-top: 260px;
-      margin-left: 175px;
+      margin-left: 170px;
     }
   }
 }

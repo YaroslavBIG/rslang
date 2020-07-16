@@ -15,7 +15,7 @@
     color: #7e919f;
   }
   &__settings-and-raunds-description {
-    display: flex;
+    display: none;
     flex-direction: row;
     width: 35%;
     justify-content: flex-end;
@@ -85,6 +85,7 @@
     background-color: #dfe4e7;
   }
   &__body-cell {
+    margin-top: 10px;
     width: 62px;
     height: 50px;
     background-color: #f5f7f8;
@@ -105,6 +106,7 @@
     margin-top: 30px;
   }
   &__body-cell-answer {
+    margin-top: 10px;
     width: 62px;
     height: 50px;
     background-color: #2582e7;

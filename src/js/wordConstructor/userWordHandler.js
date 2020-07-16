@@ -14,9 +14,14 @@ export const userWordHandler = async () => {
   dontKnowButton(word, translate, audio, text, image);
   volume(audio);
   const buttons = document.querySelectorAll('.game-block__body-cell-answer');
-  buttons.forEach((button) => button.addEventListener('click', (ev) => answerHandler(ev, word, image, text, translate, audio)));
+  buttons.forEach((button) =>
+    button.addEventListener('click', (ev) =>
+      answerHandler(ev, word, image, text, translate, audio)
+    )
+  );
   constantsData.counter += 1;
-  if (counter === constantsData.raunds) {
+  if (constantsData.counter === constantsData.raunds) {
+    alert(constantsData.counter);
     constantsData.raundsCounter += 1;
     constantsData.counter = 0;
   }
