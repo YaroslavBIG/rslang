@@ -10,7 +10,6 @@
   align-items: center;
   flex-direction: column;
   &__raund {
-    margin-top: 15px;
     font-size: 20px;
     color: #7e919f;
   }
@@ -19,18 +18,15 @@
     flex-direction: row;
     width: 35%;
     justify-content: flex-end;
+    align-items: center;
   }
   &__autopronunciation {
-    margin-top: 25px;
     font-size: 15px;
     color: #7e919f;
-    margin-right: 20px;
     cursor: pointer;
   }
   &__checkbox {
-    margin-top: 20px;
     cursor: pointer;
-    margin-right: 5px;
   }
   &__black-cross {
     width: 50px;
@@ -56,12 +52,15 @@
     display: none;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
   }
   &__footer {
     width: 100%;
     height: 20%;
     background-color: #f5f7f8;
     display: none;
+    justify-content: center;
+    align-items: center;
   }
   &__header-name {
     font-size: 27px;
@@ -74,7 +73,6 @@
   &__footer-dont-know-button {
     width: 30%;
     height: 75%;
-    margin-top: 12px;
     border: 0px solid white;
     border-radius: 3px;
     cursor: pointer;
@@ -95,7 +93,6 @@
   }
   &__body-cells {
     display: flex;
-    display: flex;
     width: auto;
     flex-wrap: wrap;
   }
@@ -103,7 +100,6 @@
     display: flex;
     width: auto;
     flex-wrap: wrap;
-    margin-top: 30px;
   }
   &__body-cell-answer {
     margin-top: 10px;
@@ -141,7 +137,6 @@
     font-size: 14px;
   }
   &__context-name {
-    margin-top: 30px;
     font-size: 14px;
     color: #7e919e;
     display: none;
@@ -168,7 +163,6 @@
     display: none;
     width: 30%;
     height: 75%;
-    margin-top: 12px;
     border: 0px solid white;
     border-radius: 3px;
     cursor: pointer;
@@ -185,8 +179,8 @@
   width: 700px;
   height: 600px;
   text-align: center;
+  justify-content: space-between;
   &__restart {
-    margin-top: 25px;
     cursor: pointer;
     border: none;
     outline: 0;
@@ -196,7 +190,6 @@
     color: $primary-color;
   }
   &__return {
-    margin-top: 25px;
     color: #2582e7;
   }
   &__error {

@@ -58,7 +58,7 @@
     width: fit-content;
     text-align: left;
     margin: 0 auto;
-    li{
+    li {
       padding-bottom: 3px;
     }
   }
@@ -85,5 +85,9 @@
     box-sizing: border-box;
     display: inline-block;
     width: 100%;
+  }
+  &__no-game {
+    text-decoration: none;
+    color: white;
   }
 }
