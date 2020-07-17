@@ -10,6 +10,7 @@
 * [Rina Yasnovskaya](https://github.com/RinaYasnovskaya)
 * [Elfimov Artem](https://github.com/ElfimovArtem)
 * [Vadim Romanovski](https://github.com/VadimRomanovski)
+* [Konstantin Kravtsov](https://github.com/Yeeeeee1)
 * [NataliaK96](https://github.com/NataliaK96)
 
 ## Запуск сборки
