@@ -21,7 +21,6 @@ export const userWordHandler = async () => {
   );
   constantsData.counter += 1;
   if (constantsData.counter === constantsData.raunds) {
-    alert(constantsData.counter);
     constantsData.raundsCounter += 1;
     constantsData.counter = 0;
   }

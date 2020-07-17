@@ -11,7 +11,8 @@ export const englishPuzzleGame = () => `
           <iframe src="https://www.youtube.com/embed/f4ioMGDQblI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="modal-body__video"></iframe>
         </div>
         <div class="modal-footer">
-          <button class="modal-footer__button-start" id="englishPuzzleGame"><span class="modal-footer__button-name">Начать</span></button>
+          <p>Данная мини-игра находится в разработке, но у нас есть и другие замечательные игры</p>
+          <button class="modal-footer__button-start" id="englishPuzzleGame"><span class="modal-footer__button-name"><a href="#/main" class="modal-footer__no-game">Меню</a></span></button>
         </div>
       </div>
       </div>

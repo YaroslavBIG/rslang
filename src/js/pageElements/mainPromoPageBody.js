@@ -9,7 +9,6 @@ export const mainPromoPageBody = () => `
   <div class="wrapper-body__second-gifs">
     <img src="https://raw.githubusercontent.com/YaroslavBIG/rslang-data/master/gif/video-audio-game.gif" class="wrapper-body__gifs-block" />
     <img src="https://raw.githubusercontent.com/YaroslavBIG/rslang-data/master/gif/video-savannah-game.gif" class="wrapper-body__gifs-block" />
-    <img src="./assets/no-photo.png" class="wrapper-body__gifs-block" />
   </div>
 </div>
 `;
