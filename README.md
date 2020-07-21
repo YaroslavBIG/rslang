@@ -24,7 +24,7 @@
 * [Webpack](https://webpack.js.org/)
 * [NPM](https://www.npmjs.com/)
 * [Babel](https://babeljs.io/)
-* [Eslint](https://eslint.org/)
+* [Eslint config airbnb](https://eslint.org/)
 * [SASS](https://sass-scss.ru/)
 * [Charts JS](https://www.chartjs.org/)
 * [SwiperJS](https://swiperjs.com/)
