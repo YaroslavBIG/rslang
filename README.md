@@ -2,7 +2,8 @@
 [Техническое задание RSlang](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/rslang/rslang.md)
 
 ## Deploy
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3c4a0252-d0a6-4ff5-9e4b-315f1b80b80d/deploy-status)](https://app.netlify.com/sites/rslang-team9-yaroslavbig/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3c4a0252-d0a6-4ff5-9e4b-315f1b80b80d/deploy-status)](https://rslang-team9-yaroslavbig.netlify.app)
+
 [Ветка master](https://rslang-team9-yaroslavbig.netlify.app)
 
 ## Наша комманда
