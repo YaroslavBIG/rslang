@@ -36,8 +36,8 @@
 * [Babel](https://babeljs.io/)
 * [Eslint](https://eslint.org/)  [config airbnb-base](https://github.com/airbnb/javascript)
 * [SASS](https://sass-scss.ru/)
-* [Charts JS](https://www.chartjs.org/)
-* [SwiperJS](https://swiperjs.com/)
+* [Charts JS](https://www.chartjs.org/) - библиотека, позволяющая генерировать графики и диаграммы с использованием средств canvas.
+* [SwiperJS](https://swiperjs.com/) - Превосходный слайдер заточенный строго для работы с мобильными сайтами или веб приложениями. Swiper обеспечивает аппаратное ускорение анимации на уровне нативного.
  
 ## RACI
 |                                                 | Ярослав  |  Карина  | Наталья  |  Артём   |  Вадим   |Константин|   Иван   |
