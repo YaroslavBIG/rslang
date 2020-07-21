@@ -13,10 +13,20 @@
 * [Konstantin Kravtsov](https://github.com/Yeeeeee1)
 * [NataliaK96](https://github.com/NataliaK96)
 
-## Запуск сборки
+## Запуск сборки 
 
-* development mode: npm run dev
-* production: npm run prod
+|                                                 |
+|:-----------------------------------------------:|
+|Установка node modules                           |
+|`npm install`                                    |
+|Запуск проекта в development mode                |
+|`npm run dev`                                    |
+|Запуск проекта в  production mode                |
+|`npm run prod`                                   |
+|Проверка на ошибки eslint                        |
+|`npm run lint`                                   |
+|Автоисправление ошибок eslint                    |
+|`npm run fix`                                    |
 
 ## Технологии которые мы исользовали:
 
